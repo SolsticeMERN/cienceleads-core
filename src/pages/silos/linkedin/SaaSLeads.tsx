@@ -1,145 +1,159 @@
-import { ArrowRight, Linkedin, Check, Code, Target, TrendingUp, Users, Shield, Zap, BarChart3, Clock } from "lucide-react";
+import { ArrowRight, Linkedin, Check, AlertTriangle, Code, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import ScrollReveal from "@/components/ScrollReveal";
 import PageFAQSection from "@/components/PageFAQSection";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 
+const faqs = [
+  { question: "Why is LinkedIn important for SaaS lead generation?", answer: "92% of B2B SaaS buyers start vendor evaluation on LinkedIn. Decision-makers are active, profiles are current, and targeting by tech stack and funding stage is uniquely possible." },
+  { question: "What SaaS buyer titles do you target?", answer: "VP of Engineering, CTO, VP of Product, Head of Sales, VP of Marketing, Director of Operations, CFO, CEO — any SaaS decision-maker role matching your buyer persona." },
+  { question: "Can you filter by tech stack or funding stage?", answer: "Yes. We filter by technology (Salesforce, HubSpot, AWS, etc.), funding stage (Seed through Series D+), ARR range, growth rate, and more." },
+  { question: "How do you verify SaaS companies?", answer: "Analysts manually confirm each company is genuinely SaaS — not just tagged as tech. We verify business model, product type, and industry classification." },
+];
+
 const LinkedInSaaSLeads = () => {
   usePageSEO(
-    "LinkedIn Lead Generation for SaaS | SaaS Decision-Maker Lists — CienceLeads",
-    "LinkedIn lead generation for SaaS companies. Find VP/C-level buyers at SaaS and tech companies with verified emails, direct dials, and company data."
+    "LinkedIn Lead Generation for SaaS | SaaS Decision-Makers — CienceLeads",
+    "LinkedIn lead generation for SaaS companies. Find VP/C-level buyers at SaaS companies with verified emails, direct dials, and tech stack data."
   );
-
-  const faqs = [
-    { question: "Why is LinkedIn lead generation important for SaaS companies?", answer: "SaaS buyers are highly active on LinkedIn — they research solutions, compare vendors, and evaluate thought leadership before engaging with sales. LinkedIn lead generation lets you identify and reach these tech-savvy decision-makers with verified contact data, enabling multi-channel outreach that meets them where they already spend time." },
-    { question: "What SaaS buyer titles do you target?", answer: "We target any SaaS decision-maker role including VP of Engineering, CTO, VP of Product, Head of Sales, VP of Marketing, Director of Operations, CFO, CEO, and more. We filter by seniority, department, and specific titles to match your exact buyer persona." },
-    { question: "Can you filter by technology stack or funding stage?", answer: "Yes. We can filter SaaS prospects by technology stack (e.g., companies using Salesforce, HubSpot, AWS), funding stage (Seed, Series A-D, Public), ARR range, employee growth rate, and many other SaaS-specific attributes to ensure precise ICP matching." },
-    { question: "How do you identify SaaS companies on LinkedIn?", answer: "We use LinkedIn Sales Navigator combined with additional data sources to identify SaaS companies by industry classification, technology stack, funding history, business model, and growth signals. Our analysts manually verify each company is genuinely a SaaS/software business, not just tagged as one." },
-  ];
   useFAQSchema(faqs);
 
   return (
     <main className="min-h-screen bg-background text-foreground">
       <section className="py-24 md:py-32">
         <div className="container max-w-4xl">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full border border-border bg-secondary/50 backdrop-blur-sm text-sm text-muted-foreground">
-              <Linkedin className="w-3.5 h-3.5" /> LinkedIn Lead Generation for SaaS
+          {/* ── HERO ── */}
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
+                LinkedIn Leads for{" "}
+                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">SaaS</span>
+              </h1>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                Find and verify <strong className="text-foreground">VP and C-level decision-makers</strong> at SaaS companies. Tech stack data, funding stage, and growth signals included.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 mt-8">
+                <Link to="/contact">
+                  <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
+                    Get SaaS Leads <ArrowRight className="ml-2" />
+                  </Button>
+                </Link>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
-              LinkedIn Leads for{" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">SaaS</span>
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              LinkedIn lead generation built specifically for SaaS companies. We find and verify{" "}
-              <strong className="text-foreground">VP and C-level decision-makers</strong> at your target SaaS and tech companies with complete contact profiles.
-            </p>
-          </div>
+          </ScrollReveal>
 
-          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-            <h2 className="text-2xl font-bold mb-4">Why SaaS Companies Need LinkedIn Lead Generation</h2>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-              The SaaS industry is one of the most competitive B2B verticals, with thousands of companies competing for the attention of the same decision-makers. Generic outreach fails because SaaS buyers are sophisticated, research-driven, and skeptical of cold pitches. They respond to sales teams that demonstrate deep understanding of their tech stack, business model, and growth challenges.
-            </p>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-              LinkedIn is where 92% of B2B SaaS buyers start their vendor evaluation process. Decision-makers at SaaS companies actively use LinkedIn to follow industry trends, evaluate solutions, and engage with thought leaders. This makes LinkedIn the most valuable prospecting platform for SaaS sales teams.
-            </p>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              CienceLeads' LinkedIn lead generation for SaaS combines deep industry knowledge with precision targeting to deliver verified contacts at exactly the companies and roles your sales team needs to reach. We don't just find contacts — we deliver SaaS-specific intelligence including tech stack, ARR range, funding stage, and growth signals.
-            </p>
-          </div>
+          {/* ── PROBLEM ── */}
+          <ScrollReveal delay={0.1}>
+            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-9 h-9 rounded-lg bg-destructive/10 flex items-center justify-center">
+                  <AlertTriangle className="w-4.5 h-4.5 text-destructive" />
+                </div>
+                <h2 className="text-2xl font-bold">Why SaaS Prospecting Is Hard</h2>
+              </div>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                SaaS is the most competitive B2B vertical. Generic outreach fails because SaaS buyers are research-driven and skeptical:
+              </p>
+              <ul className="grid sm:grid-cols-2 gap-2">
+                {["Thousands of companies competing for same buyers", "Generic databases can't filter by tech stack", "SaaS buyers ignore cold pitches without context", "Rapid job changes make data decay faster"].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                    <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </ScrollReveal>
 
-          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-            <h2 className="text-2xl font-bold mb-6">SaaS-Specific Targeting Capabilities</h2>
-            <div className="grid md:grid-cols-3 gap-6 mb-6">
-              {[
-                { icon: Code, title: "Tech Stack Filtering", desc: "Target companies using specific technologies — HubSpot, Salesforce, AWS, Kubernetes, React, and 1,000+ more." },
-                { icon: Target, title: "ICP Precision", desc: "Filter by ARR range, employee count, funding stage, department, title seniority, and geographic location." },
-                { icon: TrendingUp, title: "Growth Signals", desc: "Identify SaaS companies with growth indicators — recent funding, hiring surges, new product launches, and market expansion." },
-              ].map((s) => (
-                <div key={s.title} className="text-center">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                    <s.icon className="w-5 h-5 text-primary" />
+          {/* ── SOLUTION ── */}
+          <ScrollReveal delay={0.1}>
+            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Code className="w-4.5 h-4.5 text-primary" />
+                </div>
+                <h2 className="text-2xl font-bold">SaaS-Specific Targeting</h2>
+              </div>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {[
+                  { title: "Tech Stack Filtering", desc: "Target companies using HubSpot, Salesforce, AWS, Kubernetes, and 1,000+ technologies." },
+                  { title: "ICP Precision", desc: "Filter by ARR range, employee count, funding stage, department, and seniority." },
+                  { title: "Growth Signals", desc: "Recent funding, hiring surges, product launches, and market expansion." },
+                  { title: "Verified Contacts", desc: "SMTP-verified email, direct dial, LinkedIn URL — 0% bounce guaranteed." },
+                ].map((item) => (
+                  <div key={item.title} className="p-4 rounded-xl border border-border bg-secondary/30">
+                    <h3 className="font-semibold mb-1 text-sm">{item.title}</h3>
+                    <p className="text-xs text-muted-foreground">{item.desc}</p>
                   </div>
-                  <h3 className="font-semibold mb-1">{s.title}</h3>
-                  <p className="text-sm text-muted-foreground">{s.desc}</p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          </ScrollReveal>
 
-          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-            <h2 className="text-2xl font-bold mb-6">SaaS Lead Generation Deliverables</h2>
-            <div className="grid sm:grid-cols-2 gap-4 mb-6">
-              {[
-                "VP/C-level contacts at SaaS companies",
-                "Filtered by ARR, funding stage & team size",
-                "Tech stack intelligence included",
-                "Verified email + direct dial per contact",
-                "LinkedIn profile URL for warm outreach",
-                "Growth signals and hiring patterns flagged",
-                "Custom research notes per prospect",
-                "CRM-ready CSV delivery",
-                "Company firmographic data",
-                "Competitive landscape context",
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-3 text-sm">
-                  <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                  <span>{item}</span>
-                </div>
-              ))}
+          {/* ── DELIVERABLES ── */}
+          <ScrollReveal delay={0.1}>
+            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+              <h2 className="text-2xl font-bold mb-4">What You Get</h2>
+              <ul className="grid sm:grid-cols-2 gap-2">
+                {["VP/C-level contacts at SaaS companies", "Filtered by ARR, funding & team size", "Tech stack intelligence included", "Verified email + direct dial", "LinkedIn profile URL", "Growth signals flagged", "Custom research notes", "CRM-ready CSV delivery"].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                    <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
+          </ScrollReveal>
 
-          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-            <h2 className="text-2xl font-bold mb-4">SaaS Verticals We Cover</h2>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-              We've built verified lead lists for SaaS companies across every major vertical. Whether you're selling to other SaaS companies or to enterprises using SaaS solutions, we can target the exact buyer personas you need.
-            </p>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {[
-                "Marketing Technology (MarTech)",
-                "Sales Technology (SalesTech)",
-                "HR Technology and People Ops",
-                "FinTech and Payment Platforms",
-                "Cybersecurity and InfoSec",
-                "DevOps and Infrastructure",
-                "Customer Success and Support",
-                "Data Analytics and BI Platforms",
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-3 text-sm">
-                  <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                  <span>{item}</span>
-                </div>
-              ))}
+          {/* ── VERTICALS ── */}
+          <ScrollReveal delay={0.1}>
+            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+              <h2 className="text-2xl font-bold mb-4">SaaS Verticals We Cover</h2>
+              <ul className="grid sm:grid-cols-2 gap-2">
+                {["MarTech & AdTech", "SalesTech & RevOps", "HR Tech & People Ops", "FinTech & Payments", "Cybersecurity & InfoSec", "DevOps & Infrastructure", "Customer Success", "Data Analytics & BI"].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                    <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
+          </ScrollReveal>
 
-          <div className="mb-8">
-            <PageFAQSection faqs={faqs} heading="LinkedIn Lead Generation for SaaS FAQ" />
-          </div>
+          {/* ── CTA ── */}
+          <ScrollReveal delay={0.1}>
+            <div className="text-center mb-12">
+              <Link to="/contact">
+                <Button size="lg" className="text-base px-10 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
+                  Get SaaS Leads <ArrowRight className="ml-2" />
+                </Button>
+              </Link>
+            </div>
+          </ScrollReveal>
 
-          <InternalLinkBlock
-            title="Related Services & Resources"
-            links={[
-              { to: "/linkedin-prospecting/service", label: "LinkedIn Prospecting Service" },
-              { to: "/linkedin-prospecting/lead-generation", label: "LinkedIn Lead Generation" },
-              { to: "/b2b-lead-generation-for-saas", label: "Lead Gen for SaaS (Industry)" },
-              { to: "/b2b-lead-generation/service", label: "B2B Lead Generation Service" },
-              { to: "/proof/saas-lead-generation", label: "SaaS Case Study" },
-              { to: "/contact", label: "Get SaaS Leads" },
-            ]}
-          />
+          {/* ────── SEO SUPPORT ────── */}
 
-          <div className="text-center mt-12">
-            <Link to="/contact">
-              <Button size="lg" className="text-base px-10 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
-                Get SaaS Leads <ArrowRight className="ml-2" />
-              </Button>
-            </Link>
-          </div>
+          <ScrollReveal delay={0.1}>
+            <div className="mb-8">
+              <PageFAQSection faqs={faqs} heading="Frequently Asked Questions" />
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.1}>
+            <div className="mb-12">
+              <InternalLinkBlock title="Related Pages" links={[
+                { to: "/linkedin-prospecting/service", label: "LinkedIn Prospecting Service" },
+                { to: "/linkedin-prospecting/lead-generation", label: "LinkedIn Lead Generation" },
+                { to: "/b2b-lead-generation-for-saas", label: "Lead Gen for SaaS (Industry)" },
+                { to: "/b2b-lead-generation/service", label: "B2B Lead Generation Service" },
+                { to: "/proof/saas-lead-generation", label: "SaaS Case Study" },
+                { to: "/contact", label: "Get SaaS Leads" },
+              ]} />
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </main>
