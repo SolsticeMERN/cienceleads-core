@@ -16,6 +16,7 @@ const navLinks = [
     ],
   },
   { label: "Case Studies", href: "/proof" },
+  { label: "Resources", href: "/resources" },
   { label: "Contact", href: "/contact" },
 ];
 
