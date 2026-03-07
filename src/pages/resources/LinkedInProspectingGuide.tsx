@@ -20,7 +20,7 @@ const LinkedInProspectingGuide = () => {
               LinkedIn Prospecting Guide
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              How to use LinkedIn for B2B sales prospecting — finding decision-makers, building verified contact lists, and running LinkedIn lead generation campaigns that book meetings.
+              How to use LinkedIn for B2B sales prospecting — finding decision-makers, building verified contact lists, and running LinkedIn lead generation campaigns that book meetings. This guide covers everything from profile optimization to multi-channel outreach sequences.
             </p>
           </div>
 
@@ -29,9 +29,31 @@ const LinkedInProspectingGuide = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               LinkedIn prospecting is the process of identifying, researching, and connecting with potential B2B buyers on LinkedIn. As the world's largest professional network with 900M+ members, LinkedIn is the most effective platform for B2B sales prospecting — especially for reaching C-suite and VP-level decision-makers.
             </p>
-            <p className="text-muted-foreground leading-relaxed">
-              A LinkedIn prospecting service takes this further by manually researching profiles at scale, verifying contact information, and delivering outreach-ready data with emails and direct dials.
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Unlike cold calling or purchased email lists, LinkedIn prospecting gives you direct access to verified professional profiles with real-time job titles, company information, and career history. This makes it significantly easier to identify the right person to contact and personalize your outreach.
             </p>
+            <p className="text-muted-foreground leading-relaxed">
+              A <Link to="/linkedin-prospecting/service" className="text-primary hover:underline">LinkedIn prospecting service</Link> takes this further by manually researching profiles at scale, verifying contact information, and delivering outreach-ready data with verified emails and direct dials — all without risking your LinkedIn account.
+            </p>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-4">Why LinkedIn Works for B2B Sales</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              LinkedIn is the highest-converting channel for B2B prospecting because of three unique advantages that no other platform offers:
+            </p>
+            <div className="space-y-3">
+              {[
+                { title: "Decision-makers are active", desc: "80% of B2B leads generated through social media come from LinkedIn. VP and C-level executives actively use the platform for industry insights, hiring, and vendor research." },
+                { title: "Rich prospect data", desc: "Every LinkedIn profile contains current job title, company, career history, education, skills, and often content that reveals priorities and pain points — all available before you send a single message." },
+                { title: "Multi-touchpoint engagement", desc: "LinkedIn allows connection requests, InMails, content engagement, group participation, and company page follows — giving you multiple ways to build familiarity before direct outreach." },
+              ].map((item) => (
+                <div key={item.title} className="rounded-xl border border-border bg-card/50 p-6">
+                  <h3 className="font-semibold mb-1">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">{item.desc}</p>
+                </div>
+              ))}
+            </div>
           </section>
 
           <section className="mb-12">
@@ -39,11 +61,12 @@ const LinkedInProspectingGuide = () => {
             <div className="rounded-xl border border-border bg-card/50 p-6 my-6">
               <ol className="space-y-4">
                 {[
-                  { step: "Define Your ICP on LinkedIn", desc: "Filter by job title (VP Sales, CTO, CEO), company size (50-500), industry, and geography." },
-                  { step: "Use Sales Navigator for Advanced Search", desc: "LinkedIn Sales Navigator lets you filter by seniority, department, company growth, and technology used." },
-                  { step: "Research & Verify Each Profile", desc: "Don't just export — manually confirm each person's current role, company, and find their verified email." },
-                  { step: "Build Your Outreach Sequence", desc: "Combine LinkedIn connection requests with cold email. Multi-channel prospecting converts 3x better." },
-                  { step: "Personalize at Scale", desc: "Use profile context notes to personalize first messages. Generic outreach gets ignored." },
+                  { step: "Optimize Your LinkedIn Profile First", desc: "Before prospecting, your profile must establish credibility. Use a professional headshot, write a headline that communicates value (not just your job title), and include a summary that speaks to your target buyer's pain points." },
+                  { step: "Define Your ICP on LinkedIn", desc: "Filter by job title (VP Sales, CTO, CEO), company size (50-500), industry, and geography. The more specific your ICP, the higher your response rates will be." },
+                  { step: "Use Sales Navigator for Advanced Search", desc: "LinkedIn Sales Navigator lets you filter by seniority, department, company growth, technology used, recent job changes, and even content posted. Build saved searches that automatically surface new prospects matching your criteria." },
+                  { step: "Research & Verify Each Profile", desc: "Don't just export — manually confirm each person's current role, company, and find their verified email. Cross-reference with company websites and use B2B prospect research to gather intelligence for personalization." },
+                  { step: "Build Your Outreach Sequence", desc: "Combine LinkedIn connection requests with cold email. Multi-channel prospecting converts 3x better than single-channel. Day 1: Connection request. Day 3: Email. Day 5: LinkedIn message. Day 8: Follow-up email." },
+                  { step: "Personalize at Scale", desc: "Use profile context — recent posts, company news, mutual connections, shared groups — to personalize first messages. Generic 'I noticed your profile' messages get ignored. Reference something specific." },
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-sm">
                     <span className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-xs font-bold text-primary">{i + 1}</span>
@@ -60,51 +83,93 @@ const LinkedInProspectingGuide = () => {
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-4">LinkedIn Prospecting for SaaS Companies</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              SaaS companies benefit most from LinkedIn lead generation because their buyers (VPs of Engineering, CTOs, Heads of Product) are highly active on the platform. Here's what works:
+              SaaS companies benefit most from <Link to="/linkedin-prospecting/lead-generation" className="text-primary hover:underline">LinkedIn lead generation</Link> because their buyers (VPs of Engineering, CTOs, Heads of Product) are highly active on the platform. Here's what works best for SaaS prospecting:
             </p>
-            <div className="space-y-3">
+            <div className="grid sm:grid-cols-2 gap-4">
               {[
                 "Target by technology stack — find companies using competing tools",
                 "Filter by funding stage — recently funded startups are actively buying",
                 "Focus on VP/C-level — they have budget authority",
                 "Use company growth signals — hiring indicates budget availability",
+                "Monitor content engagement — prospects engaging with competitor content are in-market",
+                "Track job changes — new hires in leadership roles often bring new tools",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 text-sm">
                   <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                   <span>{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-muted-foreground leading-relaxed mt-4">
+              For dedicated SaaS prospecting campaigns, explore our <Link to="/linkedin-prospecting/saas-leads" className="text-primary hover:underline">LinkedIn SaaS leads</Link> service built specifically for software companies.
+            </p>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-4">Manual LinkedIn Prospecting vs. Automation Tools</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              LinkedIn automation tools promise scale but carry serious risks. LinkedIn actively detects automated activity and restricts or bans accounts that violate their terms of service. A single ban can cost you years of connections and credibility.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div className="rounded-xl border border-border bg-card/50 p-6">
+                <h3 className="font-semibold mb-2">Automation Risks</h3>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Account suspension or permanent ban</li>
+                  <li>• Low-quality, unverified data exports</li>
+                  <li>• Generic messages that get ignored</li>
+                  <li>• Violation of LinkedIn ToS</li>
+                  <li>• Damaged professional reputation</li>
+                </ul>
+              </div>
+              <div className="rounded-xl border border-border bg-card/50 p-6">
+                <h3 className="font-semibold mb-2">Manual Prospecting Benefits</h3>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Zero risk of account suspension</li>
+                  <li>• Human-verified emails, 0% bounce rate</li>
+                  <li>• Context notes for personalized outreach</li>
+                  <li>• Direct dials alongside LinkedIn profiles</li>
+                  <li>• Full compliance with LinkedIn ToS</li>
+                </ul>
+              </div>
+            </div>
+            <p className="text-muted-foreground leading-relaxed mt-4">
+              Manual <Link to="/linkedin-prospecting/sales-prospecting" className="text-primary hover:underline">LinkedIn sales prospecting</Link> through a professional service delivers higher-quality data without any of the account risks. Every contact is researched, verified, and enriched with context notes for your outreach team.
+            </p>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-4">LinkedIn Outreach Best Practices</h2>
+            <div className="space-y-3">
+              {[
+                { title: "Connection request messages", desc: "Keep under 300 characters. Reference a shared connection, group, or recent post. Never pitch in the connection request — focus on establishing relevance." },
+                { title: "First message after connection", desc: "Wait 24 hours after they accept. Lead with value — share a relevant insight, case study, or data point. Ask a question rather than making a statement." },
+                { title: "Follow-up cadence", desc: "Send a maximum of 2 follow-up messages on LinkedIn. Space them 3–5 days apart. If no response after 3 touches, move to email or phone." },
+                { title: "Content engagement strategy", desc: "Like and comment on your prospects' posts before reaching out. This creates familiarity so your connection request isn't completely cold." },
+              ].map((item) => (
+                <div key={item.title} className="rounded-xl border border-border bg-card/50 p-6">
+                  <h3 className="font-semibold mb-1">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">{item.desc}</p>
                 </div>
               ))}
             </div>
           </section>
 
           <section className="mb-12">
-            <h2 className="text-2xl font-bold mb-4">Manual LinkedIn Prospecting vs. Automation Tools</h2>
+            <h2 className="text-2xl font-bold mb-4">Combine LinkedIn With Email Outreach</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              LinkedIn automation tools risk account bans and produce low-quality data. Manual LinkedIn sales prospecting through a service like CienceLeads delivers:
+              The most effective B2B prospecting combines LinkedIn with <Link to="/resources/sales-outreach-strategies" className="text-primary hover:underline">cold email outreach</Link>. Multi-channel sequences convert 3x better than single-channel because you're meeting prospects where they're most active.
             </p>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {[
-                "Zero risk of LinkedIn account suspension",
-                "Human-verified emails with 0% bounce rate",
-                "Context notes for personalized outreach",
-                "Direct dials alongside LinkedIn profiles",
-                "Accurate firmographic data included",
-                "Compliance with LinkedIn's terms of service",
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-3 text-sm">
-                  <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                  <span>{item}</span>
-                </div>
-              ))}
-            </div>
+            <p className="text-muted-foreground leading-relaxed">
+              To run multi-channel campaigns, you need verified email addresses alongside LinkedIn profiles. A <Link to="/data-enrichment/service" className="text-primary hover:underline">data enrichment service</Link> can append verified emails and direct dials to your LinkedIn prospect list, making your outreach CRM-ready from day one.
+            </p>
           </section>
 
-          {/* Internal Links */}
           <div className="rounded-xl border border-border bg-card/50 p-6 mb-12">
             <h3 className="font-semibold mb-3">Related Resources & Services</h3>
             <div className="grid sm:grid-cols-2 gap-2">
               <Link to="/resources/what-is-b2b-lead-generation" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5" /> What is B2B Lead Generation?</Link>
               <Link to="/resources/data-enrichment-explained" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5" /> Data Enrichment Explained</Link>
+              <Link to="/resources/how-to-find-decision-makers" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5" /> How to Find Decision Makers</Link>
               <Link to="/linkedin-prospecting/service" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5" /> LinkedIn Prospecting Service</Link>
               <Link to="/b2b-lead-generation/service" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5" /> B2B Lead Generation Service</Link>
               <Link to="/data-enrichment/service" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5" /> Data Enrichment Service</Link>
