@@ -7,9 +7,10 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
-import LeadListBuilding from "./pages/services/LeadListBuilding";
-import LinkedInProspecting from "./pages/services/LinkedInProspecting";
-import DataEnrichment from "./pages/services/DataEnrichment";
+import LeadGeneration from "./pages/silos/LeadGeneration";
+import LinkedInProspecting from "./pages/silos/LinkedInProspecting";
+import DataEnrichment from "./pages/silos/DataEnrichment";
+import EmailLists from "./pages/silos/EmailLists";
 import Proof from "./pages/Proof";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -26,9 +27,10 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/services/lead-list-building" element={<LeadListBuilding />} />
-          <Route path="/services/linkedin-prospecting" element={<LinkedInProspecting />} />
-          <Route path="/services/data-enrichment" element={<DataEnrichment />} />
+          <Route path="/b2b-lead-generation" element={<LeadGeneration />} />
+          <Route path="/linkedin-prospecting" element={<LinkedInProspecting />} />
+          <Route path="/data-enrichment" element={<DataEnrichment />} />
+          <Route path="/email-lists" element={<EmailLists />} />
           <Route path="/proof" element={<Proof />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />

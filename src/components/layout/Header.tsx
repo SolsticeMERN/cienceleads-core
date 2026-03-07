@@ -9,12 +9,13 @@ const navLinks = [
     label: "Services",
     href: "/services",
     children: [
-      { label: "B2B Lead List Building", href: "/services/lead-list-building" },
-      { label: "LinkedIn Prospecting", href: "/services/linkedin-prospecting" },
-      { label: "Data Enrichment", href: "/services/data-enrichment" },
+      { label: "B2B Lead Generation", href: "/b2b-lead-generation" },
+      { label: "LinkedIn Prospecting", href: "/linkedin-prospecting" },
+      { label: "Data Enrichment", href: "/data-enrichment" },
+      { label: "B2B Email Lists", href: "/email-lists" },
     ],
   },
-  { label: "Proof", href: "/proof" },
+  { label: "Case Studies", href: "/proof" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -34,7 +35,8 @@ const Header = () => {
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
-  const isServicesActive = location.pathname.startsWith("/services");
+  const serviceRoutes = ["/services", "/b2b-lead-generation", "/linkedin-prospecting", "/data-enrichment", "/email-lists"];
+  const isServicesActive = serviceRoutes.some((r) => location.pathname.startsWith(r));
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/50 bg-background/60 backdrop-blur-xl">
@@ -99,10 +101,12 @@ const Header = () => {
         </nav>
 
         <div className="hidden md:block">
-          <Button size="sm" className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity">
-            Get a Free Sample List
-            <ArrowRight className="ml-1.5 w-3.5 h-3.5" />
-          </Button>
+          <Link to="/contact">
+            <Button size="sm" className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity">
+              Get a Free Sample List
+              <ArrowRight className="ml-1.5 w-3.5 h-3.5" />
+            </Button>
+          </Link>
         </div>
 
         <button
@@ -163,10 +167,12 @@ const Header = () => {
               )
             )}
             <div className="pt-3 px-3">
-              <Button className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity">
-                Get a Free Sample List
-                <ArrowRight className="ml-1.5 w-3.5 h-3.5" />
-              </Button>
+              <Link to="/contact" onClick={() => setOpen(false)}>
+                <Button className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity">
+                  Get a Free Sample List
+                  <ArrowRight className="ml-1.5 w-3.5 h-3.5" />
+                </Button>
+              </Link>
             </div>
           </nav>
         </div>
