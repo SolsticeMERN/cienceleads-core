@@ -13,7 +13,6 @@ const LinkedInService = () => {
     "LinkedIn Prospecting Service | Find Decision-Makers on LinkedIn — CienceLeads",
     "LinkedIn prospecting service delivering verified decision-maker contacts. Manual LinkedIn research with emails, direct dials, and company data. 0% bounce guarantee."
   );
-  useFAQSchema(faqs);
 
   const faqs = [
     { question: "What does your LinkedIn prospecting service include?", answer: "Our LinkedIn prospecting service includes manual decision-maker identification via LinkedIn Sales Navigator, multi-source email verification (SMTP + manual), direct dial validation, LinkedIn profile URLs, company firmographic data, and CRM-ready CSV delivery. Every contact is individually researched and verified." },
@@ -21,6 +20,7 @@ const LinkedInService = () => {
     { question: "Can you target specific industries or job titles?", answer: "Yes. We target by any combination of industry, company size, job title, seniority, department, technology stack, geography, and more. Our LinkedIn prospecting service delivers contacts matched exactly to your ICP specifications." },
     { question: "What's the turnaround time?", answer: "Most LinkedIn prospecting projects are delivered within 48–72 hours for standard volumes. Larger projects (5,000+ contacts) may take 5–7 business days. We offer expedited delivery for urgent campaigns." },
   ];
+  useFAQSchema(faqs);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

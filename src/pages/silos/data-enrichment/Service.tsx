@@ -13,7 +13,6 @@ const DataEnrichmentService = () => {
     "Data Enrichment Service | Clean & Verify Your B2B Data — CienceLeads",
     "Data enrichment service to clean, verify, and enrich your B2B contact lists. SMTP verification, field appending, and domain risk scoring. 0% bounce guarantee."
   );
-  useFAQSchema(faqs);
 
   const faqs = [
     { question: "What does your data enrichment service include?", answer: "Our data enrichment service includes multi-layer email verification (SMTP, MX, catch-all detection), missing field appending (phone, LinkedIn, company data), duplicate removal, domain risk scoring, deliverability confidence scoring, CRM field mapping, and a detailed before/after audit report." },
@@ -21,6 +20,7 @@ const DataEnrichmentService = () => {
     { question: "Can you enrich data from any CRM?", answer: "Yes. Export your contacts as CSV from HubSpot, Salesforce, Pipedrive, Outreach, Apollo, or any other CRM. We return enriched, verified data mapped to your CRM fields for instant re-import." },
     { question: "What's the cost of data enrichment?", answer: "Data enrichment pricing depends on list size, the number of fields to append, and verification depth. Contact us for a custom quote based on your specific requirements." },
   ];
+  useFAQSchema(faqs);
 
   return (
     <main className="min-h-screen bg-background text-foreground">
