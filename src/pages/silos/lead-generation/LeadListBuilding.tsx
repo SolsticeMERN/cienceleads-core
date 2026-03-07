@@ -180,7 +180,7 @@ const LeadListBuilding = () => {
 
           {/* Internal Links */}
           <InternalLinkBlock
-            heading="Related Services & Resources"
+            title="Related Services & Resources"
             links={[
               { to: "/b2b-lead-generation/service", label: "B2B Lead Generation Service" },
               { to: "/b2b-lead-generation/prospect-research", label: "B2B Prospect Research" },
