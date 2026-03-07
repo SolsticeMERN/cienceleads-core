@@ -1,4 +1,4 @@
-import { ArrowRight, ListPlus, Check, Filter, Database, FileSpreadsheet, Clock, Users, Shield, BarChart3, Target, Zap } from "lucide-react";
+import { ArrowRight, ListPlus, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
@@ -6,18 +6,18 @@ import { useFAQSchema } from "@/hooks/use-faq-schema";
 import PageFAQSection from "@/components/PageFAQSection";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 
+const faqs = [
+  { question: "What information is included in a lead list?", answer: "A typical lead list includes company information, decision-maker names, job titles, verified email addresses, direct dial phone numbers, and LinkedIn profiles. Additional fields like company size, revenue range, industry, and technology stack can be included based on your requirements." },
+  { question: "How accurate are lead lists?", answer: "When lists are manually verified, accuracy is significantly higher compared to scraped databases. Our lead lists achieve 98%+ accuracy through SMTP verification and human review, which helps reduce email bounce rates and improve campaign performance." },
+  { question: "How long does it take to build a lead list?", answer: "Delivery time depends on the number of leads required and targeting complexity. Most lead lists of 500 to 2,000 contacts can be delivered within a few business days. Larger projects are delivered in batches over one to two weeks." },
+  { question: "Can lead lists be customized?", answer: "Yes. Lead lists can be customized based on industry, company size, location, job titles, seniority level, technology stack, and other firmographic criteria. The more specific your targeting, the more relevant your outreach results will be." },
+];
+
 const LeadListBuilding = () => {
   usePageSEO(
-    "Lead List Building Service | Custom B2B Prospect Lists — CienceLeads",
-    "Lead list building service creating custom B2B prospect lists matched to your ICP. Human-researched, verified contacts delivered CRM-ready. 0% bounce guarantee."
+    "Lead List Building | Targeted B2B Prospect Lists — CienceLeads",
+    "Lead list building service for targeted B2B prospecting. Custom prospect lists with verified emails, direct dials, and company data. Human-verified with 0% bounce guarantee."
   );
-
-  const faqs = [
-    { question: "What is lead list building?", answer: "Lead list building is the process of researching, identifying, and compiling a targeted list of potential business buyers who match your Ideal Customer Profile (ICP). Unlike purchasing pre-built databases, lead list building creates custom prospect lists from scratch using manual research and multi-source verification." },
-    { question: "How long does it take to build a lead list?", answer: "Most lead list building projects are completed within 48–72 hours for standard volumes of 500–1,000 contacts. Larger projects (2,000–5,000+ contacts) typically take 5–7 business days depending on targeting complexity and ICP specificity." },
-    { question: "What data fields are included in a lead list?", answer: "Every lead list includes full name, verified business email, direct dial phone number, job title, LinkedIn profile URL, company name, website, industry, company size, revenue range, and geographic location. Custom fields can be added based on your requirements." },
-    { question: "How is lead list building different from buying a database?", answer: "Lead list building creates exclusive, custom-researched lists matched to your specific ICP. Database purchases give you pre-built, shared data that may be months or years old with 15–30% bounce rates. Custom-built lead lists deliver 98%+ accuracy with 0% bounce guarantees." },
-  ];
   useFAQSchema(faqs);
 
   return (
@@ -29,172 +29,258 @@ const LeadListBuilding = () => {
               <ListPlus className="w-3.5 h-3.5" /> Lead List Building
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
-              Lead List{" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Building</span>
+              Lead List Building for Targeted B2B{" "}
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Prospecting</span>
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Our lead list building service creates <strong className="text-foreground">custom prospect lists</strong> from scratch.
-              Every contact is manually researched and verified — no bulk database dumps, no shared data, no recycled contacts.
+          </div>
+
+          {/* Intro */}
+          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Building a high-quality lead list is one of the most important steps in successful B2B outreach. Without accurate prospect data, sales teams waste time contacting the wrong people, dealing with bounced emails, and struggling to generate qualified meetings.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              At CienceLeads, our lead list building process focuses on identifying the right companies, finding decision-makers, and delivering verified contact data ready for outreach campaigns.
             </p>
           </div>
 
           {/* What is Lead List Building */}
           <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-            <h2 className="text-2xl font-bold mb-4">What is Lead List Building?</h2>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-              Lead list building is the systematic process of identifying, researching, and compiling a targeted list of potential B2B buyers who match your Ideal Customer Profile. Unlike generic database subscriptions that give you access to millions of stale records, professional lead list building creates a custom-built, verified prospect list designed exclusively for your outreach campaigns.
+            <h2 className="text-2xl font-bold mb-4">What Is Lead List Building?</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Lead list building is the process of researching and collecting contact information for potential business customers who match a company's ideal customer profile.
             </p>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-              The quality of your lead list directly determines the success of your outbound campaigns. A well-built lead list with verified contacts delivers 50%+ open rates and 5–15% reply rates, while generic database exports typically achieve less than 20% open rates with 15–30% bounce rates that damage your sender reputation.
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              A typical lead list includes important details such as:
             </p>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              At CienceLeads, our lead list building service combines manual research with multi-source verification to deliver prospect lists with 98%+ accuracy and a 0% bounce guarantee. Every contact is individually researched by human analysts — not scraped by bots or pulled from shared databases.
-            </p>
-          </div>
-
-          {/* Process */}
-          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-            <h2 className="text-2xl font-bold mb-6">How We Build Your Lead Lists</h2>
-            <div className="grid md:grid-cols-3 gap-6 mb-6">
-              {[
-                { icon: Filter, title: "1. Define Filters", desc: "Industry, title, company size, revenue, location, technology stack — we match your exact ICP criteria down to the most granular level." },
-                { icon: Database, title: "2. Research & Source", desc: "Our team manually researches prospects from LinkedIn, company websites, verified databases, and public business records. No automated scraping." },
-                { icon: FileSpreadsheet, title: "3. Verify & Deliver", desc: "Every email is SMTP-verified with catch-all detection, every phone number confirmed. Delivered as a CRM-ready CSV mapped to your fields." },
-              ].map((s) => (
-                <div key={s.title} className="text-center">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                    <s.icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <h3 className="font-semibold mb-1">{s.title}</h3>
-                  <p className="text-sm text-muted-foreground">{s.desc}</p>
-                </div>
-              ))}
-            </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Our lead list building process typically takes 48–72 hours for standard volumes. We assign a dedicated research analyst to your project who understands your ICP, target market, and buyer persona. This isn't mass data extraction — it's precision research designed to maximize your outreach conversion rates.
-            </p>
-          </div>
-
-          {/* Why Lead List Building Matters */}
-          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-            <h2 className="text-2xl font-bold mb-4">Why Lead List Building Matters</h2>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-              Your outbound campaigns are only as good as the data behind them. Sales teams waste an average of 40% of their time researching prospects instead of selling. Poor data quality costs B2B companies an estimated $3.1 trillion annually in the US alone, according to IBM research.
-            </p>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-              Professional lead list building eliminates these problems by delivering outreach-ready data from day one. Instead of your SDRs spending hours on LinkedIn searching for prospects, they receive a verified, CRM-ready list and start booking meetings immediately.
-            </p>
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                { icon: Clock, title: "Save 40+ Hours/Month", desc: "Eliminate manual research. Your sales team focuses on selling, not sourcing." },
-                { icon: Shield, title: "Protect Domain Health", desc: "0% bounce rate lists keep your sender reputation clean and deliverability high." },
-                { icon: BarChart3, title: "Higher ROI", desc: "Verified data means more replies, more meetings, and more revenue per campaign." },
-              ].map((s) => (
-                <div key={s.title} className="text-center">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                    <s.icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <h3 className="font-semibold mb-1">{s.title}</h3>
-                  <p className="text-sm text-muted-foreground">{s.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* What's Included */}
-          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-            <h2 className="text-2xl font-bold mb-6">What's Included in Every Lead List</h2>
-            <div className="grid sm:grid-cols-2 gap-4 mb-6">
-              {["Full name and job title", "Verified business email address", "Direct dial phone number", "LinkedIn profile URL", "Company name and website", "Industry and company size", "Revenue range", "City, state, and country", "Technology stack (when available)", "Custom research notes per prospect", "Deliverability confidence score", "CRM-ready CSV with mapped fields"].map((item) => (
-                <div key={item} className="flex items-start gap-3 text-sm">
+            <ul className="space-y-2 mb-4">
+              {["Company name and website", "Industry and employee size", "Decision-maker name and job title", "Verified email address", "Direct dial phone number", "LinkedIn profile URL"].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                   <span>{item}</span>
-                </div>
+                </li>
               ))}
-            </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Every lead list is delivered with a quality audit report showing verification pass rates, data completeness scores, and any targeting notes from your research analyst. We also include a replacement guarantee — any contact that bounces is replaced free of charge.
+            </ul>
+            <p className="text-muted-foreground leading-relaxed">
+              These lists are used by sales teams for cold email campaigns, LinkedIn outreach, and outbound sales prospecting. A well-built lead list ensures that outreach efforts target people who are more likely to be interested in your product or service.
             </p>
           </div>
 
-          {/* Comparison Table */}
+          {/* Why High-Quality Lead Lists Matter */}
           <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-            <h2 className="text-2xl font-bold mb-6">Lead List Building vs. Database Subscriptions</h2>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b border-border">
-                    <th className="text-left py-3 font-semibold">Feature</th>
-                    <th className="text-center py-3 font-semibold text-primary">Custom Lead Lists</th>
-                    <th className="text-center py-3 font-semibold text-muted-foreground">Database Tools</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-border">
-                  {[
-                    ["Data Freshness", "Built on demand", "Months/years old"],
-                    ["Accuracy", "98%+", "40-70%"],
-                    ["Bounce Rate", "0% guaranteed", "15-30%"],
-                    ["Exclusivity", "Built only for you", "Shared with 100s"],
-                    ["ICP Match", "Custom targeting", "Broad filters only"],
-                    ["Verification", "SMTP + human review", "Automated only"],
-                    ["Cost per Qualified Lead", "Lower (higher conversion)", "Higher (low conversion)"],
-                  ].map(([feature, custom, database]) => (
-                    <tr key={feature}>
-                      <td className="py-3">{feature}</td>
-                      <td className="py-3 text-center text-primary font-medium">{custom}</td>
-                      <td className="py-3 text-center text-muted-foreground">{database}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          {/* Who It's For */}
-          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-            <h2 className="text-2xl font-bold mb-4">Who Needs Lead List Building?</h2>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-              Lead list building is ideal for B2B companies running outbound campaigns who need verified, targeted prospect data. Whether you're a startup founder building your first pipeline or an enterprise sales team scaling outreach, custom lead lists deliver better results than self-serve database tools.
+            <h2 className="text-2xl font-bold mb-4">Why High-Quality Lead Lists Matter</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Many companies rely on scraped databases or outdated data sources. This often results in poor campaign performance and low response rates.
             </p>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {[
-                "SaaS companies targeting specific buyer personas",
-                "Agencies running outbound for multiple clients",
-                "Startups with limited SDR bandwidth",
-                "Enterprise teams entering new markets",
-                "Sales teams tired of bad data from databases",
-                "Marketing teams building ABM target account lists",
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-3 text-sm">
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              A high-quality lead list improves sales performance by:
+            </p>
+            <ul className="space-y-2 mb-4">
+              {["Reducing email bounce rates", "Targeting the right decision makers", "Improving response rates", "Increasing booked meetings", "Saving time for sales teams"].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                   <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-muted-foreground leading-relaxed">
+              Accurate prospect data allows businesses to focus their efforts on leads that actually match their ideal customer profile.
+            </p>
+          </div>
+
+          {/* Our Process */}
+          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <h2 className="text-2xl font-bold mb-6">Our Lead List Building Process</h2>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              At CienceLeads, we follow a structured process to ensure every lead list is accurate and relevant.
+            </p>
+
+            <h3 className="text-lg font-semibold mb-3">1. Ideal Customer Profile Research</h3>
+            <p className="text-muted-foreground leading-relaxed mb-3">
+              The first step is understanding your target audience. We analyze your ideal customer profile based on:
+            </p>
+            <ul className="space-y-1 mb-6">
+              {["Industry", "Company size", "Geographic location", "Technology usage", "Job roles and seniority"].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                  <Check className="w-3.5 h-3.5 text-primary mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="text-lg font-semibold mb-3">2. Prospect Identification</h3>
+            <p className="text-muted-foreground leading-relaxed mb-3">
+              Our research team identifies companies that match your targeting criteria using multiple data sources and research tools. We focus on finding:
+            </p>
+            <ul className="space-y-1 mb-6">
+              {["High-growth companies", "Businesses actively hiring", "Companies using relevant technologies", "Organizations with clear decision-making structures"].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                  <Check className="w-3.5 h-3.5 text-primary mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="text-lg font-semibold mb-3">3. Decision-Maker Identification</h3>
+            <p className="text-muted-foreground leading-relaxed mb-3">
+              Once target companies are identified, we locate the most relevant decision makers. Common roles include:
+            </p>
+            <ul className="space-y-1 mb-6">
+              {["Founders and CEOs", "Marketing directors", "Sales leaders", "Operations managers", "Technology executives"].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                  <Check className="w-3.5 h-3.5 text-primary mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Targeting the right decision maker significantly improves outreach results.
+            </p>
+
+            <h3 className="text-lg font-semibold mb-3">4. Human Verification</h3>
+            <p className="text-muted-foreground leading-relaxed mb-3">
+              Unlike automated databases, our lead lists go through a manual verification process to ensure accuracy. We verify:
+            </p>
+            <ul className="space-y-1 mb-6">
+              {["Email deliverability via SMTP checks", "Job title accuracy", "LinkedIn profile authenticity", "Company relevance to your ICP"].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                  <Check className="w-3.5 h-3.5 text-primary mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              This helps reduce bounce rates and improves the quality of outreach campaigns.
+            </p>
+
+            <h3 className="text-lg font-semibold mb-3">5. CRM-Ready Delivery</h3>
+            <p className="text-muted-foreground leading-relaxed mb-3">
+              Your final lead list is delivered in a format ready for popular CRM and outreach tools such as:
+            </p>
+            <ul className="space-y-1">
+              {["HubSpot", "Salesforce", "Pipedrive", "Apollo", "Instantly", "Lemlist"].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                  <Check className="w-3.5 h-3.5 text-primary mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-muted-foreground leading-relaxed mt-3">
+              The data is organized, clean, and ready to use for outbound campaigns.
+            </p>
+          </div>
+
+          {/* Industries */}
+          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <h2 className="text-2xl font-bold mb-4">Industries We Support</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Our lead list building services support businesses across a wide range of industries, including:
+            </p>
+            <ul className="grid sm:grid-cols-2 gap-2">
+              {["SaaS companies", "Marketing agencies", "Technology startups", "Consulting firms", "eCommerce platforms", "Financial services"].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                  <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-muted-foreground leading-relaxed mt-4">
+              We customize every list based on your specific targeting needs.
+            </p>
+          </div>
+
+          {/* Benefits */}
+          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <h2 className="text-2xl font-bold mb-4">Benefits of Professional Lead List Building</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Working with a professional lead research team offers several advantages.
+            </p>
+            <div className="space-y-4">
+              <div>
+                <h3 className="font-semibold mb-1">Higher Data Accuracy</h3>
+                <p className="text-sm text-muted-foreground">Manual verification helps ensure contact information is correct and up-to-date.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-1">Better Targeting</h3>
+                <p className="text-sm text-muted-foreground">Lead lists are built around your ideal customer profile, not generic segments.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-1">Faster Sales Prospecting</h3>
+                <p className="text-sm text-muted-foreground">Your sales team can focus on outreach rather than spending time researching prospects.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-1">Improved Campaign Performance</h3>
+                <p className="text-sm text-muted-foreground">Accurate data increases response rates and meeting bookings.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Comparison */}
+          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <h2 className="text-2xl font-bold mb-4">Lead List Building vs. Buying Email Lists</h2>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Many businesses consider purchasing large email databases. However, these lists often contain outdated or irrelevant contacts. A custom lead list offers several advantages:
+            </p>
+            <div className="rounded-xl border border-border overflow-hidden">
+              <div className="grid grid-cols-3 bg-secondary/50 border-b border-border">
+                <div className="p-4 text-sm font-medium text-muted-foreground">Feature</div>
+                <div className="p-4 text-sm font-semibold text-primary text-center">Custom Lead List</div>
+                <div className="p-4 text-sm font-medium text-muted-foreground text-center">Purchased Database</div>
+              </div>
+              {[
+                ["Targeting accuracy", "High", "Low"],
+                ["Data freshness", "Verified", "Often outdated"],
+                ["Bounce rates", "Low (0%)", "High (15-30%)"],
+                ["Personalization", "Possible", "Limited"],
+                ["Exclusivity", "Built for you", "Shared with others"],
+              ].map(([feature, custom, purchased], i, arr) => (
+                <div key={feature} className={`grid grid-cols-3 ${i < arr.length - 1 ? "border-b border-border" : ""}`}>
+                  <div className="p-4 text-sm font-medium">{feature}</div>
+                  <div className="p-4 text-sm text-center text-primary">{custom}</div>
+                  <div className="p-4 text-sm text-center text-muted-foreground">{purchased}</div>
                 </div>
               ))}
             </div>
+            <p className="text-muted-foreground leading-relaxed mt-4">
+              Custom lead list building ensures your outreach campaigns reach the right people.
+            </p>
           </div>
 
           {/* FAQ */}
           <div className="mb-8">
-            <PageFAQSection faqs={faqs} heading="Lead List Building FAQ" />
+            <PageFAQSection faqs={faqs} heading="Frequently Asked Questions" />
+          </div>
+
+          {/* CTA */}
+          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <h2 className="text-2xl font-bold mb-4">Get a Custom Lead List for Your Business</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              If your sales team needs targeted prospect data, a professionally researched lead list can significantly improve outreach results.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              CienceLeads provides human-verified prospect lists designed to help B2B companies generate more qualified opportunities and grow their sales pipeline.
+            </p>
           </div>
 
           {/* Internal Links */}
-          <InternalLinkBlock
-            title="Related Services & Resources"
-            links={[
-              { to: "/b2b-lead-generation/service", label: "B2B Lead Generation Service" },
-              { to: "/b2b-lead-generation/prospect-research", label: "B2B Prospect Research" },
-              { to: "/email-lists/b2b-email-list-provider", label: "B2B Email List Provider" },
-              { to: "/data-enrichment/service", label: "Data Enrichment Service" },
-              { to: "/resources/what-is-b2b-lead-generation", label: "What is B2B Lead Generation?" },
-              { to: "/contact", label: "Get a Free Sample List" },
-            ]}
-          />
+          <div className="mb-12">
+            <InternalLinkBlock
+              title="Related Services"
+              links={[
+                { to: "/b2b-lead-generation/service", label: "B2B Lead Generation Service" },
+                { to: "/b2b-lead-generation/prospect-research", label: "B2B Prospect Research" },
+                { to: "/b2b-lead-generation/verified-leads", label: "Verified B2B Leads" },
+                { to: "/email-lists/b2b-email-list-provider", label: "B2B Email List Provider" },
+                { to: "/data-enrichment/service", label: "Data Enrichment Service" },
+                { to: "/contact", label: "Request a Free Sample List" },
+              ]}
+            />
+          </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center">
             <Link to="/contact">
               <Button size="lg" className="text-base px-10 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
-                Build My Lead List <ArrowRight className="ml-2" />
+                Request a Free Sample List <ArrowRight className="ml-2" />
               </Button>
             </Link>
           </div>
