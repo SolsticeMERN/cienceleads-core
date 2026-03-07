@@ -2,6 +2,7 @@ import { ArrowRight, Search, Check, Target, Users, FileSpreadsheet, TrendingUp, 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import { useFAQSchema } from "@/hooks/use-faq-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 import PageFAQSection from "@/components/PageFAQSection";
@@ -20,6 +21,7 @@ const LeadGenerationService = () => {
     { question: "How many leads can you deliver per month?", answer: "CienceLeads delivers 500–10,000+ verified leads per month depending on targeting specificity and ICP complexity. Most clients start with 1,000–2,000 leads per month and scale based on their sales team's capacity." },
     { question: "Do you offer a free trial or sample?", answer: "Yes. We offer a free sample list so you can evaluate the quality of our human-verified leads before committing to a project. Contact us to request a free sample matched to your ICP." },
   ];
+  useFAQSchema(faqs);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

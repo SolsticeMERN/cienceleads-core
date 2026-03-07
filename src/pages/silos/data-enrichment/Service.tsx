@@ -2,6 +2,7 @@ import { ArrowRight, DatabaseZap, Check, ShieldCheck, RefreshCw, Zap, TrendingUp
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import { useFAQSchema } from "@/hooks/use-faq-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 import PageFAQSection from "@/components/PageFAQSection";
@@ -19,6 +20,7 @@ const DataEnrichmentService = () => {
     { question: "Can you enrich data from any CRM?", answer: "Yes. Export your contacts as CSV from HubSpot, Salesforce, Pipedrive, Outreach, Apollo, or any other CRM. We return enriched, verified data mapped to your CRM fields for instant re-import." },
     { question: "What's the cost of data enrichment?", answer: "Data enrichment pricing depends on list size, the number of fields to append, and verification depth. Contact us for a custom quote based on your specific requirements." },
   ];
+  useFAQSchema(faqs);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

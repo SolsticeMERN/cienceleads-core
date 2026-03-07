@@ -2,6 +2,7 @@ import { ArrowRight, Linkedin, Check, UserCheck, Search, MessageSquare, Trending
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import { useFAQSchema } from "@/hooks/use-faq-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 import PageFAQSection from "@/components/PageFAQSection";
@@ -19,6 +20,7 @@ const LinkedInService = () => {
     { question: "Can you target specific industries or job titles?", answer: "Yes. We target by any combination of industry, company size, job title, seniority, department, technology stack, geography, and more. Our LinkedIn prospecting service delivers contacts matched exactly to your ICP specifications." },
     { question: "What's the turnaround time?", answer: "Most LinkedIn prospecting projects are delivered within 48–72 hours for standard volumes. Larger projects (5,000+ contacts) may take 5–7 business days. We offer expedited delivery for urgent campaigns." },
   ];
+  useFAQSchema(faqs);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

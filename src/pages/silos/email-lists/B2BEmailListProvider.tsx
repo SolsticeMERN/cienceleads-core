@@ -2,6 +2,7 @@ import { ArrowRight, Mail, Check, Shield, Target, Users, TrendingUp, BarChart3, 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import { useFAQSchema } from "@/hooks/use-faq-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 import PageFAQSection from "@/components/PageFAQSection";
@@ -19,6 +20,7 @@ const B2BEmailListProvider = () => {
     { question: "Are your email lists GDPR compliant?", answer: "CienceLeads sources contact data from publicly available business records and professional profiles. Our data is intended for B2B outreach under legitimate interest provisions. We recommend consulting your legal team for specific GDPR compliance requirements." },
     { question: "What volume of emails can you provide?", answer: "We deliver 500 to 10,000+ verified email contacts per month depending on your ICP specificity and targeting requirements. Custom volumes are available for enterprise clients." },
   ];
+  useFAQSchema(faqs);
 
   return (
     <main className="min-h-screen bg-background text-foreground">
