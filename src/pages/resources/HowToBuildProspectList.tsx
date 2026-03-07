@@ -1,143 +1,139 @@
-import { usePageSEO } from "@/hooks/use-page-seo";
-import { useFAQSchema } from "@/hooks/use-faq-schema";
-import ScrollReveal from "@/components/ScrollReveal";
-import PageFAQSection from "@/components/PageFAQSection";
-import InternalLinkBlock from "@/components/InternalLinkBlock";
+import { ArrowRight, Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ListChecks, ArrowRight } from "lucide-react";
-
-const faqs = [
-  { question: "How many prospects should be on a B2B prospect list?", answer: "A well-targeted B2B prospect list typically contains 200–1,000 contacts per campaign. Smaller, highly targeted lists outperform larger generic ones. Focus on quality over quantity — 500 verified decision-makers will generate more pipeline than 5,000 unverified contacts." },
-  { question: "What information should a prospect list include?", answer: "A complete prospect list should include full name, job title, company name, verified business email, direct phone number, LinkedIn profile URL, company size, industry, and location. The more data points you capture, the better you can personalize outreach." },
-  { question: "How long does it take to build a prospect list?", answer: "Building a quality prospect list manually takes 15–30 hours for 500 contacts. Using a professional lead list building service like CienceLeads, you can receive 500–1,000 verified prospects in 3–5 business days with guaranteed accuracy." },
-  { question: "Should I buy a prospect list or build one myself?", answer: "Building your own list gives you more control but takes significant time. Buying pre-built lists is faster but often has accuracy issues. The best approach is using a lead list building service that custom-builds lists to your exact ICP with human verification." },
-];
+import { usePageSEO } from "@/hooks/use-page-seo";
 
 const HowToBuildProspectList = () => {
   usePageSEO(
-    "How to Build a Prospect List for B2B Sales (2026 Guide)",
+    "How to Build a Prospect List for B2B Sales (2026 Guide) — CienceLeads",
     "Step-by-step guide to building a B2B prospect list — define your ICP, find decision-makers, verify contact data, and build CRM-ready lists that convert."
   );
-  useFAQSchema(faqs);
 
   return (
     <main className="min-h-screen bg-background text-foreground">
-      <section className="py-24 md:py-32">
+      <article className="py-24 md:py-32">
         <div className="container max-w-3xl">
-          <ScrollReveal>
-            <div className="mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full border border-border bg-secondary/50 backdrop-blur-sm text-sm text-muted-foreground">
-                <ListChecks className="w-3.5 h-3.5" /> Prospect List Building
-              </div>
-              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
-                How to Build a Prospect List for{" "}
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">B2B Sales</span>
-              </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                A well-built prospect list is the foundation of every successful B2B sales campaign. This guide walks you through the exact process sales teams use to build targeted, verified prospect lists that generate pipeline and revenue.
-              </p>
+          <div className="mb-12">
+            <Link to="/resources" className="text-sm text-muted-foreground hover:text-primary transition-colors mb-4 inline-block">← Back to Resources</Link>
+            <span className="block text-xs text-muted-foreground mb-4">8 min read · Updated 2026</span>
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+              How to Build a Prospect List for B2B Sales
+            </h1>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              A well-built prospect list is the foundation of every successful B2B sales campaign. This guide walks you through the exact process sales teams use to build targeted, verified prospect lists that generate pipeline and revenue.
+            </p>
+          </div>
+
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-4">What Is a Prospect List?</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              A prospect list is a curated database of potential buyers who match your Ideal Customer Profile (ICP). Unlike generic contact lists, a prospect list is built around specific criteria — industry, company size, job title, location, and technology stack — to ensure every contact is a realistic buyer.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Companies that invest in <Link to="/b2b-lead-generation/prospect-research" className="text-primary hover:underline">B2B prospect research</Link> before launching outreach campaigns see 3–5x higher response rates compared to teams using generic purchased lists.
+            </p>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-4">How to Build a Prospect List: Step by Step</h2>
+            <div className="rounded-xl border border-border bg-card/50 p-6 my-6">
+              <ol className="space-y-4">
+                {[
+                  { step: "Define Your Ideal Customer Profile", desc: "Nail down industry, company size (employee count + revenue), job titles (VP Sales, CTO, Head of Marketing), geography, and technology stack before sourcing a single contact." },
+                  { step: "Source Prospect Data", desc: "Use LinkedIn Sales Navigator for advanced filters, company directories, conference attendee lists, and professional associations. Combine multiple sources for the most complete data." },
+                  { step: "Verify Contact Information", desc: "Raw prospect data decays at 30% per year. Run every email through SMTP handshake verification and validate direct dials. Human-verified leads catch edge cases tools miss." },
+                  { step: "Enrich With Additional Data Points", desc: "Append company revenue, recent funding rounds, technology stack, and social profiles. Enriched data enables the personalization that drives reply rates." },
+                  { step: "Organize and Import to CRM", desc: "Segment your list by priority, industry, or campaign type. Tag properly and import directly into your CRM so your sales team can start outreach immediately." },
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm">
+                    <span className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-xs font-bold text-primary">{i + 1}</span>
+                    <div>
+                      <strong className="text-foreground">{item.step}</strong>
+                      <p className="text-muted-foreground mt-1">{item.desc}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
             </div>
-          </ScrollReveal>
+          </section>
 
-          <div className="space-y-12">
-            <ScrollReveal>
-              <div className="prose prose-lg max-w-none">
-                <h2 className="text-2xl font-bold mb-4">What Is a Prospect List?</h2>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  A prospect list is a curated database of potential buyers who match your Ideal Customer Profile (ICP). Unlike generic contact lists, a prospect list is built around specific criteria — industry, company size, job title, location, and technology stack — to ensure every contact is a realistic buyer.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Companies that invest in <Link to="/b2b-lead-generation/prospect-research" className="text-primary hover:underline">B2B prospect research</Link> before launching outreach campaigns see 3–5x higher response rates compared to teams using generic purchased lists.
-                </p>
-              </div>
-            </ScrollReveal>
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-4">What Data Should a Prospect List Include?</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              A complete, outreach-ready prospect list includes more than just names and emails. The more data points you capture, the better you can personalize outreach and qualify leads.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                "Full name and verified job title",
+                "Verified business email (SMTP checked)",
+                "Direct phone number / mobile",
+                "LinkedIn profile URL",
+                "Company name, size, and revenue",
+                "Industry and sub-industry",
+                "Headquarters location",
+                "Technology stack / tools used",
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3 text-sm">
+                  <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </section>
 
-            <ScrollReveal>
-              <div>
-                <h2 className="text-2xl font-bold mb-4">Step 1: Define Your Ideal Customer Profile</h2>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Before building any list, define exactly who you're targeting. Your ICP should include:
-                </p>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-start gap-2"><ArrowRight className="w-4 h-4 text-primary mt-1 shrink-0" /> <strong>Industry:</strong> SaaS, fintech, healthcare, agencies, etc.</li>
-                  <li className="flex items-start gap-2"><ArrowRight className="w-4 h-4 text-primary mt-1 shrink-0" /> <strong>Company size:</strong> Employee count and revenue range</li>
-                  <li className="flex items-start gap-2"><ArrowRight className="w-4 h-4 text-primary mt-1 shrink-0" /> <strong>Job titles:</strong> VP Sales, Head of Marketing, CTO, etc.</li>
-                  <li className="flex items-start gap-2"><ArrowRight className="w-4 h-4 text-primary mt-1 shrink-0" /> <strong>Geography:</strong> Target regions and markets</li>
-                  <li className="flex items-start gap-2"><ArrowRight className="w-4 h-4 text-primary mt-1 shrink-0" /> <strong>Technology:</strong> Tools they currently use</li>
-                </ul>
-              </div>
-            </ScrollReveal>
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-4">Why Verification Is Non-Negotiable</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Studies show that B2B contact databases decay at 30% per year due to job changes, company closures, and email changes. Every contact on your list needs verification before outreach.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Use <Link to="/data-enrichment/email-verification" className="text-primary hover:underline">email verification services</Link> to validate email addresses via SMTP handshake. For the highest accuracy, choose <Link to="/b2b-lead-generation/human-verified-leads" className="text-primary hover:underline">human-verified leads</Link> — they catch role-based emails, job changes, and outdated contacts that automated tools miss.
+            </p>
+          </section>
 
-            <ScrollReveal>
-              <div>
-                <h2 className="text-2xl font-bold mb-4">Step 2: Source Prospect Data</h2>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Once your ICP is defined, gather prospect data from multiple sources:
-                </p>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  <strong>LinkedIn Sales Navigator</strong> is the most popular tool for finding B2B prospects. Use advanced filters to search by title, company size, industry, and geography. For systematic LinkedIn prospecting, consider a <Link to="/linkedin-prospecting/service" className="text-primary hover:underline">LinkedIn prospecting service</Link> that handles research at scale.
-                </p>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  <strong>Company websites and directories</strong> provide additional data points. Industry directories, conference attendee lists, and professional associations are often overlooked gold mines for prospect data.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  <strong>Professional <Link to="/b2b-lead-generation/lead-list-building" className="text-primary hover:underline">lead list building services</Link></strong> combine multiple data sources with human verification to deliver CRM-ready lists faster than any in-house effort.
-                </p>
-              </div>
-            </ScrollReveal>
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-4">Build vs. Buy: When to Use a Service</h2>
+            <div className="space-y-3">
+              {[
+                { title: "Build in-house when...", desc: "You have a small, well-defined ICP and your sales team has time to research. Expect 15–30 hours for 500 verified contacts." },
+                { title: "Use a service when...", desc: "You need scale, speed, or guaranteed accuracy. A professional lead list building service delivers 500–1,000 verified prospects in 3–5 business days." },
+                { title: "Avoid generic purchased lists", desc: "Pre-built lists from data vendors often have 15–30% bounce rates. They're not custom-built to your ICP and the data is shared with competitors." },
+              ].map((item) => (
+                <div key={item.title} className="rounded-xl border border-border bg-card/50 p-6">
+                  <h3 className="font-semibold mb-1">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </section>
 
-            <ScrollReveal>
-              <div>
-                <h2 className="text-2xl font-bold mb-4">Step 3: Verify Contact Information</h2>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Raw prospect data is unreliable. Studies show that B2B contact databases decay at 30% per year due to job changes, company closures, and email changes. Every contact on your list needs verification before outreach.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Use <Link to="/data-enrichment/email-verification" className="text-primary hover:underline">email verification services</Link> to validate email addresses via SMTP handshake. For the highest accuracy, choose <Link to="/b2b-lead-generation/human-verified-leads" className="text-primary hover:underline">human-verified leads</Link> — they catch role-based emails, job changes, and outdated contacts that automated tools miss.
-                </p>
-              </div>
-            </ScrollReveal>
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-4">Results You Can Expect</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Teams using professionally built prospect lists from a <Link to="/b2b-lead-generation/service" className="text-primary hover:underline">B2B lead generation service</Link> report 40–60% open rates and 8–15% reply rates on cold email — compared to 15–25% open rates with generic lists. The difference is data quality.
+            </p>
+          </section>
 
-            <ScrollReveal>
-              <div>
-                <h2 className="text-2xl font-bold mb-4">Step 4: Enrich and Organize Your List</h2>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  After verification, enrich your prospect list with additional data points that enable personalization. Add company revenue, recent funding rounds, technology stack, and social profiles. A <Link to="/data-enrichment/service" className="text-primary hover:underline">data enrichment service</Link> can automate this process.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Organize your list into segments based on priority, industry, or campaign type. Import directly into your CRM with proper tagging so your sales team can start outreach immediately.
-                </p>
-              </div>
-            </ScrollReveal>
+          <div className="rounded-xl border border-border bg-card/50 p-6 mb-12">
+            <h3 className="font-semibold mb-3">Related Resources & Services</h3>
+            <div className="grid sm:grid-cols-2 gap-2">
+              <Link to="/b2b-lead-generation/lead-list-building" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5" /> Lead List Building Service</Link>
+              <Link to="/b2b-lead-generation/prospect-research" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5" /> B2B Prospect Research</Link>
+              <Link to="/b2b-lead-generation/service" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5" /> B2B Lead Generation Service</Link>
+              <Link to="/b2b-lead-generation/human-verified-leads" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5" /> Human-Verified Leads</Link>
+              <Link to="/data-enrichment/service" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5" /> Data Enrichment Service</Link>
+            </div>
+          </div>
 
-            <ScrollReveal>
-              <div>
-                <h2 className="text-2xl font-bold mb-4">Step 5: Launch Targeted Outreach</h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  With a verified, enriched prospect list, your outreach campaigns will perform significantly better. Teams using professionally built prospect lists from a <Link to="/b2b-lead-generation/service" className="text-primary hover:underline">B2B lead generation service</Link> report 40–60% open rates and 8–15% reply rates on cold email — compared to 15–25% open rates with generic lists.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal>
-              <PageFAQSection faqs={faqs} heading="Prospect List Building FAQ" />
-            </ScrollReveal>
-
-            <ScrollReveal>
-              <InternalLinkBlock
-                title="Related Services"
-                links={[
-                  { to: "/b2b-lead-generation/lead-list-building", label: "Lead List Building Service" },
-                  { to: "/b2b-lead-generation/prospect-research", label: "B2B Prospect Research" },
-                  { to: "/b2b-lead-generation/service", label: "B2B Lead Generation Service" },
-                  { to: "/b2b-lead-generation/human-verified-leads", label: "Human-Verified Leads" },
-                  { to: "/data-enrichment/service", label: "Data Enrichment Service" },
-                ]}
-              />
-            </ScrollReveal>
+          <div className="text-center">
+            <Link to="/contact">
+              <Button size="lg" className="text-base px-10 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
+                Get a Custom Prospect List <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
-      </section>
+      </article>
     </main>
   );
 };
