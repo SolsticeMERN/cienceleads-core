@@ -1,4 +1,5 @@
 import { Shield, Globe, Users, TrendingUp } from "lucide-react";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const stats = [
   { icon: TrendingUp, value: "2,500+", label: "Projects Delivered" },
@@ -11,28 +12,29 @@ const AboutSection = () => {
   return (
     <section className="py-20 md:py-28 border-y border-border">
       <div className="container max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          About CienceLeads — Your B2B Lead Generation Agency
-        </h2>
-        <p className="text-muted-foreground text-center mb-16 max-w-2xl mx-auto leading-relaxed">
-          With <strong className="text-foreground">2,500+ projects delivered</strong> across USA, UK, Canada & Australia,
-          CienceLeads is the <strong className="text-foreground">B2B contact list provider</strong> trusted by SaaS founders, agency owners,
-          and VPs of Sales who demand <strong className="text-foreground">human-verified B2B leads</strong> with zero bounce rates.
-          We're not a B2B lead database — we're a <strong className="text-foreground">B2B lead generation service</strong> that researches every contact on demand.
-        </p>
+        <ScrollReveal>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            About CienceLeads — Your B2B Lead Generation Agency
+          </h2>
+          <p className="text-muted-foreground text-center mb-16 max-w-2xl mx-auto leading-relaxed">
+            With <strong className="text-foreground">2,500+ projects delivered</strong> across USA, UK, Canada & Australia,
+            CienceLeads is the <strong className="text-foreground">B2B contact list provider</strong> trusted by SaaS founders, agency owners,
+            and VPs of Sales who demand <strong className="text-foreground">human-verified B2B leads</strong> with zero bounce rates.
+            We're not a B2B lead database — we're a <strong className="text-foreground">B2B lead generation service</strong> that researches every contact on demand.
+          </p>
+        </ScrollReveal>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="text-center p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm"
-            >
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                <stat.icon className="w-5 h-5 text-primary" />
+          {stats.map((stat, i) => (
+            <ScrollReveal key={stat.label} delay={i * 0.1}>
+              <div className="text-center p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="w-5 h-5 text-primary" />
+                </div>
+                <div className="text-2xl md:text-3xl font-extrabold mb-1">{stat.value}</div>
+                <div className="text-xs text-muted-foreground uppercase tracking-wider font-medium">{stat.label}</div>
               </div>
-              <div className="text-2xl md:text-3xl font-extrabold mb-1">{stat.value}</div>
-              <div className="text-xs text-muted-foreground uppercase tracking-wider font-medium">{stat.label}</div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>
