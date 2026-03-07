@@ -47,6 +47,7 @@ import LeadGenerationCostGuide from "./pages/resources/LeadGenerationCostGuide";
 import LeadGenerationStrategies from "./pages/resources/LeadGenerationStrategies";
 import BestProspectingTools from "./pages/resources/BestProspectingTools";
 import SalesOutreachStrategies from "./pages/resources/SalesOutreachStrategies";
+import B2BLeadGenerationStatistics from "./pages/resources/B2BLeadGenerationStatistics";
 import LeadGenForSaaS from "./pages/industries/LeadGenForSaaS";
 import LeadGenForAgencies from "./pages/industries/LeadGenForAgencies";
 import LeadGenForStartups from "./pages/industries/LeadGenForStartups";
@@ -109,6 +110,7 @@ const App = () => (
           <Route path="/resources/lead-generation-strategies" element={<LeadGenerationStrategies />} />
           <Route path="/resources/best-prospecting-tools" element={<BestProspectingTools />} />
           <Route path="/resources/sales-outreach-strategies" element={<SalesOutreachStrategies />} />
+          <Route path="/resources/b2b-lead-generation-statistics" element={<B2BLeadGenerationStatistics />} />
           {/* Industry Pages */}
           <Route path="/b2b-lead-generation-for-saas" element={<LeadGenForSaaS />} />
           <Route path="/b2b-lead-generation-for-agencies" element={<LeadGenForAgencies />} />
