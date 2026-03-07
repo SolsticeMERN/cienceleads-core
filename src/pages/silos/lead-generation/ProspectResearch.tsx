@@ -1,4 +1,4 @@
-import { ArrowRight, Search, Check, BookOpen, Target, ClipboardList, Users, Shield, TrendingUp, Clock, Layers, Eye } from "lucide-react";
+import { ArrowRight, Search, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
@@ -6,18 +6,18 @@ import { useFAQSchema } from "@/hooks/use-faq-schema";
 import PageFAQSection from "@/components/PageFAQSection";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 
+const faqs = [
+  { question: "What is B2B prospect research?", answer: "B2B prospect research is the process of manually investigating potential business buyers to build detailed profiles that include verified contact information, company data, technology usage, and buying signals. It goes beyond basic lead lists by providing context that enables personalized outreach." },
+  { question: "What data is included in prospect research?", answer: "Our prospect research includes verified email, direct dial, LinkedIn URL, current job title and seniority, company firmographics such as size, revenue, and industry, technology stack intelligence, recent hiring patterns, growth signals, and custom research notes for personalized outreach." },
+  { question: "How is prospect research different from lead list building?", answer: "Lead list building focuses on compiling verified contact lists at scale. Prospect research goes deeper with individual analysis including buying signals, technology intelligence, company context, and personalized outreach angles. Prospect research is ideal for account-based marketing and high-value targets." },
+  { question: "How many prospects can you research per month?", answer: "We typically research 200 to 2,000 prospects per month depending on the depth required. Deep-research profiles with tech stack, buying signals, and custom notes take longer per prospect than standard verification. Contact us to discuss your specific requirements." },
+];
+
 const ProspectResearch = () => {
   usePageSEO(
-    "B2B Prospect Research Service | Deep-Research Prospect Profiles — CienceLeads",
-    "B2B prospect research service delivering deep-researched contact profiles with buying signals, tech stack data, and verified contact information for your sales team."
+    "B2B Prospect Research | Deep-Research Prospect Profiles — CienceLeads",
+    "B2B prospect research service delivering detailed contact profiles with buying signals, tech stack data, and verified contact information for personalized sales outreach."
   );
-
-  const faqs = [
-    { question: "What is B2B prospect research?", answer: "B2B prospect research is the process of manually investigating and profiling potential business buyers to identify decision-makers, understand their company context, and gather verified contact information. Unlike automated list scraping, prospect research delivers deep insights that enable personalized outreach." },
-    { question: "What data do you include in prospect research?", answer: "Our prospect research includes verified email, direct dial, LinkedIn URL, job title and seniority, company firmographics (size, revenue, industry), technology stack, recent hiring patterns, growth signals, competitive landscape context, and custom research notes for personalized outreach." },
-    { question: "How is prospect research different from lead list building?", answer: "Lead list building focuses on compiling verified contact lists at scale. Prospect research goes deeper — each prospect receives individual analysis including buying signals, technology intelligence, company context, and personalized outreach angles. Prospect research is ideal for ABM campaigns and high-value targets." },
-    { question: "How many prospects can you research per month?", answer: "We typically research 200–2,000 prospects per month depending on the depth required. Deep-research profiles (with tech stack, buying signals, and custom notes) take longer per prospect than standard verification. Contact us to discuss your specific requirements." },
-  ];
   useFAQSchema(faqs);
 
   return (
@@ -29,169 +29,150 @@ const ProspectResearch = () => {
               <Search className="w-3.5 h-3.5" /> B2B Prospect Research
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
-              B2B Prospect{" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Research</span>
+              B2B Prospect Research for Personalized{" "}
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Outreach</span>
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Our B2B prospect research service goes beyond basic data. We deliver{" "}
-              <strong className="text-foreground">deep-researched prospect profiles</strong> with buying signals, tech stack data, and verified contact information for personalized outreach.
+          </div>
+
+          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Generic cold outreach gets ignored. Sales teams that personalize their messaging based on real research consistently outperform those sending templated emails to purchased lists.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              B2B prospect research gives your sales team the context they need to start relevant conversations with decision-makers. Instead of just a name and email, your team receives detailed profiles including company challenges, technology usage, hiring patterns, and personalized outreach angles.
             </p>
           </div>
 
-          {/* What is Prospect Research */}
           <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-            <h2 className="text-2xl font-bold mb-4">What is B2B Prospect Research?</h2>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-              B2B prospect research is the practice of manually investigating potential business buyers to build comprehensive profiles that go far beyond basic contact data. While standard lead lists provide name, email, and company, prospect research delivers the context your sales team needs to personalize every touchpoint.
+            <h2 className="text-2xl font-bold mb-4">What Is B2B Prospect Research?</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              B2B prospect research is the practice of manually investigating potential business buyers to build comprehensive profiles. While standard lead lists provide a name, email, and company, prospect research delivers the context that transforms cold outreach into warm conversations.
             </p>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-              Effective prospect research answers critical questions: What technology does the company use? Are they hiring for roles that signal buying intent? What challenges does the prospect's department face? Who else in the organization is involved in purchasing decisions? These insights transform generic cold outreach into relevant, value-driven conversations.
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Effective prospect research answers critical questions about each target:
             </p>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              At CienceLeads, our prospect research combines manual LinkedIn analysis, company website research, technology intelligence platforms, and public business records to deliver prospect profiles that drive 3–5x higher reply rates compared to standard contact lists.
-            </p>
-          </div>
-
-          {/* Research Process */}
-          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-            <h2 className="text-2xl font-bold mb-6">Our Research Process</h2>
-            <div className="grid md:grid-cols-3 gap-6 mb-6">
-              {[
-                { icon: BookOpen, title: "1. ICP Brief", desc: "Define your ideal customer — titles, industries, company size, technology, geography, and buying signals to watch for." },
-                { icon: Target, title: "2. Manual Research", desc: "Our analysts research each prospect individually across LinkedIn, company sites, job boards, press releases, and databases." },
-                { icon: ClipboardList, title: "3. Quality Delivery", desc: "Every prospect is verified and delivered with context notes, buying signals, and personalized outreach angles." },
-              ].map((s) => (
-                <div key={s.title} className="text-center">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                    <s.icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <h3 className="font-semibold mb-1">{s.title}</h3>
-                  <p className="text-sm text-muted-foreground">{s.desc}</p>
-                </div>
-              ))}
-            </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Each prospect research project is assigned to a dedicated analyst who becomes an expert in your ICP and target market. This consistent analyst relationship means research quality improves over time as they learn your buyer persona's nuances, objections, and decision-making patterns.
-            </p>
-          </div>
-
-          {/* What Research Includes */}
-          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-            <h2 className="text-2xl font-bold mb-6">What Our Prospect Research Includes</h2>
-            <div className="grid sm:grid-cols-2 gap-4 mb-6">
-              {[
-                "Decision-maker identification by role and seniority",
-                "Verified email and direct dial for each prospect",
-                "Company firmographic data (size, revenue, industry)",
-                "Technology stack intelligence",
-                "Recent hiring patterns and growth signals",
-                "LinkedIn profile URLs for warm outreach",
-                "Competitive landscape context",
-                "Custom research notes per prospect",
-                "Buying intent signals and trigger events",
-                "Organizational chart mapping for complex deals",
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-3 text-sm">
+            <ul className="space-y-2 mb-4">
+              {["What technology does the company currently use?", "Are they hiring for roles that signal buying intent?", "What challenges does the prospect's department face?", "Who else in the organization is involved in purchasing decisions?", "Has the company received recent funding or announced growth plans?"].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                   <span>{item}</span>
-                </div>
+                </li>
               ))}
-            </div>
-          </div>
-
-          {/* Why Prospect Research Matters */}
-          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-            <h2 className="text-2xl font-bold mb-4">Why Prospect Research Drives Better Results</h2>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-              Generic outreach gets ignored. According to Gartner, 77% of B2B buyers say their last purchase was "very complex or difficult." The sales teams that win are the ones who demonstrate deep understanding of the prospect's business before the first conversation. That understanding starts with thorough prospect research.
+            </ul>
+            <p className="text-muted-foreground leading-relaxed">
+              These insights allow sales teams to craft messages that reference specific company situations rather than sending generic pitches.
             </p>
-            <div className="grid md:grid-cols-3 gap-6">
+          </div>
+
+          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <h2 className="text-2xl font-bold mb-6">Our Prospect Research Process</h2>
+
+            <h3 className="text-lg font-semibold mb-3">1. Define Your Research Brief</h3>
+            <p className="text-muted-foreground leading-relaxed mb-3">
+              We start by understanding exactly who you want to reach. This includes target industries, company sizes, job titles, seniority levels, and the specific buying signals or company attributes that indicate a good fit for your product.
+            </p>
+
+            <h3 className="text-lg font-semibold mb-3 mt-6">2. Manual Research and Investigation</h3>
+            <p className="text-muted-foreground leading-relaxed mb-3">
+              Our analysts research each prospect individually across multiple sources:
+            </p>
+            <ul className="space-y-1 mb-3">
+              {["LinkedIn profiles and activity", "Company websites and about pages", "Job postings and hiring patterns", "Press releases and news mentions", "Technology intelligence platforms", "Public financial records"].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                  <Check className="w-3.5 h-3.5 text-primary mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="text-lg font-semibold mb-3 mt-6">3. Contact Verification</h3>
+            <p className="text-muted-foreground leading-relaxed mb-3">
+              Every prospect profile includes verified contact information. Email addresses are confirmed through SMTP handshake verification. Phone numbers are validated for format and carrier. LinkedIn URLs are confirmed as active profiles.
+            </p>
+
+            <h3 className="text-lg font-semibold mb-3 mt-6">4. Profile Delivery with Context Notes</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Each prospect is delivered with custom research notes including recommended outreach angles, relevant talking points, and any buying signals our analysts identified. This gives your sales team a head start on personalization.
+            </p>
+          </div>
+
+          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <h2 className="text-2xl font-bold mb-4">What Prospect Research Includes</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Every prospect profile delivered by CienceLeads contains:
+            </p>
+            <ul className="grid sm:grid-cols-2 gap-2">
+              {["Decision-maker name and current job title", "Verified email address", "Direct dial phone number", "LinkedIn profile URL", "Company name, website, and industry", "Company size and revenue range", "Technology stack data", "Recent hiring patterns and growth signals", "Competitive landscape context", "Custom research notes for personalization"].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                  <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <h2 className="text-2xl font-bold mb-4">Prospect Research vs. Standard Lead Lists</h2>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Both approaches deliver verified contact data, but prospect research provides significantly more depth:
+            </p>
+            <div className="rounded-xl border border-border overflow-hidden">
+              <div className="grid grid-cols-3 bg-secondary/50 border-b border-border">
+                <div className="p-4 text-sm font-medium text-muted-foreground">Feature</div>
+                <div className="p-4 text-sm font-semibold text-primary text-center">Prospect Research</div>
+                <div className="p-4 text-sm font-medium text-muted-foreground text-center">Standard Lead Lists</div>
+              </div>
               {[
-                { icon: TrendingUp, title: "3-5x Higher Reply Rates", desc: "Personalized outreach based on research converts significantly better than generic templates." },
-                { icon: Clock, title: "Shorter Sales Cycles", desc: "Informed first touches build credibility faster, reducing the time from outreach to closed deal." },
-                { icon: Users, title: "Multi-Threading", desc: "Org chart mapping identifies all stakeholders, enabling multi-threaded engagement from day one." },
-              ].map((s) => (
-                <div key={s.title} className="text-center">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                    <s.icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <h3 className="font-semibold mb-1">{s.title}</h3>
-                  <p className="text-sm text-muted-foreground">{s.desc}</p>
+                ["Depth of data", "Deep profiles with context", "Name, email, and title"],
+                ["Buying signals", "Included", "Not available"],
+                ["Tech stack data", "Researched per prospect", "Rarely included"],
+                ["Custom notes", "Per prospect", "None"],
+                ["Best for", "ABM and high-value targets", "Volume outreach"],
+                ["Reply rate impact", "3 to 5x higher", "Baseline"],
+              ].map(([feature, research, standard], i, arr) => (
+                <div key={feature} className={`grid grid-cols-3 ${i < arr.length - 1 ? "border-b border-border" : ""}`}>
+                  <div className="p-4 text-sm font-medium">{feature}</div>
+                  <div className="p-4 text-sm text-center text-primary">{research}</div>
+                  <div className="p-4 text-sm text-center text-muted-foreground">{standard}</div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Comparison */}
-          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-            <h2 className="text-2xl font-bold mb-6">Prospect Research vs. Standard Lead Lists</h2>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b border-border">
-                    <th className="text-left py-3 font-semibold">Feature</th>
-                    <th className="text-center py-3 font-semibold text-primary">Prospect Research</th>
-                    <th className="text-center py-3 font-semibold text-muted-foreground">Standard Lists</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-border">
-                  {[
-                    ["Depth of Data", "Deep profiles + context", "Name, email, title"],
-                    ["Buying Signals", "✓ Included", "✗ Not available"],
-                    ["Tech Stack Data", "✓ Researched", "✗ Rarely included"],
-                    ["Custom Notes", "✓ Per prospect", "✗ None"],
-                    ["Best For", "ABM & high-value targets", "Volume outreach"],
-                    ["Reply Rate Impact", "3-5x higher", "Baseline"],
-                  ].map(([feature, research, standard]) => (
-                    <tr key={feature}>
-                      <td className="py-3">{feature}</td>
-                      <td className="py-3 text-center text-primary font-medium">{research}</td>
-                      <td className="py-3 text-center text-muted-foreground">{standard}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          {/* Who It's For */}
           <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
             <h2 className="text-2xl font-bold mb-4">Who Benefits from Prospect Research?</h2>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {[
-                "Enterprise sales teams running ABM campaigns",
-                "SaaS companies targeting specific verticals",
-                "Sales teams with high-ACV deals ($50K+)",
-                "Startups entering new markets",
-                "Agencies managing multi-channel outreach",
-                "Teams using intent data for trigger-based selling",
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-3 text-sm">
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Prospect research delivers the highest value for teams where personalization directly impacts deal outcomes:
+            </p>
+            <ul className="grid sm:grid-cols-2 gap-2">
+              {["Enterprise sales teams running ABM campaigns", "SaaS companies targeting specific verticals", "Sales teams with high-value deals", "Startups entering new markets", "Agencies managing multi-channel outreach for clients", "Teams using intent data for trigger-based selling"].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                   <span>{item}</span>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
-          {/* FAQ */}
           <div className="mb-8">
-            <PageFAQSection faqs={faqs} heading="B2B Prospect Research FAQ" />
+            <PageFAQSection faqs={faqs} heading="Frequently Asked Questions" />
           </div>
 
-          <InternalLinkBlock
-            title="Related Services & Resources"
-            links={[
-              { to: "/b2b-lead-generation/service", label: "B2B Lead Generation Service" },
-              { to: "/b2b-lead-generation/lead-list-building", label: "Lead List Building" },
-              { to: "/linkedin-prospecting/service", label: "LinkedIn Prospecting Service" },
-              { to: "/data-enrichment/service", label: "Data Enrichment Service" },
-              { to: "/resources/linkedin-prospecting-guide", label: "LinkedIn Prospecting Guide" },
-              { to: "/contact", label: "Start Prospect Research" },
-            ]}
-          />
+          <div className="mb-12">
+            <InternalLinkBlock
+              title="Related Services"
+              links={[
+                { to: "/b2b-lead-generation/service", label: "B2B Lead Generation Service" },
+                { to: "/b2b-lead-generation/lead-list-building", label: "Lead List Building" },
+                { to: "/b2b-lead-generation/verified-leads", label: "Verified B2B Leads" },
+                { to: "/linkedin-prospecting/service", label: "LinkedIn Prospecting Service" },
+                { to: "/data-enrichment/service", label: "Data Enrichment Service" },
+                { to: "/contact", label: "Start Prospect Research" },
+              ]}
+            />
+          </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center">
             <Link to="/contact">
               <Button size="lg" className="text-base px-10 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
                 Start Prospect Research <ArrowRight className="ml-2" />
