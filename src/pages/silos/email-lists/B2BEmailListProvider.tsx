@@ -13,6 +13,7 @@ const B2BEmailListProvider = () => {
     "B2B Email List Provider | Verified Email Lists for Cold Outreach — CienceLeads",
     "B2B email list provider delivering verified, ICP-matched contact lists for cold outreach. 0% bounce guarantee. Every list built on demand by human researchers."
   );
+  useFAQSchema(faqs);
 
   const faqs = [
     { question: "What makes CienceLeads different from other email list providers?", answer: "Most email list providers sell access to pre-built databases of scraped contacts. CienceLeads builds every email list on demand, matched to your specific ICP. Every contact is individually researched by human researchers and verified via SMTP handshake — guaranteeing 0% bounce rates." },

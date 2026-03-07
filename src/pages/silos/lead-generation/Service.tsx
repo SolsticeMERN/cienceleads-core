@@ -13,6 +13,7 @@ const LeadGenerationService = () => {
     "B2B Lead Generation Service | Custom Lead Lists | 0% Bounce — CienceLeads",
     "Professional B2B lead generation service delivering custom-built, human-verified lead lists. 0% bounce guarantee. Trusted by 2,500+ sales teams worldwide."
   );
+  useFAQSchema(faqs);
 
   const faqs = [
     { question: "What is a B2B lead generation service?", answer: "A B2B lead generation service is a professional service that researches, identifies, and verifies potential business buyers who match your Ideal Customer Profile. Unlike databases that sell pre-built lists, a service like CienceLeads builds custom prospect lists on demand with human verification." },

@@ -13,6 +13,7 @@ const DataEnrichmentService = () => {
     "Data Enrichment Service | Clean & Verify Your B2B Data — CienceLeads",
     "Data enrichment service to clean, verify, and enrich your B2B contact lists. SMTP verification, field appending, and domain risk scoring. 0% bounce guarantee."
   );
+  useFAQSchema(faqs);
 
   const faqs = [
     { question: "What does your data enrichment service include?", answer: "Our data enrichment service includes multi-layer email verification (SMTP, MX, catch-all detection), missing field appending (phone, LinkedIn, company data), duplicate removal, domain risk scoring, deliverability confidence scoring, CRM field mapping, and a detailed before/after audit report." },

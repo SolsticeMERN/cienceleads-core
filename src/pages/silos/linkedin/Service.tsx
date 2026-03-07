@@ -13,6 +13,7 @@ const LinkedInService = () => {
     "LinkedIn Prospecting Service | Find Decision-Makers on LinkedIn — CienceLeads",
     "LinkedIn prospecting service delivering verified decision-maker contacts. Manual LinkedIn research with emails, direct dials, and company data. 0% bounce guarantee."
   );
+  useFAQSchema(faqs);
 
   const faqs = [
     { question: "What does your LinkedIn prospecting service include?", answer: "Our LinkedIn prospecting service includes manual decision-maker identification via LinkedIn Sales Navigator, multi-source email verification (SMTP + manual), direct dial validation, LinkedIn profile URLs, company firmographic data, and CRM-ready CSV delivery. Every contact is individually researched and verified." },
