@@ -1,15 +1,21 @@
 import { ArrowRight, Search, Check, Shield, Target, Users, FileSpreadsheet } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { usePageSEO } from "@/hooks/use-page-seo";
 
 const LeadListBuilding = () => {
+  usePageSEO(
+    "B2B Lead List Building | Verified B2B Email Lists | 0% Bounce — CienceLeads",
+    "B2B lead list building service delivering human-verified prospect lists for cold outreach. Buy verified B2B contact lists with 0% bounce guarantee. Trusted B2B email list provider."
+  );
+
   return (
     <main className="min-h-screen bg-background text-foreground">
       <section className="py-24 md:py-32">
         <div className="container max-w-4xl">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full border border-border bg-secondary/50 backdrop-blur-sm text-sm text-muted-foreground">
-              <Search className="w-3.5 h-3.5" /> Core Service
+              <Search className="w-3.5 h-3.5" /> B2B Lead Generation Service
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
               B2B Lead{" "}
@@ -18,15 +24,15 @@ const LeadListBuilding = () => {
               </span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Targeted, human-verified prospect lists built for cold outreach.
+              Targeted, human-verified B2B prospect lists built for cold email outreach.
               Every email validated. Every record matched to your ICP.{" "}
-              <strong className="text-foreground">0% bounce guaranteed.</strong>
+              <strong className="text-foreground">0% bounce guaranteed.</strong> We're the B2B email list provider
+              trusted by 2,500+ sales teams worldwide.
             </p>
           </div>
 
-          {/* What You Get */}
           <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-            <h2 className="text-2xl font-bold mb-6">What You Get</h2>
+            <h2 className="text-2xl font-bold mb-6">What You Get From Our B2B Contact List Service</h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
                 "Custom ICP targeting by industry, title, revenue & geo",
@@ -44,16 +50,15 @@ const LeadListBuilding = () => {
             </div>
           </div>
 
-          {/* How It Works */}
           <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-            <h2 className="text-2xl font-bold mb-6">How It Works</h2>
+            <h2 className="text-2xl font-bold mb-6">How Our B2B Lead Generation Service Works</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {[
-                { icon: Target, step: "1", title: "Define Your ICP", desc: "Share your ideal customer profile — titles, industries, company size, and geo." },
-                { icon: Users, step: "2", title: "We Research & Verify", desc: "Our team manually sources and validates every contact against live servers." },
-                { icon: FileSpreadsheet, step: "3", title: "Receive Clean Data", desc: "Get a CRM-ready CSV with verified emails, direct dials, and LinkedIn URLs." },
+                { icon: Target, title: "Define Your ICP", desc: "Share your ideal customer profile — titles, industries, company size, and target geo (USA, UK, Canada, Australia)." },
+                { icon: Users, title: "We Research & Verify", desc: "Our team manually sources and validates every contact — human-verified leads, not scraped data." },
+                { icon: FileSpreadsheet, title: "Receive CRM-Ready Data", desc: "Get a CRM-ready CSV with verified B2B emails, direct dials, and LinkedIn URLs." },
               ].map((s) => (
-                <div key={s.step} className="text-center">
+                <div key={s.title} className="text-center">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-3">
                     <s.icon className="w-5 h-5 text-primary" />
                   </div>
@@ -64,9 +69,8 @@ const LeadListBuilding = () => {
             </div>
           </div>
 
-          {/* Data Fields */}
           <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-12">
-            <h2 className="text-2xl font-bold mb-6">Data Fields Included</h2>
+            <h2 className="text-2xl font-bold mb-6">Data Fields Included in Every B2B Lead List</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {["Full Name", "Job Title", "Company Name", "Industry", "Company Size", "Revenue Range", "Verified Email", "Direct Dial", "LinkedIn URL", "City / State / Country", "Website URL", "Technology Stack"].map((field) => (
                 <div key={field} className="flex items-center gap-2 text-sm">
@@ -77,7 +81,6 @@ const LeadListBuilding = () => {
             </div>
           </div>
 
-          {/* CTA */}
           <div className="text-center">
             <Link to="/contact">
               <Button size="lg" className="text-base px-10 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">

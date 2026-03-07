@@ -1,4 +1,5 @@
 import { TrendingUp, Mail, Users, Clock, Target, BarChart3 } from "lucide-react";
+import { usePageSEO } from "@/hooks/use-page-seo";
 
 const caseStudies = [
   {
@@ -6,15 +7,15 @@ const caseStudies = [
     clientType: "SaaS Startup (Series A)",
     metric: "58%",
     metricLabel: "Open Rate",
-    description: "5,000 cold emails sent with zero bounces. Booked 47 demos in the first month.",
-    tags: ["B2B Lead Lists", "SaaS"],
+    description: "5,000 cold emails sent with zero bounces. Booked 47 demos in the first month using our B2B lead generation service.",
+    tags: ["B2B Lead Lists", "SaaS Lead Generation"],
   },
   {
     icon: Clock,
     clientType: "Marketing Agency",
     metric: "1,000",
     metricLabel: "Verified Leads in 72hrs",
-    description: "Needed decision-maker contacts at mid-market e-commerce brands — delivered in 3 days.",
+    description: "Needed decision-maker contacts at mid-market e-commerce brands — our LinkedIn prospecting service delivered in 3 days.",
     tags: ["LinkedIn Prospecting", "Fast Turnaround"],
   },
   {
@@ -22,36 +23,41 @@ const caseStudies = [
     clientType: "Real Estate Firm (USA)",
     metric: "3,200",
     metricLabel: "Geo-Targeted Leads",
-    description: "Property managers and investors across 12 states. 47% response rate on first touch.",
-    tags: ["Geo-Targeting", "Real Estate"],
+    description: "Property managers and investors across 12 states. 47% response rate on first touch with human-verified leads.",
+    tags: ["Geo-Targeting", "Verified B2B Leads"],
   },
   {
     icon: TrendingUp,
     clientType: "FinTech (Series A)",
     metric: "2 Weeks",
     metricLabel: "Full Pipeline Built",
-    description: "Built entire outbound pipeline from scratch — CFOs and VPs of Finance at 500+ companies.",
-    tags: ["Pipeline Build", "FinTech"],
+    description: "Built entire outbound pipeline from scratch — CFOs and VPs of Finance at 500+ companies. Outsourced lead generation that delivered.",
+    tags: ["Pipeline Build", "Outsourced Lead Generation"],
   },
   {
     icon: BarChart3,
     clientType: "IT Staffing Company",
     metric: "0%",
     metricLabel: "Bounce Rate on 8,000 Emails",
-    description: "Replaced their scraped list vendor. Domain reputation recovered within 2 weeks.",
-    tags: ["Data Enrichment", "Deliverability"],
+    description: "Replaced their scraped list vendor with our data enrichment service. Domain reputation recovered within 2 weeks.",
+    tags: ["Data Enrichment", "Email Verification"],
   },
   {
     icon: Users,
     clientType: "B2B SaaS (Growth Stage)",
     metric: "340%",
     metricLabel: "ROI in 90 Days",
-    description: "Targeted VP-level buyers at companies with 50–500 employees. Closed $220K in new ARR.",
-    tags: ["B2B Lead Lists", "ROI"],
+    description: "Targeted VP-level buyers at companies with 50–500 employees. Closed $220K in new ARR with CRM-ready leads from CienceLeads.",
+    tags: ["B2B Sales Prospecting", "Verified B2B Leads"],
   },
 ];
 
 const Proof = () => {
+  usePageSEO(
+    "B2B Lead Generation Results | Case Studies | Verified Leads That Convert — CienceLeads",
+    "Real B2B lead generation results from CienceLeads. See case studies: 58% open rates, 0% bounce rates, 340% ROI. Human-verified B2B leads that deliver pipeline."
+  );
+
   return (
     <main className="min-h-screen bg-background text-foreground">
       <section className="py-24 md:py-32">
@@ -64,7 +70,7 @@ const Proof = () => {
               </span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-              Metrics from real projects — not hypotheticals. See why 2,500+ B2B teams trust CienceLeads.
+              B2B lead generation results from real projects — not hypotheticals. See why 2,500+ B2B teams trust CienceLeads as their lead generation agency.
             </p>
           </div>
 

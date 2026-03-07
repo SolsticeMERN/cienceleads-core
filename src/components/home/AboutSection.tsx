@@ -12,12 +12,13 @@ const AboutSection = () => {
     <section className="py-20 md:py-28 border-y border-border">
       <div className="container max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          About CienceLeads
+          About CienceLeads — Your B2B Lead Generation Agency
         </h2>
         <p className="text-muted-foreground text-center mb-16 max-w-2xl mx-auto leading-relaxed">
-          With <strong className="text-foreground">2,500+ projects delivered</strong> across 4 continents,
-          CienceLeads is the B2B lead intelligence partner trusted by SaaS founders, agency owners,
-          and VPs of Sales who demand <strong className="text-foreground">zero-bounce, revenue-ready data</strong>.
+          With <strong className="text-foreground">2,500+ projects delivered</strong> across USA, UK, Canada & Australia,
+          CienceLeads is the <strong className="text-foreground">B2B contact list provider</strong> trusted by SaaS founders, agency owners,
+          and VPs of Sales who demand <strong className="text-foreground">human-verified B2B leads</strong> with zero bounce rates.
+          We're not a B2B lead database — we're a <strong className="text-foreground">B2B lead generation service</strong> that researches every contact on demand.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
