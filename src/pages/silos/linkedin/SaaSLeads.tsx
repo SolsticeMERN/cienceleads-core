@@ -1,13 +1,24 @@
-import { ArrowRight, Linkedin, Check, Code, Target, TrendingUp } from "lucide-react";
+import { ArrowRight, Linkedin, Check, Code, Target, TrendingUp, Users, Shield, Zap, BarChart3, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import { useFAQSchema } from "@/hooks/use-faq-schema";
+import PageFAQSection from "@/components/PageFAQSection";
+import InternalLinkBlock from "@/components/InternalLinkBlock";
 
 const LinkedInSaaSLeads = () => {
   usePageSEO(
     "LinkedIn Lead Generation for SaaS | SaaS Decision-Maker Lists — CienceLeads",
-    "LinkedIn lead generation for SaaS companies. Find VP/C-level buyers at SaaS and tech companies with verified emails and direct dials."
+    "LinkedIn lead generation for SaaS companies. Find VP/C-level buyers at SaaS and tech companies with verified emails, direct dials, and company data."
   );
+
+  const faqs = [
+    { question: "Why is LinkedIn lead generation important for SaaS companies?", answer: "SaaS buyers are highly active on LinkedIn — they research solutions, compare vendors, and evaluate thought leadership before engaging with sales. LinkedIn lead generation lets you identify and reach these tech-savvy decision-makers with verified contact data, enabling multi-channel outreach that meets them where they already spend time." },
+    { question: "What SaaS buyer titles do you target?", answer: "We target any SaaS decision-maker role including VP of Engineering, CTO, VP of Product, Head of Sales, VP of Marketing, Director of Operations, CFO, CEO, and more. We filter by seniority, department, and specific titles to match your exact buyer persona." },
+    { question: "Can you filter by technology stack or funding stage?", answer: "Yes. We can filter SaaS prospects by technology stack (e.g., companies using Salesforce, HubSpot, AWS), funding stage (Seed, Series A-D, Public), ARR range, employee growth rate, and many other SaaS-specific attributes to ensure precise ICP matching." },
+    { question: "How do you identify SaaS companies on LinkedIn?", answer: "We use LinkedIn Sales Navigator combined with additional data sources to identify SaaS companies by industry classification, technology stack, funding history, business model, and growth signals. Our analysts manually verify each company is genuinely a SaaS/software business, not just tagged as one." },
+  ];
+  useFAQSchema(faqs);
 
   return (
     <main className="min-h-screen bg-background text-foreground">
@@ -23,17 +34,30 @@ const LinkedInSaaSLeads = () => {
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               LinkedIn lead generation built specifically for SaaS companies. We find and verify{" "}
-              <strong className="text-foreground">VP and C-level decision-makers</strong> at your target SaaS and tech companies.
+              <strong className="text-foreground">VP and C-level decision-makers</strong> at your target SaaS and tech companies with complete contact profiles.
             </p>
           </div>
 
           <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-            <h2 className="text-2xl font-bold mb-6">Why SaaS Companies Need LinkedIn Prospecting</h2>
-            <div className="grid md:grid-cols-3 gap-6">
+            <h2 className="text-2xl font-bold mb-4">Why SaaS Companies Need LinkedIn Lead Generation</h2>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+              The SaaS industry is one of the most competitive B2B verticals, with thousands of companies competing for the attention of the same decision-makers. Generic outreach fails because SaaS buyers are sophisticated, research-driven, and skeptical of cold pitches. They respond to sales teams that demonstrate deep understanding of their tech stack, business model, and growth challenges.
+            </p>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+              LinkedIn is where 92% of B2B SaaS buyers start their vendor evaluation process. Decision-makers at SaaS companies actively use LinkedIn to follow industry trends, evaluate solutions, and engage with thought leaders. This makes LinkedIn the most valuable prospecting platform for SaaS sales teams.
+            </p>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              CienceLeads' LinkedIn lead generation for SaaS combines deep industry knowledge with precision targeting to deliver verified contacts at exactly the companies and roles your sales team needs to reach. We don't just find contacts — we deliver SaaS-specific intelligence including tech stack, ARR range, funding stage, and growth signals.
+            </p>
+          </div>
+
+          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <h2 className="text-2xl font-bold mb-6">SaaS-Specific Targeting Capabilities</h2>
+            <div className="grid md:grid-cols-3 gap-6 mb-6">
               {[
-                { icon: Code, title: "Tech-Savvy Buyers", desc: "SaaS buyers research on LinkedIn. Meet them where they are with verified, relevant outreach." },
-                { icon: Target, title: "ICP Precision", desc: "Filter by tech stack, company size, funding stage, and department to reach your ideal SaaS buyer." },
-                { icon: TrendingUp, title: "Faster Pipeline", desc: "SaaS sales cycles are long. Start with verified decision-makers to compress time-to-revenue." },
+                { icon: Code, title: "Tech Stack Filtering", desc: "Target companies using specific technologies — HubSpot, Salesforce, AWS, Kubernetes, React, and 1,000+ more." },
+                { icon: Target, title: "ICP Precision", desc: "Filter by ARR range, employee count, funding stage, department, title seniority, and geographic location." },
+                { icon: TrendingUp, title: "Growth Signals", desc: "Identify SaaS companies with growth indicators — recent funding, hiring surges, new product launches, and market expansion." },
               ].map((s) => (
                 <div key={s.title} className="text-center">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-3">
@@ -48,8 +72,19 @@ const LinkedInSaaSLeads = () => {
 
           <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
             <h2 className="text-2xl font-bold mb-6">SaaS Lead Generation Deliverables</h2>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {["VP/C-level contacts at SaaS companies", "Filtered by ARR, funding stage & team size", "Tech stack intelligence included", "Verified email + direct dial per contact", "LinkedIn profile URL for warm outreach", "Growth signals and hiring patterns flagged", "Custom research notes per prospect", "CRM-ready CSV delivery"].map((item) => (
+            <div className="grid sm:grid-cols-2 gap-4 mb-6">
+              {[
+                "VP/C-level contacts at SaaS companies",
+                "Filtered by ARR, funding stage & team size",
+                "Tech stack intelligence included",
+                "Verified email + direct dial per contact",
+                "LinkedIn profile URL for warm outreach",
+                "Growth signals and hiring patterns flagged",
+                "Custom research notes per prospect",
+                "CRM-ready CSV delivery",
+                "Company firmographic data",
+                "Competitive landscape context",
+              ].map((item) => (
                 <div key={item} className="flex items-start gap-3 text-sm">
                   <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                   <span>{item}</span>
@@ -58,17 +93,47 @@ const LinkedInSaaSLeads = () => {
             </div>
           </div>
 
-          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-12">
-            <h2 className="text-2xl font-bold mb-4">Related Pages</h2>
-            <div className="grid sm:grid-cols-2 gap-3">
-              <Link to="/linkedin-prospecting" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5" /> LinkedIn Prospecting</Link>
-              <Link to="/linkedin-prospecting/lead-generation" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5" /> LinkedIn Lead Generation</Link>
-              <Link to="/b2b-lead-generation/startup-leads" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5" /> Startup Lead Generation</Link>
-              <Link to="/proof/saas-lead-generation" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5" /> SaaS Case Study</Link>
+          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <h2 className="text-2xl font-bold mb-4">SaaS Verticals We Cover</h2>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+              We've built verified lead lists for SaaS companies across every major vertical. Whether you're selling to other SaaS companies or to enterprises using SaaS solutions, we can target the exact buyer personas you need.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                "Marketing Technology (MarTech)",
+                "Sales Technology (SalesTech)",
+                "HR Technology and People Ops",
+                "FinTech and Payment Platforms",
+                "Cybersecurity and InfoSec",
+                "DevOps and Infrastructure",
+                "Customer Success and Support",
+                "Data Analytics and BI Platforms",
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3 text-sm">
+                  <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="text-center">
+          <div className="mb-8">
+            <PageFAQSection faqs={faqs} heading="LinkedIn Lead Generation for SaaS FAQ" />
+          </div>
+
+          <InternalLinkBlock
+            title="Related Services & Resources"
+            links={[
+              { to: "/linkedin-prospecting/service", label: "LinkedIn Prospecting Service" },
+              { to: "/linkedin-prospecting/lead-generation", label: "LinkedIn Lead Generation" },
+              { to: "/b2b-lead-generation-for-saas", label: "Lead Gen for SaaS (Industry)" },
+              { to: "/b2b-lead-generation/service", label: "B2B Lead Generation Service" },
+              { to: "/proof/saas-lead-generation", label: "SaaS Case Study" },
+              { to: "/contact", label: "Get SaaS Leads" },
+            ]}
+          />
+
+          <div className="text-center mt-12">
             <Link to="/contact">
               <Button size="lg" className="text-base px-10 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
                 Get SaaS Leads <ArrowRight className="ml-2" />
