@@ -67,22 +67,6 @@ const DataEnrichment = () => {
             </div>
           </ScrollReveal>
 
-          {/* What is Data Enrichment */}
-          <ScrollReveal delay={0.1}>
-            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-              <h2 className="text-2xl font-bold mb-4">What is B2B Data Enrichment?</h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                B2B data enrichment is the process of enhancing your existing contact and company records with additional verified information. This includes appending missing data fields like phone numbers, LinkedIn URLs, and company details — as well as verifying the accuracy of existing data like email addresses and job titles.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Data enrichment is critical because B2B contact data decays at approximately 30% per year. People change jobs, companies merge or close, and email addresses become invalid. Without regular enrichment, your CRM becomes a liability instead of an asset — sending your sales team after prospects who no longer exist at those companies.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                CienceLeads' <Link to="/data-enrichment/service" className="text-primary hover:underline">data enrichment service</Link> combines automated verification tools with human review to deliver the highest accuracy possible. We don't just run your data through an API — our team manually reviews flagged records to catch edge cases that automated tools miss.
-              </p>
-            </div>
-          </ScrollReveal>
-
           {/* The Problem */}
           <ScrollReveal delay={0.1}>
             <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">

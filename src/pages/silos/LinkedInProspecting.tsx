@@ -67,22 +67,6 @@ const LinkedInProspecting = () => {
             </div>
           </ScrollReveal>
 
-          {/* What is LinkedIn Prospecting */}
-          <ScrollReveal delay={0.1}>
-            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-              <h2 className="text-2xl font-bold mb-4">What is LinkedIn Prospecting?</h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                LinkedIn prospecting is the process of using LinkedIn's professional network to identify, research, and collect contact information for B2B decision-makers. With over 900 million professionals on the platform, LinkedIn is the most valuable source for B2B sales prospecting — but only when combined with proper verification and enrichment.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Unlike LinkedIn automation tools that blast connection requests and risk account restrictions, professional LinkedIn prospecting involves manual research to identify the right people, verify their contact details through independent sources, and deliver outreach-ready data. This is what separates a <Link to="/linkedin-prospecting/service" className="text-primary hover:underline">LinkedIn prospecting service</Link> from DIY automation.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                CienceLeads' LinkedIn lead generation process combines LinkedIn Sales Navigator research with multi-source email verification and phone number validation. The result is a verified contact list with accurate job titles, company details, email addresses, direct dials, and LinkedIn profile URLs — ready for multi-channel outreach.
-              </p>
-            </div>
-          </ScrollReveal>
-
           {/* Why LinkedIn Prospecting Matters */}
           <ScrollReveal delay={0.1}>
             <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">

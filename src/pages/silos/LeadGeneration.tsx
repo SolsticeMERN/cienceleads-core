@@ -72,22 +72,6 @@ const LeadGeneration = () => {
             </div>
           </ScrollReveal>
 
-          {/* What is B2B Lead Generation */}
-          <ScrollReveal delay={0.1}>
-            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-              <h2 className="text-2xl font-bold mb-4">What is B2B Lead Generation?</h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                B2B lead generation is the systematic process of identifying, researching, and collecting verified contact information for potential business buyers who match your Ideal Customer Profile (ICP). Unlike B2C lead generation, which targets individual consumers, B2B lead generation focuses on finding decision-makers within companies — CEOs, VPs of Sales, Marketing Directors, and other key stakeholders who have the authority to purchase your product or service.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                The goal of B2B lead generation is to fill your sales pipeline with qualified prospects who are likely to convert into paying customers. This involves a combination of research, data enrichment, email verification, and CRM formatting to ensure your sales team can start outreach immediately without spending time on data quality issues.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                At CienceLeads, we take a fundamentally different approach from typical lead databases. Instead of selling recycled contact lists scraped from the internet, we assign human researchers to manually build custom prospect lists matched to your exact specifications. Every email is verified via SMTP handshake, every job title is confirmed, and every record is formatted for your CRM. The result: <strong className="text-foreground">0% bounce rates</strong> and sales conversations with the right people.
-              </p>
-            </div>
-          </ScrollReveal>
-
           {/* Why Most Lead Databases Fail */}
           <ScrollReveal delay={0.1}>
             <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
