@@ -5,8 +5,8 @@ import { usePageSEO } from "@/hooks/use-page-seo";
 
 const DataEnrichment = () => {
   usePageSEO(
-    "Data Enrichment Service | B2B Data Verification | CRM Data Enrichment — CienceLeads",
-    "B2B data enrichment service to verify, enrich, and clean your existing contact lists. Multi-layer email verification, CRM data enrichment, and domain reputation scoring. Protect your sender reputation."
+    "Data Enrichment Service | B2B Data Enrichment | CRM Data Enrichment — CienceLeads",
+    "B2B data enrichment service to verify, enrich, and clean your contact lists. CRM data enrichment, email verification, and contact data cleaning. Protect your sender reputation."
   );
 
   return (
@@ -18,20 +18,20 @@ const DataEnrichment = () => {
               <DatabaseZap className="w-3.5 h-3.5" /> B2B Data Enrichment Service
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
-              Data Enrichment &{" "}
+              Data Enrichment{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Verification Service
+                Service
               </span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Our B2B data enrichment service cleans your existing contact list and removes bounces before they happen.
-              Protect your sender reputation with{" "}
-              <strong className="text-foreground">multi-layer verification</strong> and CRM data enrichment.
+              Our B2B data enrichment service cleans, verifies, and enriches your existing contact lists.
+              CRM data enrichment, email verification, and contact data cleaning —{" "}
+              <strong className="text-foreground">protect your sender reputation</strong> before your next campaign.
             </p>
           </div>
 
           <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-            <h2 className="text-2xl font-bold mb-6">What You Get From Our Data Enrichment Service</h2>
+            <h2 className="text-2xl font-bold mb-6">What Our Data Enrichment Service Includes</h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
                 "Multi-layer email verification (SMTP, MX, catch-all)",
@@ -40,6 +40,8 @@ const DataEnrichment = () => {
                 "Domain reputation risk scoring included",
                 "Deliverability confidence score per record",
                 "Full before/after audit report",
+                "CRM data enrichment with field mapping",
+                "Contact data cleaning for outdated lists",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 text-sm">
                   <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
@@ -50,11 +52,11 @@ const DataEnrichment = () => {
           </div>
 
           <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-            <h2 className="text-2xl font-bold mb-6">How We Verify B2B Emails</h2>
+            <h2 className="text-2xl font-bold mb-6">How We Verify & Enrich B2B Data</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {[
-                { icon: ShieldCheck, title: "SMTP Handshake", desc: "We ping mail servers to confirm each address exists — without sending test emails. Accurate B2B email list verification." },
-                { icon: RefreshCw, title: "MX & Catch-All Detection", desc: "Identify domains that accept all emails and flag risky catch-all addresses to protect your sender reputation." },
+                { icon: ShieldCheck, title: "Email Verification", desc: "SMTP handshake confirms each address exists — accurate email verification without sending test messages." },
+                { icon: RefreshCw, title: "MX & Catch-All Detection", desc: "Identify risky catch-all domains and flag addresses that could bounce. Contact data cleaning at scale." },
                 { icon: Zap, title: "Human Review", desc: "Final manual pass to catch edge cases automated tools miss — the human-verified leads advantage." },
               ].map((s) => (
                 <div key={s.title} className="text-center">
@@ -68,12 +70,12 @@ const DataEnrichment = () => {
             </div>
           </div>
 
-          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-12">
+          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
             <h2 className="text-2xl font-bold mb-4">When You Need B2B Data Enrichment</h2>
             <ul className="space-y-3">
               {[
                 "Your bounce rate is above 2% and damaging your domain reputation",
-                "You bought a B2B lead database from another vendor and need it cleaned",
+                "You bought a B2B contact database from another vendor and need it cleaned",
                 "Your CRM has outdated contacts from the last 12+ months",
                 "You're preparing a high-stakes campaign and can't afford bounced emails",
               ].map((item) => (
@@ -83,6 +85,25 @@ const DataEnrichment = () => {
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* Internal Links — Silo */}
+          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-12">
+            <h2 className="text-2xl font-bold mb-4">Explore Related Services</h2>
+            <div className="grid sm:grid-cols-2 gap-3">
+              <Link to="/b2b-lead-generation" className="flex items-center gap-2 text-sm text-primary hover:underline">
+                <ArrowRight className="w-3.5 h-3.5" /> B2B Lead Generation Service
+              </Link>
+              <Link to="/linkedin-prospecting" className="flex items-center gap-2 text-sm text-primary hover:underline">
+                <ArrowRight className="w-3.5 h-3.5" /> LinkedIn Prospecting Service
+              </Link>
+              <Link to="/email-lists" className="flex items-center gap-2 text-sm text-primary hover:underline">
+                <ArrowRight className="w-3.5 h-3.5" /> B2B Email List Provider
+              </Link>
+              <Link to="/proof" className="flex items-center gap-2 text-sm text-primary hover:underline">
+                <ArrowRight className="w-3.5 h-3.5" /> See Our Case Studies
+              </Link>
+            </div>
           </div>
 
           <div className="text-center">

@@ -26,7 +26,7 @@ const LinkedInProspecting = () => {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Our LinkedIn lead generation service finds decision-makers at scale through manual research.
               Get <strong className="text-foreground">verified LinkedIn leads</strong> with emails, direct dials, and
-              company data — built for SaaS founders, SDR teams, and B2B agencies.
+              company data — LinkedIn sales prospecting built for SaaS founders, SDR teams, and agencies.
             </p>
           </div>
 
@@ -40,6 +40,8 @@ const LinkedInProspecting = () => {
                 "Scaled outreach-ready within 48–72 hours",
                 "LinkedIn profile URLs for warm outreach",
                 "Filtered by seniority, department & company size",
+                "LinkedIn outreach strategy consultation included",
+                "LinkedIn lead generation for SaaS specialists",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 text-sm">
                   <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
@@ -50,12 +52,12 @@ const LinkedInProspecting = () => {
           </div>
 
           <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-            <h2 className="text-2xl font-bold mb-6">Why Manual LinkedIn Lead Generation Wins</h2>
+            <h2 className="text-2xl font-bold mb-6">Why Manual LinkedIn Sales Prospecting Wins</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {[
-                { icon: Search, title: "Real-Time Research", desc: "Every LinkedIn profile is researched live — no stale databases or recycled contacts from B2B lead databases." },
-                { icon: UserCheck, title: "Human Verified Leads", desc: "Our team confirms each decision-maker's current role, company, and contact info — delivering verified LinkedIn leads." },
-                { icon: MessageSquare, title: "Outreach-Ready Data", desc: "Contacts delivered with context notes to personalize your first message — CRM-ready and mapped to your fields." },
+                { icon: Search, title: "Real-Time Research", desc: "Every LinkedIn profile is researched live — no stale databases or recycled contacts." },
+                { icon: UserCheck, title: "Human Verified Leads", desc: "Our team confirms each decision-maker's current role, company, and contact info." },
+                { icon: MessageSquare, title: "Outreach-Ready Data", desc: "Contacts delivered with context notes for LinkedIn outreach strategy personalization." },
               ].map((s) => (
                 <div key={s.title} className="text-center">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-3">
@@ -68,14 +70,14 @@ const LinkedInProspecting = () => {
             </div>
           </div>
 
-          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-12">
+          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
             <h2 className="text-2xl font-bold mb-4">Ideal For</h2>
             <ul className="space-y-3">
               {[
-                "SaaS companies targeting VP/C-level buyers for B2B sales prospecting",
-                "Agencies building outbound pipelines for clients with outsourced lead generation",
+                "SaaS companies targeting VP/C-level buyers — LinkedIn lead generation for SaaS",
+                "Agencies building outbound pipelines with outsourced LinkedIn prospecting",
                 "SDR teams sourcing high-quality B2B leads at scale",
-                "B2B startups needing startup lead generation with verified contacts",
+                "B2B startups needing startup lead generation with verified LinkedIn contacts",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm">
                   <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
@@ -83,6 +85,25 @@ const LinkedInProspecting = () => {
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* Internal Links — Silo */}
+          <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-12">
+            <h2 className="text-2xl font-bold mb-4">Explore Related Services</h2>
+            <div className="grid sm:grid-cols-2 gap-3">
+              <Link to="/b2b-lead-generation" className="flex items-center gap-2 text-sm text-primary hover:underline">
+                <ArrowRight className="w-3.5 h-3.5" /> B2B Lead Generation Service
+              </Link>
+              <Link to="/data-enrichment" className="flex items-center gap-2 text-sm text-primary hover:underline">
+                <ArrowRight className="w-3.5 h-3.5" /> Data Enrichment Service
+              </Link>
+              <Link to="/email-lists" className="flex items-center gap-2 text-sm text-primary hover:underline">
+                <ArrowRight className="w-3.5 h-3.5" /> B2B Email List Provider
+              </Link>
+              <Link to="/proof" className="flex items-center gap-2 text-sm text-primary hover:underline">
+                <ArrowRight className="w-3.5 h-3.5" /> See Our Case Studies
+              </Link>
+            </div>
           </div>
 
           <div className="text-center">

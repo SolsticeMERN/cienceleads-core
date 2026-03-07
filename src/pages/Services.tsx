@@ -1,4 +1,4 @@
-import { ArrowRight, Search, Linkedin, DatabaseZap, Check } from "lucide-react";
+import { ArrowRight, Search, Linkedin, DatabaseZap, Mail, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
@@ -6,49 +6,62 @@ import { usePageSEO } from "@/hooks/use-page-seo";
 const services = [
   {
     icon: Search,
-    title: "B2B Lead List Building",
-    headline: "B2B Email List Provider — Human-Verified Prospect Lists for Cold Outreach",
-    description: "As a trusted B2B contact list provider, we manually research and verify every contact to match your Ideal Customer Profile — no scraped databases, no recycled data. Get verified B2B leads with a 0% bounce guarantee.",
+    title: "B2B Lead Generation",
+    headline: "Outsourced Lead Generation — Human-Verified B2B Prospect Lists",
+    description: "We manually research and verify every contact to match your ICP. Our B2B lead generation service delivers verified B2B leads with a 0% bounce guarantee.",
     features: [
       "Custom ICP targeting by industry, title, revenue & geo",
-      "Every email verified via SMTP + manual checks",
-      "0% bounce rate guarantee on all deliveries",
+      "Human-verified leads with 0% bounce guarantee",
       "CRM-ready CSV mapped to your exact fields",
+      "B2B prospect research on demand",
     ],
-    href: "/services/lead-list-building",
+    href: "/b2b-lead-generation",
   },
   {
     icon: Linkedin,
     title: "LinkedIn Prospecting Service",
-    headline: "LinkedIn Lead Generation Service — Decision-Maker Profiles at Scale",
-    description: "Our LinkedIn prospecting service manually identifies C-suite and VP-level buyers. We deliver verified LinkedIn leads with direct emails, phone numbers, and company firmographic data.",
+    headline: "LinkedIn Lead Generation — Decision-Maker Profiles at Scale",
+    description: "Our LinkedIn prospecting service manually identifies C-suite and VP-level buyers with verified emails, direct dials, and LinkedIn sales prospecting data.",
     features: [
       "C-suite & VP-level contact identification",
       "Verified email + direct dial for every profile",
-      "Company firmographic data included",
-      "Scaled outreach-ready within 48–72 hours",
+      "LinkedIn lead generation for SaaS specialists",
+      "Outreach-ready within 48–72 hours",
     ],
-    href: "/services/linkedin-prospecting",
+    href: "/linkedin-prospecting",
   },
   {
     icon: DatabaseZap,
     title: "Data Enrichment Service",
-    headline: "B2B Data Enrichment — Clean Your List, Protect Your Reputation",
-    description: "Our data enrichment service verifies, enriches, and de-duplicates your existing B2B contact list. Remove bounces before they happen and protect your sender reputation with CRM data enrichment.",
+    headline: "B2B Data Enrichment — CRM Data Cleaning & Email Verification",
+    description: "Our data enrichment service verifies, enriches, and de-duplicates your existing B2B contact list. CRM data enrichment and contact data cleaning to protect your sender reputation.",
     features: [
       "Multi-layer email verification (SMTP, MX, catch-all)",
       "Append missing fields: title, company, phone, LinkedIn",
       "Remove duplicates, invalids & role-based addresses",
       "Domain reputation risk scoring included",
     ],
-    href: "/services/data-enrichment",
+    href: "/data-enrichment",
+  },
+  {
+    icon: Mail,
+    title: "B2B Email Lists",
+    headline: "B2B Email List Provider — Accurate, Targeted Prospect Lists",
+    description: "The B2B email list provider trusted by 2,500+ sales teams. Buy B2B email lists that are human-verified with 0% bounce guarantee. Not a recycled B2B contact database.",
+    features: [
+      "Human-verified accurate email lists",
+      "Targeted prospect lists matched to your ICP",
+      "Geo-targeted for USA, UK, Canada & Australia",
+      "B2B contact database built on-demand",
+    ],
+    href: "/email-lists",
   },
 ];
 
 const Services = () => {
   usePageSEO(
-    "B2B Lead Generation Services | LinkedIn Prospecting | Data Enrichment — CienceLeads",
-    "CienceLeads offers B2B lead generation services including verified lead list building, LinkedIn prospecting service, and data enrichment. Human-verified B2B leads with 0% bounce rate."
+    "B2B Lead Generation Services | LinkedIn Prospecting | Data Enrichment | Email Lists — CienceLeads",
+    "CienceLeads offers B2B lead generation services including verified lead list building, LinkedIn prospecting, data enrichment, and B2B email lists. Human-verified leads with 0% bounce rate."
   );
 
   return (
@@ -62,7 +75,7 @@ const Services = () => {
             </span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Three core B2B sales prospecting services built for SaaS founders, sales teams, and agencies.
+            Four core B2B sales prospecting services built for SaaS founders, startups, and sales teams.
             Every service backed by our <strong className="text-foreground">0% bounce guarantee</strong> with human-verified leads.
           </p>
         </div>
@@ -94,7 +107,7 @@ const Services = () => {
 
                 <Link to={service.href}>
                   <Button className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
-                    Book This Service
+                    Learn More
                     <ArrowRight className="ml-2" />
                   </Button>
                 </Link>
