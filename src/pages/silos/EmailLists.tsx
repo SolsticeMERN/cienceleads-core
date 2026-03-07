@@ -67,22 +67,6 @@ const EmailLists = () => {
             </div>
           </ScrollReveal>
 
-          {/* What Are B2B Email Lists */}
-          <ScrollReveal delay={0.1}>
-            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-              <h2 className="text-2xl font-bold mb-4">What Are B2B Email Lists?</h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                B2B email lists are collections of verified business email addresses belonging to decision-makers at target companies. Unlike consumer email lists, B2B email lists focus on professional contacts — CEOs, VPs, Directors, and Managers — who have purchasing authority for products and services.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                The quality of B2B email lists varies dramatically by provider. Cheap, scraped databases sell recycled contacts at low prices, but the hidden cost is devastating: 15–30% bounce rates that destroy your domain reputation, making even your legitimate emails land in spam folders.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                CienceLeads takes a fundamentally different approach as a <Link to="/email-lists/b2b-email-list-provider" className="text-primary hover:underline">B2B email list provider</Link>. Instead of selling pre-built databases, we build custom email lists on demand — every contact individually researched by human researchers and verified via SMTP handshake. The result: <Link to="/email-lists/accurate-email-lists" className="text-primary hover:underline">accurate email lists</Link> with 0% bounce rates.
-              </p>
-            </div>
-          </ScrollReveal>
-
           {/* The Problem with Cheap Lists */}
           <ScrollReveal delay={0.1}>
             <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
