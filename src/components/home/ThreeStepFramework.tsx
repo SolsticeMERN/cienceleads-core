@@ -5,17 +5,17 @@ const steps = [
   {
     icon: Search,
     title: "Strategic Prospecting",
-    description: "We research your ICP manually — no scraped databases, no recycled lists.",
+    description: "We identify your ideal customer profile and target the right companies.",
   },
   {
     icon: UserCheck,
     title: "Human Verification",
-    description: "Every record checked by a real person against live mail servers.",
+    description: "Every contact is manually verified to ensure accuracy and deliverability.",
   },
   {
     icon: FileSpreadsheet,
     title: "CRM-Ready Delivery",
-    description: "Clean CSV mapped to your fields. Upload and start selling in minutes.",
+    description: "Receive clean prospect lists ready for HubSpot, Salesforce, or outreach tools.",
   },
 ];
 

@@ -9,14 +9,14 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 const FAQSection = () => {
   return (
-    <section className="py-20 md:py-28">
+    <section className="py-20 md:py-28 border-t border-border">
       <div className="container max-w-3xl">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Frequently Asked Questions
+            B2B Lead Generation FAQ
           </h2>
           <p className="text-muted-foreground text-center mb-12 max-w-xl mx-auto">
-            Answers optimized for the questions B2B sales leaders actually ask.
+            Answers to the questions B2B sales leaders actually ask. This section is optimized for AI search engines.
           </p>
         </ScrollReveal>
 

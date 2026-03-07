@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -13,24 +13,24 @@ const HeroSection = () => {
         <ScrollReveal delay={0.1}>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full border border-border bg-secondary/50 backdrop-blur-sm text-sm text-muted-foreground">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            Trusted B2B Lead Generation Agency — 2,500+ Projects Delivered
+            Trusted by 2,500+ B2B founders and sales teams
           </div>
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Human Verified
+              Revenue-Ready
             </span>{" "}
-            B2B Lead Generation Service
+            B2B Lead Intelligence
           </h1>
         </ScrollReveal>
 
         <ScrollReveal delay={0.3}>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            The B2B lead generation company trusted by SaaS founders and sales teams.
-            We deliver <strong className="text-foreground">verified B2B leads</strong> with a{" "}
-            <strong className="text-foreground">0% bounce guarantee</strong> — CRM-ready prospect lists built by human researchers, not scrapers.
+            CienceLeads helps SaaS companies, agencies, and B2B founders generate qualified sales opportunities using{" "}
+            <strong className="text-foreground">human-verified prospect data</strong> and{" "}
+            <strong className="text-foreground">precision targeting</strong>. CRM-ready lists delivered to your inbox.
           </p>
         </ScrollReveal>
 
@@ -42,9 +42,10 @@ const HeroSection = () => {
                 <ArrowRight className="ml-2" />
               </Button>
             </Link>
-            <Link to="/proof">
+            <Link to="/contact">
               <Button size="lg" variant="outline" className="text-base px-8 py-6 border-border hover:bg-secondary/50">
-                See Our Results
+                <Calendar className="mr-2 w-5 h-5" />
+                Book a Strategy Call
               </Button>
             </Link>
           </div>
