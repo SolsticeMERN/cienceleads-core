@@ -1,15 +1,16 @@
-import { ArrowRight, BookOpen, Search, Linkedin, DatabaseZap, DollarSign, Lightbulb, Wrench, Send } from "lucide-react";
+import { ArrowRight, BookOpen, Search, Linkedin, DatabaseZap, DollarSign, Lightbulb, Wrench, Send, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const pillars = [
-  { icon: Search, title: "What is B2B Lead Generation?", description: "The ultimate guide to B2B lead generation — what it is, how it works, strategies, costs, and how to choose the right B2B lead generation service for your business.", href: "/resources/what-is-b2b-lead-generation", readTime: "12 min read", tags: ["Lead Generation", "Strategy"] },
+  { icon: Search, title: "What is B2B Lead Generation?", description: "Complete guide for sales teams — how B2B lead generation works, types, strategies, challenges, and best practices for generating qualified leads.", href: "/resources/what-is-b2b-lead-generation", readTime: "10 min read", tags: ["Lead Generation", "Guide"] },
+  { icon: Wrench, title: "15 Best B2B Lead Generation Tools (2026)", description: "Compare 15 B2B lead generation tools — Apollo, ZoomInfo, LinkedIn Sales Navigator, Hunter.io, and more. Features, pros, cons, and pricing compared.", href: "/resources/best-prospecting-tools", readTime: "15 min read", tags: ["Tools", "Comparison"] },
+  { icon: BarChart3, title: "70+ B2B Lead Generation Statistics", description: "70+ B2B lead generation statistics — cold email benchmarks, LinkedIn prospecting stats, cost per lead data, conversion rates, and data quality insights.", href: "/resources/b2b-lead-generation-statistics", readTime: "12 min read", tags: ["Statistics", "Data"] },
+  { icon: Lightbulb, title: "10 Proven Lead Generation Strategies", description: "10 proven B2B lead generation strategies for 2026 — prospect research, LinkedIn prospecting, cold email, ABM, data enrichment, and more.", href: "/resources/lead-generation-strategies", readTime: "12 min read", tags: ["Strategy", "Outbound"] },
   { icon: Linkedin, title: "LinkedIn Prospecting Guide", description: "Complete guide to LinkedIn prospecting — how to find decision-makers, build prospect lists, and run LinkedIn lead generation campaigns that convert.", href: "/resources/linkedin-prospecting-guide", readTime: "10 min read", tags: ["LinkedIn", "Prospecting"] },
   { icon: DatabaseZap, title: "Data Enrichment Explained", description: "Everything you need to know about B2B data enrichment — what it is, how it works, CRM data enrichment best practices, and when to use a data enrichment service.", href: "/resources/data-enrichment-explained", readTime: "9 min read", tags: ["Data Enrichment", "Email Verification"] },
   { icon: DollarSign, title: "B2B Lead Generation Cost Guide", description: "How much does B2B lead generation cost in 2026? Breakdown of pricing models, cost per lead benchmarks, and how to calculate ROI on verified B2B leads.", href: "/resources/lead-generation-cost-guide", readTime: "8 min read", tags: ["Pricing", "ROI"] },
-  { icon: Lightbulb, title: "Top 10 Lead Generation Strategies", description: "The most effective B2B lead generation strategies for 2025 — from cold email outreach to LinkedIn prospecting and ABM tactics.", href: "/resources/lead-generation-strategies", readTime: "11 min read", tags: ["Strategy", "Outbound"] },
-  { icon: Wrench, title: "Best B2B Prospecting Tools", description: "Compare the best B2B prospecting tools — LinkedIn Sales Navigator, Apollo, ZoomInfo, and more. Plus why human-verified leads outperform any tool.", href: "/resources/best-prospecting-tools", readTime: "9 min read", tags: ["Tools", "Comparison"] },
   { icon: Send, title: "Sales Outreach Strategies", description: "Proven B2B sales outreach strategies — cold email templates, LinkedIn messaging, multi-channel sequences, and personalization tactics that get replies.", href: "/resources/sales-outreach-strategies", readTime: "10 min read", tags: ["Outreach", "Sales"] },
 ];
 
