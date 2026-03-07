@@ -52,6 +52,10 @@ import BestLinkedInProspectingTools from "./pages/resources/BestLinkedInProspect
 import BestEmailFinderTools from "./pages/resources/BestEmailFinderTools";
 import BestColdEmailTools from "./pages/resources/BestColdEmailTools";
 import BestCRMTools from "./pages/resources/BestCRMTools";
+import HowToBuildProspectList from "./pages/resources/HowToBuildProspectList";
+import SalesProspectResearch from "./pages/resources/SalesProspectResearch";
+import HowToFindDecisionMakers from "./pages/resources/HowToFindDecisionMakers";
+import HowToVerifyBusinessEmails from "./pages/resources/HowToVerifyBusinessEmails";
 import LeadGenForSaaS from "./pages/industries/LeadGenForSaaS";
 import LeadGenForAgencies from "./pages/industries/LeadGenForAgencies";
 import LeadGenForStartups from "./pages/industries/LeadGenForStartups";
@@ -119,6 +123,10 @@ const App = () => (
           <Route path="/resources/best-email-finder-tools" element={<BestEmailFinderTools />} />
           <Route path="/resources/best-cold-email-tools" element={<BestColdEmailTools />} />
           <Route path="/resources/best-crm-tools" element={<BestCRMTools />} />
+          <Route path="/resources/how-to-build-a-prospect-list" element={<HowToBuildProspectList />} />
+          <Route path="/resources/sales-prospect-research" element={<SalesProspectResearch />} />
+          <Route path="/resources/how-to-find-decision-makers" element={<HowToFindDecisionMakers />} />
+          <Route path="/resources/how-to-verify-business-emails" element={<HowToVerifyBusinessEmails />} />
           {/* Industry Pages */}
           <Route path="/b2b-lead-generation-for-saas" element={<LeadGenForSaaS />} />
           <Route path="/b2b-lead-generation-for-agencies" element={<LeadGenForAgencies />} />
