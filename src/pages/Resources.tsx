@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, Search, Linkedin, DatabaseZap, DollarSign, Lightbulb, Wrench, Send, BarChart3, Mail, Database } from "lucide-react";
+import { ArrowRight, BookOpen, Search, Linkedin, DatabaseZap, DollarSign, Lightbulb, Wrench, Send, BarChart3, Mail, Database, ListChecks, Users, MailCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -16,6 +16,10 @@ const pillars = [
   { icon: DatabaseZap, title: "Data Enrichment Explained", description: "Everything you need to know about B2B data enrichment — what it is, how it works, CRM data enrichment best practices, and when to use a data enrichment service.", href: "/resources/data-enrichment-explained", readTime: "9 min read", tags: ["Data Enrichment", "Email Verification"] },
   { icon: DollarSign, title: "B2B Lead Generation Cost Guide", description: "How much does B2B lead generation cost in 2026? Breakdown of pricing models, cost per lead benchmarks, and how to calculate ROI on verified B2B leads.", href: "/resources/lead-generation-cost-guide", readTime: "8 min read", tags: ["Pricing", "ROI"] },
   { icon: Send, title: "Sales Outreach Strategies", description: "Proven B2B sales outreach strategies — cold email templates, LinkedIn messaging, multi-channel sequences, and personalization tactics that get replies.", href: "/resources/sales-outreach-strategies", readTime: "10 min read", tags: ["Outreach", "Sales"] },
+  { icon: ListChecks, title: "How to Build a Prospect List", description: "Step-by-step guide to building a B2B prospect list — define your ICP, find decision-makers, verify contact data, and build CRM-ready lists that convert.", href: "/resources/how-to-build-a-prospect-list", readTime: "8 min read", tags: ["Prospecting", "Guide"] },
+  { icon: Search, title: "Sales Prospect Research Guide", description: "Master sales prospect research — how to find decision-makers, gather buying signals, and build targeted prospect profiles that drive higher conversion rates.", href: "/resources/sales-prospect-research", readTime: "9 min read", tags: ["Prospecting", "Research"] },
+  { icon: Users, title: "How to Find Decision Makers in Companies", description: "Learn how to identify and reach decision-makers in any company — LinkedIn techniques, org chart mapping, and proven strategies for B2B sales teams.", href: "/resources/how-to-find-decision-makers", readTime: "9 min read", tags: ["Prospecting", "Strategy"] },
+  { icon: MailCheck, title: "How to Verify Business Email Addresses", description: "Learn how email verification works — SMTP checks, MX records, catch-all detection, and best practices for maintaining clean B2B email lists.", href: "/resources/how-to-verify-business-emails", readTime: "8 min read", tags: ["Email Verification", "Data"] },
 ];
 
 const Resources = () => {
