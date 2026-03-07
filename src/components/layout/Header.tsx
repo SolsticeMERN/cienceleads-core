@@ -55,6 +55,15 @@ const navLinks = [
           { label: "Targeted Prospect Lists", href: "/email-lists/targeted-prospect-lists" },
         ],
       },
+      {
+        label: "By Industry",
+        href: "/b2b-lead-generation-for-saas",
+        subPages: [
+          { label: "Lead Gen for SaaS", href: "/b2b-lead-generation-for-saas" },
+          { label: "Lead Gen for Agencies", href: "/b2b-lead-generation-for-agencies" },
+          { label: "Lead Gen for Startups", href: "/b2b-lead-generation-for-startups" },
+        ],
+      },
     ],
   },
   { label: "Case Studies", href: "/proof" },
@@ -88,7 +97,7 @@ const Header = () => {
     setOpen(false);
   }, [location.pathname]);
 
-  const serviceRoutes = ["/services", "/b2b-lead-generation", "/linkedin-prospecting", "/data-enrichment", "/email-lists"];
+  const serviceRoutes = ["/services", "/b2b-lead-generation", "/linkedin-prospecting", "/data-enrichment", "/email-lists", "/b2b-lead-generation-for-saas", "/b2b-lead-generation-for-agencies", "/b2b-lead-generation-for-startups"];
   const isServicesActive = serviceRoutes.some((r) => location.pathname.startsWith(r));
 
   return (
