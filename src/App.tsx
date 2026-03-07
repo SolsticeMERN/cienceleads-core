@@ -21,13 +21,12 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
-
+);
 
 export default App;
