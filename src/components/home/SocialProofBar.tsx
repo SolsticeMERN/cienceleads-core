@@ -1,7 +1,18 @@
 import { Database, Megaphone, Users } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import techcorpLogo from "@/assets/logos/techcorp.png";
+import saleshqLogo from "@/assets/logos/saleshq.png";
+import growthioLogo from "@/assets/logos/growthio.png";
+import pipelineaiLogo from "@/assets/logos/pipelineai.png";
+import revenuestackLogo from "@/assets/logos/revenuestack.png";
 
-const logos = ["TechCorp", "SalesHQ", "GrowthIO", "PipelineAI", "RevenueStack"];
+const logos = [
+  { name: "TechCorp", src: techcorpLogo },
+  { name: "SalesHQ", src: saleshqLogo },
+  { name: "GrowthIO", src: growthioLogo },
+  { name: "PipelineAI", src: pipelineaiLogo },
+  { name: "RevenueStack", src: revenuestackLogo },
+];
 
 const metrics = [
   { icon: Database, value: "50M+", label: "Verified Contacts" },
@@ -19,12 +30,15 @@ const SocialProofBar = () => {
           </p>
         </ScrollReveal>
 
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 mb-10">
-          {logos.map((name, i) => (
-            <ScrollReveal key={name} delay={i * 0.08}>
-              <div className="px-6 py-3 rounded-lg border border-border bg-secondary/30 backdrop-blur-sm text-muted-foreground font-semibold text-sm tracking-wide">
-                {name}
-              </div>
+        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-14 mb-10">
+          {logos.map((logo, i) => (
+            <ScrollReveal key={logo.name} delay={i * 0.08}>
+              <img
+                src={logo.src}
+                alt={`${logo.name} logo`}
+                className="h-8 md:h-10 w-auto opacity-70 hover:opacity-100 transition-opacity brightness-0 invert"
+                loading="lazy"
+              />
             </ScrollReveal>
           ))}
         </div>
