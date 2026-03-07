@@ -48,6 +48,10 @@ import LeadGenerationStrategies from "./pages/resources/LeadGenerationStrategies
 import BestProspectingTools from "./pages/resources/BestProspectingTools";
 import SalesOutreachStrategies from "./pages/resources/SalesOutreachStrategies";
 import B2BLeadGenerationStatistics from "./pages/resources/B2BLeadGenerationStatistics";
+import BestLinkedInProspectingTools from "./pages/resources/BestLinkedInProspectingTools";
+import BestEmailFinderTools from "./pages/resources/BestEmailFinderTools";
+import BestColdEmailTools from "./pages/resources/BestColdEmailTools";
+import BestCRMTools from "./pages/resources/BestCRMTools";
 import LeadGenForSaaS from "./pages/industries/LeadGenForSaaS";
 import LeadGenForAgencies from "./pages/industries/LeadGenForAgencies";
 import LeadGenForStartups from "./pages/industries/LeadGenForStartups";
@@ -111,6 +115,10 @@ const App = () => (
           <Route path="/resources/best-prospecting-tools" element={<BestProspectingTools />} />
           <Route path="/resources/sales-outreach-strategies" element={<SalesOutreachStrategies />} />
           <Route path="/resources/b2b-lead-generation-statistics" element={<B2BLeadGenerationStatistics />} />
+          <Route path="/resources/best-linkedin-prospecting-tools" element={<BestLinkedInProspectingTools />} />
+          <Route path="/resources/best-email-finder-tools" element={<BestEmailFinderTools />} />
+          <Route path="/resources/best-cold-email-tools" element={<BestColdEmailTools />} />
+          <Route path="/resources/best-crm-tools" element={<BestCRMTools />} />
           {/* Industry Pages */}
           <Route path="/b2b-lead-generation-for-saas" element={<LeadGenForSaaS />} />
           <Route path="/b2b-lead-generation-for-agencies" element={<LeadGenForAgencies />} />
