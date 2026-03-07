@@ -47,6 +47,9 @@ import LeadGenerationCostGuide from "./pages/resources/LeadGenerationCostGuide";
 import LeadGenerationStrategies from "./pages/resources/LeadGenerationStrategies";
 import BestProspectingTools from "./pages/resources/BestProspectingTools";
 import SalesOutreachStrategies from "./pages/resources/SalesOutreachStrategies";
+import LeadGenForSaaS from "./pages/industries/LeadGenForSaaS";
+import LeadGenForAgencies from "./pages/industries/LeadGenForAgencies";
+import LeadGenForStartups from "./pages/industries/LeadGenForStartups";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -106,6 +109,10 @@ const App = () => (
           <Route path="/resources/lead-generation-strategies" element={<LeadGenerationStrategies />} />
           <Route path="/resources/best-prospecting-tools" element={<BestProspectingTools />} />
           <Route path="/resources/sales-outreach-strategies" element={<SalesOutreachStrategies />} />
+          {/* Industry Pages */}
+          <Route path="/b2b-lead-generation-for-saas" element={<LeadGenForSaaS />} />
+          <Route path="/b2b-lead-generation-for-agencies" element={<LeadGenForAgencies />} />
+          <Route path="/b2b-lead-generation-for-startups" element={<LeadGenForStartups />} />
           {/* Contact */}
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
