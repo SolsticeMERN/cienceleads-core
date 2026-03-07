@@ -2,6 +2,7 @@ import { ArrowRight, Search, Check, Shield, Target, Users, FileSpreadsheet } fro
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const LeadGeneration = () => {
   usePageSEO(
@@ -13,6 +14,7 @@ const LeadGeneration = () => {
     <main className="min-h-screen bg-background text-foreground">
       <section className="py-24 md:py-32">
         <div className="container max-w-4xl">
+          <ScrollReveal>
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full border border-border bg-secondary/50 backdrop-blur-sm text-sm text-muted-foreground">
               <Search className="w-3.5 h-3.5" /> Core Service — B2B Lead Generation
@@ -29,8 +31,10 @@ const LeadGeneration = () => {
               <strong className="text-foreground">0% bounce guarantee</strong> — every prospect researched on demand, not scraped.
             </p>
           </div>
+          </ScrollReveal>
 
           {/* What You Get */}
+          <ScrollReveal delay={0.1}>
           <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
             <h2 className="text-2xl font-bold mb-6">What You Get From Our B2B Lead Generation Service</h2>
             <div className="grid sm:grid-cols-2 gap-4">
@@ -51,8 +55,10 @@ const LeadGeneration = () => {
               ))}
             </div>
           </div>
+          </ScrollReveal>
 
           {/* How It Works */}
+          <ScrollReveal delay={0.2}>
           <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
             <h2 className="text-2xl font-bold mb-6">How Our Outsourced Lead Generation Works</h2>
             <div className="grid md:grid-cols-3 gap-6">
@@ -71,8 +77,10 @@ const LeadGeneration = () => {
               ))}
             </div>
           </div>
+          </ScrollReveal>
 
           {/* Data Fields */}
+          <ScrollReveal delay={0.15}>
           <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
             <h2 className="text-2xl font-bold mb-6">Data Fields Included in Every Verified Lead List</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -84,8 +92,10 @@ const LeadGeneration = () => {
               ))}
             </div>
           </div>
+          </ScrollReveal>
 
           {/* Internal Links — Silo */}
+          <ScrollReveal delay={0.2}>
           <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-12">
             <h2 className="text-2xl font-bold mb-4">Explore Related Services</h2>
             <div className="grid sm:grid-cols-2 gap-3">
@@ -103,7 +113,9 @@ const LeadGeneration = () => {
               </Link>
             </div>
           </div>
+          </ScrollReveal>
 
+          <ScrollReveal delay={0.25}>
           <div className="text-center">
             <Link to="/contact">
               <Button size="lg" className="text-base px-10 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
@@ -112,6 +124,7 @@ const LeadGeneration = () => {
               </Button>
             </Link>
           </div>
+          </ScrollReveal>
         </div>
       </section>
     </main>

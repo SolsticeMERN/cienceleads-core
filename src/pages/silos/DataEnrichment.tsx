@@ -2,6 +2,7 @@ import { ArrowRight, DatabaseZap, Check, ShieldCheck, RefreshCw, Zap } from "luc
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const DataEnrichment = () => {
   usePageSEO(
@@ -13,6 +14,7 @@ const DataEnrichment = () => {
     <main className="min-h-screen bg-background text-foreground">
       <section className="py-24 md:py-32">
         <div className="container max-w-4xl">
+          <ScrollReveal>
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full border border-border bg-secondary/50 backdrop-blur-sm text-sm text-muted-foreground">
               <DatabaseZap className="w-3.5 h-3.5" /> B2B Data Enrichment Service
@@ -29,7 +31,9 @@ const DataEnrichment = () => {
               <strong className="text-foreground">protect your sender reputation</strong> before your next campaign.
             </p>
           </div>
+          </ScrollReveal>
 
+          <ScrollReveal delay={0.1}>
           <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
             <h2 className="text-2xl font-bold mb-6">What Our Data Enrichment Service Includes</h2>
             <div className="grid sm:grid-cols-2 gap-4">
@@ -50,7 +54,9 @@ const DataEnrichment = () => {
               ))}
             </div>
           </div>
+          </ScrollReveal>
 
+          <ScrollReveal delay={0.2}>
           <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
             <h2 className="text-2xl font-bold mb-6">How We Verify & Enrich B2B Data</h2>
             <div className="grid md:grid-cols-3 gap-6">
@@ -69,6 +75,7 @@ const DataEnrichment = () => {
               ))}
             </div>
           </div>
+          </ScrollReveal>
 
           <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
             <h2 className="text-2xl font-bold mb-4">When You Need B2B Data Enrichment</h2>

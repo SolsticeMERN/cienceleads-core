@@ -2,6 +2,7 @@ import { ArrowRight, Mail, Check, Shield, Database, Target } from "lucide-react"
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const EmailLists = () => {
   usePageSEO(
@@ -13,6 +14,7 @@ const EmailLists = () => {
     <main className="min-h-screen bg-background text-foreground">
       <section className="py-24 md:py-32">
         <div className="container max-w-4xl">
+          <ScrollReveal>
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full border border-border bg-secondary/50 backdrop-blur-sm text-sm text-muted-foreground">
               <Mail className="w-3.5 h-3.5" /> B2B Email List Provider
@@ -29,8 +31,9 @@ const EmailLists = () => {
               Accurate email lists and targeted prospect lists — not recycled B2B contact databases.
             </p>
           </div>
+          </ScrollReveal>
 
-          {/* Why CienceLeads */}
+          <ScrollReveal delay={0.1}>
           <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
             <h2 className="text-2xl font-bold mb-6">Why Choose CienceLeads as Your B2B Email List Provider</h2>
             <div className="grid sm:grid-cols-2 gap-4">
@@ -51,8 +54,9 @@ const EmailLists = () => {
               ))}
             </div>
           </div>
+          </ScrollReveal>
 
-          {/* Comparison */}
+          <ScrollReveal delay={0.2}>
           <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
             <h2 className="text-2xl font-bold mb-6">CienceLeads vs. Bulk B2B Contact Databases</h2>
             <div className="grid md:grid-cols-3 gap-6">
@@ -71,6 +75,7 @@ const EmailLists = () => {
               ))}
             </div>
           </div>
+          </ScrollReveal>
 
           {/* Data Fields */}
           <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
