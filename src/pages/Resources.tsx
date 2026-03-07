@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, Search, Linkedin, DatabaseZap, DollarSign } from "lucide-react";
+import { ArrowRight, BookOpen, Search, Linkedin, DatabaseZap, DollarSign, Lightbulb, Wrench, Send } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 
@@ -34,6 +34,30 @@ const pillars = [
     href: "/resources/lead-generation-cost-guide",
     readTime: "8 min read",
     tags: ["Pricing", "ROI"],
+  },
+  {
+    icon: Lightbulb,
+    title: "Top 10 Lead Generation Strategies",
+    description: "The most effective B2B lead generation strategies for 2025 — from cold email outreach to LinkedIn prospecting and ABM tactics.",
+    href: "/resources/lead-generation-strategies",
+    readTime: "11 min read",
+    tags: ["Strategy", "Outbound"],
+  },
+  {
+    icon: Wrench,
+    title: "Best B2B Prospecting Tools",
+    description: "Compare the best B2B prospecting tools — LinkedIn Sales Navigator, Apollo, ZoomInfo, and more. Plus why human-verified leads outperform any tool.",
+    href: "/resources/best-prospecting-tools",
+    readTime: "9 min read",
+    tags: ["Tools", "Comparison"],
+  },
+  {
+    icon: Send,
+    title: "Sales Outreach Strategies",
+    description: "Proven B2B sales outreach strategies — cold email templates, LinkedIn messaging, multi-channel sequences, and personalization tactics that get replies.",
+    href: "/resources/sales-outreach-strategies",
+    readTime: "10 min read",
+    tags: ["Outreach", "Sales"],
   },
 ];
 
