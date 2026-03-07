@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
+import { usePageSEO } from "@/hooks/use-page-seo";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be under 100 characters"),
@@ -30,6 +31,7 @@ const industries = [
   "Manufacturing",
   "Professional Services",
   "Education",
+  "IT Staffing",
   "Other",
 ];
 
@@ -43,6 +45,11 @@ const leadGoals = [
 ];
 
 const Contact = () => {
+  usePageSEO(
+    "Contact CienceLeads | Hire a B2B Lead Generation Expert | Get a Free Sample List",
+    "Contact CienceLeads to hire a B2B lead generation expert. Get a free sample list of human-verified B2B leads. Tell us your ICP and monthly lead goal — we'll deliver within 48 hours."
+  );
+
   const { toast } = useToast();
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
@@ -67,7 +74,7 @@ const Contact = () => {
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Pipeline</span>
             </h1>
             <p className="text-muted-foreground max-w-md mx-auto">
-              Tell us about your ideal customers. We'll deliver a free sample list within 48 hours.
+              Hire a B2B lead generation expert. Tell us about your ideal customers and we'll deliver a free sample list of verified B2B leads within 48 hours.
             </p>
           </div>
 
