@@ -2,6 +2,7 @@ import { ArrowRight, Mail, Check, Shield, Target, Users, TrendingUp, BarChart3, 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import { useFAQSchema } from "@/hooks/use-faq-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 import PageFAQSection from "@/components/PageFAQSection";
