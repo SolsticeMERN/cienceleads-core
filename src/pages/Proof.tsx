@@ -1,4 +1,6 @@
-import { TrendingUp, Mail, Users, Clock, Target, BarChart3 } from "lucide-react";
+import { TrendingUp, Mail, Users, Clock, Target, BarChart3, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import { usePageSEO } from "@/hooks/use-page-seo";
 
 const caseStudies = [
@@ -52,6 +54,37 @@ const caseStudies = [
   },
 ];
 
+const detailedCaseStudies = [
+  {
+    title: "SaaS Lead Generation Case Study",
+    description: "How a Series A SaaS company 3x'd their sales pipeline in 90 days with human-verified leads.",
+    metric: "3x Pipeline",
+    href: "/proof/saas-lead-generation",
+    tags: ["SaaS", "Pipeline Growth"],
+  },
+  {
+    title: "Agency Lead Generation Results",
+    description: "How a marketing agency cut lead research costs by 60% using CienceLeads as a white-label partner.",
+    metric: "60% Cost Cut",
+    href: "/proof/agency-lead-generation",
+    tags: ["Agency", "White-Label"],
+  },
+  {
+    title: "Startup Lead Growth",
+    description: "How a pre-seed startup went from 0 to 100 customers in 6 months with startup lead generation.",
+    metric: "100 Customers",
+    href: "/proof/startup-lead-growth",
+    tags: ["Startup", "Growth"],
+  },
+  {
+    title: "Verified Leads Success Stories",
+    description: "Real results from clients using human-verified B2B leads with 0% bounce guarantee.",
+    metric: "0% Bounce",
+    href: "/proof/verified-leads-success",
+    tags: ["Verified Leads", "Results"],
+  },
+];
+
 const Proof = () => {
   usePageSEO(
     "B2B Lead Generation Results | Case Studies | Verified Leads That Convert — CienceLeads",
@@ -74,7 +107,35 @@ const Proof = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Detailed Case Studies */}
+          <div className="mb-16">
+            <h2 className="text-2xl font-bold mb-6">In-Depth Case Studies</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {detailedCaseStudies.map((study) => (
+                <Link key={study.href} to={study.href} className="group block">
+                  <article className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-7 hover:border-primary/40 transition-colors h-full flex flex-col">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-3xl font-extrabold text-primary">{study.metric}</span>
+                      <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                    </div>
+                    <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors">{study.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed flex-1">{study.description}</p>
+                    <div className="flex flex-wrap gap-2 mt-5 pt-5 border-t border-border">
+                      {study.tags.map((tag) => (
+                        <span key={tag} className="text-xs px-2.5 py-1 rounded-full border border-border bg-secondary/50 text-muted-foreground">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </article>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick Results Grid */}
+          <h2 className="text-2xl font-bold mb-6">More Client Results</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {caseStudies.map((study) => (
               <article
                 key={study.metricLabel}
@@ -83,32 +144,33 @@ const Proof = () => {
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-5">
                   <study.icon className="w-5 h-5 text-primary" />
                 </div>
-
                 <p className="text-xs text-muted-foreground uppercase tracking-wider font-medium mb-3">
                   {study.clientType}
                 </p>
-
                 <div className="mb-4">
                   <span className="text-4xl font-extrabold leading-none">{study.metric}</span>
                   <p className="text-sm text-muted-foreground mt-1 font-medium">{study.metricLabel}</p>
                 </div>
-
                 <p className="text-sm text-muted-foreground leading-relaxed flex-1">
                   {study.description}
                 </p>
-
                 <div className="flex flex-wrap gap-2 mt-5 pt-5 border-t border-border">
                   {study.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs px-2.5 py-1 rounded-full border border-border bg-secondary/50 text-muted-foreground"
-                    >
+                    <span key={tag} className="text-xs px-2.5 py-1 rounded-full border border-border bg-secondary/50 text-muted-foreground">
                       {tag}
                     </span>
                   ))}
                 </div>
               </article>
             ))}
+          </div>
+
+          <div className="text-center">
+            <Link to="/contact">
+              <Button size="lg" className="text-base px-10 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
+                Get Results Like These <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
