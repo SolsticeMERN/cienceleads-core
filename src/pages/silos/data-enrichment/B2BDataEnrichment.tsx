@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "What is B2B data enrichment?", answer: "B2B data enrichment is the process of enhancing existing contact records by appending missing information — verified emails, direct dial phone numbers, current job titles, LinkedIn URLs, company firmographics, and technology stack data. The goal is to transform incomplete records into outreach-ready profiles." },
