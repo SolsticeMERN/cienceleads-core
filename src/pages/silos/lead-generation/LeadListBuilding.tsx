@@ -19,6 +19,8 @@ const LeadListBuilding = () => {
     "Lead list building service delivering custom B2B prospect lists with verified emails, direct dials, and company data. 0% bounce guarantee on every delivery."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "Lead List Building", description: "Custom B2B prospect lists with verified emails, direct dials, and company data.", url: "/b2b-lead-generation/lead-list-building", category: "Lead Generation" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "B2B Lead Generation", url: "/b2b-lead-generation" }, { name: "Lead List Building", url: "/b2b-lead-generation/lead-list-building" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

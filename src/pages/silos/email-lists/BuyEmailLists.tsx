@@ -20,6 +20,8 @@ const BuyEmailLists = () => {
     "Buy B2B email lists that are human-verified with 0% bounce guarantee. Custom-built, ICP-matched contact lists for outreach campaigns."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "Buy B2B Email Lists", description: "Human-verified B2B email lists with 0% bounce guarantee.", url: "/email-lists/buy-email-lists", category: "Email Lists" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Email Lists", url: "/email-lists" }, { name: "Buy Email Lists", url: "/email-lists/buy-email-lists" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

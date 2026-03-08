@@ -20,6 +20,8 @@ const LinkedInSalesProspecting = () => {
     "LinkedIn sales prospecting service for B2B sales teams. Manual research delivering verified decision-maker contacts — emails, direct dials, company data. Give SDRs 20+ hours back per week."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "LinkedIn Sales Prospecting", description: "Manual research delivering verified decision-maker contacts.", url: "/linkedin-prospecting/sales-prospecting", category: "LinkedIn Prospecting" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "LinkedIn Prospecting", url: "/linkedin-prospecting" }, { name: "Sales Prospecting", url: "/linkedin-prospecting/sales-prospecting" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

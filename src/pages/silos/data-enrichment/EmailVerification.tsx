@@ -20,6 +20,8 @@ const EmailVerification = () => {
     "Email verification service with SMTP handshake, MX validation, catch-all detection, and human review. Protect your sender reputation with 0% bounce guarantee. 100 to 500,000+ emails."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "Email Verification Service", description: "4-layer SMTP + human verification with 0% bounce guarantee.", url: "/data-enrichment/email-verification", category: "Data Enrichment" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Data Enrichment", url: "/data-enrichment" }, { name: "Email Verification", url: "/data-enrichment/email-verification" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

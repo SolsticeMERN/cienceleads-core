@@ -20,6 +20,8 @@ const B2BEmailListProvider = () => {
     "B2B email list provider delivering verified, ICP-matched contact lists. 0% bounce guarantee. Every list built on demand by human researchers."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "B2B Email List Provider", description: "Verified, ICP-matched contact lists built on demand.", url: "/email-lists/b2b-email-list-provider", category: "Email Lists" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Email Lists", url: "/email-lists" }, { name: "B2B Email List Provider", url: "/email-lists/b2b-email-list-provider" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

@@ -20,6 +20,8 @@ const TargetedProspectLists = () => {
     "Targeted prospect lists matched to your ICP. Filter by industry, title, company size, revenue, technology, and geography. Human-verified with 0% bounce guarantee."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "Targeted Prospect Lists", description: "ICP-matched B2B lists filtered by industry, title, size, and technology.", url: "/email-lists/targeted-prospect-lists", category: "Email Lists" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Email Lists", url: "/email-lists" }, { name: "Targeted Prospect Lists", url: "/email-lists/targeted-prospect-lists" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

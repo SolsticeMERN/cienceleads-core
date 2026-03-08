@@ -19,6 +19,8 @@ const StartupLeads = () => {
     "Startup lead generation service delivering human-verified B2B leads without enterprise pricing. Start from 200 leads, no contracts, 0% bounce guarantee."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "Startup Lead Generation", description: "Affordable B2B leads for startups. No contracts, 0% bounce guarantee.", url: "/b2b-lead-generation/startup-leads", category: "Lead Generation" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "B2B Lead Generation", url: "/b2b-lead-generation" }, { name: "Startup Leads", url: "/b2b-lead-generation/startup-leads" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

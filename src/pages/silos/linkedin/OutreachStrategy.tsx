@@ -20,6 +20,8 @@ const LinkedInOutreachStrategy = () => {
     "LinkedIn outreach strategy for B2B sales teams. Proven connection templates, 5-touch messaging sequences, and follow-up playbooks to convert LinkedIn prospects into booked calls."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "LinkedIn Outreach Strategy", description: "Messaging playbooks that convert LinkedIn prospects into booked calls.", url: "/linkedin-prospecting/outreach-strategy", category: "LinkedIn Prospecting" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "LinkedIn Prospecting", url: "/linkedin-prospecting" }, { name: "Outreach Strategy", url: "/linkedin-prospecting/outreach-strategy" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

@@ -20,6 +20,8 @@ const ContactDatabase = () => {
     "B2B contact database built on demand for your ICP. Human-verified contacts with emails, direct dials, and LinkedIn URLs. 0% bounce guarantee."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "B2B Contact Database", description: "Custom-built contact database with human-verified data.", url: "/email-lists/contact-database", category: "Email Lists" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Email Lists", url: "/email-lists" }, { name: "Contact Database", url: "/email-lists/contact-database" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

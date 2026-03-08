@@ -20,6 +20,8 @@ const B2BDataEnrichment = () => {
     "B2B data enrichment service to append missing emails, phones, titles, LinkedIn URLs, and company data to your existing contacts. Human-verified with 98%+ accuracy and 0% bounce guarantee."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "B2B Data Enrichment", description: "Append missing emails, phones, titles, and company data to your contacts.", url: "/data-enrichment/b2b-data-enrichment", category: "Data Enrichment" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Data Enrichment", url: "/data-enrichment" }, { name: "B2B Data Enrichment", url: "/data-enrichment/b2b-data-enrichment" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

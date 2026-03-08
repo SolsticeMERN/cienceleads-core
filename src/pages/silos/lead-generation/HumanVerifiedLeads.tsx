@@ -19,6 +19,8 @@ const HumanVerifiedLeads = () => {
     "Human verified leads — every B2B contact researched and validated by real analysts. 98%+ accuracy with 0% bounce guarantee. Not scraped, not recycled."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "Human Verified Leads", description: "Every B2B contact researched and validated by real analysts. 98%+ accuracy.", url: "/b2b-lead-generation/human-verified-leads", category: "Lead Generation" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "B2B Lead Generation", url: "/b2b-lead-generation" }, { name: "Human Verified Leads", url: "/b2b-lead-generation/human-verified-leads" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">
