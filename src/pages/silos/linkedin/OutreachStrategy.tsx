@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "What is a LinkedIn outreach strategy?", answer: "A LinkedIn outreach strategy is a systematic plan for engaging B2B prospects through optimized profiles, personalized connection requests, messaging sequences, and follow-up cadences. It covers everything from initial connection to booked meeting — designed for manual execution to protect your account." },
