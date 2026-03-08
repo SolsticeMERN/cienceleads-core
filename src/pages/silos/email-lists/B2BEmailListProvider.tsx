@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "What makes CienceLeads different from other B2B email list providers?", answer: "We build every list on demand matched to your ICP. Every contact is individually researched and human-verified with SMTP checks. Not a recycled database — exclusive data built only for you with a 0% bounce guarantee." },
