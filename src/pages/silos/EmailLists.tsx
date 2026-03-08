@@ -19,6 +19,7 @@ const EmailLists = () => {
     "B2B email list provider delivering human-verified, targeted prospect lists with 0% bounce guarantee. Custom-built email lists for SaaS, agencies, and B2B sales teams."
   );
   useFAQSchema(faqs);
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "Email Lists", url: "/email-lists" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

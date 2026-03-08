@@ -22,6 +22,8 @@ const LinkedInProspecting = () => {
     { question: "What's the difference between LinkedIn automation and LinkedIn prospecting?", answer: "LinkedIn automation tools send connection requests and messages automatically, which risks account restrictions. LinkedIn prospecting is the research process of identifying and verifying decision-makers — CienceLeads does the research manually and delivers verified contact data you can use across any channel." },
   ];
 
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "LinkedIn Prospecting", url: "/linkedin-prospecting" }]);
+
   return (
     <main className="min-h-screen bg-background text-foreground">
       <section className="py-24 md:py-32">

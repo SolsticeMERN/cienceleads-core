@@ -9,6 +9,7 @@ const SaaSCaseStudy = () => {
     "SaaS Lead Generation Case Study | 3x Pipeline in 90 Days — CienceLeads",
     "How a B2B SaaS company 3x'd their sales pipeline in 90 days using CienceLeads' human-verified lead generation service."
   );
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Proof", url: "/proof" }, { name: "SaaS Case Study", url: "/proof/saas-lead-generation" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

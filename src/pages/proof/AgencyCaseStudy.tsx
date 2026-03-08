@@ -9,6 +9,7 @@ const AgencyCaseStudy = () => {
     "Agency Lead Generation Results | White-Label Case Study — CienceLeads",
     "How a marketing agency scaled their client lead generation using CienceLeads as a white-label partner. 60% cost reduction, 0% bounce rate."
   );
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Proof", url: "/proof" }, { name: "Agency Case Study", url: "/proof/agency-lead-generation" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

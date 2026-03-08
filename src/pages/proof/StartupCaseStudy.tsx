@@ -9,6 +9,7 @@ const StartupCaseStudy = () => {
     "Startup Lead Growth Case Study | First 100 Customers — CienceLeads",
     "How an early-stage B2B startup acquired their first 100 customers using CienceLeads' startup lead generation service."
   );
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Proof", url: "/proof" }, { name: "Startup Case Study", url: "/proof/startup-lead-growth" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

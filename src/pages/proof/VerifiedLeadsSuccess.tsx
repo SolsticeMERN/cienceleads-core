@@ -9,6 +9,7 @@ const VerifiedLeadsSuccess = () => {
     "Verified Leads Success Stories | 0% Bounce Results — CienceLeads",
     "Verified leads success stories from CienceLeads clients. See how human-verified B2B leads with 0% bounce rate transformed outbound campaigns."
   );
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Proof", url: "/proof" }, { name: "Verified Leads Success", url: "/proof/verified-leads-success" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

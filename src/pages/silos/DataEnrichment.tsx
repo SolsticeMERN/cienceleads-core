@@ -22,6 +22,8 @@ const DataEnrichment = () => {
     { question: "Can you enrich data from any CRM?", answer: "Yes. CienceLeads works with data from any CRM including HubSpot, Salesforce, Pipedrive, Outreach, Apollo, and custom databases. Export your contacts as CSV, send them to us, and we'll return enriched, verified data mapped to your CRM fields." },
   ];
 
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "Data Enrichment", url: "/data-enrichment" }]);
+
   return (
     <main className="min-h-screen bg-background text-foreground">
       <section className="py-24 md:py-32">
