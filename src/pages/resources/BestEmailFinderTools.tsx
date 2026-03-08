@@ -122,6 +122,7 @@ const BestEmailFinderTools = () => {
   });
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "Best Email Finder Tools", url: "/resources/best-email-finder-tools" }]);
 
+  return (
     <main className="min-h-screen bg-background text-foreground">
       <article className="py-24 md:py-32">
         <div className="container max-w-3xl">

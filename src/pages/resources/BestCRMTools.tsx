@@ -133,6 +133,7 @@ const BestCRMTools = () => {
   });
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "Best CRM Tools", url: "/resources/best-crm-tools" }]);
 
+  return (
     <main className="min-h-screen bg-background text-foreground">
       <article className="py-24 md:py-32">
         <div className="container max-w-3xl">

@@ -42,6 +42,7 @@ const HowToBuildProspectList = () => {
   });
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "How to Build a Prospect List", url: "/resources/how-to-build-a-prospect-list" }]);
 
+  return (
     <main className="min-h-screen bg-background text-foreground">
       <article className="py-24 md:py-32">
         <div className="container max-w-3xl">
