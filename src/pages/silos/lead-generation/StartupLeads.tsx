@@ -1,191 +1,237 @@
-import { ArrowRight, Rocket, Check, AlertTriangle, Target } from "lucide-react";
+import { ArrowRight, ArrowLeft, Rocket, Check, AlertTriangle, Target, DollarSign, Clock, TrendingUp, Cpu, Shield, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
-import ScrollReveal from "@/components/ScrollReveal";
-import PageFAQSection from "@/components/PageFAQSection";
-import InternalLinkBlock from "@/components/InternalLinkBlock";
 
 const faqs = [
-  { question: "What's the minimum order for startups?", answer: "Start with as few as 200 verified leads. No minimum commitment — scale based on results." },
-  { question: "Can startups afford outsourced lead generation?", answer: "Yes. More cost-effective than hiring in-house. An in-house researcher costs $4,000–$6,000/month. Our startup packages start at a fraction of that." },
-  { question: "How quickly can I start getting leads?", answer: "First batch delivered within 48–72 hours. Free sample list available immediately to evaluate quality." },
-  { question: "Do I need a long-term contract?", answer: "No. Month-to-month, pause or cancel anytime. Most startups start with a pilot and scale from there." },
+  { question: "What's the minimum order for startups?", answer: "Start with as few as 200 verified leads. No minimum commitment required — scale based on results and outreach capacity." },
+  { question: "Can startups afford outsourced lead generation?", answer: "Yes. Outsourced lead research is significantly more cost-effective than hiring in-house. An in-house researcher costs $4,000–$6,000 per month in salary alone. Our startup packages start at a fraction of that with no hiring risk." },
+  { question: "How quickly can I start getting leads?", answer: "First batch of verified leads is delivered within 48–72 hours of defining your ICP. A free sample list is available immediately to evaluate quality before committing." },
+  { question: "Do I need a long-term contract?", answer: "No. We operate month-to-month with no commitment. Most startups start with a pilot of 200–500 leads and scale from there based on outreach results." },
 ];
 
 const StartupLeads = () => {
   usePageSEO(
-    "Startup Lead Generation | B2B Leads for Startups — CienceLeads",
-    "Startup lead generation service for early-stage and growth-stage B2B startups. Affordable verified leads, no contracts. Start from 200 leads."
+    "Startup Lead Generation | Affordable B2B Leads for Startups — CienceLeads",
+    "Startup lead generation service delivering human-verified B2B leads without enterprise pricing. Start from 200 leads, no contracts, 0% bounce guarantee."
   );
   useFAQSchema(faqs);
 
   return (
     <main className="min-h-screen bg-background text-foreground">
-      <section className="py-24 md:py-32">
+      <article className="py-16 md:py-24">
         <div className="container max-w-4xl">
-          {/* ── HERO ── */}
-          <ScrollReveal>
-            <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
-                Lead Generation for{" "}
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Startups</span>
-              </h1>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                High-quality prospect data without enterprise pricing. Start from 200 leads, <strong className="text-foreground">no contracts, 0% bounce guarantee.</strong>
-              </p>
-              <div className="flex flex-wrap justify-center gap-4 mt-8">
-                <Link to="/contact">
-                  <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
-                    Get a Free Sample List <ArrowRight className="ml-2" />
-                  </Button>
-                </Link>
-              </div>
+
+          <Link to="/b2b-lead-generation" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-10">
+            <ArrowLeft className="w-4 h-4" /> Back to Lead Generation
+          </Link>
+
+          <header className="mb-12">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-wide uppercase">Startup Leads</span>
+              <span className="text-xs text-muted-foreground">9 min read</span>
             </div>
-          </ScrollReveal>
+
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+              Lead Generation for{" "}
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Startups</span>
+            </h1>
+
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+              Enterprise-quality prospect data <strong className="text-foreground">without enterprise pricing</strong>. Start from 200 leads, no contracts, 0% bounce guarantee.
+            </p>
+            <ul className="space-y-2 mb-8">
+              {["Start with as few as 200 verified leads", "Month-to-month — no contracts or commitments", "First batch delivered in 48–72 hours"].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                  <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <Link to="/contact">
+              <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
+                Get a Free Sample List <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
+          </header>
 
           {/* ── PROBLEM ── */}
-          <ScrollReveal delay={0.1}>
-            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-9 h-9 rounded-lg bg-destructive/10 flex items-center justify-center">
-                  <AlertTriangle className="w-4.5 h-4.5 text-destructive" />
-                </div>
-                <h2 className="text-2xl font-bold">The Startup Lead Gen Problem</h2>
+          <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-9 h-9 rounded-lg bg-destructive/10 flex items-center justify-center">
+                <AlertTriangle className="w-5 h-5 text-destructive" />
               </div>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Startups need pipeline fast but can't afford enterprise tools or dedicated research teams:
-              </p>
-              <ul className="grid sm:grid-cols-2 gap-2">
-                {["ZoomInfo costs $15,000+/year", "Full-service agencies charge $5,000+/month", "Free tools produce low-quality data", "Bulk email lists damage sender reputation"].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+              <h2 className="text-2xl font-bold">The Startup Lead Generation Problem</h2>
             </div>
-          </ScrollReveal>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Startups need pipeline fast but face a frustrating set of options — all either too expensive, too low quality, or too slow:
+            </p>
+            <ul className="space-y-2 mb-4">
+              {[
+                "ZoomInfo and similar databases cost $15,000+ per year",
+                "Full-service lead gen agencies charge $5,000+ per month",
+                "Free tools like Hunter.io produce low-accuracy, unverified data",
+                "Bulk email lists damage sender reputation with 15–30% bounce rates",
+                "Hiring in-house researchers takes 4–8 weeks and costs $4,000–$6,000 per month",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                  <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-muted-foreground leading-relaxed">
+              Startups need a middle ground: high-quality verified data at a price point that makes sense for early-stage and growth-stage companies.
+            </p>
+          </section>
 
-          {/* ── SOLUTION ── */}
-          <ScrollReveal delay={0.1}>
-            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Rocket className="w-4.5 h-4.5 text-primary" />
-                </div>
-                <h2 className="text-2xl font-bold">Built for Startup Budgets</h2>
+          {/* ── BUILT FOR STARTUPS ── */}
+          <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Rocket className="w-5 h-5 text-primary" />
               </div>
-              <div className="grid sm:grid-cols-2 gap-4">
-                {[
-                  { title: "Low Minimums", desc: "Start with 200 leads. No large commitments." },
-                  { title: "No Contracts", desc: "Month-to-month. Scale up, pause, or cancel anytime." },
-                  { title: "Fast Turnaround", desc: "First batch in 48–72 hours. Start outreach this week." },
-                  { title: "Same Quality", desc: "98%+ accuracy and 0% bounce — not startup-grade quality." },
-                ].map((item) => (
-                  <div key={item.title} className="p-4 rounded-xl border border-border bg-secondary/30">
-                    <h3 className="font-semibold mb-1 text-sm">{item.title}</h3>
-                    <p className="text-xs text-muted-foreground">{item.desc}</p>
-                  </div>
-                ))}
-              </div>
+              <h2 className="text-2xl font-bold">Built for Startup Budgets and Speed</h2>
             </div>
-          </ScrollReveal>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                { icon: DollarSign, title: "Low Minimums", desc: "Start with 200 leads. No large commitments or minimum spend requirements." },
+                { icon: Shield, title: "No Contracts", desc: "Month-to-month. Scale up when pipeline is working, pause during slow periods." },
+                { icon: Clock, title: "Fast Turnaround", desc: "First batch in 48–72 hours. Start outreach campaigns this week." },
+                { icon: Zap, title: "Same Quality", desc: "98%+ accuracy and 0% bounce — the same data quality enterprise clients receive." },
+              ].map((item) => (
+                <div key={item.title} className="p-5 rounded-xl border border-border bg-secondary/30">
+                  <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+                    <item.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <h3 className="font-semibold mb-1">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </section>
 
           {/* ── WHAT'S INCLUDED ── */}
-          <ScrollReveal delay={0.1}>
-            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-              <h2 className="text-2xl font-bold mb-4">What's Included</h2>
-              <ul className="grid sm:grid-cols-2 gap-2">
-                {["Custom ICP targeting", "Human-verified contacts", "Verified email addresses", "Direct dial phone numbers", "LinkedIn profile URLs", "CRM-ready CSV delivery", "0% bounce guarantee", "Free sample before commitment"].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+          <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <h2 className="text-2xl font-bold mb-4">What's Included in Every Startup Lead List</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Every lead list is custom-built to your ICP and <Link to="/b2b-lead-generation/human-verified-leads" className="text-primary hover:underline">human-verified</Link> before delivery:
+            </p>
+            <div className="grid sm:grid-cols-2 gap-2">
+              {[
+                "Custom ICP targeting",
+                "Human-verified contacts",
+                "Verified email addresses",
+                "Direct dial phone numbers",
+                "LinkedIn profile URLs",
+                "Company firmographic data",
+                "CRM-ready CSV delivery",
+                "Free sample before commitment",
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                  <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </div>
+              ))}
             </div>
-          </ScrollReveal>
+          </section>
+
+          {/* ── COMPARISON TABLE ── */}
+          <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <h2 className="text-2xl font-bold mb-6">Startup Lead Gen Options Compared</h2>
+            <div className="rounded-xl border border-border overflow-hidden">
+              <div className="grid grid-cols-4 bg-secondary/50 border-b border-border">
+                <div className="p-3 text-xs font-medium text-muted-foreground">Factor</div>
+                <div className="p-3 text-xs font-semibold text-primary text-center">CienceLeads</div>
+                <div className="p-3 text-xs font-medium text-muted-foreground text-center">Database Tools</div>
+                <div className="p-3 text-xs font-medium text-muted-foreground text-center">In-House SDR</div>
+              </div>
+              {[
+                ["Monthly cost", "From $500", "$99–$500/mo", "$5,000+/mo"],
+                ["Data accuracy", "98%+", "40–70%", "60–85%"],
+                ["Time to first lead", "48–72 hours", "Immediate (low quality)", "2–4 weeks"],
+                ["Commitment", "Month-to-month", "Annual contract", "Employment"],
+                ["Bounce guarantee", "0%", "None", "None"],
+                ["Scalability", "Instant up/down", "Fixed credits", "Requires hiring"],
+              ].map(([factor, cience, database, inhouse], i, arr) => (
+                <div key={factor} className={`grid grid-cols-4 ${i < arr.length - 1 ? "border-b border-border" : ""}`}>
+                  <div className="p-3 text-xs font-medium">{factor}</div>
+                  <div className="p-3 text-xs text-center text-primary">{cience}</div>
+                  <div className="p-3 text-xs text-center text-muted-foreground">{database}</div>
+                  <div className="p-3 text-xs text-center text-muted-foreground">{inhouse}</div>
+                </div>
+              ))}
+            </div>
+          </section>
 
           {/* ── INDUSTRIES ── */}
-          <ScrollReveal delay={0.1}>
-            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-              <h2 className="text-2xl font-bold mb-4">Startup Industries We Serve</h2>
-              <ul className="grid sm:grid-cols-2 gap-2">
-                {["SaaS & software", "FinTech & payments", "HealthTech", "MarTech & AdTech", "Cybersecurity", "Developer tools", "HR Tech", "eCommerce technology"].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </ScrollReveal>
-
-          {/* ── CTA ── */}
-          <ScrollReveal delay={0.1}>
-            <div className="text-center mb-12">
-              <Link to="/contact">
-                <Button size="lg" className="text-base px-10 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
-                  Get Startup Leads <ArrowRight className="ml-2" />
-                </Button>
-              </Link>
-            </div>
-          </ScrollReveal>
-
-          {/* ────── SEO SUPPORT ────── */}
-
-          <ScrollReveal delay={0.1}>
-            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-              <h2 className="text-2xl font-bold mb-4">Startup Options Compared</h2>
-              <div className="rounded-xl border border-border overflow-hidden">
-                <div className="grid grid-cols-4 bg-secondary/50 border-b border-border">
-                  <div className="p-3 text-xs font-medium text-muted-foreground">Factor</div>
-                  <div className="p-3 text-xs font-semibold text-primary text-center">CienceLeads</div>
-                  <div className="p-3 text-xs font-medium text-muted-foreground text-center">Database Tools</div>
-                  <div className="p-3 text-xs font-medium text-muted-foreground text-center">In-House SDR</div>
-                </div>
-                {[
-                  ["Monthly cost", "From $500", "$99–$500/mo", "$5,000+/mo"],
-                  ["Data accuracy", "98%+", "40–70%", "60–85%"],
-                  ["Time to first lead", "48–72 hours", "Immediate (low quality)", "2–4 weeks"],
-                  ["Commitment", "Month-to-month", "Annual", "Employment"],
-                  ["Bounce guarantee", "0%", "None", "None"],
-                ].map(([factor, cience, database, inhouse], i, arr) => (
-                  <div key={factor} className={`grid grid-cols-4 ${i < arr.length - 1 ? "border-b border-border" : ""}`}>
-                    <div className="p-3 text-xs font-medium">{factor}</div>
-                    <div className="p-3 text-xs text-center text-primary">{cience}</div>
-                    <div className="p-3 text-xs text-center text-muted-foreground">{database}</div>
-                    <div className="p-3 text-xs text-center text-muted-foreground">{inhouse}</div>
+          <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <h2 className="text-2xl font-bold mb-4">Startup Industries We Serve</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              We build lead lists for startups across the B2B technology landscape:
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                { icon: Cpu, title: "SaaS & Software", desc: "Target technology buyers and product decision-makers." },
+                { icon: DollarSign, title: "FinTech & Payments", desc: "Reach finance leaders and compliance officers." },
+                { icon: Shield, title: "Cybersecurity", desc: "Find CISOs, IT directors, and security decision-makers." },
+                { icon: TrendingUp, title: "MarTech & AdTech", desc: "Connect with CMOs and marketing operations leaders." },
+              ].map((industry) => (
+                <div key={industry.title} className="p-5 rounded-xl border border-border bg-secondary/30">
+                  <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+                    <industry.icon className="w-5 h-5 text-primary" />
                   </div>
-                ))}
-              </div>
+                  <h3 className="font-semibold mb-1">{industry.title}</h3>
+                  <p className="text-sm text-muted-foreground">{industry.desc}</p>
+                </div>
+              ))}
             </div>
-          </ScrollReveal>
+            <p className="text-sm text-muted-foreground mt-4">
+              We also serve HealthTech, Developer Tools, HR Tech, and eCommerce technology startups.
+            </p>
+          </section>
 
-          <ScrollReveal delay={0.1}>
-            <div className="mb-8">
-              <PageFAQSection faqs={faqs} heading="Frequently Asked Questions" />
+          {/* ── FAQ ── */}
+          <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+            <div className="space-y-6">
+              {faqs.map((faq) => (
+                <div key={faq.question}>
+                  <h3 className="font-semibold mb-2">{faq.question}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
             </div>
-          </ScrollReveal>
+          </section>
 
-          <ScrollReveal delay={0.1}>
-            <div className="mb-12">
-              <InternalLinkBlock
-                title="Related Services"
-                links={[
-                  { to: "/b2b-lead-generation/service", label: "B2B Lead Generation Service" },
-                  { to: "/b2b-lead-generation/outsourced", label: "Outsourced Lead Generation" },
-                  { to: "/b2b-lead-generation/lead-list-building", label: "Lead List Building" },
-                  { to: "/b2b-lead-generation-for-startups", label: "Lead Gen for Startups (Industry)" },
-                  { to: "/contact", label: "Get a Free Sample List" },
-                ]}
-              />
+          {/* ── FINAL CTA ── */}
+          <section className="rounded-xl border border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5 p-8 md:p-10 mb-8 text-center">
+            <h2 className="text-2xl font-bold mb-4">Start Building Your Startup Pipeline</h2>
+            <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-6">
+              If your startup needs qualified prospect data without enterprise budgets, our lead generation service delivers the same data quality at a fraction of the cost. Combine with <Link to="/b2b-lead-generation/outsourced" className="text-primary hover:underline">outsourced lead generation</Link> for a complete pipeline solution.
+            </p>
+            <Link to="/contact">
+              <Button size="lg" className="text-base px-10 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
+                Get a Free Sample List <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
+          </section>
+
+          {/* ── RELATED ── */}
+          <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10">
+            <h2 className="text-lg font-bold mb-4">Related Services & Resources</h2>
+            <div className="grid sm:grid-cols-2 gap-3">
+              <Link to="/b2b-lead-generation/service" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5 shrink-0" /> B2B Lead Generation Service</Link>
+              <Link to="/b2b-lead-generation/outsourced" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5 shrink-0" /> Outsourced Lead Generation</Link>
+              <Link to="/b2b-lead-generation/lead-list-building" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5 shrink-0" /> Lead List Building</Link>
+              <Link to="/b2b-lead-generation-for-startups" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5 shrink-0" /> Lead Gen for Startups (Industry)</Link>
             </div>
-          </ScrollReveal>
+          </section>
+
         </div>
-      </section>
+      </article>
     </main>
   );
 };
