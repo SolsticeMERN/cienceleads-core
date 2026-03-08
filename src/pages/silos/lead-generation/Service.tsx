@@ -1,259 +1,303 @@
-import { ArrowRight, Search, Check, AlertTriangle, Target, TrendingUp } from "lucide-react";
+import { ArrowRight, ArrowLeft, Check, AlertTriangle, Target, TrendingUp, Users, Building, Rocket, Cpu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
-import ScrollReveal from "@/components/ScrollReveal";
-import InternalLinkBlock from "@/components/InternalLinkBlock";
-import PageFAQSection from "@/components/PageFAQSection";
 
 const faqs = [
-  { question: "What is a B2B lead generation service?", answer: "A B2B lead generation service researches and verifies potential business buyers who match your ideal customer profile. Unlike databases, we build custom prospect lists on demand with human verification and a 0% bounce guarantee." },
-  { question: "How many leads can you deliver per month?", answer: "We deliver 500 to 10,000+ verified leads per month depending on targeting specificity. Most clients start with 1,000 to 2,000 leads and scale based on outreach capacity." },
-  { question: "How long does delivery take?", answer: "Standard delivery for 1,000 to 2,000 contacts takes 5 to 7 business days. Smaller lists of 500 contacts can be delivered within 48 to 72 hours." },
-  { question: "Do you offer a free sample?", answer: "Yes. We provide a free sample of 50 to 100 contacts matched to your ICP so you can evaluate quality before committing." },
+  { question: "What is B2B lead generation?", answer: "B2B lead generation is the process of identifying companies and decision-makers who may be interested in a business's products or services." },
+  { question: "How accurate are your lead lists?", answer: "Every contact goes through a manual verification process to ensure accuracy and reduce email bounce rates." },
+  { question: "How long does lead delivery take?", answer: "Delivery time depends on the number of leads and targeting criteria. Most lead lists can be delivered within a few days." },
+  { question: "Can lead lists be customized?", answer: "Yes. Lead lists can be customized based on industry, company size, location, and job titles." },
 ];
 
 const LeadGenerationService = () => {
   usePageSEO(
-    "B2B Lead Generation Service | Custom Verified Leads — CienceLeads",
-    "Professional B2B lead generation service delivering custom-built, human-verified lead lists. 0% bounce guarantee. Trusted by 2,500+ sales teams."
+    "B2B Lead Generation Service | Targeted Sales Growth — CienceLeads",
+    "Professional B2B lead generation service delivering human-verified prospect lists for targeted sales growth. Custom ICP targeting, decision-maker identification, and CRM-ready delivery."
   );
   useFAQSchema(faqs);
 
   return (
     <main className="min-h-screen bg-background text-foreground">
-      {/* ── HERO ── */}
-      <section className="py-24 md:py-32">
+      <article className="py-16 md:py-24">
         <div className="container max-w-4xl">
-          <ScrollReveal>
-            <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
-                B2B Lead Generation{" "}
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Service</span>
-              </h1>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Get custom-built prospect lists matched to your ideal customer profile. Every contact is human-verified with a <strong className="text-foreground">0% bounce guarantee</strong>.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4 mt-8">
-                <Link to="/contact">
-                  <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
-                    Get a Free Sample List <ArrowRight className="ml-2" />
-                  </Button>
-                </Link>
-                <Link to="/contact">
-                  <Button size="lg" variant="outline" className="text-base px-8 py-6">
-                    Book a Strategy Call
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </ScrollReveal>
 
-          {/* ── PROBLEM ── */}
-          <ScrollReveal delay={0.1}>
-            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-9 h-9 rounded-lg bg-destructive/10 flex items-center justify-center">
-                  <AlertTriangle className="w-4.5 h-4.5 text-destructive" />
+          {/* Breadcrumb */}
+          <Link to="/services" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-10">
+            <ArrowLeft className="w-4 h-4" /> Back to Services
+          </Link>
+
+          {/* ── HERO ── */}
+          <header className="mb-12">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-wide uppercase">Lead Generation</span>
+              <span className="text-xs text-muted-foreground">12 min read</span>
+            </div>
+
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+              B2B Lead Generation Service for{" "}
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Targeted Sales Growth</span>
+            </h1>
+
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+              Generating qualified B2B leads consistently is one of the biggest challenges for growing companies. Many sales teams spend countless hours searching for prospects, verifying contact information, and building outreach lists instead of focusing on what matters most — starting conversations and closing deals.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+              Our B2B lead generation service helps businesses identify the right companies, find decision-makers, and build human-verified prospect lists ready for outreach campaigns.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              Whether you're a SaaS company, agency, or B2B startup, we provide accurate, targeted prospect data that helps your sales team reach the right people faster.
+            </p>
+
+            <Link to="/contact">
+              <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
+                Request a Free Sample List <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
+          </header>
+
+          {/* ── WHY MOST FAIL ── */}
+          <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-9 h-9 rounded-lg bg-destructive/10 flex items-center justify-center">
+                <AlertTriangle className="w-5 h-5 text-destructive" />
+              </div>
+              <h2 className="text-2xl font-bold">Why Most B2B Lead Generation Fails</h2>
+            </div>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Many businesses struggle with lead generation because they rely on outdated databases or generic contact lists. Common problems include:
+            </p>
+            <ul className="space-y-2 mb-4">
+              {["Incorrect job titles", "Outdated contact information", "Irrelevant companies", "High email bounce rates", "Poor targeting of decision-makers"].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                  <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-muted-foreground leading-relaxed">
+              These issues lead to low response rates and wasted outreach efforts. Effective B2B lead generation requires accurate research, proper targeting, and verified contact data. When done correctly, it helps businesses build a predictable pipeline of sales opportunities.
+            </p>
+          </section>
+
+          {/* ── OUR PROCESS ── */}
+          <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Target className="w-5 h-5 text-primary" />
+              </div>
+              <h2 className="text-2xl font-bold">Our B2B Lead Generation Process</h2>
+            </div>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Our lead generation process focuses on identifying companies that match your ideal customer profile and finding the most relevant decision-makers within those organizations.
+            </p>
+
+            <div className="space-y-8">
+              {/* Step 1 */}
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-sm font-bold text-primary">1</div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Ideal Customer Profile Research</h3>
+                  <p className="text-sm text-muted-foreground mb-3">The first step is understanding your target audience. We analyze key factors such as:</p>
+                  <ul className="space-y-1.5">
+                    {["Industry", "Company size", "Geographic location", "Technology usage", "Job roles of decision makers"].map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                        <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-sm text-muted-foreground mt-3">This ensures that outreach campaigns target companies that are more likely to become customers.</p>
                 </div>
-                <h2 className="text-2xl font-bold">Why Most Prospect Lists Fail</h2>
               </div>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Sales teams relying on scraped databases or outdated contact lists consistently see poor campaign results:
-              </p>
-              <ul className="grid sm:grid-cols-2 gap-2">
-                {["High email bounce rates (15–30%)", "Wrong job titles and outdated roles", "Irrelevant companies outside your ICP", "Wasted SDR time on dead contacts"].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </ScrollReveal>
 
-          {/* ── SOLUTION ── */}
-          <ScrollReveal delay={0.1}>
-            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Target className="w-4.5 h-4.5 text-primary" />
+              {/* Step 2 */}
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-sm font-bold text-primary">2</div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Target Company Identification</h3>
+                  <p className="text-sm text-muted-foreground mb-3">After defining your ideal customer profile, our team identifies companies that match your targeting criteria. We research businesses that:</p>
+                  <ul className="space-y-1.5">
+                    {["Operate within your target industry", "Meet company size requirements", "Show growth signals", "Have relevant decision-making roles"].map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                        <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h2 className="text-2xl font-bold">Human-Verified B2B Lead Generation</h2>
               </div>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                We build custom prospect lists from scratch — not scraped from databases. Every contact is individually researched and verified by human analysts.
-              </p>
-              <ul className="grid sm:grid-cols-2 gap-2">
-                {["Verified email addresses (SMTP + human review)", "Direct dial phone numbers", "LinkedIn profile URLs", "Company firmographic data", "CRM-ready CSV delivery", "0% bounce guarantee"].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </ScrollReveal>
 
-          {/* ── PROCESS ── */}
-          <ScrollReveal delay={0.1}>
-            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-              <h2 className="text-2xl font-bold mb-6">Our Lead Generation Process</h2>
-              <div className="space-y-6">
-                {[
-                  { step: "1", title: "ICP Targeting", desc: "We define your ideal customer profile by industry, company size, job titles, geography, and technology stack." },
-                  { step: "2", title: "Manual Research", desc: "Our team identifies matching companies and decision-makers using LinkedIn, company websites, and proprietary databases." },
-                  { step: "3", title: "Multi-Layer Verification", desc: "SMTP handshake, MX validation, catch-all detection, and human review confirm every contact." },
-                  { step: "4", title: "CRM-Ready Delivery", desc: "Clean CSV with fields mapped to HubSpot, Salesforce, Pipedrive, or any platform. Start outreach immediately." },
-                ].map((s) => (
-                  <div key={s.step} className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-sm font-bold text-primary">{s.step}</div>
-                    <div>
-                      <h3 className="font-semibold mb-1">{s.title}</h3>
-                      <p className="text-sm text-muted-foreground">{s.desc}</p>
-                    </div>
+              {/* Step 3 */}
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-sm font-bold text-primary">3</div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Decision-Maker Identification</h3>
+                  <p className="text-sm text-muted-foreground mb-3">Once target companies are identified, we locate the most relevant contacts inside those organizations. Typical roles include:</p>
+                  <ul className="space-y-1.5">
+                    {["Founders and CEOs", "Marketing directors", "Sales leaders", "Operations managers", "Technology executives"].map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                        <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-sm text-muted-foreground mt-3">Reaching the right decision-maker significantly increases the chances of starting a meaningful conversation.</p>
+                </div>
+              </div>
+
+              {/* Step 4 */}
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-sm font-bold text-primary">4</div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Human Verification</h3>
+                  <p className="text-sm text-muted-foreground mb-3">Unlike automated databases, our lead lists go through a manual verification process to ensure accuracy. We verify:</p>
+                  <ul className="space-y-1.5">
+                    {["Email deliverability", "Job title accuracy", "LinkedIn profile authenticity", "Company relevance"].map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                        <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-sm text-muted-foreground mt-3">This helps reduce bounce rates and improves the performance of outreach campaigns.</p>
+                </div>
+              </div>
+
+              {/* Step 5 */}
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-sm font-bold text-primary">5</div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">CRM-Ready Lead Delivery</h3>
+                  <p className="text-sm text-muted-foreground mb-3">Once research and verification are completed, the final prospect list is delivered in a clean, structured format ready for CRM or outreach tools. Lead data typically includes:</p>
+                  <ul className="grid sm:grid-cols-2 gap-1.5">
+                    {["Company name", "Website", "Industry", "Decision maker name", "Job title", "Verified email address", "LinkedIn profile"].map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                        <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-sm text-muted-foreground mt-3">Your sales team can immediately start outreach campaigns using this data.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ── TYPES OF LEADS ── */}
+          <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <h2 className="text-2xl font-bold mb-4">Types of B2B Leads We Generate</h2>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Our lead generation services support a wide range of B2B targeting needs. Each lead list is customized based on your industry, targeting criteria, and outreach goals.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                { icon: Cpu, title: "SaaS Lead Generation", desc: "Target technology companies, startups, and SaaS decision makers." },
+                { icon: Building, title: "Agency Lead Generation", desc: "Find businesses that need marketing, consulting, or service providers." },
+                { icon: Rocket, title: "Startup Lead Generation", desc: "Identify early-stage companies looking for new solutions." },
+                { icon: Users, title: "Technology Companies", desc: "Target companies based on technology stack or digital infrastructure." },
+              ].map((type) => (
+                <div key={type.title} className="p-5 rounded-xl border border-border bg-secondary/30">
+                  <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+                    <type.icon className="w-5 h-5 text-primary" />
                   </div>
-                ))}
-              </div>
-            </div>
-          </ScrollReveal>
-
-          {/* ── RESULTS ── */}
-          <ScrollReveal delay={0.1}>
-            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <TrendingUp className="w-4.5 h-4.5 text-primary" />
+                  <h3 className="font-semibold mb-1">{type.title}</h3>
+                  <p className="text-sm text-muted-foreground">{type.desc}</p>
                 </div>
-                <h2 className="text-2xl font-bold">Results Our Clients See</h2>
-              </div>
-              <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
-                {[
-                  { value: "0%", label: "Bounce rate" },
-                  { value: "98%+", label: "Data accuracy" },
-                  { value: "50–65%", label: "Email open rate" },
-                  { value: "30+", label: "Meetings/month" },
-                ].map((r) => (
-                  <div key={r.label} className="text-center p-4 rounded-xl border border-border bg-secondary/30">
-                    <div className="text-2xl font-extrabold mb-1">{r.value}</div>
-                    <div className="text-xs text-muted-foreground">{r.label}</div>
-                  </div>
-                ))}
-              </div>
-              <div className="flex flex-wrap gap-4 mt-4">
-                <Link to="/proof/saas-lead-generation" className="text-sm text-primary hover:underline">SaaS Case Study →</Link>
-                <Link to="/proof/agency-lead-generation" className="text-sm text-primary hover:underline">Agency Case Study →</Link>
-                <Link to="/proof/startup-lead-growth" className="text-sm text-primary hover:underline">Startup Case Study →</Link>
-              </div>
+              ))}
             </div>
-          </ScrollReveal>
+          </section>
 
           {/* ── INDUSTRIES ── */}
-          <ScrollReveal delay={0.1}>
-            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-              <h2 className="text-2xl font-bold mb-4">Industries We Serve</h2>
-              <ul className="grid sm:grid-cols-2 gap-2 mb-4">
-                {["SaaS & technology", "Marketing agencies", "Financial services", "Healthcare & MedTech", "Manufacturing", "Professional services"].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="grid sm:grid-cols-3 gap-3">
-                <Link to="/b2b-lead-generation-for-saas" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5" /> For SaaS</Link>
-                <Link to="/b2b-lead-generation-for-agencies" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5" /> For Agencies</Link>
-                <Link to="/b2b-lead-generation-for-startups" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5" /> For Startups</Link>
+          <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <h2 className="text-2xl font-bold mb-4">Industries We Support</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Our B2B lead generation services support companies across many industries. By focusing on the right industries and decision-makers, outreach campaigns become far more effective.
+            </p>
+            <ul className="grid sm:grid-cols-2 gap-2">
+              {["SaaS companies", "Marketing agencies", "Consulting firms", "Technology startups", "Financial services", "Ecommerce platforms"].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                  <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {/* ── BENEFITS ── */}
+          <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
+                <TrendingUp className="w-5 h-5 text-primary" />
               </div>
+              <h2 className="text-2xl font-bold">Benefits of Professional B2B Lead Generation</h2>
             </div>
-          </ScrollReveal>
-
-          {/* ── CTA ── */}
-          <ScrollReveal delay={0.1}>
-            <div className="text-center mb-12">
-              <Link to="/contact">
-                <Button size="lg" className="text-base px-10 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
-                  Get a Free Sample List <ArrowRight className="ml-2" />
-                </Button>
-              </Link>
-            </div>
-          </ScrollReveal>
-
-          {/* ────── SEO SUPPORT CONTENT BELOW ────── */}
-
-          <ScrollReveal delay={0.1}>
-            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-              <h2 className="text-2xl font-bold mb-4">What Is a B2B Lead Generation Service?</h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                A B2B lead generation service handles the research, identification, and verification of potential buyers on behalf of your sales team. Unlike contact databases like ZoomInfo or Apollo that sell access to pre-existing records, a lead generation service builds custom prospect lists on demand with fresh, verified data.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                This matters because B2B contact data decays at approximately 30% per year. A service that researches contacts live produces significantly more accurate data than a static database.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.1}>
-            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-              <h2 className="text-2xl font-bold mb-4">Service vs. Database: How They Compare</h2>
-              <div className="rounded-xl border border-border overflow-hidden">
-                <div className="grid grid-cols-3 bg-secondary/50 border-b border-border">
-                  <div className="p-4 text-sm font-medium text-muted-foreground">Factor</div>
-                  <div className="p-4 text-sm font-semibold text-primary text-center">CienceLeads</div>
-                  <div className="p-4 text-sm font-medium text-muted-foreground text-center">Database</div>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Working with a dedicated lead research team provides several advantages for growing companies.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                { title: "Accurate Prospect Data", desc: "Human verification ensures higher data accuracy compared to scraped databases." },
+                { title: "Better Targeting", desc: "Prospect lists are built around your ideal customer profile." },
+                { title: "Faster Sales Prospecting", desc: "Sales teams can focus on outreach rather than spending hours researching prospects." },
+                { title: "Improved Campaign Performance", desc: "Accurate prospect data leads to higher email deliverability and response rates." },
+              ].map((benefit) => (
+                <div key={benefit.title} className="p-5 rounded-xl border border-border bg-secondary/30">
+                  <h3 className="font-semibold mb-1">{benefit.title}</h3>
+                  <p className="text-sm text-muted-foreground">{benefit.desc}</p>
                 </div>
-                {[
-                  ["Data source", "Custom research", "Static database"],
-                  ["Verification", "SMTP + human review", "Automated or none"],
-                  ["Bounce rate", "0% guaranteed", "5–30%"],
-                  ["Exclusivity", "Built only for you", "Shared with buyers"],
-                  ["Data freshness", "Researched live", "Months or years old"],
-                ].map(([factor, service, database], i, arr) => (
-                  <div key={factor} className={`grid grid-cols-3 ${i < arr.length - 1 ? "border-b border-border" : ""}`}>
-                    <div className="p-4 text-sm font-medium">{factor}</div>
-                    <div className="p-4 text-sm text-center text-primary">{service}</div>
-                    <div className="p-4 text-sm text-center text-muted-foreground">{database}</div>
-                  </div>
-                ))}
-              </div>
+              ))}
             </div>
-          </ScrollReveal>
+          </section>
 
-          <ScrollReveal delay={0.1}>
-            <div className="mb-8">
-              <PageFAQSection faqs={faqs} heading="Frequently Asked Questions" />
+          {/* ── FAQ ── */}
+          <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+            <div className="space-y-6">
+              {faqs.map((faq) => (
+                <div key={faq.question}>
+                  <h3 className="font-semibold mb-2">{faq.question}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
             </div>
-          </ScrollReveal>
+          </section>
 
-          <ScrollReveal delay={0.1}>
-            <div className="mb-8">
-              <InternalLinkBlock
-                title="Related Pages"
-                links={[
-                  { to: "/b2b-lead-generation", label: "B2B Lead Generation Overview" },
-                  { to: "/b2b-lead-generation/lead-list-building", label: "Lead List Building" },
-                  { to: "/b2b-lead-generation/verified-leads", label: "Verified B2B Leads" },
-                  { to: "/b2b-lead-generation/human-verified-leads", label: "Human Verified Leads" },
-                  { to: "/b2b-lead-generation/prospect-research", label: "Prospect Research" },
-                  { to: "/b2b-lead-generation/outsourced", label: "Outsourced Lead Generation" },
-                  { to: "/contact", label: "Contact Us" },
-                ]}
-              />
-            </div>
-          </ScrollReveal>
+          {/* ── FINAL CTA ── */}
+          <section className="rounded-xl border border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5 p-8 md:p-10 mb-8 text-center">
+            <h2 className="text-2xl font-bold mb-4">Get Your First B2B Lead List</h2>
+            <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-6">
+              If your sales team needs accurate prospect data to support outreach campaigns, a professionally researched lead list can significantly improve results. Our B2B lead generation service provides <Link to="/b2b-lead-generation/human-verified-leads" className="text-primary hover:underline">human-verified prospect lists</Link> designed to help businesses connect with decision-makers and generate new opportunities.
+            </p>
+            <Link to="/contact">
+              <Button size="lg" className="text-base px-10 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
+                Request a Free Sample List <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
+          </section>
 
-          <ScrollReveal delay={0.15}>
-            <div className="text-center">
-              <Link to="/contact">
-                <Button size="lg" className="text-base px-10 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
-                  Book a Strategy Call <ArrowRight className="ml-2" />
-                </Button>
+          {/* ── RELATED PAGES ── */}
+          <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10">
+            <h2 className="text-lg font-bold mb-4">Related Services & Resources</h2>
+            <div className="grid sm:grid-cols-2 gap-3">
+              <Link to="/b2b-lead-generation/prospect-research" className="flex items-center gap-2 text-sm text-primary hover:underline">
+                <ArrowRight className="w-3.5 h-3.5 shrink-0" /> B2B Prospect Research
+              </Link>
+              <Link to="/linkedin-prospecting/service" className="flex items-center gap-2 text-sm text-primary hover:underline">
+                <ArrowRight className="w-3.5 h-3.5 shrink-0" /> LinkedIn Prospecting Service
+              </Link>
+              <Link to="/data-enrichment/service" className="flex items-center gap-2 text-sm text-primary hover:underline">
+                <ArrowRight className="w-3.5 h-3.5 shrink-0" /> Data Enrichment Service
+              </Link>
+              <Link to="/b2b-lead-generation/human-verified-leads" className="flex items-center gap-2 text-sm text-primary hover:underline">
+                <ArrowRight className="w-3.5 h-3.5 shrink-0" /> Human-Verified B2B Leads
               </Link>
             </div>
-          </ScrollReveal>
+          </section>
+
         </div>
-      </section>
+      </article>
     </main>
   );
 };
