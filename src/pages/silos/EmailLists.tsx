@@ -30,16 +30,16 @@ const EmailLists = () => {
           </Link>
 
           {/* ── HERO ── */}
-          <header className="mb-12">
+          <header className="mb-12 text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
               B2B Email Lists That{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Actually Convert</span>
             </h1>
 
-            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4 max-w-2xl mx-auto">
               Stop buying recycled contact databases. Get <strong className="text-foreground">custom-built, human-verified email lists</strong> matched to your ICP — with a 0% bounce guarantee on every delivery.
             </p>
-            <ul className="space-y-2 mb-8">
+            <ul className="space-y-2 mb-8 inline-block text-left">
               {["Every email SMTP-verified + manually reviewed", "Built on demand — never recycled or shared", "Includes direct dials, LinkedIn URLs, and company data"].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
@@ -48,11 +48,13 @@ const EmailLists = () => {
               ))}
             </ul>
 
-            <Link to="/contact">
-              <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
-                Get a Free Sample List <ArrowRight className="ml-2" />
-              </Button>
-            </Link>
+            <div>
+              <Link to="/contact">
+                <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
+                  Get a Free Sample List <ArrowRight className="ml-2" />
+                </Button>
+              </Link>
+            </div>
           </header>
 
           {/* ── PROBLEM ── */}

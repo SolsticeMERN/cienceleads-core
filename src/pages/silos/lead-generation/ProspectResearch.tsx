@@ -27,16 +27,16 @@ const ProspectResearch = () => {
             <ArrowLeft className="w-4 h-4" /> Back to Lead Generation
           </Link>
 
-          <header className="mb-12">
+          <header className="mb-12 text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
               B2B Prospect Research for{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Personalized Sales Outreach</span>
             </h1>
 
-            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4 max-w-2xl mx-auto">
               Go beyond basic lead lists. Get <strong className="text-foreground">deep-research prospect profiles</strong> with buying signals, tech stack data, and custom outreach notes — built for ABM and high-value sales.
             </p>
-            <ul className="space-y-2 mb-8">
+            <ul className="space-y-2 mb-8 inline-block text-left">
               {["Individual analyst research on every prospect", "Buying signals, tech stack, and growth indicators included", "Custom outreach notes with recommended talking points"].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
@@ -45,11 +45,13 @@ const ProspectResearch = () => {
               ))}
             </ul>
 
-            <Link to="/contact">
-              <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
-                Start Prospect Research <ArrowRight className="ml-2" />
-              </Button>
-            </Link>
+            <div>
+              <Link to="/contact">
+                <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
+                  Start Prospect Research <ArrowRight className="ml-2" />
+                </Button>
+              </Link>
+            </div>
           </header>
 
           {/* ── PROBLEM ── */}

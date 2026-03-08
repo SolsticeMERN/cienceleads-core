@@ -30,16 +30,16 @@ const LinkedInService = () => {
           </Link>
 
           {/* ── HERO ── */}
-          <header className="mb-12">
+          <header className="mb-12 text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
               LinkedIn Prospecting Service for{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Verified Decision-Maker Data</span>
             </h1>
 
-            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4 max-w-2xl mx-auto">
               Get <strong className="text-foreground">human-verified decision-maker contacts</strong> sourced from LinkedIn — without risking your account. Emails, direct dials, and company data delivered in 48–72 hours.
             </p>
-            <ul className="space-y-2 mb-8">
+            <ul className="space-y-2 mb-8 inline-block text-left">
               {["Manual Sales Navigator research, zero automation risk", "Verified emails + direct dials for every contact", "CRM-ready CSV delivered in 48–72 hours"].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
@@ -48,11 +48,13 @@ const LinkedInService = () => {
               ))}
             </ul>
 
-            <Link to="/contact">
-              <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
-                Request LinkedIn Prospect List <ArrowRight className="ml-2" />
-              </Button>
-            </Link>
+            <div>
+              <Link to="/contact">
+                <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
+                  Request LinkedIn Prospect List <ArrowRight className="ml-2" />
+                </Button>
+              </Link>
+            </div>
           </header>
 
           {/* ── WHY AUTOMATION FAILS ── */}

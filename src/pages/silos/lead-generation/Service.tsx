@@ -29,16 +29,16 @@ const LeadGenerationService = () => {
           </Link>
 
           {/* ── HERO ── */}
-          <header className="mb-12">
+          <header className="mb-12 text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
               B2B Lead Generation Service for{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Targeted Sales Growth</span>
             </h1>
 
-            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4 max-w-2xl mx-auto">
               Stop wasting SDR hours on bad data. We build <strong className="text-foreground">human-verified prospect lists</strong> matched to your ICP — so your team focuses on closing, not researching.
             </p>
-            <ul className="space-y-2 mb-8">
+            <ul className="space-y-2 mb-8 inline-block text-left">
               {["Custom-built lists, not recycled databases", "0% bounce guarantee on every delivery", "CRM-ready CSV in 48–72 hours"].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
@@ -47,11 +47,13 @@ const LeadGenerationService = () => {
               ))}
             </ul>
 
-            <Link to="/contact">
-              <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
-                Request a Free Sample List <ArrowRight className="ml-2" />
-              </Button>
-            </Link>
+            <div>
+              <Link to="/contact">
+                <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
+                  Request a Free Sample List <ArrowRight className="ml-2" />
+                </Button>
+              </Link>
+            </div>
           </header>
 
           {/* ── WHY MOST FAIL ── */}

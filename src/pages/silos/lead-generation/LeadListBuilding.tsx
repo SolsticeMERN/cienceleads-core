@@ -27,16 +27,16 @@ const LeadListBuilding = () => {
             <ArrowLeft className="w-4 h-4" /> Back to Lead Generation
           </Link>
 
-          <header className="mb-12">
+          <header className="mb-12 text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
               Lead List Building for{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Targeted B2B Prospecting</span>
             </h1>
 
-            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4 max-w-2xl mx-auto">
               Get <strong className="text-foreground">custom-built prospect lists</strong> matched to your ICP — with verified emails, direct dials, and company data ready for outreach.
             </p>
-            <ul className="space-y-2 mb-8">
+            <ul className="space-y-2 mb-8 inline-block text-left">
               {["Every list built from scratch, not pulled from databases", "0% bounce guarantee on every delivery", "CRM-ready CSV in 3–5 business days"].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
@@ -45,11 +45,13 @@ const LeadListBuilding = () => {
               ))}
             </ul>
 
-            <Link to="/contact">
-              <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
-                Request a Free Sample List <ArrowRight className="ml-2" />
-              </Button>
-            </Link>
+            <div>
+              <Link to="/contact">
+                <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
+                  Request a Free Sample List <ArrowRight className="ml-2" />
+                </Button>
+              </Link>
+            </div>
           </header>
 
           {/* ── PROBLEM ── */}
