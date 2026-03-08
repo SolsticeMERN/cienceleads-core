@@ -28,11 +28,6 @@ const LeadListBuilding = () => {
           </Link>
 
           <header className="mb-12">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-wide uppercase">Lead List Building</span>
-              <span className="text-xs text-muted-foreground">10 min read</span>
-            </div>
-
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
               Lead List Building for{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Targeted B2B Prospecting</span>
