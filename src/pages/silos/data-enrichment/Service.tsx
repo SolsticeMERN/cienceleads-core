@@ -20,6 +20,8 @@ const DataEnrichmentService = () => {
     "B2B data enrichment service to verify emails, append missing fields, remove duplicates, and score domain reputation. Human-verified with 0% bounce guarantee."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "Data Enrichment Service", description: "B2B data enrichment service to verify emails, append missing fields, remove duplicates, and score domain reputation.", url: "/data-enrichment/service", category: "Data Enrichment" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "Data Enrichment", url: "/data-enrichment" }, { name: "Service", url: "/data-enrichment/service" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

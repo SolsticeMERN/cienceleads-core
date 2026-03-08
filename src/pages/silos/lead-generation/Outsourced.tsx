@@ -20,6 +20,8 @@ const OutsourcedLeadGeneration = () => {
     "Outsourced lead generation for B2B companies. Get dedicated research teams delivering human-verified prospect lists at 40–60% less than in-house. No contracts, no hiring risk."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "Outsourced Lead Generation", description: "Outsourced lead generation for B2B companies with dedicated research teams delivering human-verified prospect lists.", url: "/b2b-lead-generation/outsourced", category: "Lead Generation" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "B2B Lead Generation", url: "/b2b-lead-generation" }, { name: "Outsourced", url: "/b2b-lead-generation/outsourced" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

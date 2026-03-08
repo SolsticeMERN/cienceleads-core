@@ -19,6 +19,8 @@ const LeadGenerationService = () => {
     "Professional B2B lead generation service delivering human-verified prospect lists for targeted sales growth. Custom ICP targeting, decision-maker identification, and CRM-ready delivery."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "B2B Lead Generation Service", description: "Professional B2B lead generation service delivering human-verified prospect lists for targeted sales growth.", url: "/b2b-lead-generation/service", category: "Lead Generation" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "B2B Lead Generation", url: "/b2b-lead-generation" }, { name: "Service", url: "/b2b-lead-generation/service" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

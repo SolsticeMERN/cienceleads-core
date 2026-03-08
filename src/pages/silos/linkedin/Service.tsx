@@ -20,6 +20,8 @@ const LinkedInService = () => {
     "LinkedIn prospecting service delivering human-verified decision-maker contacts with emails, direct dials, and company data. Zero automation risk. 0% bounce guarantee."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "LinkedIn Prospecting Service", description: "LinkedIn prospecting service delivering human-verified decision-maker contacts with emails, direct dials, and company data.", url: "/linkedin-prospecting/service", category: "LinkedIn Prospecting" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "LinkedIn Prospecting", url: "/linkedin-prospecting" }, { name: "Service", url: "/linkedin-prospecting/service" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

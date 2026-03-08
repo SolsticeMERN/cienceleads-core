@@ -20,6 +20,8 @@ const CRMDataEnrichment = () => {
     "CRM data enrichment service to clean outdated records, fill missing fields, remove duplicates, and verify every contact in your CRM. Works with HubSpot, Salesforce, Pipedrive, and more."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "CRM Data Enrichment", description: "Clean outdated records, fill missing fields, remove duplicates, and verify every contact in your CRM.", url: "/data-enrichment/crm-data", category: "Data Enrichment" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Data Enrichment", url: "/data-enrichment" }, { name: "CRM Data Enrichment", url: "/data-enrichment/crm-data" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">
