@@ -41,14 +41,16 @@ const LeadGenerationService = () => {
             </h1>
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Generating qualified B2B leads consistently is one of the biggest challenges for growing companies. Many sales teams spend countless hours searching for prospects, verifying contact information, and building outreach lists instead of focusing on what matters most — starting conversations and closing deals.
+              Stop wasting SDR hours on bad data. We build <strong className="text-foreground">human-verified prospect lists</strong> matched to your ICP — so your team focuses on closing, not researching.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Our B2B lead generation service helps businesses identify the right companies, find decision-makers, and build human-verified prospect lists ready for outreach campaigns.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Whether you're a SaaS company, agency, or B2B startup, we provide accurate, targeted prospect data that helps your sales team reach the right people faster.
-            </p>
+            <ul className="space-y-2 mb-8">
+              {["Custom-built lists, not recycled databases", "0% bounce guarantee on every delivery", "CRM-ready CSV in 48–72 hours"].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                  <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
 
             <Link to="/contact">
               <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
