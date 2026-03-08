@@ -1,4 +1,5 @@
 import { ArrowRight, Check, Lightbulb } from "lucide-react";
+import AEOBlock from "@/components/AEOBlock";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
