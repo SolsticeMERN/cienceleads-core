@@ -33,6 +33,16 @@ const HowToVerifyBusinessEmails = () => {
             </p>
           </div>
 
+          <AEOBlock
+            definition="Email verification is a multi-step process that confirms whether a business email address is valid and deliverable — using syntax checks, DNS/MX record validation, SMTP handshake, and catch-all detection — without sending an actual email."
+            takeaways={[
+              "Keep bounce rates below 2% — anything above 5% damages your sender reputation",
+              "SMTP handshake verification confirms mailbox existence without sending an email",
+              "Catch-all domains require manual verification — automated tools can't reliably validate them",
+              "Re-verify email lists every 90 days; always verify immediately before new campaigns",
+            ]}
+          />
+
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-4">Why Email Verification Matters for B2B Sales</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">

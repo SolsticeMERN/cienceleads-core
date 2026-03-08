@@ -33,6 +33,16 @@ const SalesProspectResearch = () => {
             </p>
           </div>
 
+          <AEOBlock
+            definition="Sales prospect research is the systematic process of gathering intelligence about potential B2B buyers — including their role, company challenges, technology stack, and buying signals — before initiating outreach, to enable personalized messaging that drives higher response rates."
+            takeaways={[
+              "Teams that research prospects before outreach see 2–3x higher reply rates",
+              "Key data points: job title, company revenue, tech stack, funding signals, and pain points",
+              "Enterprise deals ($50K+) warrant 15–30 minutes of research per prospect",
+              "76% of B2B buyers expect personalized communication from vendors",
+            ]}
+          />
+
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-4">What Is Sales Prospect Research?</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">

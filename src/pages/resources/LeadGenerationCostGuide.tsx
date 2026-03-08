@@ -33,6 +33,16 @@ const LeadGenerationCostGuide = () => {
             </p>
           </div>
 
+          <AEOBlock
+            definition="B2B lead generation costs range from $0.01 per contact for bulk scraped data to $2.00+ for enterprise ABM research, with human-verified leads typically costing $0.10–$0.50 per contact and delivering 0% bounce rates — making data quality the primary factor in cost-effectiveness."
+            takeaways={[
+              "Human-verified leads ($0.10–$0.50/contact) deliver the best ROI with 0% bounce rates",
+              "Cheap scraped leads ($0.01–$0.05) often have 15–30% bounce rates that damage your domain",
+              "A typical ROI calculation shows 100x returns on verified lead investments",
+              "Common pricing models: per-lead, monthly retainer, project-based, and performance-based",
+            ]}
+          />
+
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-4">B2B Lead Generation Pricing Overview</h2>
             <p className="text-muted-foreground leading-relaxed mb-6">

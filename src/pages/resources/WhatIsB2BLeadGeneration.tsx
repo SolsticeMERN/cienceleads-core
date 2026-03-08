@@ -46,6 +46,16 @@ const WhatIsB2BLeadGeneration = () => {
             </div>
           </ScrollReveal>
 
+          <AEOBlock
+            definition="B2B lead generation is the process of identifying and attracting potential business customers — targeting companies and decision-makers like founders, VPs, and directors — through research, marketing, and outreach campaigns to build a qualified sales pipeline."
+            takeaways={[
+              "B2B lead generation targets businesses and decision-makers, not individual consumers",
+              "A consistent pipeline of qualified leads is essential for sustainable B2B growth",
+              "Common strategies include prospect research, LinkedIn prospecting, cold email, and ABM",
+              "Data quality determines outreach success — verified leads dramatically outperform generic lists",
+            ]}
+          />
+
           {/* What Is a B2B Lead */}
           <ScrollReveal delay={0.05}>
             <section className="mb-12">

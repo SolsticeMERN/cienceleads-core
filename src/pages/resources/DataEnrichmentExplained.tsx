@@ -33,6 +33,16 @@ const DataEnrichmentExplained = () => {
             </p>
           </div>
 
+          <AEOBlock
+            definition="Data enrichment is the process of enhancing existing contact or company records with additional data points — such as job titles, direct phone numbers, technographics, and firmographics — to make CRM data more complete and actionable for B2B sales outreach."
+            takeaways={[
+              "B2B contact data decays at 30% per year — enrich your CRM quarterly",
+              "Enrichment adds missing fields; verification confirms existing data is valid",
+              "Common enrichment fields: direct emails, phone numbers, job titles, company revenue, tech stack",
+              "Clean, enriched data drives higher deliverability and better outreach response rates",
+            ]}
+          />
+
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-4">What is Data Enrichment?</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">

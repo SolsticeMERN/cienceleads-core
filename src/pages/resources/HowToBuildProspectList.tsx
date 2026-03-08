@@ -33,6 +33,16 @@ const HowToBuildProspectList = () => {
             </p>
           </div>
 
+          <AEOBlock
+            definition="A B2B prospect list is a curated database of potential buyers matching your Ideal Customer Profile (ICP) — including verified names, emails, job titles, and company data — built specifically for targeted outbound sales campaigns."
+            takeaways={[
+              "Define your ICP first: industry, company size, job titles, geography, and tech stack",
+              "Aim for 500–2,000 verified contacts per month for most B2B outbound campaigns",
+              "Raw prospect data decays at 30% per year — verify every email before outreach",
+              "Professionally built lists deliver 40–60% open rates vs. 15–25% with generic lists",
+            ]}
+          />
+
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-4">What Is a Prospect List?</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
