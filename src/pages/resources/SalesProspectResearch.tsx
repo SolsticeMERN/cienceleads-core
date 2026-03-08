@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const prospectResearchFaqs = [
   { question: "How do you research a sales prospect?", answer: "Effective prospect research follows a structured process: review the company website and recent news, check the prospect's LinkedIn profile and activity, identify pain points relevant to your solution, note mutual connections or shared interests, and verify contact information before outreach." },

@@ -6,6 +6,7 @@ import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useHowToSchema } from "@/hooks/use-howto-schema";
 import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const prospectListSteps = [
   { name: "Define Your Ideal Customer Profile", text: "Nail down industry, company size (employee count + revenue), job titles (VP Sales, CTO, Head of Marketing), geography, and technology stack before sourcing a single contact." },

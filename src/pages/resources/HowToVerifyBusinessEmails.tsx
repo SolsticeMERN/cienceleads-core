@@ -6,6 +6,7 @@ import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useHowToSchema } from "@/hooks/use-howto-schema";
 import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const emailVerificationSteps = [
   { name: "Check Email Syntax", text: "Validate that the email address follows proper formatting rules — correct use of @ symbol, valid domain extension, no special characters or spaces." },
