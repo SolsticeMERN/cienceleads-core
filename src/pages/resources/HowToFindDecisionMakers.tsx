@@ -27,6 +27,12 @@ const HowToFindDecisionMakers = () => {
     "Learn how to find and reach decision-makers in any company — LinkedIn techniques, org chart mapping, contact verification, and proven strategies for B2B sales teams."
   );
   useFAQSchema(decisionMakerFaqs);
+  useHowToSchema({
+    name: "How to Find Decision Makers in Companies",
+    description: "A step-by-step guide to identifying and reaching B2B decision-makers using LinkedIn, org chart research, and verified contact data.",
+    totalTime: "PT2H",
+    steps: decisionMakerSteps,
+  });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

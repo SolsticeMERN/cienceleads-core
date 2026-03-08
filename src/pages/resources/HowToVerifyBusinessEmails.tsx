@@ -27,6 +27,12 @@ const HowToVerifyBusinessEmails = () => {
     "Learn how to verify business email addresses — SMTP verification, MX record checks, catch-all detection, and best practices for maintaining clean B2B email lists."
   );
   useFAQSchema(emailVerificationFaqs);
+  useHowToSchema({
+    name: "How to Verify Business Email Addresses",
+    description: "Step-by-step guide to verifying B2B email addresses using SMTP checks, MX record validation, catch-all detection, and role-based filtering.",
+    totalTime: "PT30M",
+    steps: emailVerificationSteps,
+  });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

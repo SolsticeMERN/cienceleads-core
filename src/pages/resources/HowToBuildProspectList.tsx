@@ -27,6 +27,12 @@ const HowToBuildProspectList = () => {
     "Step-by-step guide to building a B2B prospect list — define your ICP, find decision-makers, verify contact data, and build CRM-ready lists that convert."
   );
   useFAQSchema(prospectListFaqs);
+  useHowToSchema({
+    name: "How to Build a Prospect List for B2B Sales",
+    description: "Step-by-step guide to building a targeted, verified B2B prospect list that generates pipeline and revenue.",
+    totalTime: "PT3H",
+    steps: prospectListSteps,
+  });
 
   return (
     <main className="min-h-screen bg-background text-foreground">
