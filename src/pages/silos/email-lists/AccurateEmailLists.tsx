@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "What accuracy rate do your lists achieve?", answer: "98%+ through 4-layer verification: SMTP handshake, MX validation, catch-all detection, and human review. Every delivery includes a 0% bounce guarantee — if any contact bounces, we replace it free within 48 hours." },
