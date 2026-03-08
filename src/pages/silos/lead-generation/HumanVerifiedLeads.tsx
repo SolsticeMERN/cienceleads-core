@@ -1,188 +1,237 @@
-import { ArrowRight, UserCheck, Check, AlertTriangle } from "lucide-react";
+import { ArrowRight, ArrowLeft, UserCheck, Check, AlertTriangle, Target, Eye, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
-import ScrollReveal from "@/components/ScrollReveal";
-import PageFAQSection from "@/components/PageFAQSection";
-import InternalLinkBlock from "@/components/InternalLinkBlock";
 
 const faqs = [
-  { question: "What does human verified mean?", answer: "Every contact is individually researched and confirmed by a trained analyst who checks current job title, company, and email deliverability against multiple sources." },
-  { question: "Why are human verified leads better than automated?", answer: "Automated tools check if an email exists. They cannot verify if someone still holds their title or if the company is still operating. Human verification catches 10–15% of issues automated tools miss." },
-  { question: "How long does human verification take?", answer: "Human verification adds 24–48 hours. Most projects deliver within 48–72 hours total. Expedited delivery available." },
-  { question: "What accuracy do human verified leads achieve?", answer: "98%+ accuracy with a 0% bounce guarantee. Automated-only achieves 70–85%. Raw database exports are often 40–60% accurate." },
+  { question: "What does human verified mean?", answer: "Every contact is individually researched and confirmed by a trained analyst who checks current job title, company, and email deliverability against multiple sources including LinkedIn and company websites." },
+  { question: "Why are human verified leads better than automated?", answer: "Automated tools check if an email exists. They cannot verify if someone still holds their title or if the company is still operating. Human verification catches 10–15% of issues that automated tools miss entirely." },
+  { question: "How long does human verification take?", answer: "Human verification adds 24–48 hours to the process. Most projects deliver within 48–72 hours total. Expedited delivery is available for urgent campaigns." },
+  { question: "What accuracy do human verified leads achieve?", answer: "98%+ accuracy with a 0% bounce guarantee. Automated-only verification achieves 70–85%. Raw database exports are often only 40–60% accurate." },
 ];
 
 const HumanVerifiedLeads = () => {
   usePageSEO(
     "Human Verified Leads | Researched by Real People — CienceLeads",
-    "Human verified leads — every B2B contact researched and validated by real people. 98%+ accuracy with 0% bounce guarantee."
+    "Human verified leads — every B2B contact researched and validated by real analysts. 98%+ accuracy with 0% bounce guarantee. Not scraped, not recycled."
   );
   useFAQSchema(faqs);
 
   return (
     <main className="min-h-screen bg-background text-foreground">
-      <section className="py-24 md:py-32">
+      <article className="py-16 md:py-24">
         <div className="container max-w-4xl">
-          {/* ── HERO ── */}
-          <ScrollReveal>
-            <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
-                Human Verified{" "}
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Leads</span>
-              </h1>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Every contact researched and validated by real people. Not scraped, not recycled. <strong className="text-foreground">98%+ accuracy with 0% bounce guarantee.</strong>
-              </p>
-              <div className="flex flex-wrap justify-center gap-4 mt-8">
-                <Link to="/contact">
-                  <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
-                    Get Human Verified Leads <ArrowRight className="ml-2" />
-                  </Button>
-                </Link>
-              </div>
+
+          <Link to="/b2b-lead-generation" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-10">
+            <ArrowLeft className="w-4 h-4" /> Back to Lead Generation
+          </Link>
+
+          <header className="mb-12">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-wide uppercase">Human Verified</span>
+              <span className="text-xs text-muted-foreground">9 min read</span>
             </div>
-          </ScrollReveal>
+
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+              Human Verified Leads —{" "}
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Researched by Real People</span>
+            </h1>
+
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+              Every contact individually researched and validated by <strong className="text-foreground">trained analysts</strong>. Not scraped, not recycled — 98%+ accuracy with 0% bounce guarantee.
+            </p>
+            <ul className="space-y-2 mb-8">
+              {["Individual analyst review on every contact", "Catches 10–15% of issues automation misses", "Confirmed job titles, companies, and deliverability"].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                  <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <Link to="/contact">
+              <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
+                Get Human Verified Leads <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
+          </header>
 
           {/* ── PROBLEM ── */}
-          <ScrollReveal delay={0.1}>
-            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-9 h-9 rounded-lg bg-destructive/10 flex items-center justify-center">
-                  <AlertTriangle className="w-4.5 h-4.5 text-destructive" />
-                </div>
-                <h2 className="text-2xl font-bold">The Problem with Automated Data</h2>
+          <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-9 h-9 rounded-lg bg-destructive/10 flex items-center justify-center">
+                <AlertTriangle className="w-5 h-5 text-destructive" />
               </div>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Most B2B contact data is scraped by automated tools — fast, but often outdated and inaccurate:
-              </p>
-              <ul className="grid sm:grid-cols-2 gap-2">
-                {["Outdated job titles from months ago", "People who changed companies", "Invalid or catch-all email addresses", "No quality control on individual contacts"].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+              <h2 className="text-2xl font-bold">The Problem with Automated Data</h2>
             </div>
-          </ScrollReveal>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Most B2B contact data is scraped by automated tools. Fast, but riddled with accuracy problems that automation can't detect:
+            </p>
+            <ul className="space-y-2 mb-4">
+              {[
+                "Outdated job titles from people who changed roles months ago",
+                "Contacts who moved to different companies",
+                "Invalid or catch-all email addresses marked as \"valid\"",
+                "No quality control on individual contacts — just bulk processing",
+                "Companies that were acquired, merged, or shut down",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                  <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-muted-foreground leading-relaxed">
+              Human verification catches these issues because a real person confirms each contact — something no API or automated tool can replicate.
+            </p>
+          </section>
 
           {/* ── PROCESS ── */}
-          <ScrollReveal delay={0.1}>
-            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-              <h2 className="text-2xl font-bold mb-6">How Human Verification Works</h2>
-              <div className="space-y-6">
-                {[
-                  { step: "1", title: "Automated Pre-Screening", desc: "SMTP verification and catch-all detection filter out invalid addresses efficiently." },
-                  { step: "2", title: "Manual Profile Research", desc: "Analyst reviews each contact against LinkedIn and company websites. Confirms current role and company." },
-                  { step: "3", title: "Quality Review", desc: "Second analyst reviews flagged cases and runs spot checks across the full list." },
-                ].map((s) => (
-                  <div key={s.step} className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-sm font-bold text-primary">{s.step}</div>
-                    <div>
-                      <h3 className="font-semibold mb-1">{s.title}</h3>
-                      <p className="text-sm text-muted-foreground">{s.desc}</p>
-                    </div>
-                  </div>
-                ))}
+          <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Target className="w-5 h-5 text-primary" />
               </div>
+              <h2 className="text-2xl font-bold">How Human Verification Works</h2>
             </div>
-          </ScrollReveal>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Our verification process combines automated screening with individual analyst review. This hybrid approach delivers accuracy that neither method achieves alone.
+            </p>
 
-          {/* ── WHAT YOU GET ── */}
-          <ScrollReveal delay={0.1}>
-            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-              <h2 className="text-2xl font-bold mb-4">What You Get</h2>
-              <ul className="grid sm:grid-cols-2 gap-2">
-                {["Confirmed job title and company", "SMTP-verified email address", "Validated phone number", "LinkedIn profile URL", "Company firmographic data", "0% bounce guarantee"].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </ScrollReveal>
-
-          {/* ── USE CASES ── */}
-          <ScrollReveal delay={0.1}>
-            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-              <h2 className="text-2xl font-bold mb-4">Best Use Cases</h2>
-              <ul className="space-y-2">
-                {["Cold email campaigns requiring 0% bounce", "Account-based marketing programs", "Multi-channel outreach (email + LinkedIn + phone)", "Enterprise sales with high-value deals", "Replacing underperforming database subscriptions"].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </ScrollReveal>
-
-          {/* ── CTA ── */}
-          <ScrollReveal delay={0.1}>
-            <div className="text-center mb-12">
-              <Link to="/contact">
-                <Button size="lg" className="text-base px-10 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
-                  Get Human Verified Leads <ArrowRight className="ml-2" />
-                </Button>
-              </Link>
-            </div>
-          </ScrollReveal>
-
-          {/* ────── SEO SUPPORT CONTENT ────── */}
-
-          <ScrollReveal delay={0.1}>
-            <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
-              <h2 className="text-2xl font-bold mb-4">Human Verified vs. Automated vs. Scraped</h2>
-              <div className="rounded-xl border border-border overflow-hidden">
-                <div className="grid grid-cols-4 bg-secondary/50 border-b border-border">
-                  <div className="p-3 text-xs font-medium text-muted-foreground">Feature</div>
-                  <div className="p-3 text-xs font-semibold text-primary text-center">Human Verified</div>
-                  <div className="p-3 text-xs font-medium text-muted-foreground text-center">Automated</div>
-                  <div className="p-3 text-xs font-medium text-muted-foreground text-center">Scraped</div>
+            <div className="space-y-8">
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-sm font-bold text-primary">1</div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Automated Pre-Screening</h3>
+                  <p className="text-sm text-muted-foreground mb-3">SMTP verification and catch-all detection filter out clearly invalid addresses efficiently:</p>
+                  <ul className="space-y-1.5">
+                    {["SMTP handshake confirms mailbox existence", "MX record validation checks domain health", "Catch-all domains flagged for manual review", "Syntax errors and formatting issues corrected"].map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                        <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                {[
-                  ["Accuracy", "98%+", "70–85%", "40–60%"],
-                  ["Bounce rate", "0%", "5–10%", "15–30%"],
-                  ["Title verified", "Yes", "No", "Often outdated"],
-                  ["Cost per contact", "Higher", "Medium", "Lowest"],
-                  ["ROI per campaign", "Highest", "Medium", "Often negative"],
-                ].map(([feature, human, auto, scraped], i, arr) => (
-                  <div key={feature} className={`grid grid-cols-4 ${i < arr.length - 1 ? "border-b border-border" : ""}`}>
-                    <div className="p-3 text-xs font-medium">{feature}</div>
-                    <div className="p-3 text-xs text-center text-primary">{human}</div>
-                    <div className="p-3 text-xs text-center text-muted-foreground">{auto}</div>
-                    <div className="p-3 text-xs text-center text-muted-foreground">{scraped}</div>
-                  </div>
-                ))}
+              </div>
+
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-sm font-bold text-primary">2</div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Manual Profile Research</h3>
+                  <p className="text-sm text-muted-foreground mb-3">A trained analyst reviews each contact against LinkedIn and company websites to confirm:</p>
+                  <ul className="space-y-1.5">
+                    {["Current job title matches the record", "Person still works at the listed company", "Company is active and relevant to your ICP", "Contact information is current and accurate"].map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                        <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-sm font-bold text-primary">3</div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Quality Assurance Review</h3>
+                  <p className="text-sm text-muted-foreground">A second analyst reviews flagged cases and runs spot checks across the full list. Edge cases — catch-all domains, ambiguous titles, recently changed roles — get additional investigation before delivery.</p>
+                </div>
               </div>
             </div>
-          </ScrollReveal>
+          </section>
 
-          <ScrollReveal delay={0.1}>
-            <div className="mb-8">
-              <PageFAQSection faqs={faqs} heading="Frequently Asked Questions" />
+          {/* ── COMPARISON TABLE ── */}
+          <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <h2 className="text-2xl font-bold mb-6">Human Verified vs. Automated vs. Scraped</h2>
+            <div className="rounded-xl border border-border overflow-hidden">
+              <div className="grid grid-cols-4 bg-secondary/50 border-b border-border">
+                <div className="p-3 text-xs font-medium text-muted-foreground">Feature</div>
+                <div className="p-3 text-xs font-semibold text-primary text-center">Human Verified</div>
+                <div className="p-3 text-xs font-medium text-muted-foreground text-center">Automated</div>
+                <div className="p-3 text-xs font-medium text-muted-foreground text-center">Scraped</div>
+              </div>
+              {[
+                ["Accuracy", "98%+", "70–85%", "40–60%"],
+                ["Bounce rate", "0%", "5–10%", "15–30%"],
+                ["Title verified", "Yes — confirmed", "No", "Often outdated"],
+                ["Cost per contact", "Higher", "Medium", "Lowest"],
+                ["ROI per campaign", "Highest", "Medium", "Often negative"],
+                ["Catch-all handling", "Manual review", "Auto-flagged", "Ignored"],
+              ].map(([feature, human, auto, scraped], i, arr) => (
+                <div key={feature} className={`grid grid-cols-4 ${i < arr.length - 1 ? "border-b border-border" : ""}`}>
+                  <div className="p-3 text-xs font-medium">{feature}</div>
+                  <div className="p-3 text-xs text-center text-primary">{human}</div>
+                  <div className="p-3 text-xs text-center text-muted-foreground">{auto}</div>
+                  <div className="p-3 text-xs text-center text-muted-foreground">{scraped}</div>
+                </div>
+              ))}
             </div>
-          </ScrollReveal>
+          </section>
 
-          <ScrollReveal delay={0.1}>
-            <div className="mb-12">
-              <InternalLinkBlock
-                title="Related Services"
-                links={[
-                  { to: "/b2b-lead-generation/service", label: "B2B Lead Generation Service" },
-                  { to: "/b2b-lead-generation/verified-leads", label: "Verified B2B Leads" },
-                  { to: "/b2b-lead-generation/lead-list-building", label: "Lead List Building" },
-                  { to: "/data-enrichment/email-verification", label: "Email Verification" },
-                  { to: "/contact", label: "Get Human Verified Leads" },
-                ]}
-              />
+          {/* ── BEST USE CASES ── */}
+          <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Eye className="w-5 h-5 text-primary" />
+              </div>
+              <h2 className="text-2xl font-bold">Best Use Cases for Human Verified Leads</h2>
             </div>
-          </ScrollReveal>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                { title: "Cold Email Campaigns", desc: "0% bounce rates protect sender reputation and maximize inbox placement." },
+                { title: "Account-Based Marketing", desc: "Confirmed decision-maker data enables targeted, personalized ABM programs." },
+                { title: "Multi-Channel Outreach", desc: "Verified emails, phones, and LinkedIn URLs support coordinated outreach across channels." },
+                { title: "Enterprise Sales", desc: "High-value deals require accurate contact data — wrong person means lost opportunity." },
+              ].map((useCase) => (
+                <div key={useCase.title} className="p-5 rounded-xl border border-border bg-secondary/30">
+                  <h3 className="font-semibold mb-1">{useCase.title}</h3>
+                  <p className="text-sm text-muted-foreground">{useCase.desc}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* ── FAQ ── */}
+          <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
+            <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+            <div className="space-y-6">
+              {faqs.map((faq) => (
+                <div key={faq.question}>
+                  <h3 className="font-semibold mb-2">{faq.question}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* ── FINAL CTA ── */}
+          <section className="rounded-xl border border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5 p-8 md:p-10 mb-8 text-center">
+            <h2 className="text-2xl font-bold mb-4">Get Human Verified Leads</h2>
+            <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-6">
+              If your campaigns need the highest possible data accuracy, human verified leads deliver results that automated tools can't match. Pair with our <Link to="/b2b-lead-generation/service" className="text-primary hover:underline">B2B lead generation service</Link> for custom-built prospect lists.
+            </p>
+            <Link to="/contact">
+              <Button size="lg" className="text-base px-10 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
+                Get a Free Sample List <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
+          </section>
+
+          {/* ── RELATED ── */}
+          <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10">
+            <h2 className="text-lg font-bold mb-4">Related Services & Resources</h2>
+            <div className="grid sm:grid-cols-2 gap-3">
+              <Link to="/b2b-lead-generation/verified-leads" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5 shrink-0" /> Verified B2B Leads</Link>
+              <Link to="/b2b-lead-generation/service" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5 shrink-0" /> B2B Lead Generation Service</Link>
+              <Link to="/b2b-lead-generation/lead-list-building" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5 shrink-0" /> Lead List Building</Link>
+              <Link to="/data-enrichment/email-verification" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5 shrink-0" /> Email Verification</Link>
+            </div>
+          </section>
+
         </div>
-      </section>
+      </article>
     </main>
   );
 };
