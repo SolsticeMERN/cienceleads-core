@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 import PageFAQSection from "@/components/PageFAQSection";
@@ -124,6 +125,11 @@ const BestCRMTools = () => {
   ];
 
   useFAQSchema(faqs);
+  useSpeakableSchema({
+    headline: "10 Best CRM Tools for B2B Sales Teams (2026)",
+    summary: "Compare the 10 best CRM tools for B2B sales teams in 2026. HubSpot, Salesforce, Pipedrive, Close, and more — features, pros, cons, and pricing.",
+    url: "/resources/best-crm-tools",
+  });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

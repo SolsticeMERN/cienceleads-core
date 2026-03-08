@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useHowToSchema } from "@/hooks/use-howto-schema";
+import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
 
 const emailVerificationSteps = [
   { name: "Check Email Syntax", text: "Validate that the email address follows proper formatting rules — correct use of @ symbol, valid domain extension, no special characters or spaces." },
@@ -32,6 +33,11 @@ const HowToVerifyBusinessEmails = () => {
     description: "Step-by-step guide to verifying B2B email addresses using SMTP checks, MX record validation, catch-all detection, and role-based filtering.",
     totalTime: "PT30M",
     steps: emailVerificationSteps,
+  });
+  useSpeakableSchema({
+    headline: "How to Verify Business Email Addresses (Step-by-Step Guide)",
+    summary: "Learn how to verify business email addresses — SMTP verification, MX record checks, catch-all detection, and best practices for clean B2B email lists.",
+    url: "/resources/how-to-verify-business-emails",
   });
 
   return (

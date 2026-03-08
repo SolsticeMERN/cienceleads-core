@@ -13,7 +13,7 @@ const AEOBlock = ({ definition, takeaways }: AEOBlockProps) => (
     </p>
 
     {/* TL;DR summary block */}
-    <div className="rounded-xl border border-primary/20 bg-primary/5 p-6">
+    <div className="aeo-takeaways rounded-xl border border-primary/20 bg-primary/5 p-6">
       <div className="flex items-center gap-2 mb-3">
         <Lightbulb className="w-4 h-4 text-primary" />
         <span className="text-sm font-bold text-primary uppercase tracking-wide">Key Takeaways</span>

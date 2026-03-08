@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 import PageFAQSection from "@/components/PageFAQSection";
@@ -21,6 +22,11 @@ const WhatIsB2BLeadGeneration = () => {
   ];
 
   useFAQSchema(faqs);
+  useSpeakableSchema({
+    headline: "What Is B2B Lead Generation? A Complete Guide for Sales Teams",
+    summary: "What is B2B lead generation? Complete guide covering how it works, types, strategies, challenges, and best practices for generating qualified B2B leads.",
+    url: "/resources/what-is-b2b-lead-generation",
+  });
 
   return (
     <main className="min-h-screen bg-background text-foreground">
