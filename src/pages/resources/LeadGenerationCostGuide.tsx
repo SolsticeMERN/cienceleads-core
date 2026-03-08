@@ -2,6 +2,14 @@ import { ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import { useFAQSchema } from "@/hooks/use-faq-schema";
+
+const leadGenCostFaqs = [
+  { question: "How much does B2B lead generation cost per lead?", answer: "B2B lead generation costs range from $0.01 for bulk scraped data to $2.00+ for enterprise ABM research. Human-verified leads typically cost $0.10–$0.50 per contact and deliver 0% bounce rates, making them the best value for serious outbound campaigns." },
+  { question: "What is the ROI of B2B lead generation?", answer: "With verified leads, a typical ROI calculation shows 100x returns: 2,000 leads at $0.30 each ($600 investment) can generate 4 closed deals worth $60,000 in revenue, assuming standard open, reply, meeting, and close rates." },
+  { question: "Are cheap leads worth buying?", answer: "Cheap scraped leads ($0.01–$0.05) often have 15–30% bounce rates, which damages your domain reputation, wastes SDR time, and can blacklist your email domain. The recovery cost of rebuilding sender reputation far exceeds the savings on lead price." },
+  { question: "What pricing models do B2B lead generation companies use?", answer: "Common pricing models include per-lead pricing (pay per verified contact), monthly retainer (fixed fee for ongoing research), project-based pricing (one-time list builds), and performance-based models (pay per qualified meeting or appointment set)." },
+];
 
 const LeadGenerationCostGuide = () => {
   usePageSEO(
