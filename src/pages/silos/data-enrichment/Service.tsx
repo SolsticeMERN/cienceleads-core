@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "What is a data enrichment service?", answer: "A data enrichment service takes your existing contact lists and improves them by verifying emails, appending missing fields like phone numbers and LinkedIn URLs, removing duplicates, and scoring domain reputation. The result is cleaner, more complete data that performs better in outreach campaigns." },
