@@ -2,6 +2,7 @@ import { ArrowRight, DatabaseZap, Check, ShieldCheck, RefreshCw, Zap, TrendingUp
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 import PageFAQSection from "@/components/PageFAQSection";

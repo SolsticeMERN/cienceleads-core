@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "Where can I buy B2B email lists?", answer: "You can buy B2B email lists from database vendors, but most sell scraped data with 15–30% bounce rates. CienceLeads builds custom, human-verified email lists on demand — every contact is individually researched and SMTP-verified for 0% bounce rates." },

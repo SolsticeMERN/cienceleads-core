@@ -2,6 +2,7 @@ import { ArrowRight, Check, ShieldCheck, TrendingUp, Mail, BarChart3 } from "luc
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const VerifiedLeadsSuccess = () => {
   usePageSEO(
