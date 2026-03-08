@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "What is LinkedIn lead generation?", answer: "LinkedIn lead generation uses the world's largest professional network as a research platform to identify and verify B2B decision-makers. Unlike automation tools, a LinkedIn lead generation service delivers verified emails, direct dials, and company data — not automated connection requests that risk account bans." },
