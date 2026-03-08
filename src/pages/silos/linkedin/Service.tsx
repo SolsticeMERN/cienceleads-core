@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "What is a LinkedIn prospecting service?", answer: "A LinkedIn prospecting service manually identifies and verifies decision-makers using LinkedIn and Sales Navigator. Unlike automation tools, a prospecting service delivers verified contact data including emails, phone numbers, and company information without risking your LinkedIn account." },
