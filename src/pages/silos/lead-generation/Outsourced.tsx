@@ -31,11 +31,6 @@ const OutsourcedLeadGeneration = () => {
 
           {/* ── HERO ── */}
           <header className="mb-12">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-wide uppercase">Outsourced Lead Gen</span>
-              <span className="text-xs text-muted-foreground">10 min read</span>
-            </div>
-
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
               Outsourced Lead Generation —{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Scale Without Hiring</span>

@@ -31,11 +31,6 @@ const DataEnrichmentService = () => {
 
           {/* ── HERO ── */}
           <header className="mb-12">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-wide uppercase">Data Enrichment</span>
-              <span className="text-xs text-muted-foreground">10 min read</span>
-            </div>
-
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
               Data Enrichment Service to{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Clean & Verify B2B Data</span>
