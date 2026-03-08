@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "What is contact data cleaning?", answer: "Contact data cleaning is the process of removing inaccurate, incomplete, duplicated, or outdated records from your database. This includes removing invalid emails, role-based addresses (info@, sales@), duplicate contacts, outdated job titles, spam traps, and syntax errors — leaving you with a clean, accurate database." },
