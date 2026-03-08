@@ -4,6 +4,15 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useHowToSchema } from "@/hooks/use-howto-schema";
+
+const prospectListSteps = [
+  { name: "Define Your Ideal Customer Profile", text: "Nail down industry, company size (employee count + revenue), job titles (VP Sales, CTO, Head of Marketing), geography, and technology stack before sourcing a single contact." },
+  { name: "Source Prospect Data", text: "Use LinkedIn Sales Navigator for advanced filters, company directories, conference attendee lists, and professional associations. Combine multiple sources for the most complete data." },
+  { name: "Verify Contact Information", text: "Raw prospect data decays at 30% per year. Run every email through SMTP handshake verification and validate direct dials. Human-verified leads catch edge cases tools miss." },
+  { name: "Enrich With Additional Data Points", text: "Append company revenue, recent funding rounds, technology stack, and social profiles. Enriched data enables the personalization that drives reply rates." },
+  { name: "Organize and Import to CRM", text: "Segment your list by priority, industry, or campaign type. Tag properly and import directly into your CRM so your sales team can start outreach immediately." },
+];
 
 const prospectListFaqs = [
   { question: "How do you build a B2B prospect list?", answer: "Start by defining your ideal customer profile (ICP) — industry, company size, job titles, and geography. Then use a combination of LinkedIn Sales Navigator, B2B databases, and manual research to identify matching contacts. Verify all emails before outreach." },
@@ -18,6 +27,12 @@ const HowToBuildProspectList = () => {
     "Step-by-step guide to building a B2B prospect list — define your ICP, find decision-makers, verify contact data, and build CRM-ready lists that convert."
   );
   useFAQSchema(prospectListFaqs);
+  useHowToSchema({
+    name: "How to Build a Prospect List for B2B Sales",
+    description: "Step-by-step guide to building a targeted, verified B2B prospect list that generates pipeline and revenue.",
+    totalTime: "PT3H",
+    steps: prospectListSteps,
+  });
 
   return (
     <main className="min-h-screen bg-background text-foreground">
