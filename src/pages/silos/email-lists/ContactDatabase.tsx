@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "What is a B2B contact database?", answer: "A structured collection of business contacts — names, verified emails, direct dials, job titles, and company data — used by sales and marketing teams for targeted outreach. Unlike bulk databases, a custom-built database is researched on demand for your specific ICP." },
