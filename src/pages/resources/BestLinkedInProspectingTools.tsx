@@ -120,8 +120,8 @@ const BestLinkedInProspectingTools = () => {
     summary: "Compare the 10 best LinkedIn prospecting tools for 2026. Sales Navigator, Kaspr, Apollo, Phantombuster, and more — features, pros, cons, and pricing.",
     url: "/resources/best-linkedin-prospecting-tools",
   });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "Best LinkedIn Prospecting Tools", url: "/resources/best-linkedin-prospecting-tools" }]);
 
-  return (
     <main className="min-h-screen bg-background text-foreground">
       <article className="py-24 md:py-32">
         <div className="container max-w-3xl">

@@ -40,8 +40,8 @@ const HowToVerifyBusinessEmails = () => {
     summary: "Learn how to verify business email addresses — SMTP verification, MX record checks, catch-all detection, and best practices for clean B2B email lists.",
     url: "/resources/how-to-verify-business-emails",
   });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "How to Verify Business Emails", url: "/resources/how-to-verify-business-emails" }]);
 
-  return (
     <main className="min-h-screen bg-background text-foreground">
       <article className="py-24 md:py-32">
         <div className="container max-w-3xl">

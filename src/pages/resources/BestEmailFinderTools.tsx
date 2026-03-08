@@ -120,8 +120,8 @@ const BestEmailFinderTools = () => {
     summary: "Compare the 10 best email finder tools for B2B sales in 2026. Hunter.io, Snov.io, Apollo, Lusha, and more — features, accuracy, and pricing.",
     url: "/resources/best-email-finder-tools",
   });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "Best Email Finder Tools", url: "/resources/best-email-finder-tools" }]);
 
-  return (
     <main className="min-h-screen bg-background text-foreground">
       <article className="py-24 md:py-32">
         <div className="container max-w-3xl">

@@ -28,8 +28,8 @@ const WhatIsB2BLeadGeneration = () => {
     summary: "What is B2B lead generation? Complete guide covering how it works, types, strategies, challenges, and best practices for generating qualified B2B leads.",
     url: "/resources/what-is-b2b-lead-generation",
   });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "What Is B2B Lead Generation", url: "/resources/what-is-b2b-lead-generation" }]);
 
-  return (
     <main className="min-h-screen bg-background text-foreground">
       <article className="py-24 md:py-32">
         <div className="container max-w-3xl">

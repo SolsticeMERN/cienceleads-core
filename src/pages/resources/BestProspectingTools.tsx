@@ -160,8 +160,8 @@ const BestProspectingTools = () => {
     summary: "Compare the 15 best B2B lead generation tools for 2026. Apollo, ZoomInfo, LinkedIn Sales Navigator, and more — features, pros, cons, and pricing.",
     url: "/resources/best-prospecting-tools",
   });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "Best Prospecting Tools", url: "/resources/best-prospecting-tools" }]);
 
-  return (
     <main className="min-h-screen bg-background text-foreground">
       <article className="py-24 md:py-32">
         <div className="container max-w-3xl">

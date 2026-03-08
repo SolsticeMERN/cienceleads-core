@@ -25,8 +25,8 @@ const LinkedInProspectingGuide = () => {
     summary: "Complete LinkedIn prospecting guide — how to find decision-makers, build prospect lists, LinkedIn lead generation strategies, and sales prospecting best practices.",
     url: "/resources/linkedin-prospecting-guide",
   });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "LinkedIn Prospecting Guide", url: "/resources/linkedin-prospecting-guide" }]);
 
-  return (
     <main className="min-h-screen bg-background text-foreground">
       <article className="py-24 md:py-32">
         <div className="container max-w-3xl">

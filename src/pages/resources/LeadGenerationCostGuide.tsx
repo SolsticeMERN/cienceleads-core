@@ -25,8 +25,8 @@ const LeadGenerationCostGuide = () => {
     summary: "How much does B2B lead generation cost in 2026? Complete pricing guide with cost per lead benchmarks, pricing models, and ROI calculations.",
     url: "/resources/lead-generation-cost-guide",
   });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "Lead Generation Cost Guide", url: "/resources/lead-generation-cost-guide" }]);
 
-  return (
     <main className="min-h-screen bg-background text-foreground">
       <article className="py-24 md:py-32">
         <div className="container max-w-3xl">

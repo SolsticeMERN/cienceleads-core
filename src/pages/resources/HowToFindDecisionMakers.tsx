@@ -40,8 +40,8 @@ const HowToFindDecisionMakers = () => {
     summary: "Learn how to find and reach decision-makers in any company — LinkedIn techniques, org chart mapping, contact verification, and proven strategies.",
     url: "/resources/how-to-find-decision-makers",
   });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "How to Find Decision Makers", url: "/resources/how-to-find-decision-makers" }]);
 
-  return (
     <main className="min-h-screen bg-background text-foreground">
       <article className="py-24 md:py-32">
         <div className="container max-w-3xl">

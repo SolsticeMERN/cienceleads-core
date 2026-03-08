@@ -25,8 +25,8 @@ const DataEnrichmentExplained = () => {
     summary: "What is data enrichment? Complete guide to B2B data enrichment, CRM data enrichment, email verification, and contact data cleaning.",
     url: "/resources/data-enrichment-explained",
   });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "Data Enrichment Explained", url: "/resources/data-enrichment-explained" }]);
 
-  return (
     <main className="min-h-screen bg-background text-foreground">
       <article className="py-24 md:py-32">
         <div className="container max-w-3xl">

@@ -144,8 +144,8 @@ const LeadGenerationStrategies = () => {
     summary: "10 proven B2B lead generation strategies for 2026. Prospect research, LinkedIn prospecting, cold email, ABM, data enrichment, and more.",
     url: "/resources/lead-generation-strategies",
   });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "Lead Generation Strategies", url: "/resources/lead-generation-strategies" }]);
 
-  return (
     <main className="min-h-screen bg-background text-foreground">
       <article className="py-24 md:py-32">
         <div className="container max-w-3xl">

@@ -120,8 +120,8 @@ const BestColdEmailTools = () => {
     summary: "Compare the 10 best cold email tools for B2B outreach in 2026. Instantly, Lemlist, Smartlead, Apollo, and more — features, deliverability, and pricing.",
     url: "/resources/best-cold-email-tools",
   });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "Best Cold Email Tools", url: "/resources/best-cold-email-tools" }]);
 
-  return (
     <main className="min-h-screen bg-background text-foreground">
       <article className="py-24 md:py-32">
         <div className="container max-w-3xl">
