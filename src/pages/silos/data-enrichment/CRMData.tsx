@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "What is CRM data enrichment?", answer: "CRM data enrichment is the process of improving the quality and completeness of your CRM records — updating outdated job titles, appending missing emails and phone numbers, filling company firmographic data, removing duplicate records, and verifying accuracy across your entire database." },
