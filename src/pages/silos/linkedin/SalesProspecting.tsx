@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "What is LinkedIn sales prospecting?", answer: "LinkedIn sales prospecting is the process of using LinkedIn to identify, research, and gather verified contact information for B2B decision-makers — enabling multi-channel outreach (email, phone, LinkedIn) with context and relevance that dramatically improves conversion rates." },
