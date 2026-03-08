@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
 
 const linkedInProspectingFaqs = [
   { question: "What are LinkedIn prospecting best practices?", answer: "Optimize your profile before outreach, use Sales Navigator for advanced filtering, personalize every connection request with a specific reason to connect, engage with prospects' content before messaging, and follow up with value-driven messages rather than immediate sales pitches." },

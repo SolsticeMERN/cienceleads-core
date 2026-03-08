@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
 
 const leadGenCostFaqs = [
   { question: "How much does B2B lead generation cost per lead?", answer: "B2B lead generation costs range from $0.01 for bulk scraped data to $2.00+ for enterprise ABM research. Human-verified leads typically cost $0.10–$0.50 per contact and deliver 0% bounce rates, making them the best value for serious outbound campaigns." },
