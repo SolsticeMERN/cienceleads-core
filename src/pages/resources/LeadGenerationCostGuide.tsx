@@ -16,8 +16,8 @@ const LeadGenerationCostGuide = () => {
     "How Much Does B2B Lead Generation Cost? Pricing Guide (2026) — CienceLeads",
     "How much does B2B lead generation cost in 2026? Complete pricing guide with cost per lead benchmarks, pricing models, and ROI calculations for verified B2B leads."
   );
+  useFAQSchema(leadGenCostFaqs);
 
-  return (
     <main className="min-h-screen bg-background text-foreground">
       <article className="py-24 md:py-32">
         <div className="container max-w-3xl">

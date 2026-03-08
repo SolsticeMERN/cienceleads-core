@@ -16,8 +16,8 @@ const SalesOutreachStrategies = () => {
     "Sales Outreach Strategies | B2B Cold Outreach Guide (2026) — CienceLeads",
     "Proven sales outreach strategies for B2B teams. Cold email templates, LinkedIn messaging, multi-channel sequences, and personalization tactics that get replies."
   );
+  useFAQSchema(salesOutreachFaqs);
 
-  return (
     <main className="min-h-screen bg-background text-foreground">
       <article className="py-24 md:py-32">
         <div className="container max-w-3xl">

@@ -16,8 +16,8 @@ const HowToFindDecisionMakers = () => {
     "How to Find Decision Makers in Companies (B2B Guide 2026) — CienceLeads",
     "Learn how to find and reach decision-makers in any company — LinkedIn techniques, org chart mapping, contact verification, and proven strategies for B2B sales teams."
   );
+  useFAQSchema(decisionMakerFaqs);
 
-  return (
     <main className="min-h-screen bg-background text-foreground">
       <article className="py-24 md:py-32">
         <div className="container max-w-3xl">

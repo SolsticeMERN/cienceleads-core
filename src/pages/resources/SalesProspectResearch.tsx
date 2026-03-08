@@ -16,8 +16,8 @@ const SalesProspectResearch = () => {
     "Sales Prospect Research: Complete Guide for B2B Teams (2026) — CienceLeads",
     "Master sales prospect research — how to find decision-makers, gather buying signals, and build targeted prospect profiles that drive higher conversion rates."
   );
+  useFAQSchema(prospectResearchFaqs);
 
-  return (
     <main className="min-h-screen bg-background text-foreground">
       <article className="py-24 md:py-32">
         <div className="container max-w-3xl">

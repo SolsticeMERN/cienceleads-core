@@ -16,8 +16,8 @@ const HowToBuildProspectList = () => {
     "How to Build a Prospect List for B2B Sales (2026 Guide) — CienceLeads",
     "Step-by-step guide to building a B2B prospect list — define your ICP, find decision-makers, verify contact data, and build CRM-ready lists that convert."
   );
+  useFAQSchema(prospectListFaqs);
 
-  return (
     <main className="min-h-screen bg-background text-foreground">
       <article className="py-24 md:py-32">
         <div className="container max-w-3xl">

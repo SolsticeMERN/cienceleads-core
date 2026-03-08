@@ -16,8 +16,8 @@ const LinkedInProspectingGuide = () => {
     "LinkedIn Prospecting Guide: Find Decision-Makers at Scale (2026) — CienceLeads",
     "Complete LinkedIn prospecting guide — how to find decision-makers, build prospect lists, LinkedIn lead generation strategies, and LinkedIn sales prospecting best practices."
   );
+  useFAQSchema(linkedInProspectingFaqs);
 
-  return (
     <main className="min-h-screen bg-background text-foreground">
       <article className="py-24 md:py-32">
         <div className="container max-w-3xl">

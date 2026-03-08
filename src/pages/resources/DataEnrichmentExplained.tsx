@@ -16,8 +16,8 @@ const DataEnrichmentExplained = () => {
     "Data Enrichment Explained: B2B Data Enrichment Guide (2026) — CienceLeads",
     "What is data enrichment? Complete guide to B2B data enrichment, CRM data enrichment, email verification, and contact data cleaning. Learn when and why to use a data enrichment service."
   );
+  useFAQSchema(dataEnrichmentFaqs);
 
-  return (
     <main className="min-h-screen bg-background text-foreground">
       <article className="py-24 md:py-32">
         <div className="container max-w-3xl">
