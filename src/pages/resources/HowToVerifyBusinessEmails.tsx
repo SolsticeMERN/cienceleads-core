@@ -40,6 +40,7 @@ const HowToVerifyBusinessEmails = () => {
     url: "/resources/how-to-verify-business-emails",
   });
 
+  return (
     <main className="min-h-screen bg-background text-foreground">
       <article className="py-24 md:py-32">
         <div className="container max-w-3xl">
