@@ -34,6 +34,11 @@ const HowToFindDecisionMakers = () => {
     totalTime: "PT2H",
     steps: decisionMakerSteps,
   });
+  useSpeakableSchema({
+    headline: "How to Find Decision Makers in Companies (B2B Guide 2026)",
+    summary: "Learn how to find and reach decision-makers in any company — LinkedIn techniques, org chart mapping, contact verification, and proven strategies.",
+    url: "/resources/how-to-find-decision-makers",
+  });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

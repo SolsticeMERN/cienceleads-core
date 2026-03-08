@@ -138,6 +138,11 @@ const LeadGenerationStrategies = () => {
   ];
 
   useFAQSchema(faqs);
+  useSpeakableSchema({
+    headline: "10 Proven B2B Lead Generation Strategies That Work in 2026",
+    summary: "10 proven B2B lead generation strategies for 2026. Prospect research, LinkedIn prospecting, cold email, ABM, data enrichment, and more.",
+    url: "/resources/lead-generation-strategies",
+  });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

@@ -103,6 +103,11 @@ const B2BLeadGenerationStatistics = () => {
   ];
 
   useFAQSchema(faqs);
+  useSpeakableSchema({
+    headline: "70+ B2B Lead Generation Statistics Every Marketer Should Know (2026)",
+    summary: "70+ B2B lead generation statistics for 2026. Cold email benchmarks, LinkedIn prospecting stats, cost per lead data, conversion rates, and data quality insights.",
+    url: "/resources/b2b-lead-generation-statistics",
+  });
 
   const StatSection = ({ title, icon: Icon, stats, children }: { title: string; icon: typeof BarChart3; stats: StatItem[]; children?: React.ReactNode }) => (
     <section className="mb-12">

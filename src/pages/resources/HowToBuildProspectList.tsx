@@ -34,6 +34,11 @@ const HowToBuildProspectList = () => {
     totalTime: "PT3H",
     steps: prospectListSteps,
   });
+  useSpeakableSchema({
+    headline: "How to Build a Prospect List for B2B Sales (2026 Guide)",
+    summary: "Step-by-step guide to building a B2B prospect list — define your ICP, find decision-makers, verify contact data, and build CRM-ready lists.",
+    url: "/resources/how-to-build-a-prospect-list",
+  });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

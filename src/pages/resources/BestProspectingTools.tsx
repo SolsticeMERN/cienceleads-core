@@ -154,6 +154,11 @@ const BestProspectingTools = () => {
   ];
 
   useFAQSchema(faqs);
+  useSpeakableSchema({
+    headline: "15 Best B2B Lead Generation Tools for Sales Teams (2026)",
+    summary: "Compare the 15 best B2B lead generation tools for 2026. Apollo, ZoomInfo, LinkedIn Sales Navigator, and more — features, pros, cons, and pricing.",
+    url: "/resources/best-prospecting-tools",
+  });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

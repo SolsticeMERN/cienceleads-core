@@ -19,6 +19,11 @@ const LinkedInProspectingGuide = () => {
     "Complete LinkedIn prospecting guide — how to find decision-makers, build prospect lists, LinkedIn lead generation strategies, and LinkedIn sales prospecting best practices."
   );
   useFAQSchema(linkedInProspectingFaqs);
+  useSpeakableSchema({
+    headline: "LinkedIn Prospecting Guide: Find Decision-Makers at Scale (2026)",
+    summary: "Complete LinkedIn prospecting guide — how to find decision-makers, build prospect lists, LinkedIn lead generation strategies, and sales prospecting best practices.",
+    url: "/resources/linkedin-prospecting-guide",
+  });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

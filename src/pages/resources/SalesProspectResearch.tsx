@@ -19,6 +19,11 @@ const SalesProspectResearch = () => {
     "Master sales prospect research — how to find decision-makers, gather buying signals, and build targeted prospect profiles that drive higher conversion rates."
   );
   useFAQSchema(prospectResearchFaqs);
+  useSpeakableSchema({
+    headline: "Sales Prospect Research: Complete Guide for B2B Teams (2026)",
+    summary: "Master sales prospect research — how to find decision-makers, gather buying signals, and build targeted prospect profiles that drive higher conversion rates.",
+    url: "/resources/sales-prospect-research",
+  });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

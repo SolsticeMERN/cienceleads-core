@@ -19,6 +19,11 @@ const SalesOutreachStrategies = () => {
     "Proven sales outreach strategies for B2B teams. Cold email templates, LinkedIn messaging, multi-channel sequences, and personalization tactics that get replies."
   );
   useFAQSchema(salesOutreachFaqs);
+  useSpeakableSchema({
+    headline: "Sales Outreach Strategies | B2B Cold Outreach Guide (2026)",
+    summary: "Proven sales outreach strategies for B2B teams. Cold email templates, LinkedIn messaging, multi-channel sequences, and personalization tactics.",
+    url: "/resources/sales-outreach-strategies",
+  });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

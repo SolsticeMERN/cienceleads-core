@@ -114,6 +114,11 @@ const BestLinkedInProspectingTools = () => {
   ];
 
   useFAQSchema(faqs);
+  useSpeakableSchema({
+    headline: "10 Best LinkedIn Prospecting Tools for B2B Sales Teams (2026)",
+    summary: "Compare the 10 best LinkedIn prospecting tools for 2026. Sales Navigator, Kaspr, Apollo, Phantombuster, and more — features, pros, cons, and pricing.",
+    url: "/resources/best-linkedin-prospecting-tools",
+  });
 
   return (
     <main className="min-h-screen bg-background text-foreground">
