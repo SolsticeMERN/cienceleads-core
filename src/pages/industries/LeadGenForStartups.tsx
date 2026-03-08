@@ -14,6 +14,7 @@ const LeadGenForStartups = () => {
   );
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "Lead Generation for Startups", url: "/b2b-lead-generation-for-startups" }]);
 
+  const faqs = [
     { question: "How much does startup lead generation cost?", answer: "Startup lead generation costs range from $0.10 to $0.30 per verified lead depending on targeting specificity and volume. CienceLeads offers startup-friendly packages starting at 500 leads/month to help early-stage companies build their first pipeline without breaking the budget." },
     { question: "When should a startup start lead generation?", answer: "Start lead generation as soon as you have product-market fit validation. If your product solves a real problem and you've closed your first few customers, it's time to build a predictable pipeline. CienceLeads helps startups go from founder-led sales to scalable outbound in weeks." },
     { question: "Can CienceLeads help pre-revenue startups?", answer: "Yes. We work with pre-revenue and early-stage startups to build initial prospect lists for validation outreach. Start with 500 verified contacts to test your messaging and ICP assumptions before scaling." },

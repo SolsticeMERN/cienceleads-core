@@ -14,6 +14,7 @@ const LeadGenForAgencies = () => {
   );
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "Lead Generation for Agencies", url: "/b2b-lead-generation-for-agencies" }]);
 
+  const faqs = [
     { question: "How does lead generation for agencies work?", answer: "Agency lead generation works by identifying potential clients (CMOs, VPs of Marketing, business owners) at companies that match your agency's ideal client profile. CienceLeads builds custom prospect lists filtered by industry, company size, marketing budget, and growth signals." },
     { question: "Can you white-label lead generation for my agency?", answer: "CienceLeads provides white-label lead generation for agencies. We build verified prospect lists under your brand, allowing you to offer lead generation as a service to your clients without building an internal research team." },
     { question: "What types of agencies use CienceLeads?", answer: "We work with digital marketing agencies, SEO agencies, PPC agencies, content marketing firms, branding agencies, and full-service marketing agencies. Any agency that needs a predictable pipeline of qualified clients can benefit from our lead generation service." },
