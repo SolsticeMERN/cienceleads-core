@@ -60,8 +60,14 @@ import LeadGenForSaaS from "./pages/industries/LeadGenForSaaS";
 import LeadGenForAgencies from "./pages/industries/LeadGenForAgencies";
 import LeadGenForStartups from "./pages/industries/LeadGenForStartups";
 import NotFound from "./pages/NotFound";
+import { useOrganizationSchema } from "./hooks/use-organization-schema";
 
 const queryClient = new QueryClient();
+
+const AppContent = () => {
+  useOrganizationSchema();
+  return null;
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
