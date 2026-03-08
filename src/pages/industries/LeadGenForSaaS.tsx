@@ -13,8 +13,8 @@ const LeadGenForSaaS = () => {
     "B2B Lead Generation for SaaS | SaaS Lead Generation Service | CienceLeads",
     "B2B lead generation for SaaS companies. Human-verified SaaS leads targeting VPs, CTOs, and decision-makers. Custom prospect lists filtered by tech stack, funding stage, and company size."
   );
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "Lead Generation for SaaS", url: "/b2b-lead-generation-for-saas" }]);
 
-  const faqs = [
     { question: "How does SaaS lead generation work?", answer: "SaaS lead generation works by identifying decision-makers (VPs, CTOs, Heads of Product) at companies that match your ICP. CienceLeads filters by technology stack, funding stage, team size, and growth signals to find SaaS buyers who are most likely to need your solution right now." },
     { question: "How many leads does a SaaS startup need?", answer: "Most SaaS companies need 500–2,500 verified leads per month to build a healthy pipeline. The exact number depends on your ACV, conversion rates, and sales team capacity. Early-stage SaaS startups may start with 500/month, while growth-stage companies need 2,000+." },
     { question: "What data fields do SaaS leads include?", answer: "Every SaaS lead includes full name, job title, company name, verified email, direct dial, LinkedIn URL, company size, revenue range, technology stack, funding stage, and industry classification." },
