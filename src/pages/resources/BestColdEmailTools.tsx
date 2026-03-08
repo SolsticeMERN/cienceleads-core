@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 import PageFAQSection from "@/components/PageFAQSection";
@@ -119,6 +120,7 @@ const BestColdEmailTools = () => {
     summary: "Compare the 10 best cold email tools for B2B outreach in 2026. Instantly, Lemlist, Smartlead, Apollo, and more — features, deliverability, and pricing.",
     url: "/resources/best-cold-email-tools",
   });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "Best Cold Email Tools", url: "/resources/best-cold-email-tools" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

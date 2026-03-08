@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const salesOutreachFaqs = [
   { question: "What are the best B2B sales outreach channels?", answer: "The most effective B2B outreach channels are cold email (highest volume and scalability), LinkedIn (best for relationship building), and cold calling (highest conversion per touch). Multi-channel sequences combining all three consistently outperform single-channel approaches." },
@@ -24,6 +25,7 @@ const SalesOutreachStrategies = () => {
     summary: "Proven sales outreach strategies for B2B teams. Cold email templates, LinkedIn messaging, multi-channel sequences, and personalization tactics.",
     url: "/resources/sales-outreach-strategies",
   });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "Sales Outreach Strategies", url: "/resources/sales-outreach-strategies" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

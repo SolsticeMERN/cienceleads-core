@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 import PageFAQSection from "@/components/PageFAQSection";
@@ -119,6 +120,7 @@ const BestEmailFinderTools = () => {
     summary: "Compare the 10 best email finder tools for B2B sales in 2026. Hunter.io, Snov.io, Apollo, Lusha, and more — features, accuracy, and pricing.",
     url: "/resources/best-email-finder-tools",
   });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "Best Email Finder Tools", url: "/resources/best-email-finder-tools" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

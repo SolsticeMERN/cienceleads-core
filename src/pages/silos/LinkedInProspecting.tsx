@@ -2,6 +2,7 @@ import { ArrowRight, Linkedin, Check, UserCheck, Search, MessageSquare, Trending
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 import PageFAQSection from "@/components/PageFAQSection";
@@ -20,6 +21,8 @@ const LinkedInProspecting = () => {
     { question: "How many LinkedIn leads can you generate per month?", answer: "CienceLeads typically delivers 500–5,000 verified LinkedIn leads per month depending on your ICP specificity and targeting requirements. Every lead includes a verified email, direct dial, and LinkedIn profile URL." },
     { question: "What's the difference between LinkedIn automation and LinkedIn prospecting?", answer: "LinkedIn automation tools send connection requests and messages automatically, which risks account restrictions. LinkedIn prospecting is the research process of identifying and verifying decision-makers — CienceLeads does the research manually and delivers verified contact data you can use across any channel." },
   ];
+
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "LinkedIn Prospecting", url: "/linkedin-prospecting" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

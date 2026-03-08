@@ -6,6 +6,7 @@ import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useHowToSchema } from "@/hooks/use-howto-schema";
 import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const prospectListSteps = [
   { name: "Define Your Ideal Customer Profile", text: "Nail down industry, company size (employee count + revenue), job titles (VP Sales, CTO, Head of Marketing), geography, and technology stack before sourcing a single contact." },
@@ -39,6 +40,7 @@ const HowToBuildProspectList = () => {
     summary: "Step-by-step guide to building a B2B prospect list — define your ICP, find decision-makers, verify contact data, and build CRM-ready lists.",
     url: "/resources/how-to-build-a-prospect-list",
   });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "How to Build a Prospect List", url: "/resources/how-to-build-a-prospect-list" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

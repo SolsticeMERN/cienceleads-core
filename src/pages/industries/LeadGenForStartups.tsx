@@ -2,6 +2,7 @@ import { ArrowRight, Rocket, TrendingUp, BarChart3, Clock, CheckCircle } from "l
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 import PageFAQSection from "@/components/PageFAQSection";
@@ -11,6 +12,7 @@ const LeadGenForStartups = () => {
     "B2B Lead Generation for Startups | Startup Lead Generation Service | CienceLeads",
     "B2B lead generation for startups. Affordable, human-verified prospect lists to build your first sales pipeline. Startup-friendly pricing with 0% bounce guarantee."
   );
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "Lead Generation for Startups", url: "/b2b-lead-generation-for-startups" }]);
 
   const faqs = [
     { question: "How much does startup lead generation cost?", answer: "Startup lead generation costs range from $0.10 to $0.30 per verified lead depending on targeting specificity and volume. CienceLeads offers startup-friendly packages starting at 500 leads/month to help early-stage companies build their first pipeline without breaking the budget." },

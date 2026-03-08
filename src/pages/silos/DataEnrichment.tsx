@@ -2,6 +2,7 @@ import { ArrowRight, DatabaseZap, Check, ShieldCheck, RefreshCw, Zap, TrendingUp
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 import PageFAQSection from "@/components/PageFAQSection";
@@ -20,6 +21,8 @@ const DataEnrichment = () => {
     { question: "What's the difference between data enrichment and data cleaning?", answer: "Data cleaning removes invalid, duplicate, and outdated records from your database. Data enrichment adds new data fields (phone numbers, LinkedIn URLs, company details) to existing records. CienceLeads combines both — we clean your data first, then enrich it with verified information." },
     { question: "Can you enrich data from any CRM?", answer: "Yes. CienceLeads works with data from any CRM including HubSpot, Salesforce, Pipedrive, Outreach, Apollo, and custom databases. Export your contacts as CSV, send them to us, and we'll return enriched, verified data mapped to your CRM fields." },
   ];
+
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "Data Enrichment", url: "/data-enrichment" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

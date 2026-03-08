@@ -2,6 +2,7 @@ import { ArrowRight, Search, Check, Shield, Target, Users, FileSpreadsheet, Tren
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 import PageFAQSection from "@/components/PageFAQSection";
@@ -21,6 +22,8 @@ const LeadGeneration = () => {
     { question: "What industries do you support for B2B lead generation?", answer: "CienceLeads supports B2B lead generation across all major industries including SaaS, marketing agencies, consulting firms, startups, technology companies, fintech, healthcare, real estate, manufacturing, and professional services. We build custom prospect lists tailored to any B2B vertical." },
     { question: "Can I get a free sample before committing?", answer: "Yes. CienceLeads offers a free sample list so you can evaluate the quality of our human-verified leads before committing to a project. Contact us to request your free sample matched to your ICP." },
   ];
+
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "B2B Lead Generation", url: "/b2b-lead-generation" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

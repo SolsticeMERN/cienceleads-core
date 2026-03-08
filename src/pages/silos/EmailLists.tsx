@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "Where can I buy B2B email lists?", answer: "You can buy B2B email lists from database vendors, but most sell scraped data with 15–30% bounce rates. CienceLeads builds custom, human-verified email lists on demand — every contact is individually researched and SMTP-verified for 0% bounce rates." },
@@ -18,6 +19,7 @@ const EmailLists = () => {
     "B2B email list provider delivering human-verified, targeted prospect lists with 0% bounce guarantee. Custom-built email lists for SaaS, agencies, and B2B sales teams."
   );
   useFAQSchema(faqs);
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "Email Lists", url: "/email-lists" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

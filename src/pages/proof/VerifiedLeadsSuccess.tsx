@@ -2,12 +2,14 @@ import { ArrowRight, Check, ShieldCheck, TrendingUp, Mail, BarChart3 } from "luc
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const VerifiedLeadsSuccess = () => {
   usePageSEO(
     "Verified Leads Success Stories | 0% Bounce Results — CienceLeads",
     "Verified leads success stories from CienceLeads clients. See how human-verified B2B leads with 0% bounce rate transformed outbound campaigns."
   );
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Proof", url: "/proof" }, { name: "Verified Leads Success", url: "/proof/verified-leads-success" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

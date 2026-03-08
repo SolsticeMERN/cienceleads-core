@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const dataEnrichmentFaqs = [
   { question: "What is data enrichment?", answer: "Data enrichment is the process of enhancing existing contact or company records with additional data points — such as job titles, direct phone numbers, technographics, and firmographics — to make your CRM data more complete and actionable for sales outreach." },
@@ -24,6 +25,7 @@ const DataEnrichmentExplained = () => {
     summary: "What is data enrichment? Complete guide to B2B data enrichment, CRM data enrichment, email verification, and contact data cleaning.",
     url: "/resources/data-enrichment-explained",
   });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "Data Enrichment Explained", url: "/resources/data-enrichment-explained" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

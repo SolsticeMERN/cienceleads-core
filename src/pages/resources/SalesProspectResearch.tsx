@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const prospectResearchFaqs = [
   { question: "How do you research a sales prospect?", answer: "Effective prospect research follows a structured process: review the company website and recent news, check the prospect's LinkedIn profile and activity, identify pain points relevant to your solution, note mutual connections or shared interests, and verify contact information before outreach." },
@@ -24,6 +25,7 @@ const SalesProspectResearch = () => {
     summary: "Master sales prospect research — how to find decision-makers, gather buying signals, and build targeted prospect profiles that drive higher conversion rates.",
     url: "/resources/sales-prospect-research",
   });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "Sales Prospect Research", url: "/resources/sales-prospect-research" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">
