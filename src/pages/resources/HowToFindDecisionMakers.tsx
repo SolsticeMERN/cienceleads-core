@@ -4,6 +4,15 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useHowToSchema } from "@/hooks/use-howto-schema";
+
+const decisionMakerSteps = [
+  { name: "Define Your Target Buyer Persona", text: "Identify the job titles, seniority levels, and departments that make or influence purchasing decisions for your product. Focus on VP-level and above for enterprise, department heads for mid-market." },
+  { name: "Research Company Org Charts", text: "Use LinkedIn, company websites, press releases, and B2B intelligence tools to map reporting structures and identify both economic buyers and technical evaluators." },
+  { name: "Use LinkedIn Sales Navigator", text: "Leverage advanced filters for job title, seniority, company size, and industry. Save leads and create lead lists for systematic outreach." },
+  { name: "Verify Contact Information", text: "Cross-reference LinkedIn profiles with B2B data providers to obtain verified direct emails and phone numbers. Never rely on generic company emails." },
+  { name: "Build a Multi-Threaded Outreach Plan", text: "Target 3–5 stakeholders per account across different roles. Personalize messaging based on each decision-maker's priorities and pain points." },
+];
 
 const decisionMakerFaqs = [
   { question: "How do you find decision-makers in a company?", answer: "Use LinkedIn Sales Navigator to search by job title and seniority, cross-reference with company websites and press releases, and verify contact details through B2B data providers. Focus on VP-level and above for enterprise deals, or department heads for mid-market." },
