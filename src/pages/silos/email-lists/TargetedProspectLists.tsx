@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "What are targeted prospect lists?", answer: "Curated contact collections filtered to match your ideal customer profile — industry, job title, company size, revenue, geography, and technology stack. Every contact is individually researched and human-verified, not scraped from a bulk database." },
