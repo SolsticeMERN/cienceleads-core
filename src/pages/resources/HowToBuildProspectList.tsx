@@ -2,12 +2,21 @@ import { ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import { useFAQSchema } from "@/hooks/use-faq-schema";
+
+const prospectListFaqs = [
+  { question: "How do you build a B2B prospect list?", answer: "Start by defining your ideal customer profile (ICP) — industry, company size, job titles, and geography. Then use a combination of LinkedIn Sales Navigator, B2B databases, and manual research to identify matching contacts. Verify all emails before outreach." },
+  { question: "How many contacts should be on a prospect list?", answer: "For most B2B outbound campaigns, aim for 500–2,000 verified contacts per month. The exact number depends on your sales capacity, deal size, and how niche your ICP is. Quality always beats quantity." },
+  { question: "What are the best data sources for building prospect lists?", answer: "The most reliable sources include LinkedIn Sales Navigator for identifying contacts, company websites for org charts, B2B data providers for verified contact info, and intent data platforms for identifying in-market buyers." },
+  { question: "What is an ideal customer profile (ICP)?", answer: "An ICP defines the characteristics of companies and contacts most likely to buy your product. It typically includes industry, company size, revenue range, job titles, geographic location, and technology stack. A well-defined ICP dramatically improves outbound conversion rates." },
+];
 
 const HowToBuildProspectList = () => {
   usePageSEO(
     "How to Build a Prospect List for B2B Sales (2026 Guide) — CienceLeads",
     "Step-by-step guide to building a B2B prospect list — define your ICP, find decision-makers, verify contact data, and build CRM-ready lists that convert."
   );
+  useFAQSchema(prospectListFaqs);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

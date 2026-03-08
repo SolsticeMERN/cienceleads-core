@@ -2,12 +2,21 @@ import { ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import { useFAQSchema } from "@/hooks/use-faq-schema";
+
+const decisionMakerFaqs = [
+  { question: "How do you find decision-makers in a company?", answer: "Use LinkedIn Sales Navigator to search by job title and seniority, cross-reference with company websites and press releases, and verify contact details through B2B data providers. Focus on VP-level and above for enterprise deals, or department heads for mid-market." },
+  { question: "How do you bypass gatekeepers to reach decision-makers?", answer: "The most effective strategies include reaching out directly via LinkedIn, using verified direct email addresses instead of generic company emails, leveraging warm introductions through mutual connections, and targeting multiple stakeholders within the same account simultaneously." },
+  { question: "Is LinkedIn or a B2B database better for finding decision-makers?", answer: "LinkedIn is best for identifying and researching decision-makers, while B2B databases provide verified contact information like direct emails and phone numbers. The most effective approach combines both — use LinkedIn for discovery and a data provider for verified contact details." },
+  { question: "How do you map an organization's decision-making structure?", answer: "Start with LinkedIn to identify the org chart, look for recent hires and promotions in press releases, check company about pages for leadership teams, and use B2B intelligence tools to understand reporting structures. Map both the economic buyer and technical evaluators." },
+];
 
 const HowToFindDecisionMakers = () => {
   usePageSEO(
     "How to Find Decision Makers in Companies (B2B Guide 2026) — CienceLeads",
     "Learn how to find and reach decision-makers in any company — LinkedIn techniques, org chart mapping, contact verification, and proven strategies for B2B sales teams."
   );
+  useFAQSchema(decisionMakerFaqs);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

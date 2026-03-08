@@ -2,12 +2,21 @@ import { ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import { useFAQSchema } from "@/hooks/use-faq-schema";
+
+const linkedInProspectingFaqs = [
+  { question: "What are LinkedIn prospecting best practices?", answer: "Optimize your profile before outreach, use Sales Navigator for advanced filtering, personalize every connection request with a specific reason to connect, engage with prospects' content before messaging, and follow up with value-driven messages rather than immediate sales pitches." },
+  { question: "Is LinkedIn Sales Navigator worth it?", answer: "For B2B sales teams doing regular outbound prospecting, Sales Navigator pays for itself quickly. It provides advanced search filters, lead recommendations, InMail credits, and CRM integration that free LinkedIn cannot match. Most teams see 2–3x more qualified conversations." },
+  { question: "How many LinkedIn connection requests can you send per day?", answer: "LinkedIn limits connection requests to approximately 100 per week (around 20 per day). Exceeding this risks account restrictions. Focus on quality over quantity — a well-targeted, personalized request converts at 30–40%, while generic ones convert at under 10%." },
+  { question: "What are the risks of LinkedIn automation tools?", answer: "LinkedIn actively detects and penalizes automation. Risks include account restrictions, temporary bans, and permanent suspension. If you use automation, choose tools that mimic human behavior, set conservative daily limits, and never automate connection requests without personalization." },
+];
 
 const LinkedInProspectingGuide = () => {
   usePageSEO(
     "LinkedIn Prospecting Guide: Find Decision-Makers at Scale (2026) — CienceLeads",
     "Complete LinkedIn prospecting guide — how to find decision-makers, build prospect lists, LinkedIn lead generation strategies, and LinkedIn sales prospecting best practices."
   );
+  useFAQSchema(linkedInProspectingFaqs);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

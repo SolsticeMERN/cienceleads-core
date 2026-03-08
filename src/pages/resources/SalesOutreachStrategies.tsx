@@ -2,12 +2,21 @@ import { ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import { useFAQSchema } from "@/hooks/use-faq-schema";
+
+const salesOutreachFaqs = [
+  { question: "What are the best B2B sales outreach channels?", answer: "The most effective B2B outreach channels are cold email (highest volume and scalability), LinkedIn (best for relationship building), and cold calling (highest conversion per touch). Multi-channel sequences combining all three consistently outperform single-channel approaches." },
+  { question: "How long should a sales outreach sequence be?", answer: "The ideal outreach sequence is 7–12 touches over 3–4 weeks, combining email, LinkedIn, and phone. Research shows that 80% of deals require at least 5 follow-ups, yet most salespeople stop after 2. Persistence with value wins." },
+  { question: "How do you personalize outreach at scale?", answer: "Use a layered personalization framework: segment by industry and role for messaging templates, add company-specific details (recent funding, product launches, hiring), and include individual triggers (job changes, LinkedIn activity). This balances relevance with volume." },
+  { question: "Is cold email or LinkedIn better for B2B outreach?", answer: "Cold email scales better and allows longer messaging, while LinkedIn has higher response rates per message due to the social context. The best strategy uses both: LinkedIn for warming up and initial connection, email for detailed value propositions and follow-ups." },
+];
 
 const SalesOutreachStrategies = () => {
   usePageSEO(
     "Sales Outreach Strategies | B2B Cold Outreach Guide (2026) — CienceLeads",
     "Proven sales outreach strategies for B2B teams. Cold email templates, LinkedIn messaging, multi-channel sequences, and personalization tactics that get replies."
   );
+  useFAQSchema(salesOutreachFaqs);
 
   return (
     <main className="min-h-screen bg-background text-foreground">
