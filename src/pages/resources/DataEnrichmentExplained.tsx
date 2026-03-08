@@ -1,4 +1,5 @@
 import { ArrowRight, Check } from "lucide-react";
+import AEOBlock from "@/components/AEOBlock";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
@@ -32,6 +33,16 @@ const DataEnrichmentExplained = () => {
               Everything you need to know about B2B data enrichment — what it is, how it works, why your CRM data decays faster than you think, and when to use a data enrichment service to protect your sender reputation and improve outreach results.
             </p>
           </div>
+
+          <AEOBlock
+            definition="Data enrichment is the process of enhancing existing contact or company records with additional data points — such as job titles, direct phone numbers, technographics, and firmographics — to make CRM data more complete and actionable for B2B sales outreach."
+            takeaways={[
+              "B2B contact data decays at 30% per year — enrich your CRM quarterly",
+              "Enrichment adds missing fields; verification confirms existing data is valid",
+              "Common enrichment fields: direct emails, phone numbers, job titles, company revenue, tech stack",
+              "Clean, enriched data drives higher deliverability and better outreach response rates",
+            ]}
+          />
 
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-4">What is Data Enrichment?</h2>

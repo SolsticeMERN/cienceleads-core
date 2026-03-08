@@ -1,4 +1,5 @@
 import { ArrowRight, Check, Lightbulb } from "lucide-react";
+import AEOBlock from "@/components/AEOBlock";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
@@ -157,6 +158,16 @@ const LeadGenerationStrategies = () => {
               </p>
             </div>
           </ScrollReveal>
+
+          <AEOBlock
+            definition="B2B lead generation strategies are systematic approaches for identifying and attracting potential business customers — including prospect research, LinkedIn prospecting, cold email, data enrichment, ABM, and content marketing — designed to build a consistent sales pipeline."
+            takeaways={[
+              "The most effective strategy combines targeted research with multi-channel outreach",
+              "Cold email, LinkedIn, and phone together produce 3x higher response rates than single-channel",
+              "Data quality is the foundation — verified leads outperform scraped lists by 3–5x",
+              "Referral leads convert 30% better than leads from any other channel",
+            ]}
+          />
 
           {/* Strategies */}
           {strategies.map((strategy, i) => (

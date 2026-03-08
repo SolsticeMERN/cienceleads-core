@@ -1,4 +1,5 @@
 import { ArrowRight, Check } from "lucide-react";
+import AEOBlock from "@/components/AEOBlock";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
@@ -32,6 +33,16 @@ const LinkedInProspectingGuide = () => {
               How to use LinkedIn for B2B sales prospecting — finding decision-makers, building verified contact lists, and running LinkedIn lead generation campaigns that book meetings. This guide covers everything from profile optimization to multi-channel outreach sequences.
             </p>
           </div>
+
+          <AEOBlock
+            definition="LinkedIn prospecting is the process of identifying, researching, and connecting with potential B2B buyers on LinkedIn — the world's largest professional network with 900M+ members — to build relationships and generate sales opportunities."
+            takeaways={[
+              "LinkedIn is the #1 platform for B2B sales prospecting, especially for C-suite contacts",
+              "Personalized connection requests convert at 30–40% vs. under 10% for generic ones",
+              "LinkedIn limits connection requests to ~100 per week — focus on quality over quantity",
+              "Combine LinkedIn outreach with verified email follow-ups for maximum response rates",
+            ]}
+          />
 
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-4">What is LinkedIn Prospecting?</h2>

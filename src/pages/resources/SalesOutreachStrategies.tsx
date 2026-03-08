@@ -1,4 +1,5 @@
 import { ArrowRight, Check } from "lucide-react";
+import AEOBlock from "@/components/AEOBlock";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
@@ -32,6 +33,16 @@ const SalesOutreachStrategies = () => {
               Proven B2B sales outreach strategies that <strong className="text-foreground">turn cold prospects into booked meetings</strong>. Cold email, LinkedIn, phone, and multi-channel sequences — with real benchmarks and actionable tactics.
             </p>
           </div>
+
+          <AEOBlock
+            definition="Sales outreach strategies are structured, multi-channel approaches for contacting B2B prospects — combining cold email, LinkedIn messaging, and phone calls in coordinated sequences — designed to generate responses, book meetings, and build sales pipeline."
+            takeaways={[
+              "Top-performing teams achieve 8–15% reply rates vs. 1–3% average with generic outreach",
+              "The ideal sequence is 7–12 touches over 3–4 weeks across email, LinkedIn, and phone",
+              "Data quality is the #1 factor — verified contacts with 0% bounce rates are essential",
+              "Multi-channel outreach consistently outperforms single-channel approaches by 3x",
+            ]}
+          />
 
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-4">Why Most Outreach Fails</h2>

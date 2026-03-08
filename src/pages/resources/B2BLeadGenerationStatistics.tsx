@@ -1,4 +1,5 @@
 import { ArrowRight, BarChart3, TrendingUp, Linkedin, Mail, Phone, DollarSign } from "lucide-react";
+import AEOBlock from "@/components/AEOBlock";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
@@ -139,6 +140,17 @@ const B2BLeadGenerationStatistics = () => {
               </p>
             </div>
           </ScrollReveal>
+
+          <AEOBlock
+            definition="B2B lead generation statistics are quantitative benchmarks that measure the effectiveness of outbound sales activities — including cold email open rates, LinkedIn response rates, cost per lead, and conversion rates — used by sales and marketing teams to optimize pipeline performance."
+            takeaways={[
+              "Average B2B cold email open rate is 15–25%; top performers achieve 40–60% with verified data",
+              "80% of B2B social leads come from LinkedIn — it's the #1 platform for B2B prospecting",
+              "B2B contact data decays at 30% per year — verification is essential before every campaign",
+              "Human-verified leads cost $0.10–$0.50 per contact but deliver 0% bounce rates",
+              "Multi-channel outreach (email + LinkedIn + phone) produces 3x higher response rates",
+            ]}
+          />
 
           <ScrollReveal delay={0.05}>
             <StatSection title="General Lead Generation Statistics" icon={BarChart3} stats={generalStats} />

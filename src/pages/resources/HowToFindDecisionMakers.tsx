@@ -1,4 +1,5 @@
 import { ArrowRight, Check } from "lucide-react";
+import AEOBlock from "@/components/AEOBlock";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
@@ -32,6 +33,16 @@ const HowToFindDecisionMakers = () => {
               Reaching the right person is the single biggest factor in B2B sales success. This guide shows you exactly how to identify, verify, and connect with decision-makers in any target company — using free tools, paid platforms, and proven research techniques.
             </p>
           </div>
+
+          <AEOBlock
+            definition="Finding decision-makers in B2B sales means identifying the specific people within a target company who have the authority, budget, and influence to approve a purchase — typically VP-level executives, department heads, and C-suite leaders."
+            takeaways={[
+              "The average B2B deal involves 6–10 decision-makers across multiple departments",
+              "LinkedIn Sales Navigator is the most effective tool for identifying B2B decision-makers",
+              "Map the full buying committee: economic buyer, technical evaluator, champion, and end user",
+              "Always verify contact data before outreach — 30% of B2B contacts change roles annually",
+            ]}
+          />
 
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-4">Why Finding Decision-Makers Is Critical</h2>
