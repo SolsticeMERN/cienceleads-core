@@ -27,16 +27,16 @@ const HumanVerifiedLeads = () => {
             <ArrowLeft className="w-4 h-4" /> Back to Lead Generation
           </Link>
 
-          <header className="mb-12">
+          <header className="mb-12 text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
               Human Verified Leads —{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Researched by Real People</span>
             </h1>
 
-            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4 max-w-2xl mx-auto">
               Every contact individually researched and validated by <strong className="text-foreground">trained analysts</strong>. Not scraped, not recycled — 98%+ accuracy with 0% bounce guarantee.
             </p>
-            <ul className="space-y-2 mb-8">
+            <ul className="space-y-2 mb-8 inline-block text-left">
               {["Individual analyst review on every contact", "Catches 10–15% of issues automation misses", "Confirmed job titles, companies, and deliverability"].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
@@ -45,11 +45,13 @@ const HumanVerifiedLeads = () => {
               ))}
             </ul>
 
-            <Link to="/contact">
-              <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
-                Get Human Verified Leads <ArrowRight className="ml-2" />
-              </Button>
-            </Link>
+            <div>
+              <Link to="/contact">
+                <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
+                  Get Human Verified Leads <ArrowRight className="ml-2" />
+                </Button>
+              </Link>
+            </div>
           </header>
 
           {/* ── PROBLEM ── */}

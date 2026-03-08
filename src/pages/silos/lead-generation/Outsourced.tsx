@@ -30,16 +30,16 @@ const OutsourcedLeadGeneration = () => {
           </Link>
 
           {/* ── HERO ── */}
-          <header className="mb-12">
+          <header className="mb-12 text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
               Outsourced Lead Generation —{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Scale Without Hiring</span>
             </h1>
 
-            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4 max-w-2xl mx-auto">
               Get a <strong className="text-foreground">dedicated research team</strong> delivering verified, CRM-ready leads at 40–60% less than in-house — no hiring, no contracts, no tool subscriptions.
             </p>
-            <ul className="space-y-2 mb-8">
+            <ul className="space-y-2 mb-8 inline-block text-left">
               {["Month-to-month, cancel anytime", "First leads delivered in 48–72 hours", "0% bounce guarantee on every delivery"].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
@@ -48,11 +48,13 @@ const OutsourcedLeadGeneration = () => {
               ))}
             </ul>
 
-            <Link to="/contact">
-              <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
-                Get a Free Sample List <ArrowRight className="ml-2" />
-              </Button>
-            </Link>
+            <div>
+              <Link to="/contact">
+                <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
+                  Get a Free Sample List <ArrowRight className="ml-2" />
+                </Button>
+              </Link>
+            </div>
           </header>
 
           {/* ── PROBLEM ── */}

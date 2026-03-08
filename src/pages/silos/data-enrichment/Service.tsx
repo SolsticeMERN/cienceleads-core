@@ -30,16 +30,16 @@ const DataEnrichmentService = () => {
           </Link>
 
           {/* ── HERO ── */}
-          <header className="mb-12">
+          <header className="mb-12 text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
               Data Enrichment Service to{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Clean & Verify B2B Data</span>
             </h1>
 
-            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4 max-w-2xl mx-auto">
               Turn incomplete, outdated contact lists into <strong className="text-foreground">verified, campaign-ready databases</strong>. We clean, enrich, and verify every record — so your outreach hits real inboxes.
             </p>
-            <ul className="space-y-2 mb-8">
+            <ul className="space-y-2 mb-8 inline-block text-left">
               {["SMTP + human verification on every email", "Append missing phones, titles, LinkedIn URLs", "Before/after audit report with every delivery"].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
@@ -48,11 +48,13 @@ const DataEnrichmentService = () => {
               ))}
             </ul>
 
-            <Link to="/contact">
-              <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
-                Get a Free Sample Enrichment <ArrowRight className="ml-2" />
-              </Button>
-            </Link>
+            <div>
+              <Link to="/contact">
+                <Button size="lg" className="text-base px-8 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
+                  Get a Free Sample Enrichment <ArrowRight className="ml-2" />
+                </Button>
+              </Link>
+            </div>
           </header>
 
           {/* ── PROBLEM ── */}
