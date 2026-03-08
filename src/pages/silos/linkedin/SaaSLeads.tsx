@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "Why is LinkedIn important for SaaS lead generation?", answer: "92% of B2B SaaS buyers start vendor evaluation on LinkedIn. Decision-makers maintain current profiles, making LinkedIn the most reliable source for verified contact data. Combined with tech stack and funding filters, LinkedIn enables precision targeting impossible with generic databases." },
@@ -18,6 +20,8 @@ const LinkedInSaaSLeads = () => {
     "LinkedIn lead generation for SaaS companies. Find VP/C-level buyers at SaaS companies with verified emails, direct dials, tech stack data, and funding intelligence. 0% bounce guarantee."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "LinkedIn Lead Generation for SaaS", description: "Find VP/C-level buyers at SaaS companies with verified data.", url: "/linkedin-prospecting/saas-leads", category: "LinkedIn Prospecting" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "LinkedIn Prospecting", url: "/linkedin-prospecting" }, { name: "SaaS Leads", url: "/linkedin-prospecting/saas-leads" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

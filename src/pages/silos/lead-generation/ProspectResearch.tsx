@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "What is B2B prospect research?", answer: "B2B prospect research is the process of manually investigating potential buyers to build detailed profiles including verified contact info, company data, technology usage, and buying signals. It goes beyond lead list building by providing context for personalized outreach." },
@@ -17,6 +19,8 @@ const ProspectResearch = () => {
     "B2B prospect research service delivering detailed contact profiles with buying signals, tech stack data, and verified contact information for personalized outreach campaigns."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "B2B Prospect Research", description: "Deep-research contact profiles with buying signals and verified contact information.", url: "/b2b-lead-generation/prospect-research", category: "Lead Generation" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "B2B Lead Generation", url: "/b2b-lead-generation" }, { name: "Prospect Research", url: "/b2b-lead-generation/prospect-research" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

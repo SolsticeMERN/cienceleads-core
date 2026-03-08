@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "What is contact data cleaning?", answer: "Contact data cleaning is the process of removing inaccurate, incomplete, duplicated, or outdated records from your database. This includes removing invalid emails, role-based addresses (info@, sales@), duplicate contacts, outdated job titles, spam traps, and syntax errors — leaving you with a clean, accurate database." },
@@ -18,6 +20,8 @@ const ContactDataCleaning = () => {
     "Contact data cleaning service to remove invalid emails, duplicates, outdated titles, and role-based addresses from your database. Protect sender reputation and improve campaign performance."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "Contact Data Cleaning", description: "Remove invalid emails, duplicates, and outdated contacts from your database.", url: "/data-enrichment/contact-data-cleaning", category: "Data Enrichment" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Data Enrichment", url: "/data-enrichment" }, { name: "Contact Data Cleaning", url: "/data-enrichment/contact-data-cleaning" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

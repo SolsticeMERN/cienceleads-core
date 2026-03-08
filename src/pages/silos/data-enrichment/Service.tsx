@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "What is a data enrichment service?", answer: "A data enrichment service takes your existing contact lists and improves them by verifying emails, appending missing fields like phone numbers and LinkedIn URLs, removing duplicates, and scoring domain reputation. The result is cleaner, more complete data that performs better in outreach campaigns." },
@@ -18,6 +20,8 @@ const DataEnrichmentService = () => {
     "B2B data enrichment service to verify emails, append missing fields, remove duplicates, and score domain reputation. Human-verified with 0% bounce guarantee."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "Data Enrichment Service", description: "B2B data enrichment service to verify emails, append missing fields, remove duplicates, and score domain reputation.", url: "/data-enrichment/service", category: "Data Enrichment" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "Data Enrichment", url: "/data-enrichment" }, { name: "Service", url: "/data-enrichment/service" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

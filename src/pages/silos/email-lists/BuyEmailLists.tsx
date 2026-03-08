@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "Is it legal to buy B2B email lists?", answer: "Yes in most jurisdictions. CAN-SPAM (US) allows B2B outreach with proper unsubscribe mechanisms. GDPR (EU) requires legitimate interest basis for B2B contact. We source from publicly available business information and professional profiles." },
@@ -18,6 +20,8 @@ const BuyEmailLists = () => {
     "Buy B2B email lists that are human-verified with 0% bounce guarantee. Custom-built, ICP-matched contact lists for outreach campaigns."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "Buy B2B Email Lists", description: "Human-verified B2B email lists with 0% bounce guarantee.", url: "/email-lists/buy-email-lists", category: "Email Lists" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Email Lists", url: "/email-lists" }, { name: "Buy Email Lists", url: "/email-lists/buy-email-lists" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

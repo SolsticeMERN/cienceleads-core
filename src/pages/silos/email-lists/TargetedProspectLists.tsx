@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "What are targeted prospect lists?", answer: "Curated contact collections filtered to match your ideal customer profile — industry, job title, company size, revenue, geography, and technology stack. Every contact is individually researched and human-verified, not scraped from a bulk database." },
@@ -18,6 +20,8 @@ const TargetedProspectLists = () => {
     "Targeted prospect lists matched to your ICP. Filter by industry, title, company size, revenue, technology, and geography. Human-verified with 0% bounce guarantee."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "Targeted Prospect Lists", description: "ICP-matched B2B lists filtered by industry, title, size, and technology.", url: "/email-lists/targeted-prospect-lists", category: "Email Lists" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Email Lists", url: "/email-lists" }, { name: "Targeted Prospect Lists", url: "/email-lists/targeted-prospect-lists" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

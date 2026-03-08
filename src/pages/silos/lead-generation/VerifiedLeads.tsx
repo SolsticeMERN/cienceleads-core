@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "What are verified B2B leads?", answer: "Verified B2B leads are contacts validated through SMTP checks, catch-all detection, and human review to confirm the email is active, the job title is current, and the company data is accurate." },
@@ -17,6 +19,8 @@ const VerifiedLeads = () => {
     "Get verified B2B leads with a 0% bounce guarantee. Every contact validated through SMTP verification, catch-all detection, and human review. 98%+ accuracy."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "Verified B2B Leads", description: "Verified B2B leads with 0% bounce guarantee through SMTP verification and human review.", url: "/b2b-lead-generation/verified-leads", category: "Lead Generation" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "B2B Lead Generation", url: "/b2b-lead-generation" }, { name: "Verified Leads", url: "/b2b-lead-generation/verified-leads" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

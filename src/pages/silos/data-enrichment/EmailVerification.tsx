@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "What is email verification?", answer: "Email verification is the process of confirming that an email address is valid, active, and capable of receiving messages. It involves syntax checks, domain validation, SMTP handshake verification, and catch-all domain detection — ensuring the mailbox exists and can accept delivery." },
@@ -18,6 +20,8 @@ const EmailVerification = () => {
     "Email verification service with SMTP handshake, MX validation, catch-all detection, and human review. Protect your sender reputation with 0% bounce guarantee. 100 to 500,000+ emails."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "Email Verification Service", description: "4-layer SMTP + human verification with 0% bounce guarantee.", url: "/data-enrichment/email-verification", category: "Data Enrichment" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Data Enrichment", url: "/data-enrichment" }, { name: "Email Verification", url: "/data-enrichment/email-verification" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

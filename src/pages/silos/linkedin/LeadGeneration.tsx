@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "What is LinkedIn lead generation?", answer: "LinkedIn lead generation uses the world's largest professional network as a research platform to identify and verify B2B decision-makers. Unlike automation tools, a LinkedIn lead generation service delivers verified emails, direct dials, and company data — not automated connection requests that risk account bans." },
@@ -18,6 +20,8 @@ const LinkedInLeadGeneration = () => {
     "LinkedIn lead generation service delivering human-verified decision-maker contacts with emails, direct dials, and company data. Zero automation risk, 0% bounce guarantee."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "LinkedIn Lead Generation", description: "Human-verified decision-maker contacts with zero automation risk.", url: "/linkedin-prospecting/lead-generation", category: "LinkedIn Prospecting" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "LinkedIn Prospecting", url: "/linkedin-prospecting" }, { name: "Lead Generation", url: "/linkedin-prospecting/lead-generation" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

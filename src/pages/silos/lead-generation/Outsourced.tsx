@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "What is outsourced lead generation?", answer: "Outsourced lead generation means hiring a specialized external team to research, verify, and deliver B2B prospect lists instead of building an in-house research team. You get dedicated researchers without the cost and time of hiring, training, and managing employees." },
@@ -18,6 +20,8 @@ const OutsourcedLeadGeneration = () => {
     "Outsourced lead generation for B2B companies. Get dedicated research teams delivering human-verified prospect lists at 40–60% less than in-house. No contracts, no hiring risk."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "Outsourced Lead Generation", description: "Outsourced lead generation for B2B companies with dedicated research teams delivering human-verified prospect lists.", url: "/b2b-lead-generation/outsourced", category: "Lead Generation" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "B2B Lead Generation", url: "/b2b-lead-generation" }, { name: "Outsourced", url: "/b2b-lead-generation/outsourced" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

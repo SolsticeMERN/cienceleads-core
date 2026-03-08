@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "What is B2B data enrichment?", answer: "B2B data enrichment is the process of enhancing existing contact records by appending missing information — verified emails, direct dial phone numbers, current job titles, LinkedIn URLs, company firmographics, and technology stack data. The goal is to transform incomplete records into outreach-ready profiles." },
@@ -18,6 +20,8 @@ const B2BDataEnrichment = () => {
     "B2B data enrichment service to append missing emails, phones, titles, LinkedIn URLs, and company data to your existing contacts. Human-verified with 98%+ accuracy and 0% bounce guarantee."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "B2B Data Enrichment", description: "Append missing emails, phones, titles, and company data to your contacts.", url: "/data-enrichment/b2b-data-enrichment", category: "Data Enrichment" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Data Enrichment", url: "/data-enrichment" }, { name: "B2B Data Enrichment", url: "/data-enrichment/b2b-data-enrichment" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

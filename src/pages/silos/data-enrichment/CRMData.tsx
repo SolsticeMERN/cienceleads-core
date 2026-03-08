@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "What is CRM data enrichment?", answer: "CRM data enrichment is the process of improving the quality and completeness of your CRM records — updating outdated job titles, appending missing emails and phone numbers, filling company firmographic data, removing duplicate records, and verifying accuracy across your entire database." },
@@ -18,6 +20,8 @@ const CRMDataEnrichment = () => {
     "CRM data enrichment service to clean outdated records, fill missing fields, remove duplicates, and verify every contact in your CRM. Works with HubSpot, Salesforce, Pipedrive, and more."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "CRM Data Enrichment", description: "Clean outdated records, fill missing fields, remove duplicates, and verify every contact in your CRM.", url: "/data-enrichment/crm-data", category: "Data Enrichment" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Data Enrichment", url: "/data-enrichment" }, { name: "CRM Data Enrichment", url: "/data-enrichment/crm-data" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

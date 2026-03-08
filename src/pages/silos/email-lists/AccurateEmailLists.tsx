@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "What accuracy rate do your lists achieve?", answer: "98%+ through 4-layer verification: SMTP handshake, MX validation, catch-all detection, and human review. Every delivery includes a 0% bounce guarantee — if any contact bounces, we replace it free within 48 hours." },
@@ -18,6 +20,8 @@ const AccurateEmailLists = () => {
     "Accurate email lists with 98%+ accuracy through 4-layer verification. SMTP checks, catch-all detection, and human review on every contact. 0% bounce guarantee."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "Accurate Email Lists", description: "98%+ accuracy email lists through 4-layer verification.", url: "/email-lists/accurate-email-lists", category: "Email Lists" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Email Lists", url: "/email-lists" }, { name: "Accurate Email Lists", url: "/email-lists/accurate-email-lists" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

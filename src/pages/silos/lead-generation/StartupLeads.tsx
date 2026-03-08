@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 
 const faqs = [
   { question: "What's the minimum order for startups?", answer: "Start with as few as 200 verified leads. No minimum commitment required — scale based on results and outreach capacity." },
@@ -17,6 +19,8 @@ const StartupLeads = () => {
     "Startup lead generation service delivering human-verified B2B leads without enterprise pricing. Start from 200 leads, no contracts, 0% bounce guarantee."
   );
   useFAQSchema(faqs);
+  useServiceSchema({ name: "Startup Lead Generation", description: "Affordable B2B leads for startups. No contracts, 0% bounce guarantee.", url: "/b2b-lead-generation/startup-leads", category: "Lead Generation" });
+  useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "B2B Lead Generation", url: "/b2b-lead-generation" }, { name: "Startup Leads", url: "/b2b-lead-generation/startup-leads" }]);
 
   return (
     <main className="min-h-screen bg-background text-foreground">
