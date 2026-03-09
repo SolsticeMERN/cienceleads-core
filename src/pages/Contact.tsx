@@ -38,7 +38,7 @@ const Contact = () => {
     defaultValues: { name: "", company: "", email: "", industry: "", leadGoal: "", message: "" },
   });
 
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
