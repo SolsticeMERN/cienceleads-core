@@ -39,6 +39,7 @@ import AgencyCaseStudy from "./pages/proof/AgencyCaseStudy";
 import StartupCaseStudy from "./pages/proof/StartupCaseStudy";
 import VerifiedLeadsSuccess from "./pages/proof/VerifiedLeadsSuccess";
 import Contact from "./pages/Contact";
+import ThankYou from "./pages/ThankYou";
 import Resources from "./pages/Resources";
 import WhatIsB2BLeadGeneration from "./pages/resources/WhatIsB2BLeadGeneration";
 import LinkedInProspectingGuide from "./pages/resources/LinkedInProspectingGuide";
@@ -140,6 +141,7 @@ const App = () => (
           <Route path="/b2b-lead-generation-for-startups" element={<LeadGenForStartups />} />
           {/* Contact */}
           <Route path="/contact" element={<Contact />} />
+          <Route path="/thank-you" element={<ThankYou />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

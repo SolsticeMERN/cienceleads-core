@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -33,6 +34,7 @@ const Contact = () => {
     "Request a free sample list of human-verified B2B leads. Tell us your ICP — titles, industries, company size — and we'll deliver 50 verified contacts in 48 hours. Zero cost, zero contracts."
   );
 
+  const navigate = useNavigate();
   const { toast } = useToast();
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
@@ -48,8 +50,8 @@ const Contact = () => {
         body: data,
       });
       if (error) throw error;
-      toast({ title: "Request received", description: `Thanks ${data.name}, we'll reach out within 24 hours.` });
       form.reset();
+      navigate("/thank-you", { state: { name: data.name } });
     } catch (err) {
       console.error("Submission error:", err);
       toast({ title: "Something went wrong", description: "Please try again or email us directly.", variant: "destructive" });
