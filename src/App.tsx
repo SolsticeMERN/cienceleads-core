@@ -54,6 +54,7 @@ import BestLinkedInProspectingTools from "./pages/resources/BestLinkedInProspect
 import BestEmailFinderTools from "./pages/resources/BestEmailFinderTools";
 import BestColdEmailTools from "./pages/resources/BestColdEmailTools";
 import BestCRMTools from "./pages/resources/BestCRMTools";
+import BestDataEnrichmentTools from "./pages/resources/BestDataEnrichmentTools";
 import HowToBuildProspectList from "./pages/resources/HowToBuildProspectList";
 import SalesProspectResearch from "./pages/resources/SalesProspectResearch";
 import HowToFindDecisionMakers from "./pages/resources/HowToFindDecisionMakers";
