@@ -10,8 +10,17 @@ import IndustriesSection from "@/components/home/IndustriesSection";
 import FAQSection from "@/components/home/FAQSection";
 import FinalCTA from "@/components/home/FinalCTA";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import { useOrganizationSchema } from "@/hooks/use-organization-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
 
 const Index = () => {
+  useOrganizationSchema();
+  useServiceSchema({
+    name: "B2B Lead Generation & Verified Contact Lists",
+    description: "Human-verified B2B lead generation service delivering CRM-ready prospect lists with 0% bounce rate for SaaS, agencies, and startups.",
+    url: "/",
+    category: "B2B Lead Generation Service",
+  });
   usePageSEO(
     "Human-Verified B2B Lead Generation Service | CRM-Ready Prospect Lists | CienceLeads",
     "CienceLeads delivers human-verified B2B leads and CRM-ready prospect lists for SaaS, agencies, and startups. Get accurate contact data with 0% bounce. Request a free sample list today."
