@@ -22,6 +22,18 @@ const DataEnrichmentExplained = () => {
     "What is data enrichment? Complete guide to B2B data enrichment, CRM data enrichment, email verification, and contact data cleaning. Learn when and why to use a data enrichment service."
   );
   useFAQSchema(dataEnrichmentFaqs);
+  useHowToSchema({
+    name: "How to Enrich B2B Contact Data",
+    description: "Step-by-step guide to enriching CRM and contact data with verified emails, phone numbers, firmographics, and technographics.",
+    totalTime: "PT1H",
+    steps: [
+      { name: "Upload Your Existing List", text: "Share your CRM export or contact CSV. The service assesses current data quality, identifies gaps, and flags outdated records." },
+      { name: "Email Verification", text: "Multi-layer verification: SMTP handshake confirms the mailbox exists, MX record checks validate the domain, catch-all detection flags risky domains, and syntax validation catches formatting errors." },
+      { name: "Data Appending", text: "Add missing fields: verified job titles, direct dial phone numbers, LinkedIn URLs, company size, industry classification, revenue range, technology stack, and headquarters location." },
+      { name: "Deduplication & Cleaning", text: "Remove duplicate entries, role-based emails, contacts who have changed companies, and records with invalid or incomplete data." },
+      { name: "Deliverability Scoring", text: "Each record gets a confidence score based on verification results. Prioritize high-deliverability contacts for campaigns and handle uncertain records separately." },
+    ],
+  });
   useSpeakableSchema({
     headline: "Data Enrichment Explained: B2B Data Enrichment Guide (2026)",
     summary: "What is data enrichment? Complete guide to B2B data enrichment, CRM data enrichment, email verification, and contact data cleaning.",

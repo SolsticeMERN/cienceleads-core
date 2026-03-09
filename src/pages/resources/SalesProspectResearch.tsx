@@ -22,6 +22,18 @@ const SalesProspectResearch = () => {
     "Master sales prospect research — how to find decision-makers, gather buying signals, and build targeted prospect profiles that drive higher conversion rates."
   );
   useFAQSchema(prospectResearchFaqs);
+  useHowToSchema({
+    name: "How to Research Sales Prospects for B2B",
+    description: "Step-by-step guide to researching B2B sales prospects — identifying target accounts, mapping decision-makers, gathering intelligence, and prioritizing outreach.",
+    totalTime: "PT2H",
+    steps: [
+      { name: "Identify Target Accounts", text: "Start with your ICP criteria — industry, company size, geography, and technology. Use LinkedIn Sales Navigator and company databases to build your initial account list." },
+      { name: "Map Decision-Makers", text: "Within each target account, identify key decision-makers and influencers. For B2B sales, target VP-level and C-suite contacts in relevant departments." },
+      { name: "Gather Intelligence", text: "Research each prospect's recent LinkedIn activity, company news, earnings reports, job postings, and technology stack changes to reveal current priorities and pain points." },
+      { name: "Verify and Enrich Contact Data", text: "Collect verified business emails and direct phone numbers. Use human-verified leads to ensure every contact is accurate and deliverable before outreach." },
+      { name: "Score and Prioritize", text: "Rank prospects based on buying signals — recent funding, hiring activity, technology changes — and prioritize outreach to the highest-intent accounts first." },
+    ],
+  });
   useSpeakableSchema({
     headline: "Sales Prospect Research: Complete Guide for B2B Teams (2026)",
     summary: "Master sales prospect research — how to find decision-makers, gather buying signals, and build targeted prospect profiles that drive higher conversion rates.",
