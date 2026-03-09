@@ -1,7 +1,8 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -37,9 +38,14 @@ const Contact = () => {
     defaultValues: { name: "", company: "", email: "", industry: "", leadGoal: "", message: "" },
   });
 
-  const onSubmit = (data: ContactFormValues) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const onSubmit = async (data: ContactFormValues) => {
+    setIsSubmitting(true);
+    await new Promise((resolve) => setTimeout(resolve, 1500));
     toast({ title: "Request received", description: `Thanks ${data.name}, we'll reach out within 24 hours.` });
     form.reset();
+    setIsSubmitting(false);
   };
 
   return (
@@ -128,8 +134,12 @@ const Contact = () => {
                     <FormField control={form.control} name="message" render={({ field }) => (
                       <FormItem><FormLabel>Additional Details <span className="text-muted-foreground font-normal">(optional)</span></FormLabel><FormControl><Textarea placeholder="Target titles, geo, company size…" rows={3} {...field} /></FormControl><FormMessage /></FormItem>
                     )} />
-                    <Button type="submit" size="lg" className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
-                      Send My Request <ArrowRight className="ml-2" />
+                    <Button type="submit" size="lg" disabled={isSubmitting} className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25 disabled:opacity-70">
+                      {isSubmitting ? (
+                        <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Sending…</>
+                      ) : (
+                        <>Send My Request <ArrowRight className="ml-2" /></>
+                      )}
                     </Button>
                     <p className="text-xs text-center text-muted-foreground">
                       No credit card · No contracts · Your data stays private
