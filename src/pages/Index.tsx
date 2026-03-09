@@ -10,6 +10,8 @@ import IndustriesSection from "@/components/home/IndustriesSection";
 import FAQSection from "@/components/home/FAQSection";
 import FinalCTA from "@/components/home/FinalCTA";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import { useOrganizationSchema } from "@/hooks/use-organization-schema";
+import { useServiceSchema } from "@/hooks/use-service-schema";
 
 const Index = () => {
   usePageSEO(
