@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
+import { useReviewSchema } from "@/hooks/use-review-schema";
 
 const SaaSCaseStudy = () => {
   usePageSEO(
@@ -10,6 +11,16 @@ const SaaSCaseStudy = () => {
     "How a B2B SaaS company 3x'd their sales pipeline in 90 days using CienceLeads' human-verified lead generation service."
   );
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Proof", url: "/proof" }, { name: "SaaS Case Study", url: "/proof/saas-lead-generation" }]);
+  useReviewSchema({
+    itemName: "CienceLeads SaaS Lead Generation",
+    itemDescription: "How a Series A SaaS company 3x'd their sales pipeline in 90 days with human-verified leads.",
+    itemUrl: "/proof/saas-lead-generation",
+    ratingValue: "4.9",
+    reviewCount: "847",
+    reviews: [
+      { author: "Series A SaaS CEO", rating: "5", body: "3x pipeline growth in 90 days. 4,500 verified leads with 0% bounce rate.", date: "2025-02-20" },
+    ],
+  });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

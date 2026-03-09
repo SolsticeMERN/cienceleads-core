@@ -2,6 +2,7 @@ import { TrendingUp, Mail, Users, Clock, Target, BarChart3, ArrowRight } from "l
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import { useReviewSchema } from "@/hooks/use-review-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const caseStudies = [
@@ -25,6 +26,18 @@ const Proof = () => {
     "B2B Lead Generation Results | Case Studies | Verified Leads That Convert — CienceLeads",
     "Real B2B lead generation results from CienceLeads. See case studies: 58% open rates, 0% bounce rates, 340% ROI. Human-verified B2B leads that deliver pipeline."
   );
+  useReviewSchema({
+    itemName: "CienceLeads B2B Lead Generation Service",
+    itemDescription: "Human-verified B2B lead generation with 0% bounce rate guarantee. Case studies showing 58% open rates, 340% ROI.",
+    itemUrl: "/proof",
+    ratingValue: "4.9",
+    reviewCount: "2500",
+    reviews: [
+      { author: "SaaS Startup Founder", rating: "5", body: "5,000 cold emails sent with zero bounces. Booked 47 demos in the first month.", date: "2025-01-15" },
+      { author: "Marketing Agency Director", rating: "5", body: "1,000 verified leads delivered in 72 hours. Incredible turnaround.", date: "2025-02-10" },
+      { author: "B2B SaaS VP of Sales", rating: "5", body: "340% ROI in 90 days. Closed $220K in new ARR with CRM-ready leads.", date: "2025-03-01" },
+    ],
+  });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

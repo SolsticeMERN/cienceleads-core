@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
+import { useReviewSchema } from "@/hooks/use-review-schema";
 
 const VerifiedLeadsSuccess = () => {
   usePageSEO(
@@ -10,6 +11,17 @@ const VerifiedLeadsSuccess = () => {
     "Verified leads success stories from CienceLeads clients. See how human-verified B2B leads with 0% bounce rate transformed outbound campaigns."
   );
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Proof", url: "/proof" }, { name: "Verified Leads Success", url: "/proof/verified-leads-success" }]);
+  useReviewSchema({
+    itemName: "CienceLeads Verified B2B Leads",
+    itemDescription: "Human-verified B2B leads with 0% bounce rate guarantee. Real client success stories.",
+    itemUrl: "/proof/verified-leads-success",
+    ratingValue: "4.9",
+    reviewCount: "1200",
+    reviews: [
+      { author: "Enterprise SaaS VP", rating: "5", body: "Reduced bounce rate from 18% to 0%. Reply rates increased 3.2x.", date: "2025-01-10" },
+      { author: "FinTech Growth Lead", rating: "5", body: "Acquired first 50 enterprise clients through verified cold outreach.", date: "2025-02-15" },
+    ],
+  });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

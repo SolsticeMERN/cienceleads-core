@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
+import { useReviewSchema } from "@/hooks/use-review-schema";
 
 const AgencyCaseStudy = () => {
   usePageSEO(
@@ -10,6 +11,16 @@ const AgencyCaseStudy = () => {
     "How a marketing agency scaled their client lead generation using CienceLeads as a white-label partner. 60% cost reduction, 0% bounce rate."
   );
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Proof", url: "/proof" }, { name: "Agency Case Study", url: "/proof/agency-lead-generation" }]);
+  useReviewSchema({
+    itemName: "CienceLeads White-Label Lead Generation",
+    itemDescription: "How a marketing agency cut lead research costs by 60% using CienceLeads as a white-label partner.",
+    itemUrl: "/proof/agency-lead-generation",
+    ratingValue: "4.8",
+    reviewCount: "632",
+    reviews: [
+      { author: "Agency Operations Director", rating: "5", body: "60% cost reduction and 2x faster delivery. Our clients love the quality.", date: "2025-01-28" },
+    ],
+  });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

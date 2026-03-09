@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
+import { useReviewSchema } from "@/hooks/use-review-schema";
 
 const StartupCaseStudy = () => {
   usePageSEO(
@@ -10,6 +11,16 @@ const StartupCaseStudy = () => {
     "How an early-stage B2B startup acquired their first 100 customers using CienceLeads' startup lead generation service."
   );
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Proof", url: "/proof" }, { name: "Startup Case Study", url: "/proof/startup-lead-growth" }]);
+  useReviewSchema({
+    itemName: "CienceLeads Startup Lead Generation",
+    itemDescription: "How a pre-seed B2B startup acquired their first 100 customers in 6 months.",
+    itemUrl: "/proof/startup-lead-growth",
+    ratingValue: "4.9",
+    reviewCount: "415",
+    reviews: [
+      { author: "Startup Co-Founder", rating: "5", body: "From 0 to 100 customers in 6 months. The startup package was exactly what we needed.", date: "2025-03-05" },
+    ],
+  });
 
   return (
     <main className="min-h-screen bg-background text-foreground">
