@@ -144,17 +144,11 @@ const LeadGenForStartups = () => {
 
           {/* Mid-page CTA */}
           <ScrollReveal delay={0.1}>
-            <div className="rounded-xl border border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5 p-8 md:p-10 mb-8 text-center">
-              <h2 className="text-xl md:text-2xl font-bold mb-3">Get 50 Free Sample Leads — Matched to Your Startup's ICP</h2>
-              <p className="text-sm text-muted-foreground max-w-xl mx-auto mb-6">
-                Tell us who your ideal customer is and we'll deliver a free sample list within 48 hours. No contracts, no commitment — just see the quality for yourself.
-              </p>
-              <Link to="/contact">
-                <Button size="lg" className="text-base px-10 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
-                  Request Free Sample <ArrowRight className="ml-2" />
-                </Button>
-              </Link>
-            </div>
+            <ConversionCTA
+              headline="Get 50 Free Sample Leads — Matched to Your Startup's ICP"
+              description="Tell us who your ideal customer is and we'll deliver a free sample list within 48 hours. No contracts, no commitment — just see the quality for yourself."
+              buttonText="Request Free Sample"
+            />
           </ScrollReveal>
 
           {/* Results */}
