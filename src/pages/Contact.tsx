@@ -34,6 +34,7 @@ const Contact = () => {
     "Request a free sample list of human-verified B2B leads. Tell us your ICP — titles, industries, company size — and we'll deliver 50 verified contacts in 48 hours. Zero cost, zero contracts."
   );
 
+  const navigate = useNavigate();
   const { toast } = useToast();
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
