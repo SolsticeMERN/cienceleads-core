@@ -136,6 +136,7 @@ const App = () => (
           <Route path="/resources/best-email-finder-tools" element={<BestEmailFinderTools />} />
           <Route path="/resources/best-cold-email-tools" element={<BestColdEmailTools />} />
           <Route path="/resources/best-crm-tools" element={<BestCRMTools />} />
+          <Route path="/resources/best-data-enrichment-tools" element={<BestDataEnrichmentTools />} />
           <Route path="/resources/how-to-build-a-prospect-list" element={<HowToBuildProspectList />} />
           <Route path="/resources/sales-prospect-research" element={<SalesProspectResearch />} />
           <Route path="/resources/how-to-find-decision-makers" element={<HowToFindDecisionMakers />} />
