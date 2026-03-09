@@ -27,7 +27,7 @@ const EmailLists = () => {
         <div className="container max-w-4xl">
 
           {/* Breadcrumb */}
-          <Link to="/services" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-10">
+          <Link to="/services" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary <Link to="/services" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-4">">
             <ArrowLeft className="w-4 h-4" /> Back to Services
           </Link>
 

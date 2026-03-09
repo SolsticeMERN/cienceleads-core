@@ -27,7 +27,7 @@ const StartupLeads = () => {
       <article className="py-16 md:py-24">
         <div className="container max-w-4xl">
 
-          <Link to="/b2b-lead-generation" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-10">
+          <Link to="/b2b-lead-generation" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary <Link to="/b2b-lead-generation" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-4">">
             <ArrowLeft className="w-4 h-4" /> Back to Lead Generation
           </Link>
 
