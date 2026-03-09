@@ -45,6 +45,16 @@ const LeadGenForSaaS = () => {
     url: "/b2b-lead-generation-for-saas",
     category: "B2B Lead Generation",
   });
+  useHowToSchema({
+    name: "How to Get SaaS Leads with CienceLeads",
+    description: "3-step process to get human-verified SaaS leads delivered to your CRM in 48–72 hours.",
+    totalTime: "PT72H",
+    steps: [
+      { name: "Define Your ICP", text: "15-minute call to nail down your ideal SaaS buyer — titles, tech stack, funding stage, company size, and deal-breakers." },
+      { name: "We Build Your List", text: "Our researchers manually identify, verify, and enrich every contact. No scraping, no stale databases — just accurate, fresh data." },
+      { name: "Start Closing", text: "Receive your CRM-ready list within 48–72 hours. Load it into your outreach tool and watch reply rates climb." },
+    ],
+  });
 
   const faqs = [
     { question: "How does SaaS lead generation work?", answer: "SaaS lead generation works by identifying decision-makers (VPs, CTOs, Heads of Product) at companies that match your ICP. CienceLeads filters by technology stack, funding stage, team size, and growth signals to find SaaS buyers who are most likely to need your solution right now." },
