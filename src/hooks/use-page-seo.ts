@@ -1,13 +1,79 @@
 import { useEffect } from "react";
 
-export const usePageSEO = (title: string, description?: string) => {
+const SITE_URL = "https://cienceleads.com";
+const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
+const SITE_NAME = "CienceLeads";
+
+interface PageSEOOptions {
+  noindex?: boolean;
+  ogImage?: string;
+}
+
+export const usePageSEO = (
+  title: string,
+  description?: string,
+  options?: PageSEOOptions
+) => {
   useEffect(() => {
     document.title = title;
-    if (description) {
-      let meta = document.querySelector('meta[name="description"]');
-      if (meta) {
-        meta.setAttribute("content", description);
+
+    const path = window.location.pathname;
+    const canonicalUrl = `${SITE_URL}${path === "/" ? "" : path}`;
+
+    // Helper to set or create a meta tag
+    const setMeta = (attr: string, key: string, content: string) => {
+      let el = document.querySelector(`meta[${attr}="${key}"]`);
+      if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute(attr, key);
+        document.head.appendChild(el);
       }
+      el.setAttribute("content", content);
+    };
+
+    // Helper to set or create a link tag
+    const setLink = (rel: string, href: string) => {
+      let el = document.querySelector(`link[rel="${rel}"]`) as HTMLLinkElement | null;
+      if (!el) {
+        el = document.createElement("link");
+        el.setAttribute("rel", rel);
+        document.head.appendChild(el);
+      }
+      el.setAttribute("href", href);
+    };
+
+    // Canonical
+    setLink("canonical", canonicalUrl);
+
+    // Meta description
+    if (description) {
+      setMeta("name", "description", description);
     }
-  }, [title, description]);
+
+    // Robots (noindex)
+    if (options?.noindex) {
+      setMeta("name", "robots", "noindex, nofollow");
+    } else {
+      const robotsMeta = document.querySelector('meta[name="robots"]');
+      if (robotsMeta) robotsMeta.remove();
+    }
+
+    // Open Graph
+    setMeta("property", "og:title", title);
+    setMeta("property", "og:url", canonicalUrl);
+    setMeta("property", "og:type", "website");
+    setMeta("property", "og:site_name", SITE_NAME);
+    setMeta("property", "og:image", options?.ogImage || DEFAULT_OG_IMAGE);
+    if (description) {
+      setMeta("property", "og:description", description);
+    }
+
+    // Twitter Card
+    setMeta("name", "twitter:card", "summary_large_image");
+    setMeta("name", "twitter:title", title);
+    setMeta("name", "twitter:image", options?.ogImage || DEFAULT_OG_IMAGE);
+    if (description) {
+      setMeta("name", "twitter:description", description);
+    }
+  }, [title, description, options?.noindex, options?.ogImage]);
 };
