@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
+import { useReviewSchema } from "@/hooks/use-review-schema";
 
 const SaaSCaseStudy = () => {
   usePageSEO(
