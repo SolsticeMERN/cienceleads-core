@@ -6,6 +6,7 @@ import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 import { useOrganizationSchema } from "@/hooks/use-organization-schema";
 import { useServiceSchema } from "@/hooks/use-service-schema";
 import { useHowToSchema } from "@/hooks/use-howto-schema";
+import { useFAQSchema } from "@/hooks/use-faq-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 import ConversionCTA from "@/components/ConversionCTA";
