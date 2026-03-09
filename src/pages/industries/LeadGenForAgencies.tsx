@@ -64,6 +64,7 @@ const LeadGenForAgencies = () => {
     { question: "How fast can my agency get leads?", answer: "Your first custom prospect list is delivered within 48–72 hours after our ICP call. We offer weekly or monthly delivery batches depending on your outreach volume and sales capacity." },
     { question: "How is this different from buying lists on Apollo or ZoomInfo?", answer: "Database tools provide self-serve access to stale, unverified records. CienceLeads delivers custom-built, human-verified lists with 0% bounce guarantee — targeting the exact decision-makers who hire agencies, not just anyone with a marketing title." },
   ];
+  useFAQSchema(faqs);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

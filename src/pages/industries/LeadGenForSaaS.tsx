@@ -65,6 +65,7 @@ const LeadGenForSaaS = () => {
     { question: "What's the difference between CienceLeads and ZoomInfo?", answer: "ZoomInfo provides database access with self-serve filters. CienceLeads delivers custom-built, human-verified lists tailored to your exact ICP — with 0% bounce guarantee, tech stack targeting, and buying signal enrichment that databases can't match." },
     { question: "How fast can I get my first list?", answer: "Your first custom SaaS prospect list is delivered within 48–72 hours. We start with a 15-minute ICP call, then our research team builds and verifies your list before delivery." },
   ];
+  useFAQSchema(faqs);
 
   return (
     <main className="min-h-screen bg-background text-foreground">

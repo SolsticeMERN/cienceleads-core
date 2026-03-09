@@ -64,6 +64,7 @@ const LeadGenForStartups = () => {
     { question: "How fast can I get my first list?", answer: "Your first custom prospect list is delivered within 48–72 hours after our ICP call. We start with a 15-minute strategy session, then our research team builds and verifies your list before delivery." },
     { question: "What if I don't have a defined ICP yet?", answer: "That's common for early-stage startups. Our ICP validation call helps you define your ideal buyer based on your product, early customers, and market positioning. We'll help you build a testable ICP before we build your first list." },
   ];
+  useFAQSchema(faqs);
 
   return (
     <main className="min-h-screen bg-background text-foreground">
