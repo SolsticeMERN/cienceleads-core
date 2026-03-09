@@ -10,6 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import { supabase } from "@/integrations/supabase/client";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const contactSchema = z.object({
@@ -42,10 +43,19 @@ const Contact = () => {
 
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    toast({ title: "Request received", description: `Thanks ${data.name}, we'll reach out within 24 hours.` });
-    form.reset();
-    setIsSubmitting(false);
+    try {
+      const { error } = await supabase.functions.invoke("notify-contact", {
+        body: data,
+      });
+      if (error) throw error;
+      toast({ title: "Request received", description: `Thanks ${data.name}, we'll reach out within 24 hours.` });
+      form.reset();
+    } catch (err) {
+      console.error("Submission error:", err);
+      toast({ title: "Something went wrong", description: "Please try again or email us directly.", variant: "destructive" });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
