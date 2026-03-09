@@ -54,6 +54,7 @@ import BestLinkedInProspectingTools from "./pages/resources/BestLinkedInProspect
 import BestEmailFinderTools from "./pages/resources/BestEmailFinderTools";
 import BestColdEmailTools from "./pages/resources/BestColdEmailTools";
 import BestCRMTools from "./pages/resources/BestCRMTools";
+import BestDataEnrichmentTools from "./pages/resources/BestDataEnrichmentTools";
 import HowToBuildProspectList from "./pages/resources/HowToBuildProspectList";
 import SalesProspectResearch from "./pages/resources/SalesProspectResearch";
 import HowToFindDecisionMakers from "./pages/resources/HowToFindDecisionMakers";
@@ -135,6 +136,7 @@ const App = () => (
           <Route path="/resources/best-email-finder-tools" element={<BestEmailFinderTools />} />
           <Route path="/resources/best-cold-email-tools" element={<BestColdEmailTools />} />
           <Route path="/resources/best-crm-tools" element={<BestCRMTools />} />
+          <Route path="/resources/best-data-enrichment-tools" element={<BestDataEnrichmentTools />} />
           <Route path="/resources/how-to-build-a-prospect-list" element={<HowToBuildProspectList />} />
           <Route path="/resources/sales-prospect-research" element={<SalesProspectResearch />} />
           <Route path="/resources/how-to-find-decision-makers" element={<HowToFindDecisionMakers />} />
