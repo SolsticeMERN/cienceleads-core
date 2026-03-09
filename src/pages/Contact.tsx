@@ -50,8 +50,8 @@ const Contact = () => {
         body: data,
       });
       if (error) throw error;
-      toast({ title: "Request received", description: `Thanks ${data.name}, we'll reach out within 24 hours.` });
       form.reset();
+      navigate("/thank-you", { state: { name: data.name } });
     } catch (err) {
       console.error("Submission error:", err);
       toast({ title: "Something went wrong", description: "Please try again or email us directly.", variant: "destructive" });
