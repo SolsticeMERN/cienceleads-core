@@ -2,6 +2,7 @@ import { TrendingUp, Mail, Users, Clock, Target, BarChart3, ArrowRight } from "l
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { usePageSEO } from "@/hooks/use-page-seo";
+import { useReviewSchema } from "@/hooks/use-review-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const caseStudies = [
