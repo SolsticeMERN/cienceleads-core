@@ -14,7 +14,7 @@ Deno.serve(async (req) => {
   try {
     const { name, company, email, industry, leadGoal, message } = await req.json();
 
-    // Insert into database using service role
+    // Insert into database
     const supabase = createClient(
       Deno.env.get("SUPABASE_URL")!,
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
@@ -39,9 +39,70 @@ Deno.serve(async (req) => {
       );
     }
 
-    // Send email notification via Supabase Auth admin (uses built-in email)
-    // For now we log the submission — email integration can be added with a provider
-    console.log("New contact submission:", { name, company, email, industry, leadGoal });
+    // Send email notification via Resend
+    const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
+    const NOTIFICATION_EMAIL = Deno.env.get("NOTIFICATION_EMAIL");
+
+    if (RESEND_API_KEY && NOTIFICATION_EMAIL) {
+      const emailResponse = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${RESEND_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: "CienceLeads <onboarding@resend.dev>",
+          to: [NOTIFICATION_EMAIL],
+          subject: `New Lead Request: ${name} from ${company}`,
+          html: `
+            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+              <h2 style="color: #1a1a2e; border-bottom: 2px solid #4361ee; padding-bottom: 10px;">
+                🎯 New Contact Form Submission
+              </h2>
+              <table style="width: 100%; border-collapse: collapse; margin-top: 16px;">
+                <tr>
+                  <td style="padding: 10px 12px; font-weight: bold; color: #555; width: 140px;">Name</td>
+                  <td style="padding: 10px 12px;">${name}</td>
+                </tr>
+                <tr style="background: #f8f9fa;">
+                  <td style="padding: 10px 12px; font-weight: bold; color: #555;">Company</td>
+                  <td style="padding: 10px 12px;">${company}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 10px 12px; font-weight: bold; color: #555;">Email</td>
+                  <td style="padding: 10px 12px;"><a href="mailto:${email}">${email}</a></td>
+                </tr>
+                <tr style="background: #f8f9fa;">
+                  <td style="padding: 10px 12px; font-weight: bold; color: #555;">Industry</td>
+                  <td style="padding: 10px 12px;">${industry}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 10px 12px; font-weight: bold; color: #555;">Monthly Lead Goal</td>
+                  <td style="padding: 10px 12px;">${leadGoal}</td>
+                </tr>
+                ${message ? `
+                <tr style="background: #f8f9fa;">
+                  <td style="padding: 10px 12px; font-weight: bold; color: #555;">Message</td>
+                  <td style="padding: 10px 12px;">${message}</td>
+                </tr>` : ""}
+              </table>
+              <p style="margin-top: 24px; color: #888; font-size: 12px;">
+                Submitted via CienceLeads contact form
+              </p>
+            </div>
+          `,
+        }),
+      });
+
+      const emailData = await emailResponse.json();
+      if (!emailResponse.ok) {
+        console.error("Resend error:", emailData);
+      } else {
+        console.log("Notification email sent:", emailData.id);
+      }
+    } else {
+      console.warn("Email not sent: RESEND_API_KEY or NOTIFICATION_EMAIL not configured");
+    }
 
     return new Response(
       JSON.stringify({ success: true }),
