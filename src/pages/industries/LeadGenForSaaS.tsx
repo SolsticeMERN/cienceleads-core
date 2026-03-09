@@ -5,6 +5,7 @@ import { usePageSEO } from "@/hooks/use-page-seo";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
+import ConversionCTA from "@/components/ConversionCTA";
 import PageFAQSection from "@/components/PageFAQSection";
 
 const testimonials = [
