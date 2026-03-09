@@ -7,6 +7,7 @@ import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useHowToSchema } from "@/hooks/use-howto-schema";
 import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
+import { useArticleSchema } from "@/hooks/use-article-schema";
 
 const decisionMakerSteps = [
   { name: "Define Your Target Buyer Persona", text: "Identify the job titles, seniority levels, and departments that make or influence purchasing decisions for your product. Focus on VP-level and above for enterprise, department heads for mid-market." },
