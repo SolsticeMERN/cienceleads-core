@@ -1,10 +1,10 @@
 import { usePageSEO } from "@/hooks/use-page-seo";
 
 const TermsOfService = () => {
-  usePageSEO({
-    title: "Terms of Service | CienceLeads",
-    description: "CienceLeads terms of service. Read our terms and conditions for using our B2B lead generation services.",
-  });
+  usePageSEO(
+    "Terms of Service | CienceLeads",
+    "CienceLeads terms of service. Read our terms and conditions for using our B2B lead generation services."
+  );
 
   return (
     <main className="min-h-screen py-20">

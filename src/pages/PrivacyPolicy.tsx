@@ -1,10 +1,10 @@
 import { usePageSEO } from "@/hooks/use-page-seo";
 
 const PrivacyPolicy = () => {
-  usePageSEO({
-    title: "Privacy Policy | CienceLeads",
-    description: "CienceLeads privacy policy. Learn how we collect, use, and protect your personal information.",
-  });
+  usePageSEO(
+    "Privacy Policy | CienceLeads",
+    "CienceLeads privacy policy. Learn how we collect, use, and protect your personal information."
+  );
 
   return (
     <main className="min-h-screen py-20">
