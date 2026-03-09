@@ -7,6 +7,7 @@ import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useHowToSchema } from "@/hooks/use-howto-schema";
 import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
+import { useArticleSchema } from "@/hooks/use-article-schema";
 
 const emailVerificationSteps = [
   { name: "Check Email Syntax", text: "Validate that the email address follows proper formatting rules — correct use of @ symbol, valid domain extension, no special characters or spaces." },
@@ -41,6 +42,7 @@ const HowToVerifyBusinessEmails = () => {
     url: "/resources/how-to-verify-business-emails",
   });
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "How to Verify Business Emails", url: "/resources/how-to-verify-business-emails" }]);
+  useArticleSchema({ headline: "How to Verify Business Email Addresses (Step-by-Step Guide)", description: "Learn how to verify business email addresses — SMTP verification, MX record checks, catch-all detection, and best practices for clean B2B email lists.", url: "/resources/how-to-verify-business-emails" });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

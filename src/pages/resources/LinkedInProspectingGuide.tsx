@@ -6,6 +6,7 @@ import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
+import { useArticleSchema } from "@/hooks/use-article-schema";
 
 const linkedInProspectingFaqs = [
   { question: "What are LinkedIn prospecting best practices?", answer: "Optimize your profile before outreach, use Sales Navigator for advanced filtering, personalize every connection request with a specific reason to connect, engage with prospects' content before messaging, and follow up with value-driven messages rather than immediate sales pitches." },
@@ -26,6 +27,7 @@ const LinkedInProspectingGuide = () => {
     url: "/resources/linkedin-prospecting-guide",
   });
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "LinkedIn Prospecting Guide", url: "/resources/linkedin-prospecting-guide" }]);
+  useArticleSchema({ headline: "LinkedIn Prospecting Guide: Find Decision-Makers at Scale (2026)", description: "Complete LinkedIn prospecting guide — how to find decision-makers, build prospect lists, LinkedIn lead generation strategies, and sales prospecting best practices.", url: "/resources/linkedin-prospecting-guide" });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

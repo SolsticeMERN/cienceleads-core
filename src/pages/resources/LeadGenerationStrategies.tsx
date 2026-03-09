@@ -6,6 +6,7 @@ import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
+import { useArticleSchema } from "@/hooks/use-article-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 import PageFAQSection from "@/components/PageFAQSection";
@@ -145,6 +146,7 @@ const LeadGenerationStrategies = () => {
     url: "/resources/lead-generation-strategies",
   });
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "Lead Generation Strategies", url: "/resources/lead-generation-strategies" }]);
+  useArticleSchema({ headline: "10 Proven B2B Lead Generation Strategies That Work in 2026", description: "10 proven B2B lead generation strategies for 2026. Prospect research, LinkedIn prospecting, cold email, ABM, data enrichment, and more.", url: "/resources/lead-generation-strategies" });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

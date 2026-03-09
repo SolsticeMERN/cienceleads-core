@@ -6,6 +6,7 @@ import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
+import { useArticleSchema } from "@/hooks/use-article-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 import PageFAQSection from "@/components/PageFAQSection";
@@ -29,6 +30,7 @@ const WhatIsB2BLeadGeneration = () => {
     url: "/resources/what-is-b2b-lead-generation",
   });
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "What Is B2B Lead Generation", url: "/resources/what-is-b2b-lead-generation" }]);
+  useArticleSchema({ headline: "What Is B2B Lead Generation? A Complete Guide for Sales Teams", description: "What is B2B lead generation? Complete guide for sales teams covering how it works, types, strategies, challenges, and best practices for generating qualified B2B leads.", url: "/resources/what-is-b2b-lead-generation" });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

@@ -7,6 +7,7 @@ import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useHowToSchema } from "@/hooks/use-howto-schema";
 import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
+import { useArticleSchema } from "@/hooks/use-article-schema";
 
 const decisionMakerSteps = [
   { name: "Define Your Target Buyer Persona", text: "Identify the job titles, seniority levels, and departments that make or influence purchasing decisions for your product. Focus on VP-level and above for enterprise, department heads for mid-market." },
@@ -41,6 +42,7 @@ const HowToFindDecisionMakers = () => {
     url: "/resources/how-to-find-decision-makers",
   });
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "How to Find Decision Makers", url: "/resources/how-to-find-decision-makers" }]);
+  useArticleSchema({ headline: "How to Find Decision Makers in Companies (B2B Guide 2026)", description: "Learn how to find and reach decision-makers in any company — LinkedIn techniques, org chart mapping, contact verification, and proven strategies.", url: "/resources/how-to-find-decision-makers" });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

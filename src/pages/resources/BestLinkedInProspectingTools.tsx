@@ -6,6 +6,7 @@ import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
+import { useArticleSchema } from "@/hooks/use-article-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 import PageFAQSection from "@/components/PageFAQSection";
@@ -121,6 +122,7 @@ const BestLinkedInProspectingTools = () => {
     url: "/resources/best-linkedin-prospecting-tools",
   });
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "Best LinkedIn Prospecting Tools", url: "/resources/best-linkedin-prospecting-tools" }]);
+  useArticleSchema({ headline: "10 Best LinkedIn Prospecting Tools for B2B Sales Teams (2026)", description: "Compare the 10 best LinkedIn prospecting tools for 2026. Sales Navigator, Kaspr, Apollo, Phantombuster, and more — features, pros, cons, and pricing.", url: "/resources/best-linkedin-prospecting-tools" });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

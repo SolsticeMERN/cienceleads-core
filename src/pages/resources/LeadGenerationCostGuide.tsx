@@ -6,6 +6,7 @@ import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
+import { useArticleSchema } from "@/hooks/use-article-schema";
 
 const leadGenCostFaqs = [
   { question: "How much does B2B lead generation cost per lead?", answer: "B2B lead generation costs range from $0.01 for bulk scraped data to $2.00+ for enterprise ABM research. Human-verified leads typically cost $0.10–$0.50 per contact and deliver 0% bounce rates, making them the best value for serious outbound campaigns." },
@@ -26,6 +27,7 @@ const LeadGenerationCostGuide = () => {
     url: "/resources/lead-generation-cost-guide",
   });
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "Lead Generation Cost Guide", url: "/resources/lead-generation-cost-guide" }]);
+  useArticleSchema({ headline: "How Much Does B2B Lead Generation Cost? Pricing Guide (2026)", description: "How much does B2B lead generation cost in 2026? Complete pricing guide with cost per lead benchmarks, pricing models, and ROI calculations.", url: "/resources/lead-generation-cost-guide" });
 
   return (
     <main className="min-h-screen bg-background text-foreground">
