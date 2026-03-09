@@ -104,8 +104,9 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 border-b border-border/50 bg-background/60 backdrop-blur-xl">
       <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="text-lg font-bold tracking-tight">
-          <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Cience</span>Leads
+        <Link to="/" className="flex items-center gap-2 text-lg font-bold tracking-tight">
+          <img src={logoImg} alt="CienceLeads logo" className="h-8 w-8" />
+          <span><span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Cience</span>Leads</span>
         </Link>
 
         {/* Desktop nav */}
