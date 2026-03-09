@@ -27,8 +27,8 @@ const leadGoals = ["Under 500", "500 – 1,000", "1,000 – 2,500", "2,500 – 5
 
 const Contact = () => {
   usePageSEO(
-    "Contact CienceLeads | Hire a B2B Lead Generation Expert | Get a Free Sample List",
-    "Contact CienceLeads to hire a B2B lead generation expert. Get a free sample list of human-verified B2B leads. Tell us your ICP and monthly lead goal — we'll deliver within 48 hours."
+    "Get 50 Free Verified B2B Leads in 48 Hours | CienceLeads",
+    "Request a free sample list of human-verified B2B leads. Tell us your ICP — titles, industries, company size — and we'll deliver 50 verified contacts in 48 hours. Zero cost, zero contracts."
   );
 
   const { toast } = useToast();
