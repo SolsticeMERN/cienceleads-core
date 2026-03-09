@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useHowToSchema } from "@/hooks/use-howto-schema";
 import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 import { useArticleSchema } from "@/hooks/use-article-schema";
@@ -24,6 +25,17 @@ const WhatIsB2BLeadGeneration = () => {
   ];
 
   useFAQSchema(faqs);
+  useHowToSchema({
+    name: "How B2B Lead Generation Works",
+    description: "Step-by-step process for generating qualified B2B leads — from ICP definition to outreach campaigns.",
+    totalTime: "PT4H",
+    steps: [
+      { name: "Define the Ideal Customer Profile", text: "Identify target companies by industry, company size, geographic location, technology usage, and decision-maker job titles." },
+      { name: "Prospect Research", text: "Research companies matching your ICP criteria. Identify decision-makers within those companies and gather verified contact information." },
+      { name: "Contact Data Collection", text: "Collect email addresses, LinkedIn profiles, and enrich records with company size, revenue estimates, job titles, and social profiles." },
+      { name: "Launch Outreach Campaigns", text: "Use cold email campaigns, LinkedIn messaging, phone outreach, and targeted advertising to engage prospects with personalized messaging." },
+    ],
+  });
   useSpeakableSchema({
     headline: "What Is B2B Lead Generation? A Complete Guide for Sales Teams",
     summary: "What is B2B lead generation? Complete guide covering how it works, types, strategies, challenges, and best practices for generating qualified B2B leads.",

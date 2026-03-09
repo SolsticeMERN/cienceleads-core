@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useHowToSchema } from "@/hooks/use-howto-schema";
 import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 import { useArticleSchema } from "@/hooks/use-article-schema";
@@ -21,6 +22,19 @@ const LinkedInProspectingGuide = () => {
     "Complete LinkedIn prospecting guide — how to find decision-makers, build prospect lists, LinkedIn lead generation strategies, and LinkedIn sales prospecting best practices."
   );
   useFAQSchema(linkedInProspectingFaqs);
+  useHowToSchema({
+    name: "How to Prospect on LinkedIn for B2B Sales",
+    description: "Step-by-step LinkedIn prospecting guide — profile optimization, ICP targeting, Sales Navigator usage, and multi-channel outreach sequences.",
+    totalTime: "PT2H",
+    steps: [
+      { name: "Optimize Your LinkedIn Profile", text: "Use a professional headshot, write a headline that communicates value, and include a summary that speaks to your target buyer's pain points." },
+      { name: "Define Your ICP on LinkedIn", text: "Filter by job title, company size, industry, and geography. The more specific your ICP, the higher your response rates." },
+      { name: "Use Sales Navigator for Advanced Search", text: "Filter by seniority, department, company growth, technology used, recent job changes, and content posted. Build saved searches that surface new prospects automatically." },
+      { name: "Research & Verify Each Profile", text: "Manually confirm each person's current role and company. Cross-reference with company websites and use B2B prospect research for personalization intelligence." },
+      { name: "Build Your Outreach Sequence", text: "Combine LinkedIn connection requests with cold email. Day 1: Connection request. Day 3: Email. Day 5: LinkedIn message. Day 8: Follow-up email." },
+      { name: "Personalize at Scale", text: "Use profile context — recent posts, company news, mutual connections — to personalize first messages. Reference something specific to stand out." },
+    ],
+  });
   useSpeakableSchema({
     headline: "LinkedIn Prospecting Guide: Find Decision-Makers at Scale (2026)",
     summary: "Complete LinkedIn prospecting guide — how to find decision-makers, build prospect lists, LinkedIn lead generation strategies, and sales prospecting best practices.",

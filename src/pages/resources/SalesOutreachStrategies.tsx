@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { useHowToSchema } from "@/hooks/use-howto-schema";
 import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 import { useArticleSchema } from "@/hooks/use-article-schema";
@@ -21,6 +22,16 @@ const SalesOutreachStrategies = () => {
     "Proven sales outreach strategies for B2B teams. Cold email templates, LinkedIn messaging, multi-channel sequences, and personalization tactics that get replies."
   );
   useFAQSchema(salesOutreachFaqs);
+  useHowToSchema({
+    name: "How to Build a B2B Sales Outreach Strategy",
+    description: "Step-by-step guide to building a multi-channel B2B sales outreach strategy with cold email, LinkedIn, and phone.",
+    totalTime: "PT3H",
+    steps: [
+      { name: "Build Your Prospect Data Layer", text: "Start with verified contact lists including emails, direct dials, LinkedIn profiles, and firmographic data from a B2B lead generation service." },
+      { name: "Set Up Outreach Execution Tools", text: "Configure cold email tools (Instantly, Lemlist), LinkedIn outreach via Sales Navigator, and phone outreach using direct dials. Coordinate sequences across channels." },
+      { name: "Configure CRM & Tracking", text: "Use HubSpot, Salesforce, or Pipedrive to track engagement, manage pipeline, and measure conversion. Keep CRM data clean with regular enrichment." },
+    ],
+  });
   useSpeakableSchema({
     headline: "Sales Outreach Strategies | B2B Cold Outreach Guide (2026)",
     summary: "Proven sales outreach strategies for B2B teams. Cold email templates, LinkedIn messaging, multi-channel sequences, and personalization tactics.",
