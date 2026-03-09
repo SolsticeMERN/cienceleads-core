@@ -5,6 +5,7 @@ import { usePageSEO } from "@/hooks/use-page-seo";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
+import ConversionCTA from "@/components/ConversionCTA";
 import PageFAQSection from "@/components/PageFAQSection";
 
 const testimonials = [
@@ -143,17 +144,11 @@ const LeadGenForAgencies = () => {
 
           {/* Mid-page CTA */}
           <ScrollReveal delay={0.1}>
-            <div className="rounded-xl border border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5 p-8 md:p-10 mb-8 text-center">
-              <h2 className="text-xl md:text-2xl font-bold mb-3">Get 50 Free Sample Leads — Matched to Your Agency's ICP</h2>
-              <p className="text-sm text-muted-foreground max-w-xl mx-auto mb-6">
-                Tell us your ideal client profile and we'll deliver a free sample list within 48 hours. No contracts, no commitment — just see the quality for yourself.
-              </p>
-              <Link to="/contact">
-                <Button size="lg" className="text-base px-10 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
-                  Request Free Sample <ArrowRight className="ml-2" />
-                </Button>
-              </Link>
-            </div>
+            <ConversionCTA
+              headline="Get 50 Free Sample Leads — Matched to Your Agency's ICP"
+              description="Tell us your ideal client profile and we'll deliver a free sample list within 48 hours. No contracts, no commitment — just see the quality for yourself."
+              buttonText="Request Free Sample"
+            />
           </ScrollReveal>
 
           {/* Results */}
@@ -270,18 +265,11 @@ const LeadGenForAgencies = () => {
 
           {/* Final CTA */}
           <ScrollReveal delay={0.15}>
-            <div className="rounded-xl border border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5 p-10 md:p-12 text-center">
-              <h2 className="text-2xl md:text-3xl font-extrabold mb-3">Ready to Build a Predictable Agency Pipeline?</h2>
-              <p className="text-muted-foreground max-w-lg mx-auto mb-6">
-                Join 150+ agencies getting human-verified leads that convert into retainer clients. Your first sample list is free.
-              </p>
-              <Link to="/contact">
-                <Button size="lg" className="text-base px-10 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
-                  Get Your Free Sample List <ArrowRight className="ml-2" />
-                </Button>
-              </Link>
-              <p className="text-xs text-muted-foreground mt-4">No contracts · 48-hour delivery · 0% bounce guarantee</p>
-            </div>
+            <ConversionCTA
+              variant="final"
+              headline="Ready to Build a Predictable Agency Pipeline?"
+              description="Join 150+ agencies getting human-verified leads that convert into retainer clients. Your first sample list is free."
+            />
           </ScrollReveal>
         </div>
       </section>
