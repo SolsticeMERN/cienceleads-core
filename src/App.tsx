@@ -61,6 +61,8 @@ import LeadGenForSaaS from "./pages/industries/LeadGenForSaaS";
 import LeadGenForAgencies from "./pages/industries/LeadGenForAgencies";
 import LeadGenForStartups from "./pages/industries/LeadGenForStartups";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import { useOrganizationSchema } from "./hooks/use-organization-schema";
 
 const queryClient = new QueryClient();
@@ -142,6 +144,9 @@ const App = () => (
           {/* Contact */}
           <Route path="/contact" element={<Contact />} />
           <Route path="/thank-you" element={<ThankYou />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="*" element={<NotFound />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
