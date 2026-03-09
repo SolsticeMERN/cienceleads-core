@@ -5,6 +5,7 @@ import { usePageSEO } from "@/hooks/use-page-seo";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 import { useOrganizationSchema } from "@/hooks/use-organization-schema";
 import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useHowToSchema } from "@/hooks/use-howto-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 import ConversionCTA from "@/components/ConversionCTA";
@@ -43,6 +44,16 @@ const LeadGenForAgencies = () => {
     description: "Outsourced lead generation service for agencies. White-label prospect lists to grow your agency's client pipeline with 0% bounce guarantee.",
     url: "/b2b-lead-generation-for-agencies",
     category: "B2B Lead Generation",
+  });
+  useHowToSchema({
+    name: "How to Get Agency Leads with CienceLeads",
+    description: "3-step process to get human-verified leads for your agency's client pipeline in 48–72 hours.",
+    totalTime: "PT72H",
+    steps: [
+      { name: "Define Your Ideal Client", text: "15-minute call to nail down your ideal agency client — industries, company size, marketing maturity, and budget signals." },
+      { name: "We Build Your List", text: "Our researchers manually identify, verify, and enrich every contact. Decision-makers who actually hire agencies — not generic marketing titles." },
+      { name: "Start Closing Clients", text: "Receive your CRM-ready list within 48–72 hours. Load it into your outreach tool and start booking discovery calls." },
+    ],
   });
 
   const faqs = [

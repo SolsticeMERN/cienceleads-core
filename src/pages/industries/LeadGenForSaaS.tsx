@@ -5,6 +5,7 @@ import { usePageSEO } from "@/hooks/use-page-seo";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 import { useOrganizationSchema } from "@/hooks/use-organization-schema";
 import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useHowToSchema } from "@/hooks/use-howto-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 import ConversionCTA from "@/components/ConversionCTA";
@@ -43,6 +44,16 @@ const LeadGenForSaaS = () => {
     description: "Human-verified SaaS lead generation service targeting VPs, CTOs, and decision-makers. Custom prospect lists filtered by tech stack, funding stage, and company size.",
     url: "/b2b-lead-generation-for-saas",
     category: "B2B Lead Generation",
+  });
+  useHowToSchema({
+    name: "How to Get SaaS Leads with CienceLeads",
+    description: "3-step process to get human-verified SaaS leads delivered to your CRM in 48–72 hours.",
+    totalTime: "PT72H",
+    steps: [
+      { name: "Define Your ICP", text: "15-minute call to nail down your ideal SaaS buyer — titles, tech stack, funding stage, company size, and deal-breakers." },
+      { name: "We Build Your List", text: "Our researchers manually identify, verify, and enrich every contact. No scraping, no stale databases — just accurate, fresh data." },
+      { name: "Start Closing", text: "Receive your CRM-ready list within 48–72 hours. Load it into your outreach tool and watch reply rates climb." },
+    ],
   });
 
   const faqs = [
