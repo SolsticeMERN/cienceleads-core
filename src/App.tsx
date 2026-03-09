@@ -61,6 +61,8 @@ import LeadGenForSaaS from "./pages/industries/LeadGenForSaaS";
 import LeadGenForAgencies from "./pages/industries/LeadGenForAgencies";
 import LeadGenForStartups from "./pages/industries/LeadGenForStartups";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import { useOrganizationSchema } from "./hooks/use-organization-schema";
 
 const queryClient = new QueryClient();
