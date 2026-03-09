@@ -42,12 +42,12 @@ const HeroSection = () => {
                 <ArrowRight className="ml-2" />
               </Button>
             </Link>
-            <Link to="/contact">
+            <a href="https://calendly.com/cienceleads/lead_gen_strategy_consulting_call" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="text-base px-8 py-6 border-border hover:bg-secondary/50">
                 <Calendar className="mr-2 w-5 h-5" />
                 Book a Strategy Call
               </Button>
-            </Link>
+            </a>
           </div>
         </ScrollReveal>
       </div>
