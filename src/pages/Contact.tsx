@@ -37,9 +37,14 @@ const Contact = () => {
     defaultValues: { name: "", company: "", email: "", industry: "", leadGoal: "", message: "" },
   });
 
-  const onSubmit = (data: ContactFormValues) => {
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+
+  const onSubmit = async (data: ContactFormValues) => {
+    setIsSubmitting(true);
+    await new Promise((resolve) => setTimeout(resolve, 1500));
     toast({ title: "Request received", description: `Thanks ${data.name}, we'll reach out within 24 hours.` });
     form.reset();
+    setIsSubmitting(false);
   };
 
   return (
