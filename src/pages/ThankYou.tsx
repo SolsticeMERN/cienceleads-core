@@ -7,7 +7,8 @@ import ScrollReveal from "@/components/ScrollReveal";
 const ThankYou = () => {
   usePageSEO(
     "Request Received — CienceLeads",
-    "Your free sample list request has been received. We'll deliver 50 human-verified B2B leads within 48 hours."
+    "Your free sample list request has been received. We'll deliver 50 human-verified B2B leads within 48 hours.",
+    { noindex: true }
   );
 
   const location = useLocation();
