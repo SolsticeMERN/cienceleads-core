@@ -134,8 +134,12 @@ const Contact = () => {
                     <FormField control={form.control} name="message" render={({ field }) => (
                       <FormItem><FormLabel>Additional Details <span className="text-muted-foreground font-normal">(optional)</span></FormLabel><FormControl><Textarea placeholder="Target titles, geo, company size…" rows={3} {...field} /></FormControl><FormMessage /></FormItem>
                     )} />
-                    <Button type="submit" size="lg" className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
-                      Send My Request <ArrowRight className="ml-2" />
+                    <Button type="submit" size="lg" disabled={isSubmitting} className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25 disabled:opacity-70">
+                      {isSubmitting ? (
+                        <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Sending…</>
+                      ) : (
+                        <>Send My Request <ArrowRight className="ml-2" /></>
+                      )}
                     </Button>
                     <p className="text-xs text-center text-muted-foreground">
                       No credit card · No contracts · Your data stays private
