@@ -37,6 +37,13 @@ const LeadGenForSaaS = () => {
     "B2B lead generation for SaaS companies. Human-verified SaaS leads targeting VPs, CTOs, and decision-makers. Custom prospect lists filtered by tech stack, funding stage, and company size."
   );
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "Lead Generation for SaaS", url: "/b2b-lead-generation-for-saas" }]);
+  useOrganizationSchema();
+  useServiceSchema({
+    name: "B2B Lead Generation for SaaS Companies",
+    description: "Human-verified SaaS lead generation service targeting VPs, CTOs, and decision-makers. Custom prospect lists filtered by tech stack, funding stage, and company size.",
+    url: "/b2b-lead-generation-for-saas",
+    category: "B2B Lead Generation",
+  });
 
   const faqs = [
     { question: "How does SaaS lead generation work?", answer: "SaaS lead generation works by identifying decision-makers (VPs, CTOs, Heads of Product) at companies that match your ICP. CienceLeads filters by technology stack, funding stage, team size, and growth signals to find SaaS buyers who are most likely to need your solution right now." },

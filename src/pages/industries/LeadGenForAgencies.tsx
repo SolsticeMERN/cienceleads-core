@@ -37,6 +37,13 @@ const LeadGenForAgencies = () => {
     "B2B lead generation for marketing agencies. Outsourced prospect lists to grow your agency's client pipeline. Human-verified leads with 0% bounce guarantee."
   );
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "Lead Generation for Agencies", url: "/b2b-lead-generation-for-agencies" }]);
+  useOrganizationSchema();
+  useServiceSchema({
+    name: "B2B Lead Generation for Marketing Agencies",
+    description: "Outsourced lead generation service for agencies. White-label prospect lists to grow your agency's client pipeline with 0% bounce guarantee.",
+    url: "/b2b-lead-generation-for-agencies",
+    category: "B2B Lead Generation",
+  });
 
   const faqs = [
     { question: "How does lead generation for agencies work?", answer: "Agency lead generation works by identifying potential clients (CMOs, VPs of Marketing, business owners) at companies that match your agency's ideal client profile. CienceLeads builds custom prospect lists filtered by industry, company size, marketing budget, and growth signals." },
