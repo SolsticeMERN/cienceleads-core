@@ -284,18 +284,11 @@ const LeadGenForStartups = () => {
 
           {/* Final CTA */}
           <ScrollReveal delay={0.15}>
-            <div className="rounded-xl border border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5 p-10 md:p-12 text-center">
-              <h2 className="text-2xl md:text-3xl font-extrabold mb-3">Ready to Build Your First Sales Pipeline?</h2>
-              <p className="text-muted-foreground max-w-lg mx-auto mb-6">
-                Join 300+ startups getting human-verified leads that actually convert. Your first sample list is free — no contracts required.
-              </p>
-              <Link to="/contact">
-                <Button size="lg" className="text-base px-10 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
-                  Get Your Free Sample List <ArrowRight className="ml-2" />
-                </Button>
-              </Link>
-              <p className="text-xs text-muted-foreground mt-4">No contracts · 48-hour delivery · 0% bounce guarantee</p>
-            </div>
+            <ConversionCTA
+              variant="final"
+              headline="Ready to Build Your First Sales Pipeline?"
+              description="Join 300+ startups getting human-verified leads that actually convert. Your first sample list is free — no contracts required."
+            />
           </ScrollReveal>
         </div>
       </section>
