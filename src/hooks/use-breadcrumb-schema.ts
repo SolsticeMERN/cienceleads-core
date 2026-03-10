@@ -7,6 +7,11 @@ interface BreadcrumbItem {
 
 export const useBreadcrumbSchema = (items: BreadcrumbItem[]) => {
   useEffect(() => {
+    const slug = window.location.pathname.replace(/\//g, "-") || "home";
+    const id = `breadcrumb-schema-${slug}`;
+
+    document.getElementById(id)?.remove();
+
     const schema = {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
@@ -20,12 +25,12 @@ export const useBreadcrumbSchema = (items: BreadcrumbItem[]) => {
 
     const script = document.createElement("script");
     script.type = "application/ld+json";
-    script.id = "breadcrumb-schema";
+    script.id = id;
     script.textContent = JSON.stringify(schema);
     document.head.appendChild(script);
 
     return () => {
-      document.getElementById("breadcrumb-schema")?.remove();
+      document.getElementById(id)?.remove();
     };
   }, [items]);
 };

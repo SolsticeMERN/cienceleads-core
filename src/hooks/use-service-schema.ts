@@ -9,6 +9,11 @@ interface ServiceSchemaProps {
 
 export const useServiceSchema = ({ name, description, url, category }: ServiceSchemaProps) => {
   useEffect(() => {
+    const slug = url.replace(/\//g, "-") || "service";
+    const id = `service-schema-${slug}`;
+
+    document.getElementById(id)?.remove();
+
     const schema = {
       "@context": "https://schema.org",
       "@type": "Service",
@@ -26,12 +31,12 @@ export const useServiceSchema = ({ name, description, url, category }: ServiceSc
 
     const script = document.createElement("script");
     script.type = "application/ld+json";
-    script.id = "service-schema";
+    script.id = id;
     script.textContent = JSON.stringify(schema);
     document.head.appendChild(script);
 
     return () => {
-      document.getElementById("service-schema")?.remove();
+      document.getElementById(id)?.remove();
     };
   }, [name, description, url, category]);
 };

@@ -65,14 +65,8 @@ import LeadGenForStartups from "./pages/industries/LeadGenForStartups";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
-import { useOrganizationSchema } from "./hooks/use-organization-schema";
 
 const queryClient = new QueryClient();
-
-const AppContent = () => {
-  useOrganizationSchema();
-  return null;
-};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -81,7 +75,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
-        <AppContent />
+        
         <Header />
         <Routes>
           <Route path="/" element={<Index />} />
