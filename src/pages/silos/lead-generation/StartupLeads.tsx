@@ -5,6 +5,7 @@ import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useServiceSchema } from "@/hooks/use-service-schema";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
+import AEOBlock from "@/components/AEOBlock";
 
 const faqs = [
   { question: "What's the minimum order for startups?", answer: "Start with as few as 200 verified leads. No minimum commitment required — scale based on results and outreach capacity." },

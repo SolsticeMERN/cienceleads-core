@@ -5,6 +5,7 @@ import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useServiceSchema } from "@/hooks/use-service-schema";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
+import AEOBlock from "@/components/AEOBlock";
 
 const faqs = [
   { question: "What are verified B2B leads?", answer: "Verified B2B leads are contacts validated through SMTP checks, catch-all detection, and human review to confirm the email is active, the job title is current, and the company data is accurate." },
