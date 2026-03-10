@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -28,6 +28,8 @@ type ContactFormValues = z.infer<typeof contactSchema>;
 const industries = ["SaaS / Software", "Marketing / Advertising", "Financial Services", "Real Estate", "Healthcare", "E-Commerce", "Manufacturing", "Professional Services", "Education", "IT Staffing", "Other"];
 const leadGoals = ["Under 500", "500 – 1,000", "1,000 – 2,500", "2,500 – 5,000", "5,000 – 10,000", "10,000+"];
 
+const MIN_SUBMIT_TIME_MS = 3000;
+
 const Contact = () => {
   usePageSEO(
     "Get 50 Free Verified B2B Leads in 48 Hours | CienceLeads",
@@ -42,12 +44,25 @@ const Contact = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
+  const formLoadedAt = useRef(Date.now());
 
   const onSubmit = async (data: ContactFormValues) => {
+    // Client-side bot checks
+    if (honeypot) {
+      // Bot filled honeypot — silently "succeed"
+      navigate("/thank-you", { state: { name: data.name } });
+      return;
+    }
+    if (Date.now() - formLoadedAt.current < MIN_SUBMIT_TIME_MS) {
+      toast({ title: "Please slow down", description: "Try submitting again in a moment.", variant: "destructive" });
+      return;
+    }
+
     setIsSubmitting(true);
     try {
       const { error } = await supabase.functions.invoke("notify-contact", {
-        body: data,
+        body: { ...data, _hp: honeypot },
       });
       if (error) throw error;
       form.reset();
@@ -124,6 +139,20 @@ const Contact = () => {
 
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
+                    {/* Honeypot — hidden from humans */}
+                    <div className="absolute opacity-0 -z-10 pointer-events-none" aria-hidden="true" tabIndex={-1}>
+                      <label htmlFor="_hp_field">Leave this blank</label>
+                      <input
+                        id="_hp_field"
+                        type="text"
+                        name="_hp"
+                        autoComplete="off"
+                        value={honeypot}
+                        onChange={(e) => setHoneypot(e.target.value)}
+                        tabIndex={-1}
+                      />
+                    </div>
+
                     <div className="grid sm:grid-cols-2 gap-5">
                       <FormField control={form.control} name="name" render={({ field }) => (
                         <FormItem><FormLabel>Full Name</FormLabel><FormControl><Input placeholder="Jane Smith" {...field} /></FormControl><FormMessage /></FormItem>
