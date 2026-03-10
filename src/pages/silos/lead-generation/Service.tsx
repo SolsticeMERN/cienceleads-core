@@ -17,7 +17,7 @@ const faqs = [
 const LeadGenerationService = () => {
   usePageSEO(
     "B2B Lead Generation Service | Targeted Sales Growth — CienceLeads",
-    "Professional B2B lead generation service delivering human-verified prospect lists for targeted sales growth. Custom ICP targeting, decision-maker identification, and CRM-ready delivery."
+    "Human-verified B2B prospect lists matched to your ICP. Custom targeting, 0% bounce guarantee, CRM-ready delivery in 48–72 hours."
   );
   useFAQSchema(faqs);
   useServiceSchema({ name: "B2B Lead Generation Service", description: "Professional B2B lead generation service delivering human-verified prospect lists for targeted sales growth.", url: "/b2b-lead-generation/service", category: "Lead Generation" });
