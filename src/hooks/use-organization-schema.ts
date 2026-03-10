@@ -18,13 +18,6 @@ export const useOrganizationSchema = () => {
         contactType: "sales",
         url: "https://cienceleads.com/contact",
       },
-      sameAs: [],
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.9",
-        reviewCount: "2500",
-        bestRating: "5",
-      },
     };
 
     const script = document.createElement("script");

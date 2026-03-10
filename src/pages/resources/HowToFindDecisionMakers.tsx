@@ -27,7 +27,8 @@ const decisionMakerFaqs = [
 const HowToFindDecisionMakers = () => {
   usePageSEO(
     "How to Find Decision Makers in Companies (B2B Guide 2026) — CienceLeads",
-    "Learn how to find and reach decision-makers in any company — LinkedIn techniques, org chart mapping, contact verification, and proven strategies for B2B sales teams."
+    "Learn how to find and reach decision-makers in any company — LinkedIn techniques, org chart mapping, contact verification, and proven strategies for B2B sales teams.",
+    { ogType: "article" }
   );
   useFAQSchema(decisionMakerFaqs);
   useHowToSchema({

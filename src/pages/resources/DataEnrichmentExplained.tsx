@@ -19,7 +19,8 @@ const dataEnrichmentFaqs = [
 const DataEnrichmentExplained = () => {
   usePageSEO(
     "Data Enrichment Explained: B2B Data Enrichment Guide (2026) — CienceLeads",
-    "What is data enrichment? Complete guide to B2B data enrichment, CRM data enrichment, email verification, and contact data cleaning. Learn when and why to use a data enrichment service."
+    "What is data enrichment? Complete guide to B2B data enrichment, CRM data enrichment, email verification, and contact data cleaning. Learn when and why to use a data enrichment service.",
+    { ogType: "article" }
   );
   useFAQSchema(dataEnrichmentFaqs);
   useHowToSchema({

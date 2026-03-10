@@ -117,7 +117,8 @@ const tools: Tool[] = [
 const BestCRMTools = () => {
   usePageSEO(
     "10 Best CRM Tools for B2B Sales Teams (2026) — CienceLeads",
-    "Compare the 10 best CRM tools for B2B sales teams in 2026. HubSpot, Salesforce, Pipedrive, Close, and more — features, pros, cons, and pricing for every budget."
+    "Compare the 10 best CRM tools for B2B sales teams in 2026. HubSpot, Salesforce, Pipedrive, Close, and more — features, pros, cons, and pricing for every budget.",
+    { ogType: "article" }
   );
 
   const faqs = [

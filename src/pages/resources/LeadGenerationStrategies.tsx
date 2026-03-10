@@ -130,7 +130,8 @@ const strategies: Strategy[] = [
 const LeadGenerationStrategies = () => {
   usePageSEO(
     "10 Proven B2B Lead Generation Strategies That Work in 2026 — CienceLeads",
-    "10 proven B2B lead generation strategies for 2026. Prospect research, LinkedIn prospecting, cold email, ABM, data enrichment, and more — actionable tactics for sales teams."
+    "10 proven B2B lead generation strategies for 2026. Prospect research, LinkedIn prospecting, cold email, ABM, data enrichment, and more — actionable tactics for sales teams.",
+    { ogType: "article" }
   );
 
   const faqs = [

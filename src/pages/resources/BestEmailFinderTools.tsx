@@ -106,7 +106,8 @@ const tools: Tool[] = [
 const BestEmailFinderTools = () => {
   usePageSEO(
     "10 Best Email Finder Tools for B2B Sales (2026) — CienceLeads",
-    "Compare the 10 best email finder tools for B2B sales in 2026. Hunter.io, Snov.io, Apollo, Lusha, and more — features, accuracy, pros, cons, and pricing compared."
+    "Compare the 10 best email finder tools for B2B sales in 2026. Hunter.io, Snov.io, Apollo, Lusha, and more — features, accuracy, pros, cons, and pricing compared.",
+    { ogType: "article" }
   );
 
   const faqs = [
