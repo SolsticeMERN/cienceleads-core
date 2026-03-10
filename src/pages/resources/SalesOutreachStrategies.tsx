@@ -19,7 +19,8 @@ const salesOutreachFaqs = [
 const SalesOutreachStrategies = () => {
   usePageSEO(
     "Sales Outreach Strategies | B2B Cold Outreach Guide (2026) — CienceLeads",
-    "Proven sales outreach strategies for B2B teams. Cold email templates, LinkedIn messaging, multi-channel sequences, and personalization tactics that get replies."
+    "Proven sales outreach strategies for B2B teams. Cold email templates, LinkedIn messaging, multi-channel sequences, and personalization tactics that get replies.",
+    { ogType: "article" }
   );
   useFAQSchema(salesOutreachFaqs);
   useHowToSchema({

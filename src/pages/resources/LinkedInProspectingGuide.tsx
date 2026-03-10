@@ -19,7 +19,8 @@ const linkedInProspectingFaqs = [
 const LinkedInProspectingGuide = () => {
   usePageSEO(
     "LinkedIn Prospecting Guide: Find Decision-Makers at Scale (2026) — CienceLeads",
-    "Complete LinkedIn prospecting guide — how to find decision-makers, build prospect lists, LinkedIn lead generation strategies, and LinkedIn sales prospecting best practices."
+    "Complete LinkedIn prospecting guide — how to find decision-makers, build prospect lists, LinkedIn lead generation strategies, and LinkedIn sales prospecting best practices.",
+    { ogType: "article" }
   );
   useFAQSchema(linkedInProspectingFaqs);
   useHowToSchema({

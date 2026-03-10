@@ -106,7 +106,8 @@ const tools: Tool[] = [
 const BestColdEmailTools = () => {
   usePageSEO(
     "10 Best Cold Email Tools for B2B Outreach (2026) — CienceLeads",
-    "Compare the 10 best cold email tools for B2B outreach in 2026. Instantly, Lemlist, Smartlead, Apollo, and more — features, deliverability, pros, cons, and pricing."
+    "Compare the 10 best cold email tools for B2B outreach in 2026. Instantly, Lemlist, Smartlead, Apollo, and more — features, deliverability, pros, cons, and pricing.",
+    { ogType: "article" }
   );
 
   const faqs = [
