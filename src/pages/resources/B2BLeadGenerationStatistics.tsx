@@ -95,7 +95,8 @@ const conversionStats: StatItem[] = [
 const B2BLeadGenerationStatistics = () => {
   usePageSEO(
     "70+ B2B Lead Generation Statistics Every Marketer Should Know (2026) — CienceLeads",
-    "70+ B2B lead generation statistics for 2026. Cold email benchmarks, LinkedIn prospecting stats, cost per lead data, conversion rates, and data quality insights for B2B teams."
+    "70+ B2B lead generation statistics for 2026. Cold email benchmarks, LinkedIn prospecting stats, cost per lead data, conversion rates, and data quality insights for B2B teams.",
+    { ogType: "article" }
   );
 
   const faqs = [
