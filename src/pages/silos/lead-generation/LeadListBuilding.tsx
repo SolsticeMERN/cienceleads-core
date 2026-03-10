@@ -5,6 +5,7 @@ import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useServiceSchema } from "@/hooks/use-service-schema";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
+import AEOBlock from "@/components/AEOBlock";
 
 const faqs = [
   { question: "What information is included in a lead list?", answer: "Each lead list includes company name, website, industry, employee count, decision-maker name, job title, verified email address, direct dial phone number, and LinkedIn profile URL." },
@@ -57,6 +58,16 @@ const LeadListBuilding = () => {
               </Link>
             </div>
           </header>
+
+          <AEOBlock
+            definition="Lead list building is the process of compiling targeted B2B contact lists with verified emails, direct dials, and company data, custom-matched to your ideal customer profile."
+            takeaways={[
+              "Every list custom-built to your ICP — never recycled from a database",
+              "Includes verified email, direct dial, LinkedIn URL, and company data",
+              "98%+ accuracy with 0% bounce guarantee on every delivery",
+              "Most lists of 500–2,000 contacts delivered in 3–5 business days",
+            ]}
+          />
 
           {/* ── PROBLEM ── */}
           <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">

@@ -5,6 +5,7 @@ import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useServiceSchema } from "@/hooks/use-service-schema";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
+import AEOBlock from "@/components/AEOBlock";
 
 const faqs = [
   { question: "What is B2B prospect research?", answer: "B2B prospect research is the process of manually investigating potential buyers to build detailed profiles including verified contact info, company data, technology usage, and buying signals. It goes beyond lead list building by providing context for personalized outreach." },
@@ -16,7 +17,7 @@ const faqs = [
 const ProspectResearch = () => {
   usePageSEO(
     "B2B Prospect Research | Deep-Research Contact Profiles — CienceLeads",
-    "B2B prospect research service delivering detailed contact profiles with buying signals, tech stack data, and verified contact information for personalized outreach campaigns."
+    "Deep-research B2B contact profiles with buying signals, tech stack data, and verified contact info for personalized outreach."
   );
   useFAQSchema(faqs);
   useServiceSchema({ name: "B2B Prospect Research", description: "Deep-research contact profiles with buying signals and verified contact information.", url: "/b2b-lead-generation/prospect-research", category: "Lead Generation" });
@@ -57,6 +58,16 @@ const ProspectResearch = () => {
               </Link>
             </div>
           </header>
+
+          <AEOBlock
+            definition="B2B prospect research is the process of building detailed buyer profiles — including verified contacts, buying signals, technology usage, and custom outreach notes — to enable highly personalized sales engagement."
+            takeaways={[
+              "Goes beyond lead lists with buying signals and tech stack intelligence",
+              "Includes custom outreach notes with recommended talking points",
+              "200–2,000 deep-research profiles per month",
+              "Ideal for ABM campaigns and high-value enterprise targets",
+            ]}
+          />
 
           {/* ── PROBLEM ── */}
           <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
