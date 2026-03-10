@@ -59,6 +59,16 @@ const ProspectResearch = () => {
             </div>
           </header>
 
+          <AEOBlock
+            definition="B2B prospect research is the process of building detailed buyer profiles — including verified contacts, buying signals, technology usage, and custom outreach notes — to enable highly personalized sales engagement."
+            takeaways={[
+              "Goes beyond lead lists with buying signals and tech stack intelligence",
+              "Includes custom outreach notes with recommended talking points",
+              "200–2,000 deep-research profiles per month",
+              "Ideal for ABM campaigns and high-value enterprise targets",
+            ]}
+          />
+
           {/* ── PROBLEM ── */}
           <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
             <div className="flex items-center gap-3 mb-4">

@@ -59,6 +59,16 @@ const HumanVerifiedLeads = () => {
             </div>
           </header>
 
+          <AEOBlock
+            definition="Human verified leads are B2B contacts individually researched and validated by trained analysts who confirm job titles, company details, and email deliverability against multiple live sources."
+            takeaways={[
+              "Every contact checked by a real person — not just automated API calls",
+              "Catches 10–15% of issues automated tools miss (job changes, closures)",
+              "98%+ accuracy with 0% bounce guarantee",
+              "Human review adds 24–48 hours but delivers dramatically higher data quality",
+            ]}
+          />
+
           {/* ── PROBLEM ── */}
           <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
             <div className="flex items-center gap-3 mb-4">

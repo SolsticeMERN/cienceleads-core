@@ -59,6 +59,16 @@ const StartupLeads = () => {
             </div>
           </header>
 
+          <AEOBlock
+            definition="Startup lead generation provides early-stage and growth-stage companies with affordable, human-verified B2B prospect lists to build their first predictable sales pipeline."
+            takeaways={[
+              "Start from as few as 200 verified leads — no minimum commitment",
+              "Startup-friendly pricing at 40–60% less than enterprise services",
+              "First batch delivered within 48–72 hours",
+              "Month-to-month — no contracts, cancel anytime",
+            ]}
+          />
+
           {/* ── PROBLEM ── */}
           <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
             <div className="flex items-center gap-3 mb-4">
