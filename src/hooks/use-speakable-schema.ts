@@ -9,6 +9,11 @@ interface SpeakableSchemaOptions {
 
 export const useSpeakableSchema = ({ headline, summary, url, cssSelectors = ["[role='definition']", ".aeo-takeaways"] }: SpeakableSchemaOptions) => {
   useEffect(() => {
+    const slug = url.replace(/\//g, "-") || "page";
+    const id = `speakable-schema-${slug}`;
+
+    document.getElementById(id)?.remove();
+
     const schema = {
       "@context": "https://schema.org",
       "@type": "WebPage",
@@ -23,12 +28,12 @@ export const useSpeakableSchema = ({ headline, summary, url, cssSelectors = ["[r
 
     const script = document.createElement("script");
     script.type = "application/ld+json";
-    script.id = "speakable-schema";
+    script.id = id;
     script.textContent = JSON.stringify(schema);
     document.head.appendChild(script);
 
     return () => {
-      document.getElementById("speakable-schema")?.remove();
+      document.getElementById(id)?.remove();
     };
   }, [headline, summary, url, cssSelectors]);
 };

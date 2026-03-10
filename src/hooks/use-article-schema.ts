@@ -16,6 +16,11 @@ export const useArticleSchema = ({
   dateModified = "2026-03-01",
 }: ArticleSchemaOptions) => {
   useEffect(() => {
+    const slug = url.replace(/\//g, "-") || "article";
+    const id = `article-schema-${slug}`;
+
+    document.getElementById(id)?.remove();
+
     const schema = {
       "@context": "https://schema.org",
       "@type": "Article",
@@ -35,7 +40,7 @@ export const useArticleSchema = ({
         url: "https://cienceleads.com",
         logo: {
           "@type": "ImageObject",
-          url: "https://cienceleads.com/favicon.ico",
+          url: "https://cienceleads.com/logo.png",
         },
       },
       mainEntityOfPage: {
@@ -46,12 +51,12 @@ export const useArticleSchema = ({
 
     const script = document.createElement("script");
     script.type = "application/ld+json";
-    script.id = "article-schema";
+    script.id = id;
     script.textContent = JSON.stringify(schema);
     document.head.appendChild(script);
 
     return () => {
-      document.getElementById("article-schema")?.remove();
+      document.getElementById(id)?.remove();
     };
   }, [headline, description, url, datePublished, dateModified]);
 };

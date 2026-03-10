@@ -5,8 +5,13 @@ interface FAQItem {
   answer: string;
 }
 
-export const useFAQSchema = (faqs: FAQItem[]) => {
+export const useFAQSchema = (faqs: FAQItem[], pageId?: string) => {
   useEffect(() => {
+    const slug = pageId || window.location.pathname.replace(/\//g, "-") || "home";
+    const id = `faq-schema-${slug}`;
+
+    document.getElementById(id)?.remove();
+
     const schema = {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -22,13 +27,12 @@ export const useFAQSchema = (faqs: FAQItem[]) => {
 
     const script = document.createElement("script");
     script.type = "application/ld+json";
-    script.id = "faq-schema";
+    script.id = id;
     script.textContent = JSON.stringify(schema);
     document.head.appendChild(script);
 
     return () => {
-      const existing = document.getElementById("faq-schema");
-      if (existing) existing.remove();
+      document.getElementById(id)?.remove();
     };
-  }, [faqs]);
+  }, [faqs, pageId]);
 };

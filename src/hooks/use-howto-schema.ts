@@ -14,6 +14,11 @@ interface HowToSchemaOptions {
 
 export const useHowToSchema = ({ name, description, totalTime, steps }: HowToSchemaOptions) => {
   useEffect(() => {
+    const slug = window.location.pathname.replace(/\//g, "-") || "howto";
+    const id = `howto-schema-${slug}`;
+
+    document.getElementById(id)?.remove();
+
     const schema = {
       "@context": "https://schema.org",
       "@type": "HowTo",
@@ -30,13 +35,12 @@ export const useHowToSchema = ({ name, description, totalTime, steps }: HowToSch
 
     const script = document.createElement("script");
     script.type = "application/ld+json";
-    script.id = "howto-schema";
+    script.id = id;
     script.textContent = JSON.stringify(schema);
     document.head.appendChild(script);
 
     return () => {
-      const existing = document.getElementById("howto-schema");
-      if (existing) existing.remove();
+      document.getElementById(id)?.remove();
     };
   }, [name, description, totalTime, steps]);
 };
