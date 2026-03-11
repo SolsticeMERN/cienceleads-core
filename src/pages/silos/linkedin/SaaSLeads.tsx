@@ -16,8 +16,8 @@ const faqs = [
 
 const LinkedInSaaSLeads = () => {
   usePageSEO(
-    "LinkedIn Lead Generation for SaaS | VP & C-Level SaaS Buyers — CienceLeads",
-    "LinkedIn lead generation for SaaS. Find VP/C-level buyers with verified emails, direct dials, and tech stack data. 0% bounce guarantee."
+    "LinkedIn Leads for SaaS | VP & C-Level Buyers — CienceLeads",
+    "LinkedIn lead generation for SaaS companies. Find VP/C-level buyers with verified emails, direct dials, tech stack data, and funding intelligence."
   );
   useFAQSchema(faqs);
   useServiceSchema({ name: "LinkedIn Lead Generation for SaaS", description: "Find VP/C-level buyers at SaaS companies with verified data.", url: "/linkedin-prospecting/saas-leads", category: "LinkedIn Prospecting" });

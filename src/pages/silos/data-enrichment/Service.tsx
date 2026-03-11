@@ -16,8 +16,8 @@ const faqs = [
 
 const DataEnrichmentService = () => {
   usePageSEO(
-    "Data Enrichment Service | Clean & Verify B2B Contact Data — CienceLeads",
-    "B2B data enrichment service to verify emails, append missing fields, remove duplicates, and score domain reputation. Human-verified with 0% bounce guarantee."
+    "B2B Data Enrichment Service | Verify Contacts — CienceLeads",
+    "B2B data enrichment to verify emails, append missing fields, remove duplicates, and score domain reputation. Human-verified, 0% bounce."
   );
   useFAQSchema(faqs);
   useServiceSchema({ name: "Data Enrichment Service", description: "B2B data enrichment service to verify emails, append missing fields, remove duplicates, and score domain reputation.", url: "/data-enrichment/service", category: "Data Enrichment" });

@@ -16,8 +16,8 @@ const faqs = [
 
 const LinkedInService = () => {
   usePageSEO(
-    "LinkedIn Prospecting Service | Decision-Maker Data at Scale — CienceLeads",
-    "LinkedIn prospecting service with human-verified decision-maker contacts, emails, and direct dials. Zero automation risk, 0% bounce."
+    "LinkedIn Prospecting Service | Decision-Maker Data — CienceLeads",
+    "LinkedIn prospecting delivering human-verified decision-maker contacts with emails, direct dials, and company data. 0% bounce guarantee."
   );
   useFAQSchema(faqs);
   useServiceSchema({ name: "LinkedIn Prospecting Service", description: "LinkedIn prospecting service delivering human-verified decision-maker contacts with emails, direct dials, and company data.", url: "/linkedin-prospecting/service", category: "LinkedIn Prospecting" });

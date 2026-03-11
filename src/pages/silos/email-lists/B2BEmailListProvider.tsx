@@ -16,7 +16,7 @@ const faqs = [
 
 const B2BEmailListProvider = () => {
   usePageSEO(
-    "B2B Email List Provider | Verified Lists for Outreach — CienceLeads",
+    "B2B Email List Provider | Verified for Outreach — CienceLeads",
     "B2B email list provider delivering verified, ICP-matched contact lists. 0% bounce guarantee. Every list built on demand by human researchers."
   );
   useFAQSchema(faqs);
