@@ -17,7 +17,7 @@ const faqs = [
 const B2BDataEnrichment = () => {
   usePageSEO(
     "B2B Data Enrichment | Fill Gaps in Your Contact Database — CienceLeads",
-    "B2B data enrichment service to append missing emails, phones, titles, LinkedIn URLs, and company data to your existing contacts. Human-verified with 98%+ accuracy and 0% bounce guarantee."
+    "B2B data enrichment to append missing emails, phones, titles, and company data. Human-verified with 98%+ accuracy and 0% bounce."
   );
   useFAQSchema(faqs);
   useServiceSchema({ name: "B2B Data Enrichment", description: "Append missing emails, phones, titles, and company data to your contacts.", url: "/data-enrichment/b2b-data-enrichment", category: "Data Enrichment" });

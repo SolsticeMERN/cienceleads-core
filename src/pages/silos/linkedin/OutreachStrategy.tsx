@@ -17,7 +17,7 @@ const faqs = [
 const LinkedInOutreachStrategy = () => {
   usePageSEO(
     "LinkedIn Outreach Strategy | Messaging Playbooks That Convert — CienceLeads",
-    "LinkedIn outreach strategy for B2B sales teams. Proven connection templates, 5-touch messaging sequences, and follow-up playbooks to convert LinkedIn prospects into booked calls."
+    "LinkedIn outreach strategy with proven templates, 5-touch messaging sequences, and follow-up playbooks to convert prospects into calls."
   );
   useFAQSchema(faqs);
   useServiceSchema({ name: "LinkedIn Outreach Strategy", description: "Messaging playbooks that convert LinkedIn prospects into booked calls.", url: "/linkedin-prospecting/outreach-strategy", category: "LinkedIn Prospecting" });

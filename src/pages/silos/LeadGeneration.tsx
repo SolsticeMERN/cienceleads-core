@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
+import { useFAQSchema } from "@/hooks/use-faq-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 import PageFAQSection from "@/components/PageFAQSection";
@@ -11,7 +12,7 @@ import PageComparisonTable from "@/components/PageComparisonTable";
 const LeadGeneration = () => {
   usePageSEO(
     "B2B Lead Generation | Human-Verified Prospect Lists | CienceLeads",
-    "Complete B2B lead generation hub. Human-verified prospect lists, outsourced lead generation, lead list building, and startup leads. 0% bounce guarantee. 2,500+ projects delivered."
+    "Human-verified B2B prospect lists with 0% bounce guarantee. Outsourced lead generation, list building, and startup leads."
   );
 
   const faqs = [
@@ -23,6 +24,7 @@ const LeadGeneration = () => {
     { question: "Can I get a free sample before committing?", answer: "Yes. CienceLeads offers a free sample list so you can evaluate the quality of our human-verified leads before committing to a project. Contact us to request your free sample matched to your ICP." },
   ];
 
+  useFAQSchema(faqs);
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "B2B Lead Generation", url: "/b2b-lead-generation" }]);
 
   return (

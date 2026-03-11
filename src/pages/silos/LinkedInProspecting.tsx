@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
+import { useFAQSchema } from "@/hooks/use-faq-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 import PageFAQSection from "@/components/PageFAQSection";
@@ -11,7 +12,7 @@ import PageComparisonTable from "@/components/PageComparisonTable";
 const LinkedInProspecting = () => {
   usePageSEO(
     "LinkedIn Prospecting | LinkedIn Lead Generation Service | CienceLeads",
-    "Complete LinkedIn prospecting hub. LinkedIn lead generation, outreach strategy, SaaS lead targeting, and sales prospecting. Human-verified LinkedIn leads with emails and direct dials."
+    "LinkedIn prospecting service with human-verified leads, emails, and direct dials. Lead generation, outreach strategy, and SaaS targeting."
   );
 
   const faqs = [
@@ -22,6 +23,7 @@ const LinkedInProspecting = () => {
     { question: "What's the difference between LinkedIn automation and LinkedIn prospecting?", answer: "LinkedIn automation tools send connection requests and messages automatically, which risks account restrictions. LinkedIn prospecting is the research process of identifying and verifying decision-makers — CienceLeads does the research manually and delivers verified contact data you can use across any channel." },
   ];
 
+  useFAQSchema(faqs);
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "LinkedIn Prospecting", url: "/linkedin-prospecting" }]);
 
   return (

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
+import { useFAQSchema } from "@/hooks/use-faq-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 import PageFAQSection from "@/components/PageFAQSection";
@@ -11,7 +12,7 @@ import PageComparisonTable from "@/components/PageComparisonTable";
 const DataEnrichment = () => {
   usePageSEO(
     "Data Enrichment Service | B2B Data Enrichment & CRM Cleaning | CienceLeads",
-    "Complete data enrichment hub. B2B data enrichment, CRM data cleaning, email verification, and contact data cleaning. Protect your sender reputation and improve deliverability."
+    "B2B data enrichment, CRM cleaning, email verification, and contact data cleaning. Protect sender reputation and improve deliverability."
   );
 
   const faqs = [
@@ -22,6 +23,7 @@ const DataEnrichment = () => {
     { question: "Can you enrich data from any CRM?", answer: "Yes. CienceLeads works with data from any CRM including HubSpot, Salesforce, Pipedrive, Outreach, Apollo, and custom databases. Export your contacts as CSV, send them to us, and we'll return enriched, verified data mapped to your CRM fields." },
   ];
 
+  useFAQSchema(faqs);
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "Data Enrichment", url: "/data-enrichment" }]);
 
   return (

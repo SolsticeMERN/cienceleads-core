@@ -5,7 +5,7 @@ import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useServiceSchema } from "@/hooks/use-service-schema";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
-import AEOBlock from "@/components/AEOBlock";
+
 
 const faqs = [
   { question: "What is B2B lead generation?", answer: "B2B lead generation is the process of identifying companies and decision-makers who may be interested in a business's products or services." },
@@ -60,16 +60,6 @@ const LeadGenerationService = () => {
               </Link>
             </div>
           </header>
-
-          <AEOBlock
-            definition="A B2B lead generation service identifies and verifies decision-maker contacts matching your ideal customer profile, delivering CRM-ready prospect lists with validated emails and direct dials."
-            takeaways={[
-              "Human-verified leads achieve 98%+ accuracy vs. 60–70% from scraped databases",
-              "Every email validated via SMTP handshake — 0% bounce guarantee",
-              "CRM-ready CSV delivery within 48–72 hours",
-              "Custom ICP targeting by industry, title, company size, and geography",
-            ]}
-          />
 
           {/* ── WHY MOST FAIL ── */}
           <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">

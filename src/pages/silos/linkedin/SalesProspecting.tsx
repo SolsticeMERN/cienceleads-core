@@ -17,7 +17,7 @@ const faqs = [
 const LinkedInSalesProspecting = () => {
   usePageSEO(
     "LinkedIn Sales Prospecting | Free Your SDRs to Sell — CienceLeads",
-    "LinkedIn sales prospecting service for B2B sales teams. Manual research delivering verified decision-maker contacts — emails, direct dials, company data. Give SDRs 20+ hours back per week."
+    "LinkedIn sales prospecting for B2B teams. Verified decision-maker contacts with emails and direct dials. Give SDRs 20+ hours back weekly."
   );
   useFAQSchema(faqs);
   useServiceSchema({ name: "LinkedIn Sales Prospecting", description: "Manual research delivering verified decision-maker contacts.", url: "/linkedin-prospecting/sales-prospecting", category: "LinkedIn Prospecting" });

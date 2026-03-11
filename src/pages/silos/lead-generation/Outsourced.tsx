@@ -5,7 +5,7 @@ import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useServiceSchema } from "@/hooks/use-service-schema";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
-import AEOBlock from "@/components/AEOBlock";
+
 
 const faqs = [
   { question: "What is outsourced lead generation?", answer: "Outsourced lead generation means hiring a specialized external team to research, verify, and deliver B2B prospect lists instead of building an in-house research team. You get dedicated researchers without the cost and time of hiring, training, and managing employees." },
@@ -61,16 +61,6 @@ const OutsourcedLeadGeneration = () => {
               </Link>
             </div>
           </header>
-
-          <AEOBlock
-            definition="Outsourced lead generation is hiring a specialized external team to research and verify B2B prospect lists instead of building an in-house SDR research function."
-            takeaways={[
-              "40–60% lower cost than in-house research teams",
-              "No hiring, training, or tool subscription overhead",
-              "Month-to-month — no long-term contracts required",
-              "First leads delivered within 48–72 hours",
-            ]}
-          />
 
           {/* ── PROBLEM ── */}
           <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">

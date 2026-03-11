@@ -17,7 +17,7 @@ const faqs = [
 const ContactDataCleaning = () => {
   usePageSEO(
     "Contact Data Cleaning | Remove Invalid, Duplicate & Outdated Contacts — CienceLeads",
-    "Contact data cleaning service to remove invalid emails, duplicates, outdated titles, and role-based addresses from your database. Protect sender reputation and improve campaign performance."
+    "Remove invalid emails, duplicates, and outdated contacts from your database. Protect sender reputation and improve campaign performance."
   );
   useFAQSchema(faqs);
   useServiceSchema({ name: "Contact Data Cleaning", description: "Remove invalid emails, duplicates, and outdated contacts from your database.", url: "/data-enrichment/contact-data-cleaning", category: "Data Enrichment" });

@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
-import { useOrganizationSchema } from "@/hooks/use-organization-schema";
 import { useServiceSchema } from "@/hooks/use-service-schema";
 import { useHowToSchema } from "@/hooks/use-howto-schema";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
@@ -39,7 +38,6 @@ const LeadGenForAgencies = () => {
     "B2B lead generation for marketing agencies. Outsourced prospect lists to grow your agency's client pipeline. Human-verified leads with 0% bounce guarantee."
   );
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "Lead Generation for Agencies", url: "/b2b-lead-generation-for-agencies" }]);
-  useOrganizationSchema();
   useServiceSchema({
     name: "B2B Lead Generation for Marketing Agencies",
     description: "Outsourced lead generation service for agencies. White-label prospect lists to grow your agency's client pipeline with 0% bounce guarantee.",
