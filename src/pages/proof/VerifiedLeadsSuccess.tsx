@@ -22,6 +22,7 @@ const VerifiedLeadsSuccess = () => {
       { author: "FinTech Growth Lead", rating: "5", body: "Acquired first 50 enterprise clients through verified cold outreach.", date: "2025-02-15" },
     ],
   });
+  useArticleSchema({ headline: "Verified Leads Success Stories | 0% Bounce Results", description: "Verified leads success stories — how human-verified B2B leads with 0% bounce rate transformed outbound campaigns.", url: "/proof/verified-leads-success", datePublished: "2026-01-10", dateModified: "2026-03-01" });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

@@ -42,7 +42,7 @@ const LinkedInProspectingGuide = () => {
     url: "/resources/linkedin-prospecting-guide",
   });
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "LinkedIn Prospecting Guide", url: "/resources/linkedin-prospecting-guide" }]);
-  useArticleSchema({ headline: "LinkedIn Prospecting Guide: Find Decision-Makers at Scale (2026)", description: "Complete LinkedIn prospecting guide — how to find decision-makers, build prospect lists, LinkedIn lead generation strategies, and sales prospecting best practices.", url: "/resources/linkedin-prospecting-guide" });
+  useArticleSchema({ headline: "LinkedIn Prospecting Guide: Find Decision-Makers at Scale (2026)", description: "Complete LinkedIn prospecting guide — how to find decision-makers, build prospect lists, LinkedIn lead generation strategies, and sales prospecting best practices.", url: "/resources/linkedin-prospecting-guide", datePublished: "2025-11-25", dateModified: "2026-02-18" });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

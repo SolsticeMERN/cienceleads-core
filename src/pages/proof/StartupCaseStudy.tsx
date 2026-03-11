@@ -21,6 +21,7 @@ const StartupCaseStudy = () => {
       { author: "Startup Co-Founder", rating: "5", body: "From 0 to 100 customers in 6 months. The startup package was exactly what we needed.", date: "2025-03-05" },
     ],
   });
+  useArticleSchema({ headline: "Startup Lead Growth Case Study | First 100 Customers", description: "How an early-stage B2B startup acquired their first 100 customers using startup lead generation.", url: "/proof/startup-lead-growth", datePublished: "2025-12-01", dateModified: "2026-03-05" });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

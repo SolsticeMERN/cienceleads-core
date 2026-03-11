@@ -21,6 +21,7 @@ const SaaSCaseStudy = () => {
       { author: "Series A SaaS CEO", rating: "5", body: "3x pipeline growth in 90 days. 4,500 verified leads with 0% bounce rate.", date: "2025-02-20" },
     ],
   });
+  useArticleSchema({ headline: "SaaS Lead Generation Case Study | 3x Pipeline in 90 Days", description: "How a B2B SaaS company 3x'd their sales pipeline in 90 days using human-verified lead generation.", url: "/proof/saas-lead-generation", datePublished: "2025-10-15", dateModified: "2026-02-20" });
 
   return (
     <main className="min-h-screen bg-background text-foreground">
