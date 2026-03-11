@@ -147,7 +147,7 @@ const LeadGenerationStrategies = () => {
     url: "/resources/lead-generation-strategies",
   });
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "Lead Generation Strategies", url: "/resources/lead-generation-strategies" }]);
-  useArticleSchema({ headline: "10 Proven B2B Lead Generation Strategies That Work in 2026", description: "10 proven B2B lead generation strategies for 2026. Prospect research, LinkedIn prospecting, cold email, ABM, data enrichment, and more.", url: "/resources/lead-generation-strategies" });
+  useArticleSchema({ headline: "10 Proven B2B Lead Generation Strategies That Work in 2026", description: "10 proven B2B lead generation strategies for 2026. Prospect research, LinkedIn prospecting, cold email, ABM, data enrichment, and more.", url: "/resources/lead-generation-strategies", datePublished: "2025-12-05", dateModified: "2026-02-25" });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

@@ -123,7 +123,7 @@ const BestColdEmailTools = () => {
     url: "/resources/best-cold-email-tools",
   });
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "Best Cold Email Tools", url: "/resources/best-cold-email-tools" }]);
-  useArticleSchema({ headline: "10 Best Cold Email Tools for B2B Outreach (2026)", description: "Compare the 10 best cold email tools for B2B outreach in 2026. Instantly, Lemlist, Smartlead, Apollo, and more — features, deliverability, and pricing.", url: "/resources/best-cold-email-tools" });
+  useArticleSchema({ headline: "10 Best Cold Email Tools for B2B Outreach (2026)", description: "Compare the 10 best cold email tools for B2B outreach in 2026. Instantly, Lemlist, Smartlead, Apollo, and more — features, deliverability, and pricing.", url: "/resources/best-cold-email-tools", datePublished: "2025-12-20", dateModified: "2026-03-01" });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

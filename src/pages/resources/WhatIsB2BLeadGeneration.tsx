@@ -43,7 +43,7 @@ const WhatIsB2BLeadGeneration = () => {
     url: "/resources/what-is-b2b-lead-generation",
   });
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "What Is B2B Lead Generation", url: "/resources/what-is-b2b-lead-generation" }]);
-  useArticleSchema({ headline: "What Is B2B Lead Generation? A Complete Guide for Sales Teams", description: "What is B2B lead generation? Complete guide for sales teams covering how it works, types, strategies, challenges, and best practices for generating qualified B2B leads.", url: "/resources/what-is-b2b-lead-generation" });
+  useArticleSchema({ headline: "What Is B2B Lead Generation? A Complete Guide for Sales Teams", description: "What is B2B lead generation? Complete guide for sales teams covering how it works, types, strategies, challenges, and best practices for generating qualified B2B leads.", url: "/resources/what-is-b2b-lead-generation", datePublished: "2025-11-15", dateModified: "2026-02-20" });
 
   return (
     <main className="min-h-screen bg-background text-foreground">

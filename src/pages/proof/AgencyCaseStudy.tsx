@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 import { useReviewSchema } from "@/hooks/use-review-schema";
+import { useArticleSchema } from "@/hooks/use-article-schema";
 
 const AgencyCaseStudy = () => {
   usePageSEO(
@@ -21,6 +22,7 @@ const AgencyCaseStudy = () => {
       { author: "Agency Operations Director", rating: "5", body: "60% cost reduction and 2x faster delivery. Our clients love the quality.", date: "2025-01-28" },
     ],
   });
+  useArticleSchema({ headline: "Agency Lead Generation Results | White-Label Case Study", description: "How a marketing agency scaled client lead generation with 60% cost reduction using white-label partnership.", url: "/proof/agency-lead-generation", datePublished: "2025-11-01", dateModified: "2026-01-28" });
 
   return (
     <main className="min-h-screen bg-background text-foreground">
