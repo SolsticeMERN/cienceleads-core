@@ -5,7 +5,7 @@ import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useServiceSchema } from "@/hooks/use-service-schema";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
-import AEOBlock from "@/components/AEOBlock";
+
 
 const faqs = [
   { question: "What is B2B prospect research?", answer: "B2B prospect research is the process of manually investigating potential buyers to build detailed profiles including verified contact info, company data, technology usage, and buying signals. It goes beyond lead list building by providing context for personalized outreach." },
