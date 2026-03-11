@@ -105,8 +105,8 @@ const tools: Tool[] = [
 
 const BestLinkedInProspectingTools = () => {
   usePageSEO(
-    "10 Best LinkedIn Prospecting Tools for B2B Sales Teams (2026) — CienceLeads",
-    "Compare the 10 best LinkedIn prospecting tools for 2026. Sales Navigator, Kaspr, Apollo, Phantombuster, and more — features, pros, cons, and pricing compared.",
+    "10 Best LinkedIn Prospecting Tools (2026) — CienceLeads",
+    "Compare the 10 best LinkedIn prospecting tools for 2026. Sales Navigator, Kaspr, Apollo, and more — features, pros, cons, and pricing.",
     { ogType: "article" }
   );
 

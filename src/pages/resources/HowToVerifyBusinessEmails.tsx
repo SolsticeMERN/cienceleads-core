@@ -26,8 +26,8 @@ const emailVerificationFaqs = [
 
 const HowToVerifyBusinessEmails = () => {
   usePageSEO(
-    "How to Verify Business Email Addresses (Step-by-Step Guide) — CienceLeads",
-    "Learn how to verify business email addresses — SMTP verification, MX record checks, catch-all detection, and best practices for maintaining clean B2B email lists.",
+    "How to Verify Business Email Addresses (2026 Guide) — CienceLeads",
+    "How to verify business email addresses — SMTP verification, MX checks, catch-all detection, and best practices for clean B2B email lists.",
     { ogType: "article" }
   );
   useFAQSchema(emailVerificationFaqs);
