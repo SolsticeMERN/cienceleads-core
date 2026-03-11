@@ -41,8 +41,8 @@ const services = [
 
 const Services = () => {
   usePageSEO(
-    "B2B Lead Generation Services | LinkedIn Prospecting | Data Enrichment | Email Lists — CienceLeads",
-    "B2B lead generation, LinkedIn prospecting, data enrichment, and verified email lists. Human-verified leads with 0% bounce guarantee."
+    "B2B Lead Generation Services — CienceLeads",
+    "Human-verified B2B lead generation, LinkedIn prospecting, data enrichment, and email list services. 0% bounce rate. 2,500+ projects delivered."
   );
 
   return (

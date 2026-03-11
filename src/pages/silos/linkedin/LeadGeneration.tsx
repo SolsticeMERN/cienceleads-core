@@ -16,8 +16,8 @@ const faqs = [
 
 const LinkedInLeadGeneration = () => {
   usePageSEO(
-    "LinkedIn Lead Generation | Verified Decision-Maker Contacts — CienceLeads",
-    "LinkedIn lead generation with human-verified decision-maker contacts, emails, and direct dials. Zero automation risk, 0% bounce."
+    "LinkedIn Lead Generation Service — CienceLeads",
+    "LinkedIn lead generation delivering verified decision-maker contacts with emails, direct dials, and company data. Zero automation risk."
   );
   useFAQSchema(faqs);
   useServiceSchema({ name: "LinkedIn Lead Generation", description: "Human-verified decision-maker contacts with zero automation risk.", url: "/linkedin-prospecting/lead-generation", category: "LinkedIn Prospecting" });

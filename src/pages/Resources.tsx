@@ -26,7 +26,7 @@ const pillars = [
 const Resources = () => {
   usePageSEO(
     "B2B Lead Generation Resources | Guides & Strategy — CienceLeads",
-    "Free B2B lead generation guides, LinkedIn prospecting strategies, data enrichment explained, and lead generation cost breakdowns. Expert resources from CienceLeads."
+    "Free B2B lead generation guides, LinkedIn prospecting strategies, data enrichment breakdowns, and cost guides. Expert resources from CienceLeads."
   );
 
   return (

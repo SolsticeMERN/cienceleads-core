@@ -26,7 +26,7 @@ const prospectListFaqs = [
 
 const HowToBuildProspectList = () => {
   usePageSEO(
-    "How to Build a Prospect List for B2B Sales (2026 Guide) — CienceLeads",
+    "How to Build a B2B Prospect List (2026 Guide) — CienceLeads",
     "Step-by-step guide to building a B2B prospect list — define your ICP, find decision-makers, verify contact data, and build CRM-ready lists that convert.",
     { ogType: "article" }
   );

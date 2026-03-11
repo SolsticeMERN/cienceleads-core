@@ -34,7 +34,7 @@ const testimonials = [
 
 const LeadGenForAgencies = () => {
   usePageSEO(
-    "B2B Lead Generation for Agencies | Agency Lead Generation Service | CienceLeads",
+    "B2B Lead Generation for Marketing Agencies | CienceLeads",
     "B2B lead generation for marketing agencies. Outsourced prospect lists to grow your agency's client pipeline. Human-verified leads with 0% bounce guarantee."
   );
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "Lead Generation for Agencies", url: "/b2b-lead-generation-for-agencies" }]);

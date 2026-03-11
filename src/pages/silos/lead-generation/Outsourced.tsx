@@ -17,8 +17,8 @@ const faqs = [
 
 const OutsourcedLeadGeneration = () => {
   usePageSEO(
-    "Outsourced Lead Generation | B2B Lead Research Without Hiring — CienceLeads",
-    "Outsourced B2B lead research at 40–60% less than in-house. Dedicated teams, human-verified lists, no contracts."
+    "Outsourced B2B Lead Generation Service — CienceLeads",
+    "Outsourced lead generation with dedicated research teams. Human-verified prospect lists at 40–60% less than in-house. No contracts."
   );
   useFAQSchema(faqs);
   useServiceSchema({ name: "Outsourced Lead Generation", description: "Outsourced lead generation for B2B companies with dedicated research teams delivering human-verified prospect lists.", url: "/b2b-lead-generation/outsourced", category: "Lead Generation" });

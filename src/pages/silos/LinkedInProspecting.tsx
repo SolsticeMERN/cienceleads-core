@@ -11,8 +11,8 @@ import PageComparisonTable from "@/components/PageComparisonTable";
 
 const LinkedInProspecting = () => {
   usePageSEO(
-    "LinkedIn Prospecting | LinkedIn Lead Generation Service | CienceLeads",
-    "LinkedIn prospecting service with human-verified leads, emails, and direct dials. Lead generation, outreach strategy, and SaaS targeting."
+    "LinkedIn Prospecting Service | Decision-Maker Leads — CienceLeads",
+    "LinkedIn lead generation, outreach strategy, and SaaS lead targeting. Human-verified LinkedIn decision-maker contacts with emails and direct dials."
   );
 
   const faqs = [

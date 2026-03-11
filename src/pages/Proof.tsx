@@ -23,8 +23,8 @@ const detailedCaseStudies = [
 
 const Proof = () => {
   usePageSEO(
-    "B2B Lead Generation Results | Case Studies | Verified Leads That Convert — CienceLeads",
-    "Real B2B lead generation results from CienceLeads. See case studies: 58% open rates, 0% bounce rates, 340% ROI. Human-verified B2B leads that deliver pipeline."
+    "B2B Lead Generation Case Studies & Results — CienceLeads",
+    "Real B2B lead generation results from CienceLeads. See case studies: 58% open rates, 0% bounce rates, 340% ROI from human-verified leads."
   );
   useReviewSchema({
     itemName: "CienceLeads B2B Lead Generation Service",

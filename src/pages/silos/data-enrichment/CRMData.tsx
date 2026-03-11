@@ -16,8 +16,8 @@ const faqs = [
 
 const CRMDataEnrichment = () => {
   usePageSEO(
-    "CRM Data Enrichment | Clean, Update & Verify Your CRM — CienceLeads",
-    "CRM data enrichment to clean records, fill missing fields, and verify contacts. Works with HubSpot, Salesforce, Pipedrive, and more."
+    "CRM Data Enrichment Service | Clean & Verify — CienceLeads",
+    "Clean outdated CRM records, fill missing fields, remove duplicates, and verify every contact. Works with HubSpot, Salesforce, and Pipedrive."
   );
   useFAQSchema(faqs);
   useServiceSchema({ name: "CRM Data Enrichment", description: "Clean outdated records, fill missing fields, remove duplicates, and verify every contact in your CRM.", url: "/data-enrichment/crm-data", category: "Data Enrichment" });

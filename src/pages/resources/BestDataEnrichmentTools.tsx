@@ -106,7 +106,7 @@ const tools: Tool[] = [
 const BestDataEnrichmentTools = () => {
   usePageSEO(
     "10 Best Data Enrichment Tools for B2B Teams (2026) — CienceLeads",
-    "Compare the 10 best data enrichment tools for 2026. Clay, ZoomInfo, Clearbit, Apollo, Lusha, Cognism, and more — features, pros, cons, and pricing compared.",
+    "Compare the 10 best data enrichment tools for 2026. Clay, ZoomInfo, Clearbit, Apollo, Cognism, and more — features, pros, cons, and pricing.",
     { ogType: "article" }
   );
 

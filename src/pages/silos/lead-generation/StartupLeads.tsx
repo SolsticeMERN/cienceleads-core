@@ -16,7 +16,7 @@ const faqs = [
 
 const StartupLeads = () => {
   usePageSEO(
-    "Startup Lead Generation | Affordable B2B Leads for Startups — CienceLeads",
+    "Startup Lead Generation | Affordable B2B Leads — CienceLeads",
     "Startup lead generation service delivering human-verified B2B leads without enterprise pricing. Start from 200 leads, no contracts, 0% bounce guarantee."
   );
   useFAQSchema(faqs);

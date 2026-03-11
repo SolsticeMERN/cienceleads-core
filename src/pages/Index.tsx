@@ -20,8 +20,8 @@ const Index = () => {
     category: "B2B Lead Generation Service",
   });
   usePageSEO(
-    "Human-Verified B2B Lead Generation Service | CRM-Ready Prospect Lists | CienceLeads",
-    "CienceLeads delivers human-verified B2B leads and CRM-ready prospect lists for SaaS, agencies, and startups. Get accurate contact data with 0% bounce. Request a free sample list today."
+    "Human-Verified B2B Lead Generation Service | CienceLeads",
+    "CienceLeads delivers human-verified B2B leads for SaaS, agencies, and startups. 0% bounce guarantee. Request a free sample list today."
   );
 
   return (

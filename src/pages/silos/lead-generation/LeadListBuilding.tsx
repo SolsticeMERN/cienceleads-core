@@ -17,7 +17,7 @@ const faqs = [
 const LeadListBuilding = () => {
   usePageSEO(
     "Lead List Building | Custom B2B Prospect Lists — CienceLeads",
-    "Lead list building service delivering custom B2B prospect lists with verified emails, direct dials, and company data. 0% bounce guarantee on every delivery."
+    "Custom B2B prospect lists with verified emails, direct dials, and company data. 0% bounce guarantee on every delivery."
   );
   useFAQSchema(faqs);
   useServiceSchema({ name: "Lead List Building", description: "Custom B2B prospect lists with verified emails, direct dials, and company data.", url: "/b2b-lead-generation/lead-list-building", category: "Lead Generation" });
