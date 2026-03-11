@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
-import { useOrganizationSchema } from "@/hooks/use-organization-schema";
 import { useServiceSchema } from "@/hooks/use-service-schema";
 import { useHowToSchema } from "@/hooks/use-howto-schema";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
