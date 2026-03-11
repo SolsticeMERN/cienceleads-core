@@ -145,8 +145,8 @@ const tools: Tool[] = [
 
 const BestProspectingTools = () => {
   usePageSEO(
-    "15 Best B2B Lead Generation Tools for Sales Teams (2026) — CienceLeads",
-    "Compare the 15 best B2B lead generation tools for 2026. Apollo, ZoomInfo, LinkedIn Sales Navigator, and more — features, pros, cons, and pricing compared.",
+    "15 Best B2B Lead Generation Tools (2026) — CienceLeads",
+    "Compare the 15 best B2B lead generation tools for 2026. Apollo, ZoomInfo, LinkedIn Sales Navigator, and more — features, pros, cons, and pricing.",
     { ogType: "article" }
   );
 

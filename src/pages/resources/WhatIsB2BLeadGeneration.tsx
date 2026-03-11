@@ -14,8 +14,8 @@ import PageFAQSection from "@/components/PageFAQSection";
 
 const WhatIsB2BLeadGeneration = () => {
   usePageSEO(
-    "What Is B2B Lead Generation? A Complete Guide for Sales Teams — CienceLeads",
-    "What is B2B lead generation? Complete guide for sales teams covering how it works, types, strategies, challenges, and best practices for generating qualified B2B leads.",
+    "What Is B2B Lead Generation? Complete Guide (2026) — CienceLeads",
+    "What is B2B lead generation? Complete guide covering how it works, strategies, and best practices for building a qualified B2B sales pipeline.",
     { ogType: "article" }
   );
 

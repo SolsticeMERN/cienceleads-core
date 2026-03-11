@@ -17,7 +17,7 @@ const faqs = [
 const TargetedProspectLists = () => {
   usePageSEO(
     "Targeted Prospect Lists | ICP-Matched B2B Lists — CienceLeads",
-    "ICP-matched prospect lists filtered by industry, title, company size, tech stack, and geography. Human-verified, 0% bounce guarantee."
+    "Targeted prospect lists matched to your ICP. Filter by industry, title, company size, revenue, and geography. Human-verified, 0% bounce."
   );
   useFAQSchema(faqs);
   useServiceSchema({ name: "Targeted Prospect Lists", description: "ICP-matched B2B lists filtered by industry, title, size, and technology.", url: "/email-lists/targeted-prospect-lists", category: "Email Lists" });

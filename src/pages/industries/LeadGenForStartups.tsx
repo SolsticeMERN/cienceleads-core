@@ -34,8 +34,8 @@ const testimonials = [
 
 const LeadGenForStartups = () => {
   usePageSEO(
-    "B2B Lead Generation for Startups | Startup Lead Generation Service | CienceLeads",
-    "B2B lead generation for startups. Affordable, human-verified prospect lists to build your first sales pipeline. Startup-friendly pricing with 0% bounce guarantee."
+    "B2B Lead Generation for Startups | CienceLeads",
+    "Affordable, human-verified B2B prospect lists for startups. Build your first sales pipeline with 0% bounce guarantee. No contracts."
   );
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "Lead Generation for Startups", url: "/b2b-lead-generation-for-startups" }]);
   useServiceSchema({
