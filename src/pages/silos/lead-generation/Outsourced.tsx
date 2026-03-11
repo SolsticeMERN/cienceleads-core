@@ -5,7 +5,7 @@ import { usePageSEO } from "@/hooks/use-page-seo";
 import { useFAQSchema } from "@/hooks/use-faq-schema";
 import { useServiceSchema } from "@/hooks/use-service-schema";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
-import AEOBlock from "@/components/AEOBlock";
+
 
 const faqs = [
   { question: "What is outsourced lead generation?", answer: "Outsourced lead generation means hiring a specialized external team to research, verify, and deliver B2B prospect lists instead of building an in-house research team. You get dedicated researchers without the cost and time of hiring, training, and managing employees." },
