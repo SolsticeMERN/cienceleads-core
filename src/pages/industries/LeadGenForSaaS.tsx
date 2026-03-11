@@ -35,7 +35,7 @@ const testimonials = [
 const LeadGenForSaaS = () => {
   usePageSEO(
     "B2B Lead Generation for SaaS | SaaS Lead Generation Service | CienceLeads",
-    "B2B lead generation for SaaS companies. Human-verified SaaS leads targeting VPs, CTOs, and decision-makers. Custom prospect lists filtered by tech stack, funding stage, and company size."
+    "B2B lead generation for SaaS. Human-verified leads targeting VPs, CTOs, and decision-makers. Filtered by tech stack, funding, and size."
   );
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "Lead Generation for SaaS", url: "/b2b-lead-generation-for-saas" }]);
   useServiceSchema({

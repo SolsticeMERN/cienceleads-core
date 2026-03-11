@@ -62,16 +62,6 @@ const OutsourcedLeadGeneration = () => {
             </div>
           </header>
 
-          <AEOBlock
-            definition="Outsourced lead generation is hiring a specialized external team to research and verify B2B prospect lists instead of building an in-house SDR research function."
-            takeaways={[
-              "40–60% lower cost than in-house research teams",
-              "No hiring, training, or tool subscription overhead",
-              "Month-to-month — no long-term contracts required",
-              "First leads delivered within 48–72 hours",
-            ]}
-          />
-
           {/* ── PROBLEM ── */}
           <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
             <div className="flex items-center gap-3 mb-4">

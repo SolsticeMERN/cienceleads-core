@@ -59,16 +59,6 @@ const VerifiedLeads = () => {
             </div>
           </header>
 
-          <AEOBlock
-            definition="Verified B2B leads are contacts validated through SMTP checks, catch-all detection, and human review to confirm active emails, current job titles, and accurate company data."
-            takeaways={[
-              "Three-layer verification: SMTP handshake, catch-all detection, human review",
-              "0% bounce guarantee — free replacement on any bounced contact",
-              "98%+ accuracy vs. 60–70% from unverified database exports",
-              "Every email confirmed deliverable before it reaches your CRM",
-            ]}
-          />
-
           {/* ── PROBLEM ── */}
           <section className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 mb-8">
             <div className="flex items-center gap-3 mb-4">

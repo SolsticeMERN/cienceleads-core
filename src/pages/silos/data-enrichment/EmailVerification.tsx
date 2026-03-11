@@ -17,7 +17,7 @@ const faqs = [
 const EmailVerification = () => {
   usePageSEO(
     "Email Verification Service | 4-Layer SMTP + Human Verification — CienceLeads",
-    "Email verification service with SMTP handshake, MX validation, catch-all detection, and human review. Protect your sender reputation with 0% bounce guarantee. 100 to 500,000+ emails."
+    "Email verification with SMTP, MX validation, catch-all detection, and human review. 0% bounce guarantee on 100 to 500,000+ emails."
   );
   useFAQSchema(faqs);
   useServiceSchema({ name: "Email Verification Service", description: "4-layer SMTP + human verification with 0% bounce guarantee.", url: "/data-enrichment/email-verification", category: "Data Enrichment" });

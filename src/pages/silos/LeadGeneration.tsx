@@ -24,6 +24,7 @@ const LeadGeneration = () => {
     { question: "Can I get a free sample before committing?", answer: "Yes. CienceLeads offers a free sample list so you can evaluate the quality of our human-verified leads before committing to a project. Contact us to request your free sample matched to your ICP." },
   ];
 
+  useFAQSchema(faqs);
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "B2B Lead Generation", url: "/b2b-lead-generation" }]);
 
   return (

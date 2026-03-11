@@ -17,7 +17,7 @@ const faqs = [
 const AccurateEmailLists = () => {
   usePageSEO(
     "Accurate Email Lists | 98%+ Accuracy Rate — CienceLeads",
-    "Accurate email lists with 98%+ accuracy through 4-layer verification. SMTP checks, catch-all detection, and human review on every contact. 0% bounce guarantee."
+    "Accurate email lists with 98%+ accuracy via 4-layer verification. SMTP, catch-all detection, and human review. 0% bounce guarantee."
   );
   useFAQSchema(faqs);
   useServiceSchema({ name: "Accurate Email Lists", description: "98%+ accuracy email lists through 4-layer verification.", url: "/email-lists/accurate-email-lists", category: "Email Lists" });

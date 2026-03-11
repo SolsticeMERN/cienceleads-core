@@ -16,7 +16,7 @@ const faqs = [
 const EmailLists = () => {
   usePageSEO(
     "B2B Email Lists | Verified Email List Provider — CienceLeads",
-    "B2B email list provider delivering human-verified, targeted prospect lists with 0% bounce guarantee. Custom-built email lists for SaaS, agencies, and B2B sales teams."
+    "Human-verified B2B email lists with 0% bounce guarantee. Custom-built prospect lists for SaaS, agencies, and B2B sales teams."
   );
   useFAQSchema(faqs);
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "Email Lists", url: "/email-lists" }]);
