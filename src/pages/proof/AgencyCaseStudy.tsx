@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 import { useReviewSchema } from "@/hooks/use-review-schema";
+import { useArticleSchema } from "@/hooks/use-article-schema";
 
 const AgencyCaseStudy = () => {
   usePageSEO(
