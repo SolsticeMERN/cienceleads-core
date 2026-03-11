@@ -12,7 +12,7 @@ import PageComparisonTable from "@/components/PageComparisonTable";
 const DataEnrichment = () => {
   usePageSEO(
     "Data Enrichment Service | B2B Data Enrichment & CRM Cleaning | CienceLeads",
-    "Complete data enrichment hub. B2B data enrichment, CRM data cleaning, email verification, and contact data cleaning. Protect your sender reputation and improve deliverability."
+    "B2B data enrichment, CRM cleaning, email verification, and contact data cleaning. Protect sender reputation and improve deliverability."
   );
 
   const faqs = [
