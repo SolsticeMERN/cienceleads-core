@@ -16,8 +16,8 @@ const faqs = [
 
 const ProspectResearch = () => {
   usePageSEO(
-    "B2B Prospect Research | Deep-Research Contact Profiles — CienceLeads",
-    "Deep-research B2B contact profiles with buying signals, tech stack data, and verified contact info for personalized outreach."
+    "B2B Prospect Research | Verified Contact Profiles — CienceLeads",
+    "B2B prospect research delivering detailed contact profiles with buying signals, tech stack data, and verified emails for personalized outreach."
   );
   useFAQSchema(faqs);
   useServiceSchema({ name: "B2B Prospect Research", description: "Deep-research contact profiles with buying signals and verified contact information.", url: "/b2b-lead-generation/prospect-research", category: "Lead Generation" });

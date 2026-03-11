@@ -33,7 +33,7 @@ const MIN_SUBMIT_TIME_MS = 3000;
 const Contact = () => {
   usePageSEO(
     "Get 50 Free Verified B2B Leads in 48 Hours | CienceLeads",
-    "Request a free sample list of human-verified B2B leads. Tell us your ICP — titles, industries, company size — and we'll deliver 50 verified contacts in 48 hours. Zero cost, zero contracts."
+    "Request a free sample list of human-verified B2B leads. Tell us your ICP and we'll deliver 50 verified contacts in 48 hours. Zero cost."
   );
 
   const navigate = useNavigate();

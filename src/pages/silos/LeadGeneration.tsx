@@ -12,7 +12,7 @@ import PageComparisonTable from "@/components/PageComparisonTable";
 const LeadGeneration = () => {
   usePageSEO(
     "B2B Lead Generation | Human-Verified Prospect Lists | CienceLeads",
-    "Human-verified B2B prospect lists with 0% bounce guarantee. Outsourced lead generation, list building, and startup leads."
+    "Human-verified B2B prospect lists for SaaS, agencies, and startups. Outsourced lead generation and list building with 0% bounce guarantee."
   );
 
   const faqs = [
