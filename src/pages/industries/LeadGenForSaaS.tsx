@@ -38,7 +38,6 @@ const LeadGenForSaaS = () => {
     "B2B lead generation for SaaS companies. Human-verified SaaS leads targeting VPs, CTOs, and decision-makers. Custom prospect lists filtered by tech stack, funding stage, and company size."
   );
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Services", url: "/services" }, { name: "Lead Generation for SaaS", url: "/b2b-lead-generation-for-saas" }]);
-  useOrganizationSchema();
   useServiceSchema({
     name: "B2B Lead Generation for SaaS Companies",
     description: "Human-verified SaaS lead generation service targeting VPs, CTOs, and decision-makers. Custom prospect lists filtered by tech stack, funding stage, and company size.",
