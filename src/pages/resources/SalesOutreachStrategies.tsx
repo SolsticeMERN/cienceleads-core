@@ -39,7 +39,7 @@ const SalesOutreachStrategies = () => {
     url: "/resources/sales-outreach-strategies",
   });
   useBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Resources", url: "/resources" }, { name: "Sales Outreach Strategies", url: "/resources/sales-outreach-strategies" }]);
-  useArticleSchema({ headline: "Sales Outreach Strategies | B2B Cold Outreach Guide (2026)", description: "Proven sales outreach strategies for B2B teams. Cold email templates, LinkedIn messaging, multi-channel sequences, and personalization tactics.", url: "/resources/sales-outreach-strategies", datePublished: "2026-01-15", dateModified: "2026-03-01" });
+  useArticleSchema({ headline: "Sales Outreach Strategies | B2B Cold Outreach Guide (2026)", description: "Proven sales outreach strategies for B2B teams. Cold email templates, LinkedIn messaging, multi-channel sequences, and personalization tactics.", url: "/resources/sales-outreach-strategies", datePublished: "2026-01-15", useArticleSchema({ headline: "Sales Outreach Strategies | B2B Cold Outreach Guide (2026)", description: "Proven sales outreach strategies for B2B teams. Cold email templates, LinkedIn messaging, multi-channel sequences, and personalization tactics.", url: "/resources/sales-outreach-strategies", datePublished: "2026-01-15", dateModified: "2026-03-06" }); });
 
   return (
     <main className="min-h-screen bg-background text-foreground">
