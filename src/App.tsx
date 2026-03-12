@@ -62,6 +62,7 @@ import HowToVerifyBusinessEmails from "./pages/resources/HowToVerifyBusinessEmai
 import LeadGenForSaaS from "./pages/industries/LeadGenForSaaS";
 import LeadGenForAgencies from "./pages/industries/LeadGenForAgencies";
 import LeadGenForStartups from "./pages/industries/LeadGenForStartups";
+import AIWebsiteDevelopment from "./pages/AIWebsiteDevelopment";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
