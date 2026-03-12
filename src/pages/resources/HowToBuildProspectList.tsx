@@ -9,7 +9,20 @@ import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 import { useArticleSchema } from "@/hooks/use-article-schema";
 
-import { prospectListFaqs, prospectListSteps } from "@/data/resources";
+const prospectListSteps = [
+  { name: "Define Your Ideal Customer Profile", text: "Nail down industry, company size (employee count + revenue), job titles (VP Sales, CTO, Head of Marketing), geography, and technology stack before sourcing a single contact." },
+  { name: "Source Prospect Data", text: "Use LinkedIn Sales Navigator for advanced filters, company directories, conference attendee lists, and professional associations. Combine multiple sources for the most complete data." },
+  { name: "Verify Contact Information", text: "Raw prospect data decays at 30% per year. Run every email through SMTP handshake verification and validate direct dials. Human-verified leads catch edge cases tools miss." },
+  { name: "Enrich With Additional Data Points", text: "Append company revenue, recent funding rounds, technology stack, and social profiles. Enriched data enables the personalization that drives reply rates." },
+  { name: "Organize and Import to CRM", text: "Segment your list by priority, industry, or campaign type. Tag properly and import directly into your CRM so your sales team can start outreach immediately." },
+];
+
+const prospectListFaqs = [
+  { question: "How do you build a B2B prospect list?", answer: "Start by defining your ideal customer profile (ICP) — industry, company size, job titles, and geography. Then use a combination of LinkedIn Sales Navigator, B2B databases, and manual research to identify matching contacts. Verify all emails before outreach." },
+  { question: "How many contacts should be on a prospect list?", answer: "For most B2B outbound campaigns, aim for 500–2,000 verified contacts per month. The exact number depends on your sales capacity, deal size, and how niche your ICP is. Quality always beats quantity." },
+  { question: "What are the best data sources for building prospect lists?", answer: "The most reliable sources include LinkedIn Sales Navigator for identifying contacts, company websites for org charts, B2B data providers for verified contact info, and intent data platforms for identifying in-market buyers." },
+  { question: "What is an ideal customer profile (ICP)?", answer: "An ICP defines the characteristics of companies and contacts most likely to buy your product. It typically includes industry, company size, revenue range, job titles, geographic location, and technology stack. A well-defined ICP dramatically improves outbound conversion rates." },
+];
 
 const HowToBuildProspectList = () => {
   usePageSEO(

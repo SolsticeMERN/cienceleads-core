@@ -9,7 +9,12 @@ import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 import { useArticleSchema } from "@/hooks/use-article-schema";
 
-import { prospectResearchFaqs } from "@/data/resources/sales-prospect-research";
+const prospectResearchFaqs = [
+  { question: "How do you research a sales prospect?", answer: "Effective prospect research follows a structured process: review the company website and recent news, check the prospect's LinkedIn profile and activity, identify pain points relevant to your solution, note mutual connections or shared interests, and verify contact information before outreach." },
+  { question: "How much time should you spend researching each prospect?", answer: "For enterprise deals ($50K+), invest 15–30 minutes per prospect on deep research. For mid-market outreach, spend 5–10 minutes per contact. For high-volume SMB campaigns, use templated research frameworks that take 2–3 minutes per prospect." },
+  { question: "What data points matter most in prospect research?", answer: "The highest-impact data points are current job title and tenure, company revenue and growth trajectory, technology stack, recent funding or hiring signals, and organizational pain points. These enable highly personalized outreach that demonstrates genuine understanding." },
+  { question: "What are the best tools for sales prospect research?", answer: "Top research tools include LinkedIn Sales Navigator for professional profiles, Crunchbase for company funding data, BuiltWith for technology stack identification, Google Alerts for trigger events, and B2B data providers like CienceLeads for verified contact details and enriched company data." },
+];
 
 const SalesProspectResearch = () => {
   usePageSEO(

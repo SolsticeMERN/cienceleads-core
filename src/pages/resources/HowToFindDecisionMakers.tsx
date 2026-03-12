@@ -9,7 +9,20 @@ import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 import { useArticleSchema } from "@/hooks/use-article-schema";
 
-import { decisionMakerFaqs, decisionMakerSteps } from "@/constants/resources";
+const decisionMakerSteps = [
+  { name: "Define Your Target Buyer Persona", text: "Identify the job titles, seniority levels, and departments that make or influence purchasing decisions for your product. Focus on VP-level and above for enterprise, department heads for mid-market." },
+  { name: "Research Company Org Charts", text: "Use LinkedIn, company websites, press releases, and B2B intelligence tools to map reporting structures and identify both economic buyers and technical evaluators." },
+  { name: "Use LinkedIn Sales Navigator", text: "Leverage advanced filters for job title, seniority, company size, and industry. Save leads and create lead lists for systematic outreach." },
+  { name: "Verify Contact Information", text: "Cross-reference LinkedIn profiles with B2B data providers to obtain verified direct emails and phone numbers. Never rely on generic company emails." },
+  { name: "Build a Multi-Threaded Outreach Plan", text: "Target 3–5 stakeholders per account across different roles. Personalize messaging based on each decision-maker's priorities and pain points." },
+];
+
+const decisionMakerFaqs = [
+  { question: "How do you find decision-makers in a company?", answer: "Use LinkedIn Sales Navigator to search by job title and seniority, cross-reference with company websites and press releases, and verify contact details through B2B data providers. Focus on VP-level and above for enterprise deals, or department heads for mid-market." },
+  { question: "How do you bypass gatekeepers to reach decision-makers?", answer: "The most effective strategies include reaching out directly via LinkedIn, using verified direct email addresses instead of generic company emails, leveraging warm introductions through mutual connections, and targeting multiple stakeholders within the same account simultaneously." },
+  { question: "Is LinkedIn or a B2B database better for finding decision-makers?", answer: "LinkedIn is best for identifying and researching decision-makers, while B2B databases provide verified contact information like direct emails and phone numbers. The most effective approach combines both — use LinkedIn for discovery and a data provider for verified contact details." },
+  { question: "How do you map an organization's decision-making structure?", answer: "Start with LinkedIn to identify the org chart, look for recent hires and promotions in press releases, check company about pages for leadership teams, and use B2B intelligence tools to understand reporting structures. Map both the economic buyer and technical evaluators." },
+];
 
 const HowToFindDecisionMakers = () => {
   usePageSEO(

@@ -9,7 +9,20 @@ import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 import { useArticleSchema } from "@/hooks/use-article-schema";
 
-import { emailVerificationSteps, emailVerificationFaqs } from "@/data/email-verification";
+const emailVerificationSteps = [
+  { name: "Check Email Syntax", text: "Validate that the email address follows proper formatting rules — correct use of @ symbol, valid domain extension, no special characters or spaces." },
+  { name: "Verify DNS and MX Records", text: "Confirm the domain exists and has valid mail exchange (MX) records configured to accept email. This catches typos in domain names and defunct companies." },
+  { name: "Perform SMTP Handshake", text: "Connect to the mail server and simulate sending an email without actually delivering it. The server response confirms whether the specific mailbox exists and can receive mail." },
+  { name: "Detect Catch-All Domains", text: "Identify domains configured to accept all emails regardless of whether the mailbox exists. Flag these for manual verification or separate campaign segmentation." },
+  { name: "Filter Role-Based and Disposable Addresses", text: "Remove generic addresses like info@, sales@, and support@, as well as temporary/disposable email addresses that indicate low-quality contacts." },
+];
+
+const emailVerificationFaqs = [
+  { question: "How does email verification work?", answer: "Email verification uses a multi-step process: syntax validation, DNS and MX record checks, SMTP handshake to confirm the mailbox exists, catch-all domain detection, and role-based address filtering. This process confirms deliverability without sending an actual email." },
+  { question: "What is an acceptable email bounce rate for cold outreach?", answer: "Industry best practice is to keep bounce rates below 2%. Anything above 5% risks triggering spam filters and damaging your sender reputation. Human-verified email lists typically achieve 0% bounce rates." },
+  { question: "What is a catch-all domain and why does it matter?", answer: "A catch-all domain accepts emails to any address, whether the mailbox exists or not. This makes automated verification unreliable for these domains because the server always responds 'valid.' Catch-all addresses require manual verification or should be segmented into separate campaigns." },
+  { question: "How often should you verify your email list?", answer: "Re-verify email lists every 90 days at minimum. B2B contact data decays at approximately 30% per year due to job changes and company restructuring. Always verify immediately before launching a new campaign." },
+];
 
 const HowToVerifyBusinessEmails = () => {
   usePageSEO(

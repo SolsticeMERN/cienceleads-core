@@ -9,7 +9,12 @@ import { useSpeakableSchema } from "@/hooks/use-speakable-schema";
 import { useBreadcrumbSchema } from "@/hooks/use-breadcrumb-schema";
 import { useArticleSchema } from "@/hooks/use-article-schema";
 
-import { dataEnrichmentFaqs } from "@/data/faq-data";
+const dataEnrichmentFaqs = [
+  { question: "What is data enrichment?", answer: "Data enrichment is the process of enhancing existing contact or company records with additional data points — such as job titles, direct phone numbers, technographics, and firmographics — to make your CRM data more complete and actionable for sales outreach." },
+  { question: "How often should you enrich your CRM data?", answer: "B2B contact data decays at roughly 30% per year due to job changes, company mergers, and role transitions. Most sales teams should enrich their CRM data quarterly to maintain accuracy and outreach effectiveness." },
+  { question: "What is the difference between data enrichment and data verification?", answer: "Data verification confirms that existing data (like an email address) is valid and deliverable. Data enrichment adds new data fields to incomplete records. Both are essential — verification ensures deliverability, while enrichment ensures targeting precision." },
+  { question: "What data points does B2B data enrichment typically add?", answer: "Common enrichment fields include direct email addresses, mobile phone numbers, current job title and seniority level, company revenue, employee count, industry classification, technology stack, and social media profiles." },
+];
 
 const DataEnrichmentExplained = () => {
   usePageSEO(
