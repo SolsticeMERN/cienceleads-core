@@ -133,7 +133,7 @@ const BestDataEnrichmentTools = () => {
     description: "Compare the 10 best data enrichment tools for 2026. Clay, ZoomInfo, Clearbit, Apollo, Lusha, Cognism, and more — features, pros, cons, and pricing compared.",
     url: "/resources/best-data-enrichment-tools",
     datePublished: "2026-01-10",
-    dateModified: "2026-03-05",
+    dateModified: "2026-03-08",
   });
 
   return (
