@@ -1,4 +1,4 @@
-import { ArrowRight, Search, Linkedin, DatabaseZap, Mail, Check } from "lucide-react";
+import { ArrowRight, Search, Linkedin, DatabaseZap, Mail, Globe, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
@@ -36,6 +36,14 @@ const services = [
     description: "The B2B email list provider trusted by 2,500+ sales teams. Buy B2B email lists that are human-verified with 0% bounce guarantee. Not a recycled B2B contact database.",
     features: ["Human-verified accurate email lists", "Targeted prospect lists matched to your ICP", "Geo-targeted for USA, UK, Canada & Australia", "B2B contact database built on-demand"],
     href: "/email-lists",
+  },
+  {
+    icon: Globe,
+    title: "AI Website Development",
+    headline: "AI Website Development — Conversion-Focused Sites for Lead Generation",
+    description: "Fast AI website development built for lead capture. Conversion-focused layouts, SEO foundations, and CRM integration — launched in 5–10 days, not months.",
+    features: ["AI-accelerated build — launch in 5–10 days", "Conversion-first layout with strategic CTA placement", "Technical SEO, structured data & sub-second load times", "CRM & lead capture form integration included"],
+    href: "/ai-website-development",
   },
 ];
 
