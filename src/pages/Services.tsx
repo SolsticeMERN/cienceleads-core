@@ -1,4 +1,4 @@
-import { ArrowRight, Search, Linkedin, DatabaseZap, Mail, Check } from "lucide-react";
+import { ArrowRight, Search, Linkedin, DatabaseZap, Mail, Globe, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
