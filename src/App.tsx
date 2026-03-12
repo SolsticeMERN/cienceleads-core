@@ -140,6 +140,8 @@ const App = () => (
           <Route path="/b2b-lead-generation-for-saas" element={<LeadGenForSaaS />} />
           <Route path="/b2b-lead-generation-for-agencies" element={<LeadGenForAgencies />} />
           <Route path="/b2b-lead-generation-for-startups" element={<LeadGenForStartups />} />
+          {/* AI Website Development */}
+          <Route path="/ai-website-development" element={<AIWebsiteDevelopment />} />
           {/* Contact */}
           <Route path="/contact" element={<Contact />} />
           <Route path="/thank-you" element={<ThankYou />} />

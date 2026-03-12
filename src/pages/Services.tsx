@@ -37,6 +37,14 @@ const services = [
     features: ["Human-verified accurate email lists", "Targeted prospect lists matched to your ICP", "Geo-targeted for USA, UK, Canada & Australia", "B2B contact database built on-demand"],
     href: "/email-lists",
   },
+  {
+    icon: Globe,
+    title: "AI Website Development",
+    headline: "AI Website Development — Conversion-Focused Sites for Lead Generation",
+    description: "Fast AI website development built for lead capture. Conversion-focused layouts, SEO foundations, and CRM integration — launched in 5–10 days, not months.",
+    features: ["AI-accelerated build — launch in 5–10 days", "Conversion-first layout with strategic CTA placement", "Technical SEO, structured data & sub-second load times", "CRM & lead capture form integration included"],
+    href: "/ai-website-development",
+  },
 ];
 
 const Services = () => {

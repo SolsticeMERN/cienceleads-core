@@ -102,7 +102,7 @@ const Header = () => {
     setOpen(false);
   }, [location.pathname]);
 
-  const serviceRoutes = ["/services", "/b2b-lead-generation", "/linkedin-prospecting", "/data-enrichment", "/email-lists", "/b2b-lead-generation-for-saas", "/b2b-lead-generation-for-agencies", "/b2b-lead-generation-for-startups"];
+  const serviceRoutes = ["/services", "/b2b-lead-generation", "/linkedin-prospecting", "/data-enrichment", "/email-lists", "/ai-website-development", "/b2b-lead-generation-for-saas", "/b2b-lead-generation-for-agencies", "/b2b-lead-generation-for-startups"];
   const isServicesActive = serviceRoutes.some((r) => location.pathname.startsWith(r));
 
   return (

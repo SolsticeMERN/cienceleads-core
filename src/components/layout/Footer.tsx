@@ -56,6 +56,7 @@ const Footer = () => {
               <Link to="/linkedin-prospecting" className="text-sm text-muted-foreground hover:text-foreground transition-colors">LinkedIn Prospecting</Link>
               <Link to="/data-enrichment" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Data Enrichment</Link>
               <Link to="/email-lists" className="text-sm text-muted-foreground hover:text-foreground transition-colors">B2B Email Lists</Link>
+              <Link to="/ai-website-development" className="text-sm text-muted-foreground hover:text-foreground transition-colors">AI Website Development</Link>
             </nav>
           </div>
 
