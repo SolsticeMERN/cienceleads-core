@@ -44,110 +44,151 @@ const SalesProspectResearch = () => {
   useArticleSchema({ headline: "Sales Prospect Research: Complete Guide for B2B Teams (2026)", description: "Master sales prospect research — how to find decision-makers, gather buying signals, and build targeted prospect profiles that drive higher conversion rates.", url: "/resources/sales-prospect-research", datePublished: "2026-01-25", dateModified: "2026-03-07" });
 
   return (
-    <main className="container relative py-16 lg:py-20">
-      <div className="mx-auto w-full max-w-screen-md">
-        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-          Sales Prospect Research: Complete Guide for B2B Teams (2026)
-        </h1>
-        <p className="mt-4 text-muted-foreground">
-          Master sales prospect research — how to find decision-makers, gather buying signals, and build targeted prospect profiles that drive higher conversion rates.
-        </p>
-      </div>
+    <main className="min-h-screen bg-background text-foreground">
+      <article className="py-24 md:py-32">
+        <div className="container max-w-3xl">
+          <div className="mb-12">
+            <Link to="/resources" className="text-sm text-muted-foreground hover:text-primary transition-colors mb-4 inline-block">← Back to Resources</Link>
+            <span className="block text-xs text-muted-foreground mb-4">9 min read · Updated 2026</span>
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+              Sales Prospect Research
+            </h1>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Sales prospect research is the difference between cold outreach that gets ignored and personalized messaging that books meetings. This guide covers the exact research process top-performing B2B sales teams use to understand their prospects before making contact.
+            </p>
+          </div>
 
-      <AEOBlock
-        blocks={[
-          {
-            title: "What is Sales Prospect Research?",
-            content:
-              "Sales prospect research is the process of identifying, gathering information on, and qualifying potential customers for your B2B sales efforts. It involves finding decision-makers, understanding their needs and pain points, and building targeted prospect profiles that drive higher conversion rates.",
-          },
-          {
-            title: "Why is Prospect Research Important?",
-            content:
-              "Effective prospect research is crucial for B2B sales success. It enables you to focus your efforts on the most promising leads, personalize your outreach, and build stronger relationships with potential customers. By understanding your prospects' needs and challenges, you can tailor your messaging and offer solutions that resonate with them.",
-          },
-        ]}
-      />
+          <AEOBlock
+            definition="Sales prospect research is the systematic process of gathering intelligence about potential B2B buyers — including their role, company challenges, technology stack, and buying signals — before initiating outreach, to enable personalized messaging that drives higher response rates."
+            takeaways={[
+              "Teams that research prospects before outreach see 2–3x higher reply rates",
+              "Key data points: job title, company revenue, tech stack, funding signals, and pain points",
+              "Enterprise deals ($50K+) warrant 15–30 minutes of research per prospect",
+              "76% of B2B buyers expect personalized communication from vendors",
+            ]}
+          />
 
-      <div className="mx-auto w-full max-w-screen-md">
-        <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
-          How to Research Sales Prospects for B2B
-        </h2>
-        <ol className="mt-6 ml-6 list-decimal [&>li]:mt-2">
-          <li>
-            <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">Identify Target Accounts</h3>
-            <p className="mt-2 text-muted-foreground">
-              Start with your Ideal Customer Profile (ICP) criteria — industry, company size, geography, and technology. Use LinkedIn Sales Navigator and company databases to build your initial account list.
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-4">What Is Sales Prospect Research?</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Sales prospect research is the systematic process of gathering intelligence about potential buyers before you reach out. It goes beyond basic contact data — it includes understanding a prospect's role, their company's challenges, recent news, technology stack, and buying signals.
             </p>
-          </li>
-          <li>
-            <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">Map Decision-Makers</h3>
-            <p className="mt-2 text-muted-foreground">
-              Within each target account, identify key decision-makers and influencers. For B2B sales, target VP-level and C-suite contacts in relevant departments.
+            <p className="text-muted-foreground leading-relaxed">
+              Teams that invest in thorough <Link to="/b2b-lead-generation/prospect-research" className="text-primary hover:underline">B2B prospect research</Link> before outreach see 2–3x higher reply rates because their messaging is relevant and personalized to each prospect's specific situation.
             </p>
-          </li>
-          <li>
-            <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">Gather Intelligence</h3>
-            <p className="mt-2 text-muted-foreground">
-              Research each prospect's recent LinkedIn activity, company news, earnings reports, job postings, and technology stack changes to reveal current priorities and pain points.
-            </p>
-          </li>
-          <li>
-            <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">Verify and Enrich Contact Data</h3>
-            <p className="mt-2 text-muted-foreground">
-              Collect verified business emails and direct phone numbers. Use human-verified leads to ensure every contact is accurate and deliverable before outreach.
-            </p>
-          </li>
-          <li>
-            <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">Score and Prioritize</h3>
-            <p className="mt-2 text-muted-foreground">
-              Rank prospects based on buying signals — recent funding, hiring activity, technology changes — and prioritize outreach to the highest-intent accounts first.
-            </p>
-          </li>
-        </ol>
-      </div>
+          </section>
 
-      <div className="mx-auto w-full max-w-screen-md">
-        <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
-          Sales Prospect Research FAQs
-        </h2>
-        <div className="grid gap-4">
-          {prospectResearchFaqs.map((faq) => (
-            <details key={faq.question} className="group rounded-lg border border-border [&_summary::-webkit-details-marker]:hidden">
-              <summary className="flex cursor-pointer list-none flex-col p-4 focus-visible:outline-none [&_svg]:rotate-90 [&_svg]:transition-transform duration-300 group-open:[&_svg]:rotate-0">
-                <div className="flex items-center justify-between">
-                  <h4 className="text-lg font-semibold">{faq.question}</h4>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-300">
-                    <path d="M12 5V19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-4">Why Prospect Research Matters</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Generic outreach fails because buyers can immediately tell when a message isn't relevant to them. Research shows that 76% of B2B buyers expect personalized communication from vendors, and decision-makers are 4x more likely to respond to emails that reference their specific challenges.
+            </p>
+            <div className="space-y-3">
+              {[
+                "Higher response rates — researched outreach gets 3–5x more replies",
+                "Shorter sales cycles — understanding pain points accelerates conversations",
+                "Better qualification — research reveals whether a prospect is actually a fit",
+                "Stronger relationships — personalized outreach builds trust from the first touch",
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3 text-sm">
+                  <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                  <span>{item}</span>
                 </div>
-              </summary>
-              <div className="pb-4 pl-4 pr-4 text-muted-foreground">{faq.answer}</div>
-            </details>
-          ))}
-        </div>
-      </div>
+              ))}
+            </div>
+          </section>
 
-      <div className="mx-auto w-full max-w-screen-md">
-        <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
-          Related Articles
-        </h2>
-        <div className="grid sm:grid-cols-2 gap-3">
-          <Link to="/resources/how-to-find-decision-makers" className="flex items-center gap-2 text-sm text-primary hover:underline">
-            <ArrowRight className="w-3.5 h-3.5" /> How to Find Decision Makers
-          </Link>
-          <Link to="/resources/how-to-build-a-prospect-list" className="flex items-center gap-2 text-sm text-primary hover:underline">
-            <ArrowRight className="w-3.5 h-3.5" /> How to Build a Prospect List
-          </Link>
-          <Link to="/resources/how-to-verify-business-emails" className="flex items-center gap-2 text-sm text-primary hover:underline">
-            <ArrowRight className="w-3.5 h-3.5" /> How to Verify Business Emails
-          </Link>
-          <Link to="/resources/data-enrichment-explained" className="flex items-center gap-2 text-sm text-primary hover:underline">
-            <ArrowRight className="w-3.5 h-3.5" /> Data Enrichment Explained
-          </Link>
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-4">The Prospect Research Process</h2>
+            <div className="rounded-xl border border-border bg-card/50 p-6 my-6">
+              <ol className="space-y-4">
+                {[
+                  { step: "Identify Target Accounts", desc: "Start with your ICP criteria — industry, company size, geography, and technology. Use tools like LinkedIn Sales Navigator and company databases to build your initial account list." },
+                  { step: "Map Decision-Makers", desc: "Within each target account, identify key decision-makers and influencers. For B2B sales, this typically means VP-level and C-suite contacts in the relevant department." },
+                  { step: "Gather Intelligence", desc: "Research each prospect's recent LinkedIn activity, company news, earnings reports, job postings, and technology stack changes. These signals reveal current priorities and pain points." },
+                  { step: "Verify and Enrich Contact Data", desc: "Collect verified business emails and direct phone numbers. Use human-verified leads to ensure every contact is accurate and deliverable before launching outreach." },
+                  { step: "Score and Prioritize", desc: "Rank prospects based on buying signals — recent funding, hiring activity, technology changes — and prioritize outreach to the highest-intent accounts first." },
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm">
+                    <span className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-xs font-bold text-primary">{i + 1}</span>
+                    <div>
+                      <strong className="text-foreground">{item.step}</strong>
+                      <p className="text-muted-foreground mt-1">{item.desc}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-4">What Data to Collect During Research</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Effective prospect research captures both firmographic and behavioral data. A <Link to="/linkedin-prospecting/service" className="text-primary hover:underline">LinkedIn prospecting service</Link> can help gather this data at scale.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div className="rounded-xl border border-border bg-card/50 p-6">
+                <h3 className="font-semibold mb-2">Firmographic Data</h3>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Company size & revenue</li>
+                  <li>• Industry & sub-industry</li>
+                  <li>• Headquarters & locations</li>
+                  <li>• Technology stack</li>
+                  <li>• Recent funding rounds</li>
+                </ul>
+              </div>
+              <div className="rounded-xl border border-border bg-card/50 p-6">
+                <h3 className="font-semibold mb-2">Behavioral Signals</h3>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Job postings (hiring signals)</li>
+                  <li>• LinkedIn activity & content</li>
+                  <li>• Conference attendance</li>
+                  <li>• Product launches or pivots</li>
+                  <li>• Competitor tool usage</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-4">Outsourcing vs. In-House Research</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              In-house prospect research gives you control but consumes 40–60% of a sales rep's time. Outsourcing to a professional <Link to="/b2b-lead-generation/prospect-research" className="text-primary hover:underline">prospect research service</Link> frees your team to focus on selling while delivering higher-quality, verified prospect data at a fraction of the cost per lead.
+            </p>
+            <div className="space-y-3">
+              {[
+                { title: "In-house makes sense when...", desc: "Your team has deep domain expertise and a small, well-defined ICP. You need fewer than 100 prospects per month." },
+                { title: "Outsource when...", desc: "Your sales team's time is better spent on closing. You need 500+ verified prospects per month with guaranteed accuracy." },
+                { title: "Combine both when...", desc: "Your team handles strategy and qualification while a service handles the research grunt work and data verification." },
+              ].map((item) => (
+                <div key={item.title} className="rounded-xl border border-border bg-card/50 p-6">
+                  <h3 className="font-semibold mb-1">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <div className="rounded-xl border border-border bg-card/50 p-6 mb-12">
+            <h3 className="font-semibold mb-3">Related Resources & Services</h3>
+            <div className="grid sm:grid-cols-2 gap-2">
+              <Link to="/b2b-lead-generation/prospect-research" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5" /> B2B Prospect Research Service</Link>
+              <Link to="/linkedin-prospecting/service" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5" /> LinkedIn Prospecting Service</Link>
+              <Link to="/b2b-lead-generation/human-verified-leads" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5" /> Human-Verified Leads</Link>
+              <Link to="/b2b-lead-generation/lead-list-building" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5" /> Lead List Building</Link>
+              <Link to="/data-enrichment/service" className="flex items-center gap-2 text-sm text-primary hover:underline"><ArrowRight className="w-3.5 h-3.5" /> Data Enrichment Service</Link>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Link to="/contact">
+              <Button size="lg" className="text-base px-10 py-6 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity shadow-lg shadow-primary/25">
+                Book Prospect Research <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
+          </div>
         </div>
-      </div>
+      </article>
     </main>
   );
 };
