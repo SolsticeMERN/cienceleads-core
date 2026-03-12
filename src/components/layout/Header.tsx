@@ -57,6 +57,10 @@ const navLinks = [
         ],
       },
       {
+        label: "AI Website Development",
+        href: "/ai-website-development",
+      },
+      {
         label: "By Industry",
         href: "/b2b-lead-generation-for-saas",
         subPages: [
