@@ -19,6 +19,7 @@ const detailedCaseStudies = [
   { title: "Agency Lead Generation Results", description: "How a marketing agency cut lead research costs by 60% using CienceLeads as a white-label partner.", metric: "60% Cost Cut", href: "/proof/agency-lead-generation", tags: ["Agency", "White-Label"] },
   { title: "Startup Lead Growth", description: "How a pre-seed startup went from 0 to 100 customers in 6 months with startup lead generation.", metric: "100 Customers", href: "/proof/startup-lead-growth", tags: ["Startup", "Growth"] },
   { title: "Verified Leads Success Stories", description: "Real results from clients using human-verified B2B leads with 0% bounce guarantee.", metric: "0% Bounce", href: "/proof/verified-leads-success", tags: ["Verified Leads", "Results"] },
+  { title: "AI Website Development Results", description: "How a B2B SaaS company increased lead capture by 4.2x with an AI-built, conversion-focused website.", metric: "4.2x Leads", href: "/proof/ai-website-development", tags: ["AI Website", "Conversion"] },
 ];
 
 const Proof = () => {
