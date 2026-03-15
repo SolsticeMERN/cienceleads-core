@@ -7,8 +7,8 @@ interface FAQItem {
 
 export const useFAQSchema = (faqs: FAQItem[], pageId?: string) => {
   useEffect(() => {
-    const slug = pageId || window.location.pathname.replace(/\//g, "-") || "home";
-    const id = `faq-schema-${slug}`;
+    // Use a single shared ID so only one FAQPage schema exists at a time
+    const id = "faq-schema-active";
 
     document.getElementById(id)?.remove();
 
