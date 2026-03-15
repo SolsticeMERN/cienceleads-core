@@ -11,6 +11,8 @@ import FAQSection from "@/components/home/FAQSection";
 import FinalCTA from "@/components/home/FinalCTA";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import { useServiceSchema } from "@/hooks/use-service-schema";
+import { useFAQSchema } from "@/hooks/use-faq-schema";
+import { faqData } from "@/data/faq";
 
 const Index = () => {
   useServiceSchema({
@@ -23,6 +25,7 @@ const Index = () => {
     "Human-Verified B2B Lead Generation Service | CienceLeads",
     "CienceLeads delivers human-verified B2B leads for SaaS, agencies, and startups. 0% bounce guarantee. Request a free sample list today."
   );
+  useFAQSchema(faqData, "home");
 
   return (
     <main className="min-h-screen bg-background text-foreground">
