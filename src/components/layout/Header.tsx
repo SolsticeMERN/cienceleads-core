@@ -83,6 +83,38 @@ const Header = () => {
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const location = useLocation();
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const submenuTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const openDropdown = () => {
+    if (closeTimeoutRef.current) { clearTimeout(closeTimeoutRef.current); closeTimeoutRef.current = null; }
+    setDropdownOpen(true);
+  };
+
+  const closeDropdown = () => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setDropdownOpen(false);
+      setActiveSubmenu(null);
+    }, 150);
+  };
+
+  const openSubmenu = (href: string) => {
+    if (submenuTimeoutRef.current) { clearTimeout(submenuTimeoutRef.current); submenuTimeoutRef.current = null; }
+    setActiveSubmenu(href);
+  };
+
+  const closeSubmenu = () => {
+    submenuTimeoutRef.current = setTimeout(() => {
+      setActiveSubmenu(null);
+    }, 100);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
+      if (submenuTimeoutRef.current) clearTimeout(submenuTimeoutRef.current);
+    };
+  }, []);
 
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
