@@ -14,8 +14,7 @@ interface HowToSchemaOptions {
 
 export const useHowToSchema = ({ name, description, totalTime, steps }: HowToSchemaOptions) => {
   useEffect(() => {
-    const slug = window.location.pathname.replace(/\//g, "-") || "howto";
-    const id = `howto-schema-${slug}`;
+    const id = "howto-schema-active";
 
     document.getElementById(id)?.remove();
 

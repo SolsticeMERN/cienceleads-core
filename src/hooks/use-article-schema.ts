@@ -16,8 +16,7 @@ export const useArticleSchema = ({
   dateModified = "2026-03-01",
 }: ArticleSchemaOptions) => {
   useEffect(() => {
-    const slug = url.replace(/\//g, "-") || "article";
-    const id = `article-schema-${slug}`;
+    const id = "article-schema-active";
 
     document.getElementById(id)?.remove();
 

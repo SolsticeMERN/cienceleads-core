@@ -7,8 +7,7 @@ interface BreadcrumbItem {
 
 export const useBreadcrumbSchema = (items: BreadcrumbItem[]) => {
   useEffect(() => {
-    const slug = window.location.pathname.replace(/\//g, "-") || "home";
-    const id = `breadcrumb-schema-${slug}`;
+    const id = "breadcrumb-schema-active";
 
     document.getElementById(id)?.remove();
 
