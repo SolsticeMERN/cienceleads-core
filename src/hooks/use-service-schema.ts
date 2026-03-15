@@ -9,8 +9,7 @@ interface ServiceSchemaProps {
 
 export const useServiceSchema = ({ name, description, url, category }: ServiceSchemaProps) => {
   useEffect(() => {
-    const slug = url.replace(/\//g, "-") || "service";
-    const id = `service-schema-${slug}`;
+    const id = "service-schema-active";
 
     document.getElementById(id)?.remove();
 

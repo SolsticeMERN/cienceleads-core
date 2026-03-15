@@ -9,8 +9,7 @@ interface SpeakableSchemaOptions {
 
 export const useSpeakableSchema = ({ headline, summary, url, cssSelectors = ["[role='definition']", ".aeo-takeaways"] }: SpeakableSchemaOptions) => {
   useEffect(() => {
-    const slug = url.replace(/\//g, "-") || "page";
-    const id = `speakable-schema-${slug}`;
+    const id = "speakable-schema-active";
 
     document.getElementById(id)?.remove();
 

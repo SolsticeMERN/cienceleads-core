@@ -20,7 +20,7 @@ export const useReviewSchema = ({
   reviews = [],
 }: ReviewSchemaProps) => {
   useEffect(() => {
-    const id = `review-schema-${itemUrl.replace(/\//g, "-")}`;
+    const id = "review-schema-active";
     document.getElementById(id)?.remove();
 
     const schema: Record<string, unknown> = {
