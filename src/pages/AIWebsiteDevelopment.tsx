@@ -1,4 +1,4 @@
-import { ArrowRight, Check, Globe, Zap, Target, BarChart3, Clock, Shield, Layers, Users } from "lucide-react";
+import { ArrowRight, Check, Globe, Zap, Target, BarChart3, Clock, Shield, Layers, Users, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
@@ -264,7 +264,42 @@ const AIWebsiteDevelopment = () => {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* Proof */}
+      <section className="pb-24 md:pb-32">
+        <div className="container max-w-3xl">
+          <ScrollReveal>
+            <Link to="/proof/ai-website-development" className="group block">
+              <div className="rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 md:p-10 hover:border-primary/40 transition-colors">
+                <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
+                  <TrendingUp className="w-4 h-4 text-primary" /> Case Study
+                </div>
+                <div className="grid sm:grid-cols-3 gap-6 mb-6">
+                  {[
+                    { metric: "4.2x", label: "More Leads Captured" },
+                    { metric: "5.1%", label: "Conversion Rate" },
+                    { metric: "14 Days", label: "Kickoff to Launch" },
+                  ].map((r) => (
+                    <div key={r.label} className="text-center">
+                      <div className="text-3xl font-extrabold text-primary mb-1">{r.metric}</div>
+                      <p className="text-sm text-muted-foreground">{r.label}</p>
+                    </div>
+                  ))}
+                </div>
+                <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors">
+                  From 1.2% to 5.1% Conversion Rate — B2B SaaS Case Study
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                  How a Series A SaaS company increased lead capture by 4.2x after replacing their template website with an AI-built, conversion-focused site.
+                </p>
+                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-primary">
+                  Read the full case study <ArrowRight className="w-3.5 h-3.5" />
+                </span>
+              </div>
+            </Link>
+          </ScrollReveal>
+        </div>
+      </section>
+
       <section className="pb-24 md:pb-32">
         <div className="container max-w-3xl">
           <ScrollReveal>
