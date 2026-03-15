@@ -1,4 +1,4 @@
-import { ArrowRight, Check, Globe, Zap, Target, BarChart3, Clock, Shield, Layers, Users } from "lucide-react";
+import { ArrowRight, Check, Globe, Zap, Target, BarChart3, Clock, Shield, Layers, Users, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
