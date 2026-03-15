@@ -83,6 +83,38 @@ const Header = () => {
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const location = useLocation();
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const submenuTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const openDropdown = () => {
+    if (closeTimeoutRef.current) { clearTimeout(closeTimeoutRef.current); closeTimeoutRef.current = null; }
+    setDropdownOpen(true);
+  };
+
+  const closeDropdown = () => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setDropdownOpen(false);
+      setActiveSubmenu(null);
+    }, 150);
+  };
+
+  const openSubmenu = (href: string) => {
+    if (submenuTimeoutRef.current) { clearTimeout(submenuTimeoutRef.current); submenuTimeoutRef.current = null; }
+    setActiveSubmenu(href);
+  };
+
+  const closeSubmenu = () => {
+    submenuTimeoutRef.current = setTimeout(() => {
+      setActiveSubmenu(null);
+    }, 100);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
+      if (submenuTimeoutRef.current) clearTimeout(submenuTimeoutRef.current);
+    };
+  }, []);
 
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
@@ -117,7 +149,10 @@ const Header = () => {
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) =>
             link.children ? (
-              <div key={link.href} className="relative" ref={dropdownRef}>
+              <div key={link.href} className="relative" ref={dropdownRef}
+                onMouseEnter={openDropdown}
+                onMouseLeave={closeDropdown}
+              >
                 <button
                   onClick={() => { setDropdownOpen(!dropdownOpen); setActiveSubmenu(null); }}
                   className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-foreground ${
@@ -128,56 +163,63 @@ const Header = () => {
                   <ChevronDown className={`w-3.5 h-3.5 transition-transform ${dropdownOpen ? "rotate-180" : ""}`} />
                 </button>
                 {dropdownOpen && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 rounded-xl border border-border bg-background/95 backdrop-blur-xl shadow-xl p-2">
-                    <Link
-                      to="/services"
-                      className="block px-3 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary/50 transition-colors"
-                    >
-                      All Services
-                    </Link>
-                    <div className="h-px bg-border my-1" />
-                    {link.children.map((child) => (
-                      <div
-                        key={child.href}
-                        className="relative"
-                        onMouseEnter={() => setActiveSubmenu(child.href)}
-                        onMouseLeave={() => setActiveSubmenu(null)}
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-64">
+                    <div className="rounded-xl border border-border bg-background/95 backdrop-blur-xl shadow-xl p-2">
+                      <Link
+                        to="/services"
+                        className="block px-3 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary/50 transition-colors"
                       >
-                        <div className="flex items-center">
-                          <Link
-                            to={child.href}
-                            className={`flex-1 px-3 py-2 rounded-lg text-sm transition-colors ${
-                              location.pathname.startsWith(child.href)
-                                ? "text-foreground bg-secondary/50"
-                                : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-                            }`}
-                          >
-                            {child.label}
-                          </Link>
-                          {child.subPages && (
-                            <ChevronRight className="w-3.5 h-3.5 text-muted-foreground mr-2 shrink-0" />
+                        All Services
+                      </Link>
+                      <div className="h-px bg-border my-1" />
+                      {link.children.map((child) => (
+                        <div
+                          key={child.href}
+                          className="relative"
+                          onMouseEnter={() => openSubmenu(child.href)}
+                          onMouseLeave={closeSubmenu}
+                        >
+                          <div className="flex items-center">
+                            <Link
+                              to={child.href}
+                              className={`flex-1 px-3 py-2 rounded-lg text-sm transition-colors ${
+                                location.pathname.startsWith(child.href)
+                                  ? "text-foreground bg-secondary/50"
+                                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
+                              }`}
+                            >
+                              {child.label}
+                            </Link>
+                            {child.subPages && (
+                              <ChevronRight className="w-3.5 h-3.5 text-muted-foreground mr-2 shrink-0" />
+                            )}
+                          </div>
+                          {child.subPages && activeSubmenu === child.href && (
+                            <div
+                              className="absolute left-full top-0 w-56 pl-1"
+                              onMouseEnter={() => openSubmenu(child.href)}
+                              onMouseLeave={closeSubmenu}
+                            >
+                              <div className="rounded-xl border border-border bg-background/95 backdrop-blur-xl shadow-xl p-2">
+                                {child.subPages.map((sub) => (
+                                  <Link
+                                    key={sub.href}
+                                    to={sub.href}
+                                    className={`block px-3 py-2 rounded-lg text-sm transition-colors ${
+                                      location.pathname === sub.href
+                                        ? "text-foreground bg-secondary/50"
+                                        : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
+                                    }`}
+                                  >
+                                    {sub.label}
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
                           )}
                         </div>
-                        {/* Sub-menu flyout */}
-                        {child.subPages && activeSubmenu === child.href && (
-                          <div className="absolute left-full top-0 ml-1 w-56 rounded-xl border border-border bg-background/95 backdrop-blur-xl shadow-xl p-2">
-                            {child.subPages.map((sub) => (
-                              <Link
-                                key={sub.href}
-                                to={sub.href}
-                                className={`block px-3 py-2 rounded-lg text-sm transition-colors ${
-                                  location.pathname === sub.href
-                                    ? "text-foreground bg-secondary/50"
-                                    : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-                                }`}
-                              >
-                                {sub.label}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
