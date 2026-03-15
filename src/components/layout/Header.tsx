@@ -149,7 +149,10 @@ const Header = () => {
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) =>
             link.children ? (
-              <div key={link.href} className="relative" ref={dropdownRef}>
+              <div key={link.href} className="relative" ref={dropdownRef}
+                onMouseEnter={openDropdown}
+                onMouseLeave={closeDropdown}
+              >
                 <button
                   onClick={() => { setDropdownOpen(!dropdownOpen); setActiveSubmenu(null); }}
                   className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-foreground ${
@@ -160,8 +163,8 @@ const Header = () => {
                   <ChevronDown className={`w-3.5 h-3.5 transition-transform ${dropdownOpen ? "rotate-180" : ""}`} />
                 </button>
                 {dropdownOpen && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 rounded-xl border border-border bg-background/95 backdrop-blur-xl shadow-xl p-2">
-                    <Link
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-64">
+                    <div className="rounded-xl border border-border bg-background/95 backdrop-blur-xl shadow-xl p-2">
                       to="/services"
                       className="block px-3 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary/50 transition-colors"
                     >
