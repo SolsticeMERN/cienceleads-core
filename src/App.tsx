@@ -39,6 +39,7 @@ import SaaSCaseStudy from "./pages/proof/SaaSCaseStudy";
 import AgencyCaseStudy from "./pages/proof/AgencyCaseStudy";
 import StartupCaseStudy from "./pages/proof/StartupCaseStudy";
 import VerifiedLeadsSuccess from "./pages/proof/VerifiedLeadsSuccess";
+import AIWebsiteCaseStudy from "./pages/proof/AIWebsiteCaseStudy";
 import Contact from "./pages/Contact";
 import ThankYou from "./pages/ThankYou";
 import Resources from "./pages/Resources";
