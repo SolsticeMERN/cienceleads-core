@@ -1,4 +1,4 @@
-import { TrendingUp, Mail, CalendarCheck, ArrowRight } from "lucide-react";
+import { TrendingUp, Mail, CalendarCheck, ArrowRight, Globe, MousePointerClick } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -20,6 +20,13 @@ const results = [
     label: "Qualified meetings booked",
   },
 ];
+
+const aiWebsiteResult = {
+  icon: Globe,
+  value: "4.2x",
+  label: "Conversion lift with AI-built website",
+  link: "/proof/ai-website-development",
+};
 
 const CaseStudySection = () => {
   return (
