@@ -118,6 +118,7 @@ const App = () => (
           <Route path="/proof/agency-lead-generation" element={<AgencyCaseStudy />} />
           <Route path="/proof/startup-lead-growth" element={<StartupCaseStudy />} />
           <Route path="/proof/verified-leads-success" element={<VerifiedLeadsSuccess />} />
+          <Route path="/proof/ai-website-development" element={<AIWebsiteCaseStudy />} />
           {/* Resources */}
           <Route path="/resources" element={<Resources />} />
           <Route path="/resources/what-is-b2b-lead-generation" element={<WhatIsB2BLeadGeneration />} />
