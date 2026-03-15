@@ -41,7 +41,7 @@ const CaseStudySection = () => {
           </p>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
           {results.map((r, i) => (
             <ScrollReveal key={r.label} delay={i * 0.15}>
               <div className="text-center p-8 rounded-xl border border-border bg-card/50 backdrop-blur-sm">
@@ -53,6 +53,20 @@ const CaseStudySection = () => {
               </div>
             </ScrollReveal>
           ))}
+          <ScrollReveal delay={0.45}>
+            <Link to={aiWebsiteResult.link} className="group">
+              <div className="text-center p-8 rounded-xl border border-primary/30 bg-primary/5 backdrop-blur-sm hover:bg-primary/10 hover:border-primary/50 transition-colors h-full">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary/20 transition-colors">
+                  <MousePointerClick className="w-6 h-6 text-primary" />
+                </div>
+                <div className="text-3xl md:text-4xl font-extrabold mb-2 text-primary">{aiWebsiteResult.value}</div>
+                <div className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">{aiWebsiteResult.label}</div>
+                <div className="mt-4 text-xs font-medium text-primary flex items-center justify-center gap-1">
+                  View Case Study <ArrowRight className="w-3 h-3" />
+                </div>
+              </div>
+            </Link>
+          </ScrollReveal>
         </div>
 
         <ScrollReveal delay={0.4}>
