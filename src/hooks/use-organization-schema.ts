@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+// Organization schema is defined statically in index.html — no dynamic injection needed
 
 export const useOrganizationSchema = () => {
   // Organization schema is defined statically in index.html
