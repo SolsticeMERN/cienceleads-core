@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, Search, Linkedin, DatabaseZap, DollarSign, Lightbulb, Wrench, Send, BarChart3, Mail, Database, ListChecks, Users, MailCheck, ArrowLeftRight, Workflow, Filter } from "lucide-react";
+import { ArrowRight, BookOpen, Search, Linkedin, DatabaseZap, DollarSign, Lightbulb, Wrench, Send, BarChart3, Mail, Database, ListChecks, Users, MailCheck, ArrowLeftRight, Workflow, Filter, MessageSquare, FileText, GitCompare, Compass } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import ScrollReveal from "@/components/ScrollReveal";
