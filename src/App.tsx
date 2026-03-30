@@ -63,6 +63,10 @@ import HowToVerifyBusinessEmails from "./pages/resources/HowToVerifyBusinessEmai
 import InboundVsOutboundLeadGeneration from "./pages/resources/InboundVsOutboundLeadGeneration";
 import LeadGenerationProcessExplained from "./pages/resources/LeadGenerationProcessExplained";
 import HowToBuildLeadGenFunnel from "./pages/resources/HowToBuildLeadGenFunnel";
+import LinkedInLeadGenerationTips from "./pages/resources/LinkedInLeadGenerationTips";
+import LinkedInOutreachTemplates from "./pages/resources/LinkedInOutreachTemplates";
+import LinkedInVsColdEmail from "./pages/resources/LinkedInVsColdEmail";
+import HowToUseSalesNavigator from "./pages/resources/HowToUseSalesNavigator";
 import LeadGenForSaaS from "./pages/industries/LeadGenForSaaS";
 import LeadGenForAgencies from "./pages/industries/LeadGenForAgencies";
 import LeadGenForStartups from "./pages/industries/LeadGenForStartups";
@@ -144,6 +148,10 @@ const App = () => (
           <Route path="/resources/inbound-vs-outbound-lead-generation" element={<InboundVsOutboundLeadGeneration />} />
           <Route path="/resources/lead-generation-process-explained" element={<LeadGenerationProcessExplained />} />
           <Route path="/resources/how-to-build-a-lead-gen-funnel" element={<HowToBuildLeadGenFunnel />} />
+          <Route path="/resources/linkedin-lead-generation-tips" element={<LinkedInLeadGenerationTips />} />
+          <Route path="/resources/linkedin-outreach-templates" element={<LinkedInOutreachTemplates />} />
+          <Route path="/resources/linkedin-vs-cold-email" element={<LinkedInVsColdEmail />} />
+          <Route path="/resources/how-to-use-sales-navigator" element={<HowToUseSalesNavigator />} />
           {/* Industry Pages */}
           <Route path="/b2b-lead-generation-for-saas" element={<LeadGenForSaaS />} />
           <Route path="/b2b-lead-generation-for-agencies" element={<LeadGenForAgencies />} />

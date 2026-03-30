@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, Search, Linkedin, DatabaseZap, DollarSign, Lightbulb, Wrench, Send, BarChart3, Mail, Database, ListChecks, Users, MailCheck, ArrowLeftRight, Workflow, Filter } from "lucide-react";
+import { ArrowRight, BookOpen, Search, Linkedin, DatabaseZap, DollarSign, Lightbulb, Wrench, Send, BarChart3, Mail, Database, ListChecks, Users, MailCheck, ArrowLeftRight, Workflow, Filter, MessageSquare, FileText, GitCompare, Compass } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -24,6 +24,10 @@ const pillars = [
   { icon: ArrowLeftRight, title: "Inbound vs Outbound Lead Generation", description: "Key differences between inbound and outbound lead generation — pros, cons, when to use each, and how to combine both for maximum B2B pipeline.", href: "/resources/inbound-vs-outbound-lead-generation", readTime: "9 min read", tags: ["Strategy", "Guide"] },
   { icon: Workflow, title: "Lead Generation Process Explained", description: "The complete B2B lead generation process in 7 steps — ICP definition, prospect lists, data enrichment, outreach, qualification, and optimization.", href: "/resources/lead-generation-process-explained", readTime: "11 min read", tags: ["Process", "Guide"] },
   { icon: Filter, title: "How to Build a Lead Gen Funnel", description: "How to build a B2B lead generation funnel — TOFU, MOFU, BOFU stages explained with activities, metrics, and optimization strategies.", href: "/resources/how-to-build-a-lead-gen-funnel", readTime: "10 min read", tags: ["Funnel", "Strategy"] },
+  { icon: MessageSquare, title: "10 LinkedIn Lead Generation Tips", description: "10 proven LinkedIn lead generation tips — profile optimization, targeting, personalization, multi-channel sequences, and metrics for B2B sales.", href: "/resources/linkedin-lead-generation-tips", readTime: "12 min read", tags: ["LinkedIn", "Tips"] },
+  { icon: FileText, title: "LinkedIn Outreach Templates", description: "Copy-paste LinkedIn outreach templates — connection requests, first messages, follow-ups, and InMails with personalization frameworks.", href: "/resources/linkedin-outreach-templates", readTime: "10 min read", tags: ["LinkedIn", "Templates"] },
+  { icon: GitCompare, title: "LinkedIn vs Cold Email", description: "LinkedIn vs cold email for B2B prospecting — compare response rates, costs, scalability, and learn how to combine both channels.", href: "/resources/linkedin-vs-cold-email", readTime: "10 min read", tags: ["LinkedIn", "Comparison"] },
+  { icon: Compass, title: "How to Use Sales Navigator", description: "Complete guide to LinkedIn Sales Navigator — advanced filters, Boolean search, saved searches, Lead Lists, InMails, and best practices.", href: "/resources/how-to-use-sales-navigator", readTime: "13 min read", tags: ["LinkedIn", "Tools"] },
 ];
 
 const Resources = () => {
