@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, Search, Linkedin, DatabaseZap, DollarSign, Lightbulb, Wrench, Send, BarChart3, Mail, Database, ListChecks, Users, MailCheck } from "lucide-react";
+import { ArrowRight, BookOpen, Search, Linkedin, DatabaseZap, DollarSign, Lightbulb, Wrench, Send, BarChart3, Mail, Database, ListChecks, Users, MailCheck, ArrowLeftRight, Workflow, Filter } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageSEO } from "@/hooks/use-page-seo";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -21,6 +21,9 @@ const pillars = [
   { icon: Search, title: "Sales Prospect Research Guide", description: "Master sales prospect research — how to find decision-makers, gather buying signals, and build targeted prospect profiles that drive higher conversion rates.", href: "/resources/sales-prospect-research", readTime: "9 min read", tags: ["Prospecting", "Research"] },
   { icon: Users, title: "How to Find Decision Makers in Companies", description: "Learn how to identify and reach decision-makers in any company — LinkedIn techniques, org chart mapping, and proven strategies for B2B sales teams.", href: "/resources/how-to-find-decision-makers", readTime: "9 min read", tags: ["Prospecting", "Strategy"] },
   { icon: MailCheck, title: "How to Verify Business Email Addresses", description: "Learn how email verification works — SMTP checks, MX records, catch-all detection, and best practices for maintaining clean B2B email lists.", href: "/resources/how-to-verify-business-emails", readTime: "8 min read", tags: ["Email Verification", "Data"] },
+  { icon: ArrowLeftRight, title: "Inbound vs Outbound Lead Generation", description: "Key differences between inbound and outbound lead generation — pros, cons, when to use each, and how to combine both for maximum B2B pipeline.", href: "/resources/inbound-vs-outbound-lead-generation", readTime: "9 min read", tags: ["Strategy", "Guide"] },
+  { icon: Workflow, title: "Lead Generation Process Explained", description: "The complete B2B lead generation process in 7 steps — ICP definition, prospect lists, data enrichment, outreach, qualification, and optimization.", href: "/resources/lead-generation-process-explained", readTime: "11 min read", tags: ["Process", "Guide"] },
+  { icon: Filter, title: "How to Build a Lead Gen Funnel", description: "How to build a B2B lead generation funnel — TOFU, MOFU, BOFU stages explained with activities, metrics, and optimization strategies.", href: "/resources/how-to-build-a-lead-gen-funnel", readTime: "10 min read", tags: ["Funnel", "Strategy"] },
 ];
 
 const Resources = () => {
