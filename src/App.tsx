@@ -141,6 +141,9 @@ const App = () => (
           <Route path="/resources/sales-prospect-research" element={<SalesProspectResearch />} />
           <Route path="/resources/how-to-find-decision-makers" element={<HowToFindDecisionMakers />} />
           <Route path="/resources/how-to-verify-business-emails" element={<HowToVerifyBusinessEmails />} />
+          <Route path="/resources/inbound-vs-outbound-lead-generation" element={<InboundVsOutboundLeadGeneration />} />
+          <Route path="/resources/lead-generation-process-explained" element={<LeadGenerationProcessExplained />} />
+          <Route path="/resources/how-to-build-a-lead-gen-funnel" element={<HowToBuildLeadGenFunnel />} />
           {/* Industry Pages */}
           <Route path="/b2b-lead-generation-for-saas" element={<LeadGenForSaaS />} />
           <Route path="/b2b-lead-generation-for-agencies" element={<LeadGenForAgencies />} />
