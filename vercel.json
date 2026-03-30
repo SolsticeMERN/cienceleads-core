@@ -3,10 +3,10 @@
     { "source": "/home", "destination": "/", "statusCode": 301 },
     { "source": "/2025/:path*", "destination": "/", "statusCode": 301 }
   ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+  "routes": [
+    { "src": "^/(services|b2b-lead-generation|b2b-lead-generation/.*|linkedin-prospecting|linkedin-prospecting/.*|data-enrichment|data-enrichment/.*|email-lists|email-lists/.*|proof|proof/.*|resources|resources/.*|b2b-lead-generation-for-saas|b2b-lead-generation-for-agencies|b2b-lead-generation-for-startups|ai-website-development|contact|thank-you|privacy-policy|terms-of-service)$", "dest": "/index.html" },
+    { "src": "^/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "^/(robots\\.txt|sitemap\\.xml|placeholder\\.svg|favicon\\.ico)$", "dest": "/$1" },
+    { "src": "^/(.*)$", "dest": "/index.html", "status": 404 }
   ]
 }
