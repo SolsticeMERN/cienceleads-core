@@ -131,19 +131,37 @@ const InboundVsOutboundLeadGeneration = () => {
           <ScrollReveal delay={0.05}>
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-6">Inbound vs Outbound: Side-by-Side Comparison</h2>
-              <PageComparisonTable
-                headers={["Factor", "Outbound", "Inbound"]}
-                rows={[
-                  ["Time to results", "2–4 weeks", "6–12 months"],
-                  ["Control over targeting", "Full control — you choose who to contact", "Limited — you attract whoever finds your content"],
-                  ["Cost structure", "Consistent per-lead cost", "High upfront, decreasing over time"],
-                  ["Scalability", "Linear — more outreach = more leads", "Compounding — content works while you sleep"],
-                  ["Lead quality", "High — you target specific ICP criteria", "Varies — depends on content and traffic quality"],
-                  ["Best for", "Immediate pipeline, enterprise sales, niche markets", "Brand authority, long sales cycles, broad markets"],
-                  ["Data dependency", "Requires verified contact data", "Requires keyword research and content strategy"],
-                  ["Sales involvement", "High — SDRs drive outreach", "Low initially — marketing drives awareness"],
-                ]}
-              />
+              <div className="rounded-xl border border-border overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="bg-secondary/50 border-b border-border">
+                        <th className="p-4 text-left font-medium text-muted-foreground">Factor</th>
+                        <th className="p-4 text-left font-semibold text-primary">Outbound</th>
+                        <th className="p-4 text-left font-semibold text-primary">Inbound</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {[
+                        ["Time to results", "2–4 weeks", "6–12 months"],
+                        ["Control over targeting", "Full control — you choose who to contact", "Limited — you attract whoever finds your content"],
+                        ["Cost structure", "Consistent per-lead cost", "High upfront, decreasing over time"],
+                        ["Scalability", "Linear — more outreach = more leads", "Compounding — content works while you sleep"],
+                        ["Lead quality", "High — you target specific ICP criteria", "Varies — depends on content and traffic quality"],
+                        ["Best for", "Immediate pipeline, enterprise sales, niche markets", "Brand authority, long sales cycles, broad markets"],
+                        ["Data dependency", "Requires verified contact data", "Requires keyword research and content strategy"],
+                        ["Sales involvement", "High — SDRs drive outreach", "Low initially — marketing drives awareness"],
+                      ].map(([factor, outbound, inbound], i) => (
+                        <tr key={factor} className={i < 7 ? "border-b border-border" : ""}>
+                          <td className="p-4 font-medium">{factor}</td>
+                          <td className="p-4 text-muted-foreground">{outbound}</td>
+                          <td className="p-4 text-muted-foreground">{inbound}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </section>
           </ScrollReveal>
 
