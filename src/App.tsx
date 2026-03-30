@@ -63,6 +63,10 @@ import HowToVerifyBusinessEmails from "./pages/resources/HowToVerifyBusinessEmai
 import InboundVsOutboundLeadGeneration from "./pages/resources/InboundVsOutboundLeadGeneration";
 import LeadGenerationProcessExplained from "./pages/resources/LeadGenerationProcessExplained";
 import HowToBuildLeadGenFunnel from "./pages/resources/HowToBuildLeadGenFunnel";
+import LinkedInLeadGenerationTips from "./pages/resources/LinkedInLeadGenerationTips";
+import LinkedInOutreachTemplates from "./pages/resources/LinkedInOutreachTemplates";
+import LinkedInVsColdEmail from "./pages/resources/LinkedInVsColdEmail";
+import HowToUseSalesNavigator from "./pages/resources/HowToUseSalesNavigator";
 import LeadGenForSaaS from "./pages/industries/LeadGenForSaaS";
 import LeadGenForAgencies from "./pages/industries/LeadGenForAgencies";
 import LeadGenForStartups from "./pages/industries/LeadGenForStartups";
