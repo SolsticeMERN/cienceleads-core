@@ -1,3 +1,30 @@
+# Redirects
 /home    /    301
 /2025/*  /    301
-/*    /index.html   200
+
+# Valid SPA routes — serve index.html with 200
+/                                              /index.html   200
+/services                                      /index.html   200
+/b2b-lead-generation                           /index.html   200
+/b2b-lead-generation/*                         /index.html   200
+/linkedin-prospecting                          /index.html   200
+/linkedin-prospecting/*                        /index.html   200
+/data-enrichment                               /index.html   200
+/data-enrichment/*                             /index.html   200
+/email-lists                                   /index.html   200
+/email-lists/*                                 /index.html   200
+/proof                                         /index.html   200
+/proof/*                                       /index.html   200
+/resources                                     /index.html   200
+/resources/*                                   /index.html   200
+/b2b-lead-generation-for-saas                  /index.html   200
+/b2b-lead-generation-for-agencies              /index.html   200
+/b2b-lead-generation-for-startups              /index.html   200
+/ai-website-development                        /index.html   200
+/contact                                       /index.html   200
+/thank-you                                     /index.html   200
+/privacy-policy                                /index.html   200
+/terms-of-service                              /index.html   200
+
+# Everything else — serve index.html with 404 status
+/*    /index.html   404
