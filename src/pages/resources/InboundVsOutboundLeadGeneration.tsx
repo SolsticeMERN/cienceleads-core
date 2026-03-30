@@ -10,7 +10,7 @@ import { useArticleSchema } from "@/hooks/use-article-schema";
 import ScrollReveal from "@/components/ScrollReveal";
 import InternalLinkBlock from "@/components/InternalLinkBlock";
 import PageFAQSection from "@/components/PageFAQSection";
-import PageComparisonTable from "@/components/PageComparisonTable";
+
 
 const InboundVsOutboundLeadGeneration = () => {
   usePageSEO(
